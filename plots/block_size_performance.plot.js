@@ -12,100 +12,92 @@ function generate_colors(num_colors) {
     return colors;
 }
 
+// set display options
+// TODO: make this modifiable for other kinds of plots
+var options = {
+    responsive: true,
+    title: {
+        display: true,
+        text: 'Block-Jacobi apply performance (#blocks = 50000)'
+    },
+    tooltips: {
+        mode: 'index',
+        intersect: false,
+    },
+    hover: {
+        mode: 'nearest',
+        intersect: true
+    },
+    scales: {
+        xAxes: [{
+            display: true,
+            scaleLabel: {
+                display: true,
+                labelString: 'Block size'
+            }
+        }],
+        yAxes: [{
+            display: true,
+            scaleLabel: {
+                display: true,
+                labelString: 'GFLOP/s'
+            },
+            ticks : {
+                min: 0
+            }
+        }]
+    }
+};
+
 // This function will be called with an array of input objects that need to be
 // plotted. It should return an object with plotting descriptions which will be
 // passed to Chart.js.
-function generate_plot_data(input) {
-    //extract interesting data
-    var datasets = [];
-    if (input.length > 0) {
-        datasets.push({
-            label: 'double',
-            data: input[0].content.double.block_jacobi
-        });
-        datasets.push({
-            label: 'single',
-            data: input[0].content.single.block_jacobi
-        });
+function generate_plot_data(inputs) {
+    if (inputs.length == 0) {
+        return {
+            type: 'line',
+            data: {
+                labels: [],
+                datasets: []
+            },
+            options: options
+        };
     }
-    for (var i = 0; i < input.length; ++i) {
-        datasets.push({
-            label: 'adaptive double-by-double [' + i + ']',
-            data: input[i].content.double.adaptive_block_jacobi
-                    .filter(e => e.block_precision === "double")
-        });
-        datasets.push({
-            label: 'adaptive single-by-double [' + i + ']',
-            data: input[i].content.double.adaptive_block_jacobi
-                    .filter(e => e.block_precision === "single")
-        });
-        datasets.push({
-            label: 'adaptive half-by-double [' + i + ']',
-            data: input[i].content.double.adaptive_block_jacobi
-                    .filter(e => e.block_precision === "half")
+
+    var max_blocks =
+        Math.max(...inputs[0].content.data.map(e => e.num_blocks));
+    // extract x-axis labels from first input
+    var labels = inputs[0].content.data
+        .filter(e => e.num_blocks == max_blocks)
+        .map(e => e.block_size);
+    // exract performance from each input
+    var datasets = inputs.map(input => ({
+        label: input.name,
+        data: input.content.data
+            .filter(e => e.num_blocks == max_blocks)
+            .map(e => (e.flops / e.time) / 1e9)
+    }));
+
+    // add display options to each dataset
+    var colors = generate_colors(datasets.length);
+    for (var i = 0; i < datasets.length; ++i) {
+        Object.assign(datasets[i], {
+            backgroundColor: colors[i],
+            borderColor: colors[i],
+            fill: false
         });
     }
 
-    //process each dataset
-    var colors = generate_colors(datasets.length);
-    var labels = [];
-    for (var i = 0; i < datasets.length; ++i) {
-        var dataset = datasets[i];
-        var max_blocks = Math.max(...dataset.data.map(el => el.num_blocks));
-        if (i === 0) {
-            labels = dataset.data
-                .filter(elem => elem.num_blocks === max_blocks)
-                .map(elem => elem.block_size);
-        }
-        dataset.data = dataset.data
-            .filter(elem => elem.num_blocks === max_blocks)
-            .map(elem => elem.apply.performance / 1e9);
-        dataset.backgroundColor = colors[i];
-        dataset.borderColor = colors[i];
-        dataset.fill = false;
-    }
     return {
         type: 'line',
         data: {
             labels: labels,
             datasets: datasets
         },
-        options: {
-            responsive: true,
-            title: {
-                display: true,
-                text: 'Block-Jacobi apply performance (#blocks = 50000)'
-            },
-            tooltips: {
-                mode: 'index',
-                intersect: false,
-            },
-            hover: {
-                mode: 'nearest',
-                intersect: true
-            },
-            scales: {
-                xAxes: [{
-                    display: true,
-                    scaleLabel: {
-                        display: true,
-                        labelString: 'Block size'
-                    }
-                }],
-                yAxes: [{
-                    display: true,
-                    scaleLabel: {
-                        display: true,
-                        labelString: 'GFLOP/s'
-                    },
-                    ticks : {
-                        min: 0
-                    }
-                }]
-            }
-        }
+        options: options
     };
 }
+
 
 return {
     generate_plot_data: generate_plot_data
