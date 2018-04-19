@@ -22,7 +22,7 @@ var options = {
     },
     tooltips: {
         mode: 'index',
-        intersect: false,
+        intersect: true,
     },
     hover: {
         mode: 'nearest',
