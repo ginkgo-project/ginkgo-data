@@ -2,7 +2,7 @@
   "type": "line",
   "data": {
     "labels": $[0].content.data[num_blocks=50000].block_size,
-    "datasets": $~>$map(function($v, $i, $a) {(
+    "datasets": $append([], $~>$map(function($v, $i, $a) {(
       $hue := $floor(360 * $i / $count($a));
       $color := "hsl(" & $hue & ",50%,60%)";
       {
@@ -12,7 +12,7 @@
         "borderColor": $color,
         "fill": false
       }
-    )})
+    )}))
   },
   "options": {
     "title": {
