@@ -1,0 +1,48 @@
+{
+  "type": "line",
+  "data": {
+    "labels": $[0].content.data[num_blocks=50000].block_size,
+    "datasets": $~>$map(function($v, $i, $a) {(
+      $hue := $floor(360 * $i / $count($a));
+      $color := "hsl(" & $hue & ",50%,60%)";
+      {
+        "label": $v.name,
+        "data": $v.content.data[num_blocks=50000].(flops * 1e-9 / time),
+        "backgroundColor": $color,
+        "borderColor": $color,
+        "fill": false
+      }
+    )})
+  },
+  "options": {
+    "title": {
+      "display": true,
+      "text": "Performance Plot"
+    },
+    "tooltips": {
+      "mode": "index",
+      "intersect": false
+    },
+    "scales": {
+      "xAxes": [
+        {
+          "scaleLabel": {
+            "display": true,
+            "labelString": "Block-Size"
+          }
+        }
+      ],
+      "yAxes": [
+        {
+          "scaleLabel": {
+            "display": true,
+            "labelString": "Perfromance [GFLOP/s]"
+          },
+          "ticks": {
+            "min": 0
+          }
+        }
+      ]
+    }
+  }
+}
