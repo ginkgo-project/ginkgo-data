@@ -1,0 +1,71 @@
+{
+  "type": "scatter",
+  "data": {
+    "labels": $[0].content.num_nonzeros,
+    "datasets": [
+      {
+        "label": "csr",
+        "data": $[0].content.{"x": num_nonzeros,"y": num_nonzeros / coo.time},
+        "backgroundColor": "hsl(346,84%,61%)",
+        "fill": false,
+        "showLine": false
+      },{
+        "label": "coo",
+        "data": $[0].content.{"x": num_nonzeros, "y": num_nonzeros / csr.time},
+        "backgroundColor": "hsl(42,100%,70%)",
+        "fill": false,
+        "showLine": false
+      },{
+        "label": "ell",
+        "data": $[0].content.{"x": num_nonzeros, "y": num_nonzeros / ell.time},
+        "backgroundColor": "hsl(164,95%,43%)",
+        "fill": false,
+        "showLine": false
+      },{
+        "label": "sellp",
+        "data": $[0].content.{"x": num_nonzeros, "y": num_nonzeros / sellp.time},
+        "backgroundColor": "hsl(195,83%,38%)",
+        "fill": false,
+        "showLine": false
+      },{
+        "label": "hybrid",
+        "data": $[0].content.{"x": num_nonzeros, "y": num_nonzeros / hybrid.time},
+        "backgroundColor": "hsl(195,83%,16%)",
+        "fill": false,
+        "showLine": false
+      }
+    ]
+  },
+  "options": {
+    "title": {
+      "display": true,
+      "text": "GFLOPs comparison plot"
+    },
+    "tooltips": {
+      "mode": "index",
+      "intersect": true
+    },
+    "scales": {
+      "xAxes": [
+        {
+          "type": "logarithmic",
+          "scaleLabel": {
+            "display": true,
+            "labelString": "Number of nonzeros"
+          }
+        }
+      ],
+      "yAxes": [
+        {
+          "scaleLabel": {
+            "display": true,
+            "labelString": "GFLOPs"
+          },
+          "ticks": {
+            "min": 0
+          }
+        }
+      ]
+    }
+  }
+}
