@@ -22,5 +22,5 @@ if __name__ == "__main__":
         sys.exit(1)
     FOLDER=sys.argv[1]
     OUTPUT=sys.argv[2]
-    PROPERTIES=['filename', 'problem', 'coo', 'csr', 'ell', 'sellp', 'hybrid']
+    PROPERTIES=['filename', 'problem', 'spmv']
     combine_json(FOLDER, OUTPUT, PROPERTIES)
