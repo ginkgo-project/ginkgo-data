@@ -1,35 +1,37 @@
+(
+$data := content[dataset.system="K20Xm"];
 {
   "type": "scatter",
   "data": {
-    "labels": $[0].content.num_nonzeros,
+    "labels": $data.problem.nonzeros,
     "datasets": [
       {
         "label": "csr",
-        "data": $[0].content.{"x": num_nonzeros,"y": num_nonzeros / coo.time},
+        "data": $data.{"x": problem.nonzeros, "y": spmv.csr.time},
         "backgroundColor": "hsl(346,84%,61%)",
         "fill": false,
         "showLine": false
       },{
         "label": "coo",
-        "data": $[0].content.{"x": num_nonzeros, "y": num_nonzeros / csr.time},
+        "data":$data.{"x": problem.nonzeros, "y": spmv.coo.time},
         "backgroundColor": "hsl(42,100%,70%)",
         "fill": false,
         "showLine": false
       },{
         "label": "ell",
-        "data": $[0].content.{"x": num_nonzeros, "y": num_nonzeros / ell.time},
+        "data": $data.{"x": problem.nonzeros, "y": spmv.ell.time},
         "backgroundColor": "hsl(164,95%,43%)",
         "fill": false,
         "showLine": false
       },{
         "label": "sellp",
-        "data": $[0].content.{"x": num_nonzeros, "y": num_nonzeros / sellp.time},
+        "data": $data.{"x": problem.nonzeros, "y": spmv.sellp.time},
         "backgroundColor": "hsl(195,83%,38%)",
         "fill": false,
         "showLine": false
       },{
         "label": "hybrid",
-        "data": $[0].content.{"x": num_nonzeros, "y": num_nonzeros / hybrid.time},
+        "data": $data.{"x": problem.nonzeros, "y": spmv.hybrid.time},
         "backgroundColor": "hsl(195,83%,16%)",
         "fill": false,
         "showLine": false
@@ -69,3 +71,4 @@
     }
   }
 }
+)
