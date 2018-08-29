@@ -1,42 +1,24 @@
 (
-$data := content[dataset.system="K20Xm"];
+$comment := "Select the system name and executor to show the results for below:";
+$data := content[dataset.system="K20Xm" and dataset.executor="cuda"];
+$formats := content.spmv~>$keys()~>$filter(function ($v) { $v != "optimal_format" });
 {
   "type": "scatter",
   "data": {
     "labels": $data.problem.nonzeros,
-    "datasets": [
+    "datasets": $formats~>$map(function ($v, $i, $a) {(
+      $hue := $floor(360 * $i / $count($a));
+      $color := "hsl(" & $hue & ",50%,60%)";
       {
-        "label": "csr",
-        "data": $data.{"x": problem.nonzeros, "y": spmv.csr.time},
-        "backgroundColor": "hsl(346,84%,61%)",
+        "label": $v,
+        "data": $data.{
+          "x": problem.nonzeros,
+          "y": 2 * problem.nonzeros / (spmv~>$lookup($v)).time * 1e-9
+        },
+        "backgroundColor": $color,
         "fill": false,
         "showLine": false
-      },{
-        "label": "coo",
-        "data":$data.{"x": problem.nonzeros, "y": spmv.coo.time},
-        "backgroundColor": "hsl(42,100%,70%)",
-        "fill": false,
-        "showLine": false
-      },{
-        "label": "ell",
-        "data": $data.{"x": problem.nonzeros, "y": spmv.ell.time},
-        "backgroundColor": "hsl(164,95%,43%)",
-        "fill": false,
-        "showLine": false
-      },{
-        "label": "sellp",
-        "data": $data.{"x": problem.nonzeros, "y": spmv.sellp.time},
-        "backgroundColor": "hsl(195,83%,38%)",
-        "fill": false,
-        "showLine": false
-      },{
-        "label": "hybrid",
-        "data": $data.{"x": problem.nonzeros, "y": spmv.hybrid.time},
-        "backgroundColor": "hsl(195,83%,16%)",
-        "fill": false,
-        "showLine": false
-      }
-    ]
+      })})
   },
   "options": {
     "title": {
