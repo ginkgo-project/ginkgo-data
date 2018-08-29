@@ -13,7 +13,7 @@ $formats := content.spmv~>$keys()~>$filter(function ($v) { $v != "optimal_format
         "label": $v,
         "data": $data.{
           "x": problem.nonzeros,
-          "y": 2 * problem.nonzeros / (spmv~>$lookup($v)).time * 1e-9
+          "y": 2 * problem.nonzeros / (spmv~>$lookup($v)).time
         },
         "backgroundColor": $color,
         "fill": false,
