@@ -1,0 +1,35 @@
+(
+$data := content[dataset.system="K20Xm" and dataset.executor="cuda"];
+$formats := $data.spmv~>$keys()~>$filter(function ($v) { $v != "optimal_format" });
+$counts := $formats~>$map(function ($v) { $data.spmv.optimal_format[$ = $v]~>$count() } );
+{
+  "type": "bar",
+  "data": {
+    "labels": $formats,
+    "datasets": [{
+      "data": $counts,
+      "backgroundColor": $formats~>$map( function($v, $i, $a) {
+        "hsl(" & 360 * $i / ($a~>$count()) & ",40%,55%)"
+      })
+    }]
+  },
+  "options": {
+    "legend": { "display": false },
+    "title": {
+      "display": true,
+      "text": "Best SpMV format"
+    },
+    "scales": {
+      "yAxes": [{
+        "scaleLabel": {
+          "display": true,
+          "labelString": "# Problems"
+        },
+        "ticks": {
+          "min": 0
+        }
+      }]
+    }
+  }
+}
+)
