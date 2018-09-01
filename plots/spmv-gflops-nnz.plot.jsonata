@@ -1,54 +1,44 @@
 (
-"Select the system name and executor to show the results for below:";
+"Select the system name and executor to show the results for:";
 $data := content[dataset.system="K20Xm" and dataset.executor="cuda"];
-$formats := content.spmv~>$keys()~>$filter(function ($v) { $v != "optimal_format" });
+$getColor := function($num_colors, $id) {
+  "hsl(" & $floor(360 * $id / $num_colors) & ",40%,55%)"
+};
+
+$formats := $data.spmv~>$keys()~>$filter(function ($v) { $v != "optimal_format" });
+$plot_data := $formats~>$map(function($v, $i) {{
+  "label": $v,
+  "data": $data.{
+    "x": problem.nonzeros,
+    "y": 2 * problem.nonzeros / (spmv~>$lookup($v)).time
+  },
+  "backgroundColor": $formats~>$count()~>$getColor($i)
+}});
+
 {
   "type": "scatter",
-  "data": {
-    "datasets": $formats~>$map(function ($v, $i, $a) {(
-      $hue := $floor(360 * $i / $count($a));
-      $color := "hsl(" & $hue & ",50%,60%)";
-      {
-        "label": $v,
-        "data": $data.{
-          "x": problem.nonzeros,
-          "y": 2 * problem.nonzeros / (spmv~>$lookup($v)).time
-        },
-        "backgroundColor": $color,
-        "fill": false,
-        "showLine": false
-      })})
-  },
+  "data": { "datasets": $plot_data },
   "options": {
     "title": {
       "display": true,
-      "text": "GFLOPs comparison plot"
+      "text": "Performance vs Nonzero Count"
     },
     "tooltips": {
       "mode": "index",
       "intersect": true
     },
     "scales": {
-      "xAxes": [
-        {
-          "type": "logarithmic",
-          "scaleLabel": {
-            "display": true,
-            "labelString": "Number of nonzeros"
-          }
+      "xAxes": [{
+        "type": "logarithmic",
+        "scaleLabel": {
+          "display": true,
+          "labelString": "#nonzeros"
         }
-      ],
-      "yAxes": [
-        {
-          "scaleLabel": {
-            "display": true,
-            "labelString": "GFLOPs"
-          },
-          "ticks": {
-            "min": 0
-          }
-        }
-      ]
+      }],
+      "yAxes": [{ "scaleLabel": {
+          "display": true,
+          "labelString": "GFLOP/s"
+      }}]
     }
   }
 }
