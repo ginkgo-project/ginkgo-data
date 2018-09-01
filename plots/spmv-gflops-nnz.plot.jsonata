@@ -1,11 +1,10 @@
 (
-$comment := "Select the system name and executor to show the results for below:";
+"Select the system name and executor to show the results for below:";
 $data := content[dataset.system="K20Xm" and dataset.executor="cuda"];
 $formats := content.spmv~>$keys()~>$filter(function ($v) { $v != "optimal_format" });
 {
   "type": "scatter",
   "data": {
-    "labels": $data.problem.nonzeros,
     "datasets": $formats~>$map(function ($v, $i, $a) {(
       $hue := $floor(360 * $i / $count($a));
       $color := "hsl(" & $hue & ",50%,60%)";
