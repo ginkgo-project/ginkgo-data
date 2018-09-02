@@ -1,7 +1,9 @@
 (
 $data := content[dataset.system="K20Xm" and dataset.executor="cuda"];
-$formats := $data.spmv~>$keys()~>$filter(function ($v) { $v != "optimal_format" });
-$counts := $formats~>$map(function ($v) { $data.spmv.optimal_format[$ = $v]~>$count() } );
+$formats := $data.spmv~>$keys();
+$counts := $formats~>$map(function($v) {
+  $data.optimal[spmv = $v]~>$count()
+});
 {
   "type": "bar",
   "data": {

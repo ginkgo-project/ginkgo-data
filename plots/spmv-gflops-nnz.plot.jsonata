@@ -5,7 +5,7 @@ $getColor := function($num_colors, $id) {
   "hsl(" & $floor(360 * $id / $num_colors) & ",40%,55%)"
 };
 
-$formats := $data.spmv~>$keys()~>$filter(function ($v) { $v != "optimal_format" });
+$formats := $data.spmv~>$keys();
 $plot_data := $formats~>$map(function($v, $i) {{
   "label": $v,
   "data": $data.{
