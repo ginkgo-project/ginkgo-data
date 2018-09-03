@@ -6,8 +6,9 @@ This repository contains performance data for the
 The performance data hosted in this repository is regularly updated to reflect
 the latest version of the library via the CI system. To interactively generate
 different visualizations of the data collected here, check out
-[Ginkgo Benchmark Explorer](https://ginkgo-project.github.io/ginkgo-benchmark-explorer).
+[Ginkgo Performance Explorer](https://ginkgo-project.github.io/gpe).
 
 ## License
 
-TBD: don't do anything commercial with the data until then.
+TBD: (Don't do anything commercial with the data until then. Using it for
+research is fine.)
