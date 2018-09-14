@@ -1,0 +1,38 @@
+(
+"Select the system name and executor to show the results for:";
+$data := content[dataset.system="K20Xm" and dataset.executor="cuda"];
+$data := $data[problem.nonzeros >= 1e5];
+$getColor := function($num_colors, $id) {
+  "hsl(" & $floor(360 * $id / $num_colors) & ",40%,55%)"
+};
+$nprob := $data~>$count();
+$updated := $data.spmv.(
+    $m := $min(*.time);
+    $~>| * | { "coef": time / $m } |
+);
+
+
+$formats := $updated~>$keys();
+$labels := [16..50].($ / 16);
+
+$datasets := $formats~>$map(function ($v, $i) {(
+    $coefs := ($updated~>$lookup($v)).coef;
+    $color := $formats~>$count()~>$getColor($i);
+    {
+        "label": $v,
+        "data": $labels~>$map(function ($x) { ($coefs.($ <= $x ? 1 : 0)~>$sum()) / $nprob }),
+        "borderColor": $color,
+        "backgroundColor": $color, 
+        "steppedLine": true,
+        "fill": false
+    }
+)});
+
+{
+    "type": "line",
+    "data": {
+        "labels": $labels,
+        "datasets": $datasets
+    }
+}
+)
