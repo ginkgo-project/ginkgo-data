@@ -1,16 +1,19 @@
 (
-"Select the system name and executor to show the results for:";
-$data := content[dataset.system="K20Xm" and dataset.executor="cuda"];
+$systems:= content{dataset.system: null}~>$keys();
+$system := $systems[0]; "The system to use";
+$executors:= content[dataset.system = $system]{dataset.executor: null}~>$keys();
+$executor := $executors[0]; "The executor to use";
+$data := content[dataset.system=$system and dataset.executor=$executor];
 $data := $data[problem.nonzeros >= 1e5];
 $getColor := function($num_colors, $id) {
   "hsl(" & $floor(360 * $id / $num_colors) & ",40%,55%)"
 };
 $nprob := $data~>$count();
+$data := $data ~> | spmv | {}, ["Hybrid20", "Hybrid40", "Hybrid60", "Hybrid80"] |;
 $updated := $data.spmv.(
-    $m := $min(*.time);
-    $~>| * | { "coef": time / $m } |
+    $m := $min(*[completed].time);
+    $~>| * | { "coef": completed ? time / $m : null } |
 );
-
 
 $formats := $updated~>$keys();
 $labels := [16..50].($ / 16);
@@ -20,7 +23,9 @@ $datasets := $formats~>$map(function ($v, $i) {(
     $color := $formats~>$count()~>$getColor($i);
     {
         "label": $v,
-        "data": $labels~>$map(function ($x) { ($coefs.($ <= $x ? 1 : 0)~>$sum()) / $nprob }),
+        "data": $labels~>$map(function ($x) {
+            100 * ($coefs.($ != null ? ($ <= $x ? 1 : 0) : 0)~>$sum()) / $nprob
+        }),
         "borderColor": $color,
         "backgroundColor": $color, 
         "steppedLine": true,
@@ -33,6 +38,33 @@ $datasets := $formats~>$map(function ($v, $i) {(
     "data": {
         "labels": $labels,
         "datasets": $datasets
+    },
+    "options": {
+        "tooltips": {
+            "mode": "index"
+        },
+        "title": {
+            "display": true,
+            "text": "Performance profile on " & $system & "(" & $executor & ")"
+        },
+        "scales": {
+            "xAxes": [{
+                "scaleLabel": {
+                    "display": "true",
+                    "labelString": "Maximum slowdown factor over fastest"
+                }
+            }],
+            "yAxes": [{
+                "scaleLabel": {
+                    "display": "true",
+                    "labelString": "% of problems"
+                },
+                "ticks": {
+                    "min": 0,
+                    "max": 100
+                }
+            }]
+        }
     }
 }
 )
