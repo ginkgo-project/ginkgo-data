@@ -1,0 +1,47 @@
+(
+"Select the system name and executor to show the results for:";
+$data := content[dataset.system="V100_summit" and dataset.executor="cuda"];
+
+$plot_data := $data[solver."cg-jacobi".apply.iterations > 100].{
+  "x": problem.nonzeros,
+  "y": solver."cg-jacobi".apply.(time / iterations)
+};
+
+{
+  "type": "scatter",
+  "data": { "datasets": [
+     {
+      "label": "Block Jacobi",
+      "data": $plot_data,
+      "backgroundColor": "hsl(120,40%,55%)"
+    }
+    ]
+  },
+  "options": {
+    "title": {
+      "display": true,
+      "text": "Time per Iteration vs Nonzero Count"
+    },
+    "tooltips": {
+      "mode": "index",
+      "intersect": true
+    },
+    "scales": {
+      "xAxes": [{
+        "type": "logarithmic",
+        "scaleLabel": {
+          "display": true,
+          "labelString": "Nonzeros #"
+        }
+      }],
+      "yAxes": [{
+        "type": "logarithmic",
+        "scaleLabel": {
+          "display": true,
+          "labelString": "Speedup"
+        }
+      }]
+    }
+  }
+}
+)

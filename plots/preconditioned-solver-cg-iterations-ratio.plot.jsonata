@@ -1,0 +1,52 @@
+(
+"Select the system name and executor to show the results for:";
+$data := content[dataset.system="V100_summit" and dataset.executor="cuda"];
+
+$plot_data := $data[solver."cg-jacobi".apply.iterations > 100].{
+  "x": problem.nonzeros,
+  "y": solver."cg-jacobi".apply.iterations / solver."cg-adaptive-jacobi".apply.iterations
+};
+
+{
+  "type": "scatter",
+  "data": { "datasets": [
+    {
+      "label": "Adaptive Block Jacobi is better",
+      "data": $plot_data[y >= 1],
+      "backgroundColor": "hsl(0,40%,55%)"
+    },
+    {
+      "label": "Block Jacobi is better",
+      "data": $plot_data[y < 1],
+      "backgroundColor": "hsl(120,40%,55%)"
+    }
+    ]
+  },
+  "options": {
+    "title": {
+      "display": true,
+      "text": "Iterations ratio vs Nonzero Count"
+    },
+    "tooltips": {
+      "mode": "index",
+      "intersect": true
+    },
+    "scales": {
+      "xAxes": [{
+        "type": "logarithmic",
+        "scaleLabel": {
+          "display": true,
+          "labelString": "Nonzeros #"
+        }
+      }],
+      "yAxes": [{
+        "type": "logarithmic",
+        "scaleLabel": {
+          "display": true,
+          "labelString": "Speedup"
+        }
+      }]
+    }
+  }
+}
+)
