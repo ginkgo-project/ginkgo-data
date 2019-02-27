@@ -1,0 +1,73 @@
+(
+$data := content[
+        dataset.system="V100_summit" and
+        problem.nonzeros >= 1e6 and
+        (solver.`cg-jacobi`.apply.iterations > 100 or
+         solver.`cg-adaptive-jacobi`.apply_iterations > 100)
+    ].{
+    "id": problem.id,
+    "label": problem.name,
+    "jacobi": solver.`cg-jacobi`.{
+        "iterations": apply.iterations,
+        "time": generate.time + apply.time
+    },
+    "adaptive-jacobi": solver.`cg-adaptive-jacobi`.{
+        "iterations": apply.iterations,
+        "time": generate.time + apply.time
+    }
+}^(id);
+
+{
+    "type": "line",
+    "data": {
+        "labels": $data.label,
+        "datasets": [
+            {
+                "label": "Iterations",
+                "data": $data.(jacobi.iterations / `adaptive-jacobi`.iterations),
+                "backgroundColor": "hsl(0,55%,45%)",
+                "borderColor": "hsl(0,55%,45%)",
+                "showLine": false,
+                "fill": false
+            },
+            {
+                "label": "Time",
+                "data": $data.(jacobi.time / `adaptive-jacobi`.time),
+                "backgroundColor": "hsl(120,55%,45%)",
+                "borderColor": "hsl(120,55%,45%)",
+                "showLine": false,
+                "fill": false
+            }
+        ]
+    },
+    "options": {
+        "title": {
+            "display": true,
+            "text": "Block-Jacobi preconditioned CG convergence"
+        },
+        "scales": {
+            "xAxes": [{
+                "scaleLabel": {
+                    "display": true,
+                    "labelString": "Problem"
+                },
+                "ticks": {
+                    "autoSkip": false
+                }
+            }],
+            "yAxes": [{
+                "type": "logarithmic",
+                "scaleLabel": {
+                    "display": true,
+                    "labelString": "Jacobi / adaptive Jacobi ratio"
+                },
+                "ticks": {
+                    "min": 1/4,
+                    "max": 4
+                }
+            }]
+        },
+        "tooltips": { "mode": "index" }
+    }
+}
+)
