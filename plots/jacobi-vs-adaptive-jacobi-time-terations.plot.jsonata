@@ -3,7 +3,8 @@ $data := content[
         dataset.system="V100_summit" and
         problem.nonzeros >= 1e6 and
         (solver.`cg-jacobi`.apply.iterations > 100 or
-         solver.`cg-adaptive-jacobi`.apply_iterations > 100)
+         solver.`cg-adaptive-jacobi`.apply_iterations > 100) and
+         (solver.`cg-jacobi`.completed or $solver.`cg-adaptive-jacobi`.completed)
     ].{
     "id": problem.id,
     "label": problem.name,
@@ -14,6 +15,11 @@ $data := content[
     "adaptive-jacobi": solver.`cg-adaptive-jacobi`.{
         "iterations": apply.iterations,
         "time": generate.time + apply.time
+    },
+    "plain": solver.cg.{
+        "iterations": apply.iterations,
+        "time": generate.time + apply.time,
+        "completed": completed
     }
 }^(id);
 
@@ -23,7 +29,7 @@ $data := content[
         "labels": $data.label,
         "datasets": [
             {
-                "label": "Iterations",
+                "label": "Iterations (adaptive)",
                 "data": $data.(jacobi.iterations / `adaptive-jacobi`.iterations),
                 "backgroundColor": "hsl(0,55%,45%)",
                 "borderColor": "hsl(0,55%,45%)",
@@ -31,12 +37,32 @@ $data := content[
                 "fill": false
             },
             {
-                "label": "Time",
+                "label": "Time (adaptive)",
                 "data": $data.(jacobi.time / `adaptive-jacobi`.time),
                 "backgroundColor": "hsl(120,55%,45%)",
                 "borderColor": "hsl(120,55%,45%)",
                 "showLine": false,
                 "fill": false
+            },
+            {
+                "label": "Iterations (no precond)",
+                "data": $data.(jacobi.iterations / plain.iterations),
+                "backgroundColor": "hsl(240,55%,45%)",
+                "borderColor": "hsl(240,55%,45%)",
+                "showLine": false,
+                "fill": false,
+                "yAxisID": "plain-jacobi"
+            }
+        ],
+        "_more_datasets" : [
+            {
+                "label": "Jacobi converged?",
+                "data": $data.plain.(completed ? 0 : 0),
+                "backgroundColor": "hsl(0,0%,0%)",
+                "borderColor": "hsl(0,0%,0%)",
+                "showLine": false,
+                "fill": false,
+                "yAxisID": "convergence"
             }
         ]
     },
@@ -62,8 +88,33 @@ $data := content[
                     "labelString": "Jacobi / adaptive Jacobi ratio"
                 },
                 "ticks": {
-                    "min": 1/4,
-                    "max": 4
+                    "min": 1/10,
+                    "max": 10
+                }
+            },
+            {
+                "display": false,
+                "type": "logarithmic",
+                "position": "right",
+                "id": "plain-jacobi",
+                "scaleLabel": {
+                    "display": true,
+                    "labelString": "Jacobi / No preconditioner ratio"
+                },
+                "ticks": {
+                    "min": 1/10,
+                    "max": 10
+                },
+                "gridLines": {
+                    "display": false
+                }
+            },
+            {
+                "display": false,
+                "id": "convergence",
+                "ticks": {
+                    "min": 1,
+                    "max": 10
                 }
             }]
         },
