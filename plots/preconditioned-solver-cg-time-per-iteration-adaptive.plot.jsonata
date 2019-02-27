@@ -2,7 +2,7 @@
 "Select the system name and executor to show the results for:";
 $data := content[dataset.system="V100_summit" and dataset.executor="cuda"];
 
-$plot_data := $data[solver."cg-jacobi".apply.iterations > 100].{
+$plot_data := $data[solver."cg-adaptive-jacobi".apply.iterations > 100].{
   "x": problem.nonzeros,
   "y": solver."cg-adaptive-jacobi".apply.(time / iterations)
 };
