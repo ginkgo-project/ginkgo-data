@@ -10,11 +10,13 @@ $data := content[
     "label": problem.name,
     "jacobi": solver.`cg-jacobi`.{
         "iterations": apply.iterations,
-        "time": generate.time + apply.time
+        "time": generate.time + apply.time,
+        "completed": completed
     },
     "adaptive-jacobi": solver.`cg-adaptive-jacobi`.{
         "iterations": apply.iterations,
-        "time": generate.time + apply.time
+        "time": generate.time + apply.time,
+        "completed": completed
     },
     "plain": solver.cg.{
         "iterations": apply.iterations,
@@ -52,13 +54,29 @@ $data := content[
                 "showLine": false,
                 "fill": false,
                 "yAxisID": "plain-jacobi"
-            }
-        ],
-        "_more_datasets" : [
+            },
             {
-                "label": "Jacobi converged?",
-                "data": $data.plain.(completed ? 0 : 0),
+                "label": "CG converged?",
+                "data": $data.plain.(completed ? 0.9 : 15),
                 "backgroundColor": "hsl(0,0%,0%)",
+                "borderColor": "hsl(0,0%,0%)",
+                "showLine": false,
+                "fill": false,
+                "yAxisID": "convergence"
+            },
+            {
+                "label": "CG + Jacobi converged?",
+                "data": $data.jacobi.(completed ? 0.7 : 15),
+                "backgroundColor": "hsl(0,0%,50%)",
+                "borderColor": "hsl(0,0%,0%)",
+                "showLine": false,
+                "fill": false,
+                "yAxisID": "convergence"
+            },
+            {
+                "label": "CG + adaptive Jacobi converged?",
+                "data": $data.`adaptive-jacobi`.(completed ? 0.5 : 15),
+                "backgroundColor": "hsl(0,0%,75%)",
                 "borderColor": "hsl(0,0%,0%)",
                 "showLine": false,
                 "fill": false,
@@ -113,8 +131,8 @@ $data := content[
                 "display": false,
                 "id": "convergence",
                 "ticks": {
-                    "min": 1,
-                    "max": 10
+                    "min": -14,
+                    "max": 1
                 }
             }]
         },
