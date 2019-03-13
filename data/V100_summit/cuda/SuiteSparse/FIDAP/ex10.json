@@ -1,106 +1,599 @@
 [
-    {
-        "filename": "/gpfs/alpine/scratch/hanzt1/csc336/ssget/MM/FIDAP/ex10/ex10.mtx",
-        "problem": {
-            "id": 407,
-            "group": "FIDAP",
-            "name": "ex10",
-            "rows": 2410,
-            "cols": 2410,
-            "nonzeros": 54840,
-            "real": true,
-            "binary": false,
-            "2d3d": true,
-            "posdef": true,
-            "psym": 1,
-            "nsym": 1,
-            "kind": "computational fluid dynamics problem",
-            "row_distribution": {
-                "min": 6,
-                "q1": 15.0,
-                "median": 20.0,
-                "q3": 30.0,
-                "max": 50,
-                "mean": 22.75518672199171,
-                "variance": 131.87367641741936,
-                "skewness": 0.8786003182235198,
-                "kurtosis": 3.105600406907215,
-                "hyperskewness": 5.579990171841371,
-                "hyperflatness": 14.43839655766271
-            },
-            "col_distribution": {
-                "min": 6,
-                "q1": 15.0,
-                "median": 20.0,
-                "q3": 30.0,
-                "max": 50,
-                "mean": 22.75518672199171,
-                "variance": 131.87367641741936,
-                "skewness": 0.8786003182235198,
-                "kurtosis": 3.105600406907215,
-                "hyperskewness": 5.579990171841371,
-                "hyperflatness": 14.43839655766271
-            }
+  {
+    "filename": "/gpfs/alpine/scratch/hanzt1/csc336/ssget/MM/FIDAP/ex10/ex10.mtx",
+    "problem": {
+      "id": 407,
+      "group": "FIDAP",
+      "name": "ex10",
+      "rows": 2410,
+      "cols": 2410,
+      "nonzeros": 54840,
+      "real": true,
+      "binary": false,
+      "2d3d": true,
+      "posdef": true,
+      "psym": 1,
+      "nsym": 1,
+      "kind": "computational fluid dynamics problem",
+      "row_distribution": {
+        "min": 6,
+        "q1": 15,
+        "median": 20,
+        "q3": 30,
+        "max": 50,
+        "mean": 22.75518672199171,
+        "variance": 131.87367641741935,
+        "skewness": 0.8786003182235198,
+        "kurtosis": 3.105600406907215,
+        "hyperskewness": 5.579990171841371,
+        "hyperflatness": 14.43839655766271
+      },
+      "col_distribution": {
+        "min": 6,
+        "q1": 15,
+        "median": 20,
+        "q3": 30,
+        "max": 50,
+        "mean": 22.75518672199171,
+        "variance": 131.87367641741935,
+        "skewness": 0.8786003182235198,
+        "kurtosis": 3.105600406907215,
+        "hyperskewness": 5.579990171841371,
+        "hyperflatness": 14.43839655766271
+      }
+    },
+    "spmv": {
+      "csr": {
+        "storage": 667724,
+        "time": 28816,
+        "completed": true
+      }
+    },
+    "optimal": {
+      "spmv": "csr"
+    },
+    "solver": {
+      "cg": {
+        "recurrent_residuals": [],
+        "true_residuals": [],
+        "rhs_norm": 28.819691365417672,
+        "generate": {
+          "components": {},
+          "time": 37546
         },
-        "spmv": {
-            "csr": {
-                "storage": 667724,
-                "time": 28816.0,
-                "completed": true
-            }
+        "apply": {
+          "components": {},
+          "iterations": 10000,
+          "time": 1921861896
         },
-        "optimal": {
-            "spmv": "csr"
+        "residual_norm": 10.700589592517819,
+        "completed": true
+      },
+      "cg-jacobi": {
+        "recurrent_residuals": [],
+        "true_residuals": [],
+        "rhs_norm": 28.819691365417672,
+        "generate": {
+          "components": {},
+          "time": 2564732
         },
-        "solver": {
-            "cg": {
-                "recurrent_residuals": [],
-                "true_residuals": [],
-                "rhs_norm": 28.819691365417673,
-                "generate": {
-                    "components": {},
-                    "time": 37546
-                },
-                "apply": {
-                    "components": {},
-                    "iterations": 10000,
-                    "time": 1921861896
-                },
-                "residual_norm": 10.700589592517819,
-                "completed": true
-            },
-            "cg-jacobi": {
-                "recurrent_residuals": [],
-                "true_residuals": [],
-                "rhs_norm": 28.819691365417673,
-                "generate": {
-                    "components": {},
-                    "time": 2564732
-                },
-                "apply": {
-                    "components": {},
-                    "iterations": 10000,
-                    "time": 1886818879
-                },
-                "residual_norm": 56.267817743814187,
-                "completed": true
-            },
-            "cg-adaptive-jacobi": {
-                "recurrent_residuals": [],
-                "true_residuals": [],
-                "rhs_norm": 28.819691365417673,
-                "generate": {
-                    "components": {},
-                    "time": 3144800
-                },
-                "apply": {
-                    "components": {},
-                    "iterations": 10000,
-                    "time": 1884145780
-                },
-                "residual_norm": 56.267817743814187,
-                "completed": true
-            }
-        }
+        "apply": {
+          "components": {},
+          "iterations": 10000,
+          "time": 1886818879
+        },
+        "residual_norm": 56.267817743814184,
+        "completed": true
+      },
+      "cg-adaptive-jacobi": {
+        "recurrent_residuals": [],
+        "true_residuals": [],
+        "rhs_norm": 28.819691365417672,
+        "generate": {
+          "components": {},
+          "time": 3144800
+        },
+        "apply": {
+          "components": {},
+          "iterations": 10000,
+          "time": 1884145780
+        },
+        "residual_norm": 56.267817743814184,
+        "completed": true
+      }
     }
+  },
+  {
+    "filename": "/gpfs/alpine/scratch/hanzt1/csc336/ssget/MM/FIDAP/ex10/ex10.mtx",
+    "problem": {
+      "id": 407,
+      "group": "FIDAP",
+      "name": "ex10",
+      "rows": 2410,
+      "cols": 2410,
+      "nonzeros": 54840,
+      "real": true,
+      "binary": false,
+      "2d3d": true,
+      "posdef": true,
+      "psym": 1,
+      "nsym": 1,
+      "kind": "computational fluid dynamics problem",
+      "row_distribution": {
+        "min": 6,
+        "q1": 15,
+        "median": 20,
+        "q3": 30,
+        "max": 50,
+        "mean": 22.75518672199171,
+        "variance": 131.87367641741935,
+        "skewness": 0.8786003182235198,
+        "kurtosis": 3.105600406907215,
+        "hyperskewness": 5.579990171841371,
+        "hyperflatness": 14.43839655766271
+      },
+      "col_distribution": {
+        "min": 6,
+        "q1": 15,
+        "median": 20,
+        "q3": 30,
+        "max": 50,
+        "mean": 22.75518672199171,
+        "variance": 131.87367641741935,
+        "skewness": 0.8786003182235198,
+        "kurtosis": 3.105600406907215,
+        "hyperskewness": 5.579990171841371,
+        "hyperflatness": 14.43839655766271
+      }
+    },
+    "spmv": {
+      "csr": {
+        "storage": 667724,
+        "time": 27025.2,
+        "completed": true
+      }
+    },
+    "optimal": {
+      "spmv": "csr"
+    },
+    "solver": {
+      "cg": {
+        "recurrent_residuals": [
+          28.819691365417672,
+          82.24032589862024
+        ],
+        "true_residuals": [
+          28.819691365417672,
+          82.24032589862024
+        ],
+        "rhs_norm": 28.819691365417672,
+        "generate": {
+          "components": {},
+          "time": 16457
+        },
+        "apply": {
+          "components": {
+            "allocate": 674395,
+            "cg::initialize#8": 35245,
+            "cg::step_1#5": 22364,
+            "cg::step_2#7": 22555,
+            "copy": 372100,
+            "csr::advanced_spmv#5": 139413,
+            "csr::spmv#3": 41946,
+            "dense::compute_dot#3": 140970,
+            "dense::compute_norm2#2": 479728,
+            "free": 620416,
+            "residual_norm_reduction::residual_norm_reduction#9": 111991,
+            "set_all_statuses::set_all_statuses#3": 24454
+          },
+          "iterations": 1,
+          "time": 926133
+        },
+        "preconditioner": {},
+        "residual_norm": 82.24032589862024,
+        "completed": true
+      },
+      "cg-jacobi": {
+        "recurrent_residuals": [
+          28.819691365417672,
+          182.34563468174844
+        ],
+        "true_residuals": [
+          28.819691365417672,
+          182.3456346836019
+        ],
+        "rhs_norm": 28.819691365417672,
+        "generate": {
+          "components": {
+            "allocate": 1370125,
+            "copy": 216284,
+            "free": 806438,
+            "jacobi::find_blocks#4": 441774,
+            "jacobi::generate#9": 218181
+          },
+          "time": 2557533
+        },
+        "apply": {
+          "components": {
+            "allocate": 676790,
+            "cg::initialize#8": 20978,
+            "cg::step_1#5": 19989,
+            "cg::step_2#7": 21601,
+            "copy": 300368,
+            "csr::advanced_spmv#5": 101645,
+            "csr::spmv#3": 40807,
+            "dense::compute_dot#3": 135065,
+            "dense::compute_norm2#2": 457462,
+            "free": 621219,
+            "jacobi::simple_apply#8": 98917,
+            "residual_norm_reduction::residual_norm_reduction#9": 105566,
+            "set_all_statuses::set_all_statuses#3": 19099
+          },
+          "iterations": 1,
+          "time": 930761
+        },
+        "preconditioner": {
+          "block_sizes": [
+            32,
+            32,
+            31,
+            32,
+            32,
+            32,
+            32,
+            31,
+            32,
+            32,
+            32,
+            32,
+            31,
+            32,
+            31,
+            31,
+            31,
+            32,
+            31,
+            32,
+            31,
+            32,
+            32,
+            32,
+            32,
+            31,
+            32,
+            32,
+            32,
+            32,
+            31,
+            32,
+            32,
+            32,
+            32,
+            31,
+            32,
+            32,
+            32,
+            32,
+            31,
+            32,
+            32,
+            32,
+            32,
+            31,
+            32,
+            31,
+            31,
+            32,
+            31,
+            32,
+            32,
+            32,
+            32,
+            32,
+            31,
+            32,
+            32,
+            32,
+            32,
+            31,
+            32,
+            32,
+            32,
+            32,
+            31,
+            32,
+            32,
+            32,
+            32,
+            31,
+            32,
+            32,
+            32,
+            30
+          ]
+        },
+        "residual_norm": 182.3456346836019,
+        "completed": true
+      },
+      "cg-adaptive-jacobi": {
+        "recurrent_residuals": [
+          28.819691365417672,
+          182.34563468174844
+        ],
+        "true_residuals": [
+          28.819691365417672,
+          182.3456346836019
+        ],
+        "rhs_norm": 28.819691365417672,
+        "generate": {
+          "components": {
+            "allocate": 2210980,
+            "copy": 171671,
+            "free": 581338,
+            "jacobi::find_blocks#4": 401374,
+            "jacobi::generate#9": 183940,
+            "jacobi::initialize_precisions#2": 27356
+          },
+          "time": 2844235
+        },
+        "apply": {
+          "components": {
+            "allocate": 670706,
+            "cg::initialize#8": 22808,
+            "cg::step_1#5": 18884,
+            "cg::step_2#7": 19228,
+            "copy": 297213,
+            "csr::advanced_spmv#5": 104469,
+            "csr::spmv#3": 37602,
+            "dense::compute_dot#3": 130166,
+            "dense::compute_norm2#2": 451160,
+            "free": 626079,
+            "jacobi::simple_apply#8": 61342,
+            "residual_norm_reduction::residual_norm_reduction#9": 103522,
+            "set_all_statuses::set_all_statuses#3": 19744
+          },
+          "iterations": 1,
+          "time": 969871
+        },
+        "preconditioner": {
+          "block_sizes": [
+            32,
+            32,
+            31,
+            32,
+            32,
+            32,
+            32,
+            31,
+            32,
+            32,
+            32,
+            32,
+            31,
+            32,
+            31,
+            31,
+            31,
+            32,
+            31,
+            32,
+            31,
+            32,
+            32,
+            32,
+            32,
+            31,
+            32,
+            32,
+            32,
+            32,
+            31,
+            32,
+            32,
+            32,
+            32,
+            31,
+            32,
+            32,
+            32,
+            32,
+            31,
+            32,
+            32,
+            32,
+            32,
+            31,
+            32,
+            31,
+            31,
+            32,
+            31,
+            32,
+            32,
+            32,
+            32,
+            32,
+            31,
+            32,
+            32,
+            32,
+            32,
+            31,
+            32,
+            32,
+            32,
+            32,
+            31,
+            32,
+            32,
+            32,
+            32,
+            31,
+            32,
+            32,
+            32,
+            30
+          ],
+          "block_precisions": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "block_conditioning": [
+            4359961273.010074,
+            1470704193.765658,
+            1090694129.8030088,
+            1753690592.6380453,
+            2263112688.2147326,
+            597999191.8845904,
+            607442451.8559844,
+            1876097960.4951267,
+            398692700.26844615,
+            325223946.418104,
+            991687809.5111048,
+            566589071.6325982,
+            241064728.74776766,
+            436385545.71062344,
+            601431544.1326253,
+            498153855.8546885,
+            499561181.6888553,
+            744856306.8854227,
+            431103979.3540192,
+            834552880.0657762,
+            361586052.40716296,
+            341621602.24434805,
+            426026847.54653955,
+            273900914.6694926,
+            341520147.69806266,
+            814994316.2915623,
+            437973909.02198774,
+            382783754.706252,
+            1178318963.7476425,
+            482524700.4294691,
+            477407306.8306149,
+            872948641.3553123,
+            1718826447.1814864,
+            522836674.9135653,
+            416670340.11065567,
+            2276476588.0667887,
+            292992037.31116337,
+            339538427.24386495,
+            1178318963.7478893,
+            418922191.5139372,
+            279516265.6443242,
+            408812241.17243516,
+            699916501.2354481,
+            273900914.66951835,
+            341520147.69806814,
+            474093367.3726301,
+            674531654.1730433,
+            420744031.9262384,
+            502061200.0055673,
+            724055331.1136274,
+            448019653.0238122,
+            830637412.533608,
+            295896704.86761457,
+            1111558603.2105634,
+            392490425.9072843,
+            314396519.2312338,
+            1378057557.3480923,
+            472336609.0863465,
+            549107496.6949191,
+            948405506.5650495,
+            1481047581.9641736,
+            674374087.9005443,
+            775159231.2794127,
+            3564109669.932463,
+            545122089.0339173,
+            617780996.2064432,
+            3801741503.664996,
+            1400453964.5892437,
+            1711902456.0790114,
+            3184674478.0293365,
+            4157781726.292206,
+            1774953287.8728812,
+            2355801440.9333596,
+            8243628439.540507,
+            3423705479.3249483,
+            1582107114.3384147
+          ]
+        },
+        "residual_norm": 182.3456346836019,
+        "completed": true
+      }
+    }
+  }
 ]

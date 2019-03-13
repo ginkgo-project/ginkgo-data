@@ -1,106 +1,297 @@
 [
-    {
-        "filename": "/gpfs/alpine/scratch/hanzt1/csc336/ssget/MM/Oberwolfach/LF10/LF10.mtx",
-        "problem": {
-            "id": 1438,
-            "group": "Oberwolfach",
-            "name": "LF10",
-            "rows": 18,
-            "cols": 18,
-            "nonzeros": 82,
-            "real": true,
-            "binary": false,
-            "2d3d": true,
-            "posdef": true,
-            "psym": 1,
-            "nsym": 1,
-            "kind": "model reduction problem",
-            "row_distribution": {
-                "min": 3,
-                "q1": 4.0,
-                "median": 5.0,
-                "q3": 5.0,
-                "max": 5,
-                "mean": 4.555555555555555,
-                "variance": 0.4691358024691357,
-                "skewness": -1.2380055823137133,
-                "kurtosis": 3.170360110803326,
-                "hyperskewness": -6.71466367104271,
-                "hyperflatness": 15.359709870243482
-            },
-            "col_distribution": {
-                "min": 3,
-                "q1": 4.0,
-                "median": 5.0,
-                "q3": 5.0,
-                "max": 5,
-                "mean": 4.555555555555555,
-                "variance": 0.4691358024691357,
-                "skewness": -1.2380055823137133,
-                "kurtosis": 3.170360110803326,
-                "hyperskewness": -6.71466367104271,
-                "hyperflatness": 15.359709870243482
-            }
+  {
+    "filename": "/gpfs/alpine/scratch/hanzt1/csc336/ssget/MM/Oberwolfach/LF10/LF10.mtx",
+    "problem": {
+      "id": 1438,
+      "group": "Oberwolfach",
+      "name": "LF10",
+      "rows": 18,
+      "cols": 18,
+      "nonzeros": 82,
+      "real": true,
+      "binary": false,
+      "2d3d": true,
+      "posdef": true,
+      "psym": 1,
+      "nsym": 1,
+      "kind": "model reduction problem",
+      "row_distribution": {
+        "min": 3,
+        "q1": 4,
+        "median": 5,
+        "q3": 5,
+        "max": 5,
+        "mean": 4.555555555555555,
+        "variance": 0.4691358024691357,
+        "skewness": -1.2380055823137133,
+        "kurtosis": 3.170360110803326,
+        "hyperskewness": -6.71466367104271,
+        "hyperflatness": 15.359709870243481
+      },
+      "col_distribution": {
+        "min": 3,
+        "q1": 4,
+        "median": 5,
+        "q3": 5,
+        "max": 5,
+        "mean": 4.555555555555555,
+        "variance": 0.4691358024691357,
+        "skewness": -1.2380055823137133,
+        "kurtosis": 3.170360110803326,
+        "hyperskewness": -6.71466367104271,
+        "hyperflatness": 15.359709870243481
+      }
+    },
+    "spmv": {
+      "csr": {
+        "storage": 1060,
+        "time": 29696.9,
+        "completed": true
+      }
+    },
+    "optimal": {
+      "spmv": "csr"
+    },
+    "solver": {
+      "cg": {
+        "recurrent_residuals": [],
+        "true_residuals": [],
+        "rhs_norm": 2.4210305972617814,
+        "generate": {
+          "components": {},
+          "time": 20591
         },
-        "spmv": {
-            "csr": {
-                "storage": 1060,
-                "time": 29696.9,
-                "completed": true
-            }
+        "apply": {
+          "components": {},
+          "iterations": 48,
+          "time": 11828797
         },
-        "optimal": {
-            "spmv": "csr"
+        "residual_norm": 3.900360956239161e-12,
+        "completed": true
+      },
+      "cg-jacobi": {
+        "recurrent_residuals": [],
+        "true_residuals": [],
+        "rhs_norm": 2.4210305972617814,
+        "generate": {
+          "components": {},
+          "time": 1972538
         },
-        "solver": {
-            "cg": {
-                "recurrent_residuals": [],
-                "true_residuals": [],
-                "rhs_norm": 2.4210305972617816,
-                "generate": {
-                    "components": {},
-                    "time": 20591
-                },
-                "apply": {
-                    "components": {},
-                    "iterations": 48,
-                    "time": 11828797
-                },
-                "residual_norm": 3.900360956239161e-12,
-                "completed": true
-            },
-            "cg-jacobi": {
-                "recurrent_residuals": [],
-                "true_residuals": [],
-                "rhs_norm": 2.4210305972617816,
-                "generate": {
-                    "components": {},
-                    "time": 1972538
-                },
-                "apply": {
-                    "components": {},
-                    "iterations": 1,
-                    "time": 962988
-                },
-                "residual_norm": 5.756682679543945e-12,
-                "completed": true
-            },
-            "cg-adaptive-jacobi": {
-                "recurrent_residuals": [],
-                "true_residuals": [],
-                "rhs_norm": 2.4210305972617816,
-                "generate": {
-                    "components": {},
-                    "time": 1945350
-                },
-                "apply": {
-                    "components": {},
-                    "iterations": 1,
-                    "time": 992329
-                },
-                "residual_norm": 5.756682679543945e-12,
-                "completed": true
-            }
-        }
+        "apply": {
+          "components": {},
+          "iterations": 1,
+          "time": 962988
+        },
+        "residual_norm": 5.756682679543945e-12,
+        "completed": true
+      },
+      "cg-adaptive-jacobi": {
+        "recurrent_residuals": [],
+        "true_residuals": [],
+        "rhs_norm": 2.4210305972617814,
+        "generate": {
+          "components": {},
+          "time": 1945350
+        },
+        "apply": {
+          "components": {},
+          "iterations": 1,
+          "time": 992329
+        },
+        "residual_norm": 5.756682679543945e-12,
+        "completed": true
+      }
     }
+  },
+  {
+    "filename": "/gpfs/alpine/scratch/hanzt1/csc336/ssget/MM/Oberwolfach/LF10/LF10.mtx",
+    "problem": {
+      "id": 1438,
+      "group": "Oberwolfach",
+      "name": "LF10",
+      "rows": 18,
+      "cols": 18,
+      "nonzeros": 82,
+      "real": true,
+      "binary": false,
+      "2d3d": true,
+      "posdef": true,
+      "psym": 1,
+      "nsym": 1,
+      "kind": "model reduction problem",
+      "row_distribution": {
+        "min": 3,
+        "q1": 4,
+        "median": 5,
+        "q3": 5,
+        "max": 5,
+        "mean": 4.555555555555555,
+        "variance": 0.4691358024691357,
+        "skewness": -1.2380055823137133,
+        "kurtosis": 3.170360110803326,
+        "hyperskewness": -6.71466367104271,
+        "hyperflatness": 15.359709870243481
+      },
+      "col_distribution": {
+        "min": 3,
+        "q1": 4,
+        "median": 5,
+        "q3": 5,
+        "max": 5,
+        "mean": 4.555555555555555,
+        "variance": 0.4691358024691357,
+        "skewness": -1.2380055823137133,
+        "kurtosis": 3.170360110803326,
+        "hyperskewness": -6.71466367104271,
+        "hyperflatness": 15.359709870243481
+      }
+    },
+    "spmv": {
+      "csr": {
+        "storage": 1060,
+        "time": 32429.1,
+        "completed": true
+      }
+    },
+    "optimal": {
+      "spmv": "csr"
+    },
+    "solver": {
+      "cg": {
+        "recurrent_residuals": [
+          2.4210305972617814,
+          4.154206004375581
+        ],
+        "true_residuals": [
+          2.4210305972617814,
+          4.154206004375582
+        ],
+        "rhs_norm": 2.4210305972617814,
+        "generate": {
+          "components": {},
+          "time": 14400
+        },
+        "apply": {
+          "components": {
+            "allocate": 763849,
+            "cg::initialize#8": 47465,
+            "cg::step_1#5": 23966,
+            "cg::step_2#7": 23617,
+            "copy": 349023,
+            "csr::advanced_spmv#5": 257008,
+            "csr::spmv#3": 49449,
+            "dense::compute_dot#3": 158087,
+            "dense::compute_norm2#2": 423117,
+            "free": 588995,
+            "residual_norm_reduction::residual_norm_reduction#9": 115825,
+            "set_all_statuses::set_all_statuses#3": 28934
+          },
+          "iterations": 1,
+          "time": 875804
+        },
+        "preconditioner": {},
+        "residual_norm": 4.154206004375582,
+        "completed": true
+      },
+      "cg-jacobi": {
+        "recurrent_residuals": [
+          2.4210305972617814,
+          5.5390047977413244e-12
+        ],
+        "true_residuals": [
+          2.4210305972617814,
+          5.756682679543945e-12
+        ],
+        "rhs_norm": 2.4210305972617814,
+        "generate": {
+          "components": {
+            "allocate": 1820566,
+            "copy": 75946,
+            "free": 149929,
+            "jacobi::find_blocks#4": 184316,
+            "jacobi::generate#9": 145377
+          },
+          "time": 2204551
+        },
+        "apply": {
+          "components": {
+            "allocate": 741590,
+            "cg::initialize#8": 71681,
+            "cg::step_1#5": 16659,
+            "cg::step_2#7": 23565,
+            "copy": 282034,
+            "csr::advanced_spmv#5": 153377,
+            "csr::spmv#3": 33475,
+            "dense::compute_dot#3": 126974,
+            "dense::compute_norm2#2": 449603,
+            "free": 572914,
+            "jacobi::simple_apply#8": 72171,
+            "residual_norm_reduction::residual_norm_reduction#9": 95016
+          },
+          "iterations": 1,
+          "time": 902575
+        },
+        "preconditioner": {
+          "block_sizes": [
+            18
+          ]
+        },
+        "residual_norm": 5.756682679543945e-12,
+        "completed": true
+      },
+      "cg-adaptive-jacobi": {
+        "recurrent_residuals": [
+          2.4210305972617814,
+          5.5390047977413244e-12
+        ],
+        "true_residuals": [
+          2.4210305972617814,
+          5.756682679543945e-12
+        ],
+        "rhs_norm": 2.4210305972617814,
+        "generate": {
+          "components": {
+            "allocate": 1242409,
+            "copy": 155779,
+            "free": 177730,
+            "jacobi::find_blocks#4": 146526,
+            "jacobi::generate#9": 122169,
+            "jacobi::initialize_precisions#2": 23889
+          },
+          "time": 1858203
+        },
+        "apply": {
+          "components": {
+            "allocate": 643219,
+            "cg::initialize#8": 19636,
+            "cg::step_1#5": 61623,
+            "cg::step_2#7": 19169,
+            "copy": 296946,
+            "csr::advanced_spmv#5": 94958,
+            "csr::spmv#3": 115431,
+            "dense::compute_dot#3": 135347,
+            "dense::compute_norm2#2": 474510,
+            "free": 580330,
+            "jacobi::simple_apply#8": 49164,
+            "residual_norm_reduction::residual_norm_reduction#9": 173480
+          },
+          "iterations": 1,
+          "time": 892827
+        },
+        "preconditioner": {
+          "block_sizes": [
+            18
+          ],
+          "block_precisions": [
+            0
+          ],
+          "block_conditioning": [
+            5090099.999999976
+          ]
+        },
+        "residual_norm": 5.756682679543945e-12,
+        "completed": true
+      }
+    }
+  }
 ]

@@ -1,106 +1,335 @@
 [
-    {
-        "filename": "/gpfs/alpine/scratch/hanzt1/csc336/ssget/MM/Pothen/mesh3e1/mesh3e1.mtx",
-        "problem": {
-            "id": 877,
-            "group": "Pothen",
-            "name": "mesh3e1",
-            "rows": 289,
-            "cols": 289,
-            "nonzeros": 1377,
-            "real": true,
-            "binary": false,
-            "2d3d": true,
-            "posdef": true,
-            "psym": 1,
-            "nsym": 1,
-            "kind": "structural problem",
-            "row_distribution": {
-                "min": 4,
-                "q1": 7.0,
-                "median": 7.0,
-                "q3": 7.0,
-                "max": 9,
-                "mean": 6.536332179930795,
-                "variance": 0.8230744363692917,
-                "skewness": -1.3730873227561396,
-                "kurtosis": 3.525533309685797,
-                "hyperskewness": -6.887882271303504,
-                "hyperflatness": 19.18746450822615
-            },
-            "col_distribution": {
-                "min": 4,
-                "q1": 7.0,
-                "median": 7.0,
-                "q3": 7.0,
-                "max": 9,
-                "mean": 6.536332179930795,
-                "variance": 0.8230744363692917,
-                "skewness": -1.3730873227561396,
-                "kurtosis": 3.525533309685797,
-                "hyperskewness": -6.887882271303504,
-                "hyperflatness": 19.18746450822615
-            }
+  {
+    "filename": "/gpfs/alpine/scratch/hanzt1/csc336/ssget/MM/Pothen/mesh3e1/mesh3e1.mtx",
+    "problem": {
+      "id": 877,
+      "group": "Pothen",
+      "name": "mesh3e1",
+      "rows": 289,
+      "cols": 289,
+      "nonzeros": 1377,
+      "real": true,
+      "binary": false,
+      "2d3d": true,
+      "posdef": true,
+      "psym": 1,
+      "nsym": 1,
+      "kind": "structural problem",
+      "row_distribution": {
+        "min": 4,
+        "q1": 7,
+        "median": 7,
+        "q3": 7,
+        "max": 9,
+        "mean": 6.536332179930795,
+        "variance": 0.8230744363692917,
+        "skewness": -1.3730873227561395,
+        "kurtosis": 3.525533309685797,
+        "hyperskewness": -6.887882271303504,
+        "hyperflatness": 19.18746450822615
+      },
+      "col_distribution": {
+        "min": 4,
+        "q1": 7,
+        "median": 7,
+        "q3": 7,
+        "max": 9,
+        "mean": 6.536332179930795,
+        "variance": 0.8230744363692917,
+        "skewness": -1.3730873227561395,
+        "kurtosis": 3.525533309685797,
+        "hyperskewness": -6.887882271303504,
+        "hyperflatness": 19.18746450822615
+      }
+    },
+    "spmv": {
+      "csr": {
+        "storage": 17684,
+        "time": 23905.7,
+        "completed": true
+      }
+    },
+    "optimal": {
+      "spmv": "csr"
+    },
+    "solver": {
+      "cg": {
+        "recurrent_residuals": [],
+        "true_residuals": [],
+        "rhs_norm": 9.769580129340103,
+        "generate": {
+          "components": {},
+          "time": 24343
         },
-        "spmv": {
-            "csr": {
-                "storage": 17684,
-                "time": 23905.7,
-                "completed": true
-            }
+        "apply": {
+          "components": {},
+          "iterations": 33,
+          "time": 6757654
         },
-        "optimal": {
-            "spmv": "csr"
+        "residual_norm": 8.348430392008177e-10,
+        "completed": true
+      },
+      "cg-jacobi": {
+        "recurrent_residuals": [],
+        "true_residuals": [],
+        "rhs_norm": 9.769580129340103,
+        "generate": {
+          "components": {},
+          "time": 1397964
         },
-        "solver": {
-            "cg": {
-                "recurrent_residuals": [],
-                "true_residuals": [],
-                "rhs_norm": 9.769580129340103,
-                "generate": {
-                    "components": {},
-                    "time": 24343
-                },
-                "apply": {
-                    "components": {},
-                    "iterations": 33,
-                    "time": 6757654
-                },
-                "residual_norm": 8.348430392008177e-10,
-                "completed": true
-            },
-            "cg-jacobi": {
-                "recurrent_residuals": [],
-                "true_residuals": [],
-                "rhs_norm": 9.769580129340103,
-                "generate": {
-                    "components": {},
-                    "time": 1397964
-                },
-                "apply": {
-                    "components": {},
-                    "iterations": 20,
-                    "time": 4140478
-                },
-                "residual_norm": 4.777497521536987e-10,
-                "completed": true
-            },
-            "cg-adaptive-jacobi": {
-                "recurrent_residuals": [],
-                "true_residuals": [],
-                "rhs_norm": 9.769580129340103,
-                "generate": {
-                    "components": {},
-                    "time": 1620760
-                },
-                "apply": {
-                    "components": {},
-                    "iterations": 20,
-                    "time": 4125063
-                },
-                "residual_norm": 4.774030188120409e-10,
-                "completed": true
-            }
-        }
+        "apply": {
+          "components": {},
+          "iterations": 20,
+          "time": 4140478
+        },
+        "residual_norm": 4.777497521536987e-10,
+        "completed": true
+      },
+      "cg-adaptive-jacobi": {
+        "recurrent_residuals": [],
+        "true_residuals": [],
+        "rhs_norm": 9.769580129340103,
+        "generate": {
+          "components": {},
+          "time": 1620760
+        },
+        "apply": {
+          "components": {},
+          "iterations": 20,
+          "time": 4125063
+        },
+        "residual_norm": 4.774030188120409e-10,
+        "completed": true
+      }
     }
+  },
+  {
+    "filename": "/gpfs/alpine/scratch/hanzt1/csc336/ssget/MM/Pothen/mesh3e1/mesh3e1.mtx",
+    "problem": {
+      "id": 877,
+      "group": "Pothen",
+      "name": "mesh3e1",
+      "rows": 289,
+      "cols": 289,
+      "nonzeros": 1377,
+      "real": true,
+      "binary": false,
+      "2d3d": true,
+      "posdef": true,
+      "psym": 1,
+      "nsym": 1,
+      "kind": "structural problem",
+      "row_distribution": {
+        "min": 4,
+        "q1": 7,
+        "median": 7,
+        "q3": 7,
+        "max": 9,
+        "mean": 6.536332179930795,
+        "variance": 0.8230744363692917,
+        "skewness": -1.3730873227561395,
+        "kurtosis": 3.525533309685797,
+        "hyperskewness": -6.887882271303504,
+        "hyperflatness": 19.18746450822615
+      },
+      "col_distribution": {
+        "min": 4,
+        "q1": 7,
+        "median": 7,
+        "q3": 7,
+        "max": 9,
+        "mean": 6.536332179930795,
+        "variance": 0.8230744363692917,
+        "skewness": -1.3730873227561395,
+        "kurtosis": 3.525533309685797,
+        "hyperskewness": -6.887882271303504,
+        "hyperflatness": 19.18746450822615
+      }
+    },
+    "spmv": {
+      "csr": {
+        "storage": 17684,
+        "time": 23514.1,
+        "completed": true
+      }
+    },
+    "optimal": {
+      "spmv": "csr"
+    },
+    "solver": {
+      "cg": {
+        "recurrent_residuals": [
+          9.769580129340103,
+          4.43478519069457
+        ],
+        "true_residuals": [
+          9.769580129340103,
+          4.434785190694569
+        ],
+        "rhs_norm": 9.769580129340103,
+        "generate": {
+          "components": {},
+          "time": 13829
+        },
+        "apply": {
+          "components": {
+            "allocate": 576529,
+            "cg::initialize#8": 54068,
+            "cg::step_1#5": 24824,
+            "cg::step_2#7": 23346,
+            "copy": 333643,
+            "csr::advanced_spmv#5": 190127,
+            "csr::spmv#3": 44326,
+            "dense::compute_dot#3": 136141,
+            "dense::compute_norm2#2": 422795,
+            "free": 555964,
+            "residual_norm_reduction::residual_norm_reduction#9": 130293,
+            "set_all_statuses::set_all_statuses#3": 34120
+          },
+          "iterations": 1,
+          "time": 834613
+        },
+        "preconditioner": {},
+        "residual_norm": 4.434785190694569,
+        "completed": true
+      },
+      "cg-jacobi": {
+        "recurrent_residuals": [
+          9.769580129340103,
+          2.973583272078981
+        ],
+        "true_residuals": [
+          9.769580129340103,
+          2.9735832720789808
+        ],
+        "rhs_norm": 9.769580129340103,
+        "generate": {
+          "components": {
+            "allocate": 1137084,
+            "copy": 73918,
+            "free": 141693,
+            "jacobi::find_blocks#4": 215605,
+            "jacobi::generate#9": 219107
+          },
+          "time": 1351484
+        },
+        "apply": {
+          "components": {
+            "allocate": 568272,
+            "cg::initialize#8": 19135,
+            "cg::step_1#5": 16945,
+            "cg::step_2#7": 18667,
+            "copy": 272025,
+            "csr::advanced_spmv#5": 84224,
+            "csr::spmv#3": 34360,
+            "dense::compute_dot#3": 119533,
+            "dense::compute_norm2#2": 419070,
+            "free": 551982,
+            "jacobi::simple_apply#8": 73619,
+            "residual_norm_reduction::residual_norm_reduction#9": 94631,
+            "set_all_statuses::set_all_statuses#3": 16828
+          },
+          "iterations": 1,
+          "time": 848669
+        },
+        "preconditioner": {
+          "block_sizes": [
+            32,
+            32,
+            32,
+            32,
+            32,
+            32,
+            32,
+            32,
+            31,
+            2
+          ]
+        },
+        "residual_norm": 2.9735832720789808,
+        "completed": true
+      },
+      "cg-adaptive-jacobi": {
+        "recurrent_residuals": [
+          9.769580129340103,
+          2.9736481955889174
+        ],
+        "true_residuals": [
+          9.769580129340103,
+          2.9736481955889174
+        ],
+        "rhs_norm": 9.769580129340103,
+        "generate": {
+          "components": {
+            "allocate": 849357,
+            "copy": 98189,
+            "free": 162431,
+            "jacobi::find_blocks#4": 170094,
+            "jacobi::generate#9": 461745,
+            "jacobi::initialize_precisions#2": 26768
+          },
+          "time": 1505082
+        },
+        "apply": {
+          "components": {
+            "allocate": 564679,
+            "cg::initialize#8": 18673,
+            "cg::step_1#5": 16700,
+            "cg::step_2#7": 19062,
+            "copy": 271660,
+            "csr::advanced_spmv#5": 86573,
+            "csr::spmv#3": 34636,
+            "dense::compute_dot#3": 118421,
+            "dense::compute_norm2#2": 419968,
+            "free": 550419,
+            "jacobi::simple_apply#8": 56850,
+            "residual_norm_reduction::residual_norm_reduction#9": 95904,
+            "set_all_statuses::set_all_statuses#3": 17068
+          },
+          "iterations": 1,
+          "time": 838406
+        },
+        "preconditioner": {
+          "block_sizes": [
+            32,
+            32,
+            32,
+            32,
+            32,
+            32,
+            32,
+            32,
+            31,
+            2
+          ],
+          "block_precisions": [
+            2,
+            2,
+            2,
+            2,
+            2,
+            2,
+            2,
+            2,
+            2,
+            2
+          ],
+          "block_conditioning": [
+            3.0938359227590873,
+            3.0938359227590873,
+            5.157638158770877,
+            5.509198380668668,
+            5.533499410984709,
+            5.535122936152066,
+            5.534847736778889,
+            5.528378254459565,
+            5.026956991160366,
+            1.5
+          ]
+        },
+        "residual_norm": 2.9736481955889174,
+        "completed": true
+      }
+    }
+  }
 ]

@@ -1,106 +1,303 @@
 [
-    {
-        "filename": "/gpfs/alpine/scratch/hanzt1/csc336/ssget/MM/Pothen/mesh1e1/mesh1e1.mtx",
-        "problem": {
-            "id": 872,
-            "group": "Pothen",
-            "name": "mesh1e1",
-            "rows": 48,
-            "cols": 48,
-            "nonzeros": 306,
-            "real": true,
-            "binary": false,
-            "2d3d": true,
-            "posdef": true,
-            "psym": 1,
-            "nsym": 1,
-            "kind": "structural problem",
-            "row_distribution": {
-                "min": 4,
-                "q1": 6.0,
-                "median": 6.0,
-                "q3": 7.0,
-                "max": 8,
-                "mean": 6.375,
-                "variance": 1.0677083333333333,
-                "skewness": -0.4567418392933361,
-                "kurtosis": 2.889066032123736,
-                "hyperskewness": -3.215068760992797,
-                "hyperflatness": 11.702593404042306
-            },
-            "col_distribution": {
-                "min": 4,
-                "q1": 6.0,
-                "median": 6.0,
-                "q3": 7.0,
-                "max": 8,
-                "mean": 6.375,
-                "variance": 1.0677083333333333,
-                "skewness": -0.4567418392933361,
-                "kurtosis": 2.889066032123736,
-                "hyperskewness": -3.215068760992797,
-                "hyperflatness": 11.702593404042306
-            }
+  {
+    "filename": "/gpfs/alpine/scratch/hanzt1/csc336/ssget/MM/Pothen/mesh1e1/mesh1e1.mtx",
+    "problem": {
+      "id": 872,
+      "group": "Pothen",
+      "name": "mesh1e1",
+      "rows": 48,
+      "cols": 48,
+      "nonzeros": 306,
+      "real": true,
+      "binary": false,
+      "2d3d": true,
+      "posdef": true,
+      "psym": 1,
+      "nsym": 1,
+      "kind": "structural problem",
+      "row_distribution": {
+        "min": 4,
+        "q1": 6,
+        "median": 6,
+        "q3": 7,
+        "max": 8,
+        "mean": 6.375,
+        "variance": 1.0677083333333333,
+        "skewness": -0.4567418392933361,
+        "kurtosis": 2.889066032123736,
+        "hyperskewness": -3.215068760992797,
+        "hyperflatness": 11.702593404042306
+      },
+      "col_distribution": {
+        "min": 4,
+        "q1": 6,
+        "median": 6,
+        "q3": 7,
+        "max": 8,
+        "mean": 6.375,
+        "variance": 1.0677083333333333,
+        "skewness": -0.4567418392933361,
+        "kurtosis": 2.889066032123736,
+        "hyperskewness": -3.215068760992797,
+        "hyperflatness": 11.702593404042306
+      }
+    },
+    "spmv": {
+      "csr": {
+        "storage": 3868,
+        "time": 24250.5,
+        "completed": true
+      }
+    },
+    "optimal": {
+      "spmv": "csr"
+    },
+    "solver": {
+      "cg": {
+        "recurrent_residuals": [],
+        "true_residuals": [],
+        "rhs_norm": 3.781932919048739,
+        "generate": {
+          "components": {},
+          "time": 24048
         },
-        "spmv": {
-            "csr": {
-                "storage": 3868,
-                "time": 24250.5,
-                "completed": true
-            }
+        "apply": {
+          "components": {},
+          "iterations": 23,
+          "time": 5001510
         },
-        "optimal": {
-            "spmv": "csr"
+        "residual_norm": 2.3896037913065614e-10,
+        "completed": true
+      },
+      "cg-jacobi": {
+        "recurrent_residuals": [],
+        "true_residuals": [],
+        "rhs_norm": 3.781932919048739,
+        "generate": {
+          "components": {},
+          "time": 255004911
         },
-        "solver": {
-            "cg": {
-                "recurrent_residuals": [],
-                "true_residuals": [],
-                "rhs_norm": 3.781932919048739,
-                "generate": {
-                    "components": {},
-                    "time": 24048
-                },
-                "apply": {
-                    "components": {},
-                    "iterations": 23,
-                    "time": 5001510
-                },
-                "residual_norm": 2.3896037913065616e-10,
-                "completed": true
-            },
-            "cg-jacobi": {
-                "recurrent_residuals": [],
-                "true_residuals": [],
-                "rhs_norm": 3.781932919048739,
-                "generate": {
-                    "components": {},
-                    "time": 255004911
-                },
-                "apply": {
-                    "components": {},
-                    "iterations": 15,
-                    "time": 3286555
-                },
-                "residual_norm": 1.8843533675685436e-10,
-                "completed": true
-            },
-            "cg-adaptive-jacobi": {
-                "recurrent_residuals": [],
-                "true_residuals": [],
-                "rhs_norm": 3.781932919048739,
-                "generate": {
-                    "components": {},
-                    "time": 4236057
-                },
-                "apply": {
-                    "components": {},
-                    "iterations": 15,
-                    "time": 3262429
-                },
-                "residual_norm": 1.8861232988820365e-10,
-                "completed": true
-            }
-        }
+        "apply": {
+          "components": {},
+          "iterations": 15,
+          "time": 3286555
+        },
+        "residual_norm": 1.8843533675685436e-10,
+        "completed": true
+      },
+      "cg-adaptive-jacobi": {
+        "recurrent_residuals": [],
+        "true_residuals": [],
+        "rhs_norm": 3.781932919048739,
+        "generate": {
+          "components": {},
+          "time": 4236057
+        },
+        "apply": {
+          "components": {},
+          "iterations": 15,
+          "time": 3262429
+        },
+        "residual_norm": 1.8861232988820364e-10,
+        "completed": true
+      }
     }
+  },
+  {
+    "filename": "/gpfs/alpine/scratch/hanzt1/csc336/ssget/MM/Pothen/mesh1e1/mesh1e1.mtx",
+    "problem": {
+      "id": 872,
+      "group": "Pothen",
+      "name": "mesh1e1",
+      "rows": 48,
+      "cols": 48,
+      "nonzeros": 306,
+      "real": true,
+      "binary": false,
+      "2d3d": true,
+      "posdef": true,
+      "psym": 1,
+      "nsym": 1,
+      "kind": "structural problem",
+      "row_distribution": {
+        "min": 4,
+        "q1": 6,
+        "median": 6,
+        "q3": 7,
+        "max": 8,
+        "mean": 6.375,
+        "variance": 1.0677083333333333,
+        "skewness": -0.4567418392933361,
+        "kurtosis": 2.889066032123736,
+        "hyperskewness": -3.215068760992797,
+        "hyperflatness": 11.702593404042306
+      },
+      "col_distribution": {
+        "min": 4,
+        "q1": 6,
+        "median": 6,
+        "q3": 7,
+        "max": 8,
+        "mean": 6.375,
+        "variance": 1.0677083333333333,
+        "skewness": -0.4567418392933361,
+        "kurtosis": 2.889066032123736,
+        "hyperskewness": -3.215068760992797,
+        "hyperflatness": 11.702593404042306
+      }
+    },
+    "spmv": {
+      "csr": {
+        "storage": 3868,
+        "time": 24053.7,
+        "completed": true
+      }
+    },
+    "optimal": {
+      "spmv": "csr"
+    },
+    "solver": {
+      "cg": {
+        "recurrent_residuals": [
+          3.781932919048739,
+          1.5272476779738144
+        ],
+        "true_residuals": [
+          3.781932919048739,
+          1.5272476779738147
+        ],
+        "rhs_norm": 3.781932919048739,
+        "generate": {
+          "components": {},
+          "time": 13595
+        },
+        "apply": {
+          "components": {
+            "allocate": 605835,
+            "cg::initialize#8": 57374,
+            "cg::step_1#5": 24782,
+            "cg::step_2#7": 23175,
+            "copy": 333111,
+            "csr::advanced_spmv#5": 181827,
+            "csr::spmv#3": 43049,
+            "dense::compute_dot#3": 136647,
+            "dense::compute_norm2#2": 414218,
+            "free": 551607,
+            "residual_norm_reduction::residual_norm_reduction#9": 113656,
+            "set_all_statuses::set_all_statuses#3": 29185
+          },
+          "iterations": 1,
+          "time": 845029
+        },
+        "preconditioner": {},
+        "residual_norm": 1.5272476779738147,
+        "completed": true
+      },
+      "cg-jacobi": {
+        "recurrent_residuals": [
+          3.781932919048739,
+          0.8597157775918628
+        ],
+        "true_residuals": [
+          3.781932919048739,
+          0.8597157775918627
+        ],
+        "rhs_norm": 3.781932919048739,
+        "generate": {
+          "components": {
+            "allocate": 862520,
+            "copy": 74147,
+            "free": 143317,
+            "jacobi::find_blocks#4": 185352,
+            "jacobi::generate#9": 220278
+          },
+          "time": 1144946
+        },
+        "apply": {
+          "components": {
+            "allocate": 603062,
+            "cg::initialize#8": 19025,
+            "cg::step_1#5": 18458,
+            "cg::step_2#7": 18402,
+            "copy": 269956,
+            "csr::advanced_spmv#5": 85426,
+            "csr::spmv#3": 34279,
+            "dense::compute_dot#3": 117880,
+            "dense::compute_norm2#2": 414002,
+            "free": 550102,
+            "jacobi::simple_apply#8": 76112,
+            "residual_norm_reduction::residual_norm_reduction#9": 93027,
+            "set_all_statuses::set_all_statuses#3": 17259
+          },
+          "iterations": 1,
+          "time": 858488
+        },
+        "preconditioner": {
+          "block_sizes": [
+            32,
+            16
+          ]
+        },
+        "residual_norm": 0.8597157775918627,
+        "completed": true
+      },
+      "cg-adaptive-jacobi": {
+        "recurrent_residuals": [
+          3.781932919048739,
+          0.8598757764348803
+        ],
+        "true_residuals": [
+          3.781932919048739,
+          0.8598757764348803
+        ],
+        "rhs_norm": 3.781932919048739,
+        "generate": {
+          "components": {
+            "allocate": 1345100,
+            "copy": 95905,
+            "free": 165067,
+            "jacobi::find_blocks#4": 142093,
+            "jacobi::generate#9": 430540,
+            "jacobi::initialize_precisions#2": 26597
+          },
+          "time": 2366629
+        },
+        "apply": {
+          "components": {
+            "allocate": 609262,
+            "cg::initialize#8": 19073,
+            "cg::step_1#5": 17106,
+            "cg::step_2#7": 18933,
+            "copy": 270985,
+            "csr::advanced_spmv#5": 85209,
+            "csr::spmv#3": 33678,
+            "dense::compute_dot#3": 119209,
+            "dense::compute_norm2#2": 414255,
+            "free": 555267,
+            "jacobi::simple_apply#8": 59138,
+            "residual_norm_reduction::residual_norm_reduction#9": 94287,
+            "set_all_statuses::set_all_statuses#3": 17083
+          },
+          "iterations": 1,
+          "time": 851390
+        },
+        "preconditioner": {
+          "block_sizes": [
+            32,
+            16
+          ],
+          "block_precisions": [
+            2,
+            2
+          ],
+          "block_conditioning": [
+            5.72097668928814,
+            3.4371102120492756
+          ]
+        },
+        "residual_norm": 0.8598757764348803,
+        "completed": true
+      }
+    }
+  }
 ]

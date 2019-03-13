@@ -1,106 +1,343 @@
 [
-    {
-        "filename": "/gpfs/alpine/scratch/hanzt1/csc336/ssget/MM/HB/plat362/plat362.mtx",
-        "problem": {
-            "id": 229,
-            "group": "HB",
-            "name": "plat362",
-            "rows": 362,
-            "cols": 362,
-            "nonzeros": 5786,
-            "real": true,
-            "binary": false,
-            "2d3d": true,
-            "posdef": true,
-            "psym": 1,
-            "nsym": 1,
-            "kind": "2D/3D problem",
-            "row_distribution": {
-                "min": 4,
-                "q1": 14.0,
-                "median": 17.0,
-                "q3": 19.0,
-                "max": 19,
-                "mean": 15.98342541436464,
-                "variance": 11.126797106315385,
-                "skewness": -1.1265206224125624,
-                "kurtosis": 3.32346624628132,
-                "hyperskewness": -7.264002182515543,
-                "hyperflatness": 19.3200078602648
-            },
-            "col_distribution": {
-                "min": 4,
-                "q1": 14.0,
-                "median": 17.0,
-                "q3": 19.0,
-                "max": 19,
-                "mean": 15.98342541436464,
-                "variance": 11.126797106315385,
-                "skewness": -1.1265206224125624,
-                "kurtosis": 3.32346624628132,
-                "hyperskewness": -7.264002182515543,
-                "hyperflatness": 19.3200078602648
-            }
+  {
+    "filename": "/gpfs/alpine/scratch/hanzt1/csc336/ssget/MM/HB/plat362/plat362.mtx",
+    "problem": {
+      "id": 229,
+      "group": "HB",
+      "name": "plat362",
+      "rows": 362,
+      "cols": 362,
+      "nonzeros": 5786,
+      "real": true,
+      "binary": false,
+      "2d3d": true,
+      "posdef": true,
+      "psym": 1,
+      "nsym": 1,
+      "kind": "2D/3D problem",
+      "row_distribution": {
+        "min": 4,
+        "q1": 14,
+        "median": 17,
+        "q3": 19,
+        "max": 19,
+        "mean": 15.98342541436464,
+        "variance": 11.126797106315385,
+        "skewness": -1.1265206224125623,
+        "kurtosis": 3.32346624628132,
+        "hyperskewness": -7.264002182515543,
+        "hyperflatness": 19.3200078602648
+      },
+      "col_distribution": {
+        "min": 4,
+        "q1": 14,
+        "median": 17,
+        "q3": 19,
+        "max": 19,
+        "mean": 15.98342541436464,
+        "variance": 11.126797106315385,
+        "skewness": -1.1265206224125623,
+        "kurtosis": 3.32346624628132,
+        "hyperskewness": -7.264002182515543,
+        "hyperflatness": 19.3200078602648
+      }
+    },
+    "spmv": {
+      "csr": {
+        "storage": 70884,
+        "time": 27687.2,
+        "completed": true
+      }
+    },
+    "optimal": {
+      "spmv": "csr"
+    },
+    "solver": {
+      "cg": {
+        "recurrent_residuals": [],
+        "true_residuals": [],
+        "rhs_norm": 10.819888206244505,
+        "generate": {
+          "components": {},
+          "time": 22184
         },
-        "spmv": {
-            "csr": {
-                "storage": 70884,
-                "time": 27687.2,
-                "completed": true
-            }
+        "apply": {
+          "components": {},
+          "iterations": 10000,
+          "time": 2000077821
         },
-        "optimal": {
-            "spmv": "csr"
+        "residual_norm": 0.00013807162956829978,
+        "completed": true
+      },
+      "cg-jacobi": {
+        "recurrent_residuals": [],
+        "true_residuals": [],
+        "rhs_norm": 10.819888206244505,
+        "generate": {
+          "components": {},
+          "time": 159800317
         },
-        "solver": {
-            "cg": {
-                "recurrent_residuals": [],
-                "true_residuals": [],
-                "rhs_norm": 10.819888206244505,
-                "generate": {
-                    "components": {},
-                    "time": 22184
-                },
-                "apply": {
-                    "components": {},
-                    "iterations": 10000,
-                    "time": 2000077821
-                },
-                "residual_norm": 0.00013807162956829978,
-                "completed": true
-            },
-            "cg-jacobi": {
-                "recurrent_residuals": [],
-                "true_residuals": [],
-                "rhs_norm": 10.819888206244505,
-                "generate": {
-                    "components": {},
-                    "time": 159800317
-                },
-                "apply": {
-                    "components": {},
-                    "iterations": 10000,
-                    "time": 1808286346
-                },
-                "residual_norm": 302.6391808034662,
-                "completed": true
-            },
-            "cg-adaptive-jacobi": {
-                "recurrent_residuals": [],
-                "true_residuals": [],
-                "rhs_norm": 10.819888206244505,
-                "generate": {
-                    "components": {},
-                    "time": 5850343
-                },
-                "apply": {
-                    "components": {},
-                    "iterations": 10000,
-                    "time": 2128104879
-                },
-                "residual_norm": 380.87778136690175,
-                "completed": true
-            }
-        }
+        "apply": {
+          "components": {},
+          "iterations": 10000,
+          "time": 1808286346
+        },
+        "residual_norm": 302.6391808034662,
+        "completed": true
+      },
+      "cg-adaptive-jacobi": {
+        "recurrent_residuals": [],
+        "true_residuals": [],
+        "rhs_norm": 10.819888206244505,
+        "generate": {
+          "components": {},
+          "time": 5850343
+        },
+        "apply": {
+          "components": {},
+          "iterations": 10000,
+          "time": 2128104879
+        },
+        "residual_norm": 380.87778136690173,
+        "completed": true
+      }
     }
+  },
+  {
+    "filename": "/gpfs/alpine/scratch/hanzt1/csc336/ssget/MM/HB/plat362/plat362.mtx",
+    "problem": {
+      "id": 229,
+      "group": "HB",
+      "name": "plat362",
+      "rows": 362,
+      "cols": 362,
+      "nonzeros": 5786,
+      "real": true,
+      "binary": false,
+      "2d3d": true,
+      "posdef": true,
+      "psym": 1,
+      "nsym": 1,
+      "kind": "2D/3D problem",
+      "row_distribution": {
+        "min": 4,
+        "q1": 14,
+        "median": 17,
+        "q3": 19,
+        "max": 19,
+        "mean": 15.98342541436464,
+        "variance": 11.126797106315385,
+        "skewness": -1.1265206224125623,
+        "kurtosis": 3.32346624628132,
+        "hyperskewness": -7.264002182515543,
+        "hyperflatness": 19.3200078602648
+      },
+      "col_distribution": {
+        "min": 4,
+        "q1": 14,
+        "median": 17,
+        "q3": 19,
+        "max": 19,
+        "mean": 15.98342541436464,
+        "variance": 11.126797106315385,
+        "skewness": -1.1265206224125623,
+        "kurtosis": 3.32346624628132,
+        "hyperskewness": -7.264002182515543,
+        "hyperflatness": 19.3200078602648
+      }
+    },
+    "spmv": {
+      "csr": {
+        "storage": 70884,
+        "time": 26862.5,
+        "completed": true
+      }
+    },
+    "optimal": {
+      "spmv": "csr"
+    },
+    "solver": {
+      "cg": {
+        "recurrent_residuals": [
+          10.819888206244505,
+          11.639267409589293
+        ],
+        "true_residuals": [
+          10.819888206244505,
+          11.639267409589294
+        ],
+        "rhs_norm": 10.819888206244505,
+        "generate": {
+          "components": {},
+          "time": 14446
+        },
+        "apply": {
+          "components": {
+            "allocate": 601247,
+            "cg::initialize#8": 44628,
+            "cg::step_1#5": 22116,
+            "cg::step_2#7": 22635,
+            "copy": 352179,
+            "csr::advanced_spmv#5": 168174,
+            "csr::spmv#3": 40645,
+            "dense::compute_dot#3": 134907,
+            "dense::compute_norm2#2": 437053,
+            "free": 588377,
+            "residual_norm_reduction::residual_norm_reduction#9": 111682,
+            "set_all_statuses::set_all_statuses#3": 26590
+          },
+          "iterations": 1,
+          "time": 877803
+        },
+        "preconditioner": {},
+        "residual_norm": 11.639267409589294,
+        "completed": true
+      },
+      "cg-jacobi": {
+        "recurrent_residuals": [
+          10.819888206244505,
+          12.720134832130006
+        ],
+        "true_residuals": [
+          10.819888206244505,
+          12.720134832130007
+        ],
+        "rhs_norm": 10.819888206244505,
+        "generate": {
+          "components": {
+            "allocate": 1213954,
+            "copy": 90251,
+            "free": 151215,
+            "jacobi::find_blocks#4": 220771,
+            "jacobi::generate#9": 215413
+          },
+          "time": 1470428
+        },
+        "apply": {
+          "components": {
+            "allocate": 587433,
+            "cg::initialize#8": 20526,
+            "cg::step_1#5": 17762,
+            "cg::step_2#7": 19034,
+            "copy": 283802,
+            "csr::advanced_spmv#5": 94640,
+            "csr::spmv#3": 35468,
+            "dense::compute_dot#3": 124063,
+            "dense::compute_norm2#2": 431200,
+            "free": 580818,
+            "jacobi::simple_apply#8": 73022,
+            "residual_norm_reduction::residual_norm_reduction#9": 95883,
+            "set_all_statuses::set_all_statuses#3": 17416
+          },
+          "iterations": 1,
+          "time": 866011
+        },
+        "preconditioner": {
+          "block_sizes": [
+            32,
+            32,
+            32,
+            32,
+            32,
+            32,
+            32,
+            32,
+            32,
+            32,
+            32,
+            10
+          ]
+        },
+        "residual_norm": 12.720134832130007,
+        "completed": true
+      },
+      "cg-adaptive-jacobi": {
+        "recurrent_residuals": [
+          10.819888206244505,
+          12.719890443058526
+        ],
+        "true_residuals": [
+          10.819888206244505,
+          12.719890443058526
+        ],
+        "rhs_norm": 10.819888206244505,
+        "generate": {
+          "components": {
+            "allocate": 868396,
+            "copy": 111392,
+            "free": 174061,
+            "jacobi::find_blocks#4": 186509,
+            "jacobi::generate#9": 381201,
+            "jacobi::initialize_precisions#2": 27524
+          },
+          "time": 1490086
+        },
+        "apply": {
+          "components": {
+            "allocate": 613236,
+            "cg::initialize#8": 20436,
+            "cg::step_1#5": 17815,
+            "cg::step_2#7": 18829,
+            "copy": 290528,
+            "csr::advanced_spmv#5": 93646,
+            "csr::spmv#3": 35781,
+            "dense::compute_dot#3": 127454,
+            "dense::compute_norm2#2": 447810,
+            "free": 601427,
+            "jacobi::simple_apply#8": 59348,
+            "residual_norm_reduction::residual_norm_reduction#9": 98281,
+            "set_all_statuses::set_all_statuses#3": 19343
+          },
+          "iterations": 1,
+          "time": 980223
+        },
+        "preconditioner": {
+          "block_sizes": [
+            32,
+            32,
+            32,
+            32,
+            32,
+            32,
+            32,
+            32,
+            32,
+            32,
+            32,
+            10
+          ],
+          "block_precisions": [
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            2,
+            1,
+            2,
+            2
+          ],
+          "block_conditioning": [
+            56.33221410812012,
+            35.59147673030356,
+            54.57193756936177,
+            119.08463551383736,
+            206.16230327426612,
+            82.69026827793189,
+            69.04993082494322,
+            59.76360884296449,
+            18.66438310509115,
+            29.01819023980244,
+            19.64161278371479,
+            12.22543980642556
+          ]
+        },
+        "residual_norm": 12.719890443058526,
+        "completed": true
+      }
+    }
+  }
 ]
