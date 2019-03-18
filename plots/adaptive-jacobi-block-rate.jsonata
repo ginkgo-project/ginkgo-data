@@ -1,0 +1,155 @@
+(
+$labels := [
+      "bcsstk36",
+      "ct20stif",
+      "msc10848",
+      "msc23052",
+      "pwtk",
+      "nasasrb",
+      "cfd1",
+      "cfd2",
+      "olafu",
+      "raefsky4",
+      "nd3k",
+      "nd6k",
+      "nd12k",
+      "nd24k",
+      "af_shell3",
+      "af_shell4",
+      "af_shell7",
+      "af_shell8",
+      "gyro_k",
+      "audikw_1",
+      "bmw7st_1",
+      "bmwcra_1",
+      "crankseg_1",
+      "crankseg_2",
+      "hood",
+      "inline_1",
+      "ldoor",
+      "m_t1",
+      "oilpan",
+      "s3dkq4m2",
+      "s3dkt3m2",
+      "ship_001",
+      "ship_003",
+      "shipsec1",
+      "shipsec5",
+      "shipsec8",
+      "thread",
+      "vanbody",
+      "x104",
+      "thermal2",
+      "G3_circuit",
+      "apache2",
+      "gyro",
+      "bone010",
+      "boneS01",
+      "boneS10",
+      "af_0_k101",
+      "af_1_k101",
+      "af_2_k101",
+      "af_3_k101",
+      "af_4_k101",
+      "af_5_k101",
+      "msdoor",
+      "Dubcova2",
+      "Dubcova3",
+      "BenElechi1",
+      "parabolic_fem",
+      "ecology2",
+      "denormal",
+      "tmt_sym",
+      "smt",
+      "offshore",
+      "pdb1HYS",
+      "consph",
+      "cant",
+      "Serena",
+      "Emilia_923",
+      "Fault_639",
+      "Flan_1565",
+      "Geo_1438",
+      "Hook_1498",
+      "StocF-1465",
+      "Bump_2911",
+      "Queen_4147",
+      "PFlow_742",
+      "bundle_adj"
+    ];
+$data := content[
+        dataset.system="V100_summit" and
+        solver.`cg-jacobi`.apply.iterations = 1 and
+        solver.`cg-adaptive-jacobi`.apply.iterations = 1 and
+        solver.`cg`.apply.iterations = 1 and
+        problem.name in $labels
+    ].{
+    "id": problem.id,
+    "label": problem.name,
+    "adaptive-jacobi": solver.`cg-adaptive-jacobi`.{
+        "total": $count(preconditioner.block_precisions),
+        "red0": $count($filter(preconditioner.block_precisions, function($v) { $v = 0 })),
+        "red1": $count($filter(preconditioner.block_precisions, function($v) { $v = 1 })),
+        "red2": $count($filter(preconditioner.block_precisions, function($v) { $v = 2 }))
+    }
+}^(id);
+
+{
+    "type": "bar",
+    "data": {
+        "labels": $data.label,
+        "datasets": [
+            {
+                "label": "double precision",
+                "data": $data."adaptive-jacobi".(red0 / total),
+                "backgroundColor": "hsl(0,55%,45%)",
+                "borderColor": "hsl(0,55%,45%)",
+                "fill": true
+            },
+            {
+                "label": "single precision",
+                "data": $data."adaptive-jacobi".(red1 / total),
+                "backgroundColor": "hsl(120,55%,45%)",
+                "borderColor": "hsl(120,55%,45%)",
+                "fill": true
+            },
+            {
+                "label": "half precision",
+                "data": $data."adaptive-jacobi".(red2 / total),
+                "backgroundColor": "hsl(240,55%,45%)",
+                "borderColor": "hsl(240,55%,45%)",
+                "fill": true
+            }
+        ]
+    },
+    "options": {
+        "title": {
+            "display": true,
+            "text": "Block precision distribution of Adaptive Block Jacobi"
+        },
+        "scales": {
+            "xAxes": [{
+                "scaleLabel": {
+                    "display": true,
+                    "labelString": "Problem"
+                },
+                "ticks": {
+                    "autoSkip": false
+                },
+                "stacked": true
+            }],
+            "yAxes": [{
+                "scaleLabel": {
+                    "display": true,
+                    "labelString": "Block distribution"
+                },
+                "ticks": {
+                    "autoSkip": false
+                },
+                "stacked": true
+            }]
+        },
+        "tooltips": { "mode": "index" }
+    }
+}
+)
