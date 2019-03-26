@@ -45,7 +45,7 @@
     "spmv": {
       "csr": {
         "storage": 8908,
-        "time": 27478.9,
+        "time": 27607.2,
         "completed": true
       }
     },
@@ -59,12 +59,12 @@
         "rhs_norm": 6.584417931698306,
         "generate": {
           "components": {},
-          "time": 21250
+          "time": 30850
         },
         "apply": {
           "components": {},
           "iterations": 412,
-          "time": 83249979
+          "time": 82882438
         },
         "residual_norm": 3.0852487571081707e-10,
         "completed": true
@@ -75,12 +75,12 @@
         "rhs_norm": 6.584417931698306,
         "generate": {
           "components": {},
-          "time": 829118
+          "time": 848185
         },
         "apply": {
           "components": {},
           "iterations": 62,
-          "time": 12960723
+          "time": 12840072
         },
         "residual_norm": 1.4465469422558595e-10,
         "completed": true
@@ -91,14 +91,14 @@
         "rhs_norm": 6.584417931698306,
         "generate": {
           "components": {},
-          "time": 906339
+          "time": 890443
         },
         "apply": {
           "components": {},
           "iterations": 62,
-          "time": 12891587
+          "time": 12780268
         },
-        "residual_norm": 1.4486212398014323e-10,
+        "residual_norm": 1.495717226315103e-10,
         "completed": true
       }
     }
@@ -149,7 +149,7 @@
     "spmv": {
       "csr": {
         "storage": 8908,
-        "time": 26420.4,
+        "time": 25895.3,
         "completed": true
       }
     },
@@ -169,25 +169,25 @@
         "rhs_norm": 6.584417931698306,
         "generate": {
           "components": {},
-          "time": 13966
+          "time": 16451
         },
         "apply": {
           "components": {
-            "allocate": 578280,
-            "cg::initialize#8": 54635,
-            "cg::step_1#5": 25837,
-            "cg::step_2#7": 23956,
-            "copy": 336003,
-            "csr::advanced_spmv#5": 190646,
-            "csr::spmv#3": 43854,
-            "dense::compute_dot#3": 136752,
-            "dense::compute_norm2#2": 420422,
-            "free": 555360,
-            "residual_norm_reduction::residual_norm_reduction#9": 115326,
-            "set_all_statuses::set_all_statuses#3": 30618
+            "allocate": 1112040,
+            "cg::initialize#8": 140178,
+            "cg::step_1#5": 27635,
+            "cg::step_2#7": 55053,
+            "copy": 666170,
+            "csr::advanced_spmv#5": 304089,
+            "csr::spmv#3": 49320,
+            "dense::compute_dot#3": 208253,
+            "dense::compute_norm2#2": 525653,
+            "free": 764883,
+            "residual_norm_reduction::residual_norm_reduction#9": 126815,
+            "set_all_statuses::set_all_statuses#3": 36645
           },
           "iterations": 1,
-          "time": 833552
+          "time": 1259718
         },
         "preconditioner": {},
         "residual_norm": 10.78961432677486,
@@ -205,32 +205,32 @@
         "rhs_norm": 6.584417931698306,
         "generate": {
           "components": {
-            "allocate": 198834,
-            "copy": 73564,
-            "free": 154442,
-            "jacobi::find_blocks#4": 201438,
-            "jacobi::generate#9": 216346
+            "allocate": 333939,
+            "copy": 126292,
+            "free": 229258,
+            "jacobi::find_blocks#4": 323792,
+            "jacobi::generate#9": 223173
           },
-          "time": 548511
+          "time": 834110
         },
         "apply": {
           "components": {
-            "allocate": 565348,
-            "cg::initialize#8": 19232,
-            "cg::step_1#5": 17088,
-            "cg::step_2#7": 18702,
-            "copy": 274055,
-            "csr::advanced_spmv#5": 86201,
-            "csr::spmv#3": 33644,
-            "dense::compute_dot#3": 118626,
-            "dense::compute_norm2#2": 423606,
-            "free": 554967,
-            "jacobi::simple_apply#8": 76433,
-            "residual_norm_reduction::residual_norm_reduction#9": 95287,
-            "set_all_statuses::set_all_statuses#3": 17185
+            "allocate": 679831,
+            "cg::initialize#8": 19092,
+            "cg::step_1#5": 45574,
+            "cg::step_2#7": 51840,
+            "copy": 343708,
+            "csr::advanced_spmv#5": 98378,
+            "csr::spmv#3": 44559,
+            "dense::compute_dot#3": 266347,
+            "dense::compute_norm2#2": 560684,
+            "free": 697307,
+            "jacobi::simple_apply#8": 125348,
+            "residual_norm_reduction::residual_norm_reduction#9": 154129,
+            "set_all_statuses::set_all_statuses#3": 21033
           },
           "iterations": 1,
-          "time": 823965
+          "time": 1128908
         },
         "preconditioner": {
           "block_sizes": [
@@ -247,42 +247,42 @@
       "cg-adaptive-jacobi": {
         "recurrent_residuals": [
           6.584417931698306,
-          15.1385324336542
+          15.138703439602338
         ],
         "true_residuals": [
           6.584417931698306,
-          15.138532433654198
+          15.13870343960234
         ],
         "rhs_norm": 6.584417931698306,
         "generate": {
           "components": {
-            "allocate": 261082,
-            "copy": 95095,
-            "free": 164301,
-            "jacobi::find_blocks#4": 150240,
-            "jacobi::generate#9": 316639,
-            "jacobi::initialize_precisions#2": 23962
+            "allocate": 359021,
+            "copy": 102674,
+            "free": 298965,
+            "jacobi::find_blocks#4": 235632,
+            "jacobi::generate#9": 317642,
+            "jacobi::initialize_precisions#2": 26195
           },
-          "time": 714412
+          "time": 836411
         },
         "apply": {
           "components": {
-            "allocate": 560792,
-            "cg::initialize#8": 18734,
-            "cg::step_1#5": 17132,
-            "cg::step_2#7": 18888,
-            "copy": 282064,
-            "csr::advanced_spmv#5": 85981,
-            "csr::spmv#3": 34172,
-            "dense::compute_dot#3": 118209,
-            "dense::compute_norm2#2": 417770,
-            "free": 553037,
-            "jacobi::simple_apply#8": 56368,
-            "residual_norm_reduction::residual_norm_reduction#9": 95451,
-            "set_all_statuses::set_all_statuses#3": 16583
+            "allocate": 876911,
+            "cg::initialize#8": 22314,
+            "cg::step_1#5": 33743,
+            "cg::step_2#7": 19993,
+            "copy": 351004,
+            "csr::advanced_spmv#5": 148282,
+            "csr::spmv#3": 84858,
+            "dense::compute_dot#3": 210156,
+            "dense::compute_norm2#2": 605576,
+            "free": 957117,
+            "jacobi::simple_apply#8": 64400,
+            "residual_norm_reduction::residual_norm_reduction#9": 148357,
+            "set_all_statuses::set_all_statuses#3": 42363
           },
           "iterations": 1,
-          "time": 826170
+          "time": 1274069
         },
         "preconditioner": {
           "block_sizes": [
@@ -297,7 +297,7 @@
             1,
             1,
             1,
-            1
+            2
           ],
           "block_conditioning": [
             249.24850753912716,
@@ -307,7 +307,7 @@
             82.97086769220732
           ]
         },
-        "residual_norm": 15.138532433654198,
+        "residual_norm": 15.13870343960234,
         "completed": true
       }
     }
