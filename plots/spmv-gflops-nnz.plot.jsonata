@@ -1,11 +1,22 @@
 (
 "Select the system name and executor to show the results for:";
-$data := content[dataset.system="P100" and dataset.executor="cuda"];
+$system := "V100";
+$executor := "cuda";
+$data := content[dataset.system=$system and dataset.executor=$executor];
+$lib := $contains($executor, "cuda") ? "cusp" : "hipsp";
+$turn_format := function ($str, $lib) {
+    $replace($str, /sparselib|splib|cusp|hipsp/, $lib)
+};
+$formats := ["coo", "csr", "ell", "hybrid", "sellp",
+  $turn_format("splib_coo", $lib),
+  $turn_format("splib_csr", $lib),
+  $turn_format("splib_ell", $lib),
+  $turn_format("splib_hybrid", $lib)];
+
 $getColor := function($num_colors, $id) {
   "hsl(" & $floor(360 * $id / $num_colors) & ",40%,55%)"
 };
 
-$formats := $data.spmv~>$keys();
 $plot_data := $formats~>$map(function($v, $i) {{
   "label": $v,
   "data": $data.{

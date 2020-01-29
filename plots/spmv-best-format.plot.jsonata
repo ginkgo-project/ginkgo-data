@@ -1,5 +1,5 @@
 (
-$data := content[dataset.system="P100" and dataset.executor="cuda"];
+$data := content[dataset.system="V100" and dataset.executor="cuda"];
 $formats := $data.spmv~>$keys();
 $counts := $formats~>$map(function($v) {
   $data.optimal[spmv = $v]~>$count()
