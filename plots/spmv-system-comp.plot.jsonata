@@ -1,0 +1,68 @@
+(
+"Select the format:";
+$format := "splib_coo";
+$data_hip := content[dataset.system = "RadeonVII" and dataset.executor = "hip"]^(problem.id);
+$data_cuda := content[dataset.system = "V100" and dataset.executor = "cuda"]^(problem.id);
+$getColor := function ($num_colors, $id) {
+  "hsl(" & $floor(360 * $id / $num_colors) & ",40%,55%)"
+};
+$turn_format := function ($str, $lib) {
+  $replace($str, /sparselib|splib|cusp|hipsp/, $lib)
+};
+
+$format_hip := $turn_format($format, "hipsp");
+$format_cuda := $turn_format($format, "cusp");
+
+$data := $zip($data_hip, $data_cuda);
+
+$plot_data := $map($data, function ($v) {
+  {
+    "x": $v[0].problem.nonzeros,
+    "y": ($v[0].problem.group = $v[1].problem.group and $v[0].problem.name = $v[1].problem.name) ? ($v[1].spmv~> $lookup($format_cuda)).time / ($v[0].spmv~> $lookup($format_hip)).time: null
+  }
+});
+
+{
+  "type": "scatter",
+  "data": {
+    "datasets": [
+      {
+        "label": "RadeonVII is faster",
+        "data": $plot_data[y >= 1],
+        "backgroundColor": "hsl(0,40%,55%)"
+      },
+      {
+        "label": "V100 is faster",
+        "data": $plot_data[y < 1],
+        "backgroundColor": "hsl(120,40%,55%)"
+      }
+    ]
+  },
+  "options": {
+    "title": {
+      "display": true,
+      "text": $turn_format($format, "splib") & " : Speedup vs Nonzero Count"
+    },
+    "tooltips": {
+      "mode": "index",
+      "intersect": true
+    },
+    "scales": {
+      "xAxes": [{
+        "type": "logarithmic",
+          "scaleLabel": {
+            "display": true,
+            "labelString": "Nonzero Count"
+            }
+          }],
+      "yAxes": [{
+        "type": "logarithmic",
+        "scaleLabel": {
+          "display": true,
+          "labelString": "Speedup"
+        }
+      }]
+    }
+  }
+}
+)
