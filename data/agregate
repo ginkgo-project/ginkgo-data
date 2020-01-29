@@ -14,7 +14,7 @@ def main():
     datasets = json.load(sys.stdin)
     result = []
     for dataset in datasets:
-        if dataset['file'] == 'agregate.json':
+        if dataset['file'] == 'agregate.json' or dataset['file'] == 'represent.json':
             continue
         try:
             with open(dataset['file'], 'r') as f:

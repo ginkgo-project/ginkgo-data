@@ -1,0 +1,45 @@
+#!/usr/bin/env python3
+
+from __future__ import with_statement
+import json
+import sys
+from pathlib import PurePath, Path
+
+
+def main():
+    if (len(sys.argv)) != 2:
+        sys.stderr.write("Usage: {} path\n".format(sys.argv[0]))
+        sys.exit(1)
+    properties = { 'file', 'problem', 'spmv', 'optimal' }
+    represent_list = list()
+    try:
+        with open("represent.list") as f:
+            represent_list = f.read().splitlines()
+    except EnvironmentError:
+        sys.stderr.write("Can not find represent.list\n")
+        sys.exit(1)
+    result = []
+    for path in Path(sys.argv[1]).glob('*/*/SuiteSparse'):
+        for rel_path in represent_list:
+            filename = str(path) + '/' + rel_path + '.json'
+            try:
+                with open(filename, 'r') as f:
+                    data = json.load(f)
+                parts = PurePath(filename).parts
+                for item in data:
+                    represent = { k : item[k]
+                        for k in item.keys() & properties }
+                    represent['dataset'] = {
+                        'system': parts[0],
+                        'executor': parts[1],
+                        'provider': parts[2],
+                        'collection': parts[3],
+                        'problem': parts[4]
+                    }
+                    result.append(represent)
+            except:
+                pass
+    json.dump(result, sys.stdout)
+
+if __name__ == "__main__":
+    main()
