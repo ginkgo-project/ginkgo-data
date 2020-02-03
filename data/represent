@@ -10,7 +10,7 @@ def main():
     if (len(sys.argv)) != 2:
         sys.stderr.write("Usage: {} path\n".format(sys.argv[0]))
         sys.exit(1)
-    properties = { 'file', 'problem', 'spmv', 'optimal' }
+    properties = { 'file', 'problem', 'spmv', 'optimal', 'solver' }
     represent_list = list()
     try:
         with open("represent.list") as f:
@@ -22,10 +22,10 @@ def main():
     for path in Path(sys.argv[1]).glob('*/*/SuiteSparse'):
         for rel_path in represent_list:
             filename = str(path) + '/' + rel_path + '.json'
+            parts = PurePath(filename).parts
             try:
                 with open(filename, 'r') as f:
                     data = json.load(f)
-                parts = PurePath(filename).parts
                 for item in data:
                     represent = { k : item[k]
                         for k in item.keys() & properties }
@@ -38,7 +38,16 @@ def main():
                     }
                     result.append(represent)
             except:
-                pass
+                # Provide a empty element
+                represent = dict()
+                represent['dataset'] = {
+                    'system': parts[0],
+                    'executor': parts[1],
+                    'provider': parts[2],
+                    'collection': parts[3],
+                    'problem': parts[4]
+                }
+                result.append(represent)
     json.dump(result, sys.stdout)
 
 if __name__ == "__main__":
