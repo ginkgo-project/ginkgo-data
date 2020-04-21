@@ -1,6 +1,6 @@
 [
     {
-        "filename": "/gpfs/work/slkit/slkit003/ssget/MM/Freescale/FullChip/FullChip.mtx",
+        "filename": "/home/kit/scc/pw7656/.config/ssget/MM/Freescale/FullChip/FullChip.mtx",
         "problem": {
             "id": 2380,
             "group": "Freescale",
@@ -43,32 +43,97 @@
             }
         },
         "spmv": {
-            "csr": {
-                "storage": 331411848,
-                "time": 311064129.8,
-                "completed": true
-            },
             "coo": {
                 "storage": 425951728,
-                "time": 1043184.8,
+                "max_relative_norm2": 6.591546132671465e-17,
+                "time": 1203384.7,
                 "completed": true
-            },
-            "hybrid": {
-                "storage": 431835344,
-                "time": 821981.2,
-                "completed": true
-            },
-            "sellp": {
-                "storage": 2428594456,
-                "time": 1411496460.4,
-                "completed": true
-            },
-            "ell": {
-                "completed": false
             }
         },
         "optimal": {
-            "spmv": "hybrid"
+            "spmv": "coo"
+        },
+        "solver": {
+            "bicgstab": {
+                "recurrent_residuals": [],
+                "true_residuals": [],
+                "rhs_norm": 997.896083904076,
+                "generate": {
+                    "components": {},
+                    "time": 6092.0
+                },
+                "apply": {
+                    "components": {},
+                    "iterations": 10000,
+                    "time": 16261694533.0
+                },
+                "residual_norm": 219325.6063253685,
+                "completed": true
+            },
+            "cg": {
+                "recurrent_residuals": [],
+                "true_residuals": [],
+                "rhs_norm": 997.896083904076,
+                "generate": {
+                    "components": {},
+                    "time": 6589.0
+                },
+                "apply": {
+                    "components": {},
+                    "iterations": 10000,
+                    "time": 16669037922.0
+                },
+                "residual_norm": 39528719920.87434,
+                "completed": true
+            },
+            "cgs": {
+                "recurrent_residuals": [],
+                "true_residuals": [],
+                "rhs_norm": 997.896083904076,
+                "generate": {
+                    "components": {},
+                    "time": 5474.0
+                },
+                "apply": {
+                    "components": {},
+                    "iterations": 10000,
+                    "time": 15748551651.0
+                },
+                "residual_norm": 5194112614759.45,
+                "completed": true
+            },
+            "fcg": {
+                "recurrent_residuals": [],
+                "true_residuals": [],
+                "rhs_norm": 997.896083904076,
+                "generate": {
+                    "components": {},
+                    "time": 5480.0
+                },
+                "apply": {
+                    "components": {},
+                    "iterations": 10000,
+                    "time": 17420476302.0
+                },
+                "residual_norm": 2319985.552333691,
+                "completed": true
+            },
+            "gmres": {
+                "recurrent_residuals": [],
+                "true_residuals": [],
+                "rhs_norm": 997.896083904076,
+                "generate": {
+                    "components": {},
+                    "time": 6765.0
+                },
+                "apply": {
+                    "components": {},
+                    "iterations": 10000,
+                    "time": 547537599942.0
+                },
+                "residual_norm": 995.869067415343,
+                "completed": true
+            }
         }
     }
 ]

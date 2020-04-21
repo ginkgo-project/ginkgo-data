@@ -1,6 +1,6 @@
 [
     {
-        "filename": "/gpfs/work/slkit/slkit003/ssget/MM/Freescale/circuit5M/circuit5M.mtx",
+        "filename": "/home/kit/scc/pw7656/.config/ssget/MM/Freescale/circuit5M/circuit5M.mtx",
         "problem": {
             "id": 2276,
             "group": "Freescale",
@@ -43,32 +43,97 @@
             }
         },
         "spmv": {
-            "csr": {
-                "storage": 736524800,
-                "time": 179418196.6,
-                "completed": true
-            },
             "coo": {
                 "storage": 952388656,
-                "time": 2338476.9,
+                "max_relative_norm2": 1.713502300375854e-19,
+                "time": 2659603.7,
                 "completed": true
-            },
-            "hybrid": {
-                "storage": 842061144,
-                "time": 1824015.8,
-                "completed": true
-            },
-            "sellp": {
-                "storage": 5186916376,
-                "time": 807504282.0,
-                "completed": true
-            },
-            "ell": {
-                "completed": false
             }
         },
         "optimal": {
-            "spmv": "hybrid"
+            "spmv": "coo"
+        },
+        "solver": {
+            "bicgstab": {
+                "recurrent_residuals": [],
+                "true_residuals": [],
+                "rhs_norm": 1361.36345261302,
+                "generate": {
+                    "components": {},
+                    "time": 8204.0
+                },
+                "apply": {
+                    "components": {},
+                    "iterations": 10000,
+                    "time": 34082645608.0
+                },
+                "residual_norm": 17670874.196952486,
+                "completed": true
+            },
+            "cg": {
+                "recurrent_residuals": [],
+                "true_residuals": [],
+                "rhs_norm": 1361.36345261302,
+                "generate": {
+                    "components": {},
+                    "time": 5436.0
+                },
+                "apply": {
+                    "components": {},
+                    "iterations": 10000,
+                    "time": 34927520624.0
+                },
+                "residual_norm": 5607543.10103048,
+                "completed": true
+            },
+            "cgs": {
+                "recurrent_residuals": [],
+                "true_residuals": [],
+                "rhs_norm": 1361.36345261302,
+                "generate": {
+                    "components": {},
+                    "time": 6018.0
+                },
+                "apply": {
+                    "components": {},
+                    "iterations": 10000,
+                    "time": 33262588964.0
+                },
+                "residual_norm": 3209331714840.649,
+                "completed": true
+            },
+            "fcg": {
+                "recurrent_residuals": [],
+                "true_residuals": [],
+                "rhs_norm": 1361.36345261302,
+                "generate": {
+                    "components": {},
+                    "time": 6209.0
+                },
+                "apply": {
+                    "components": {},
+                    "iterations": 10000,
+                    "time": 36399768381.0
+                },
+                "residual_norm": 98877.3352998802,
+                "completed": true
+            },
+            "gmres": {
+                "recurrent_residuals": [],
+                "true_residuals": [],
+                "rhs_norm": 1361.36345261302,
+                "generate": {
+                    "components": {},
+                    "time": 8865.0
+                },
+                "apply": {
+                    "components": {},
+                    "iterations": 10000,
+                    "time": 1029088933965.0
+                },
+                "residual_norm": 1315.268540856371,
+                "completed": true
+            }
         }
     }
 ]
