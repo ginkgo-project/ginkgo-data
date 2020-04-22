@@ -1,0 +1,75 @@
+(
+"Select the system name and executor to show the results for:";
+$data_hip := content[dataset.executor="hip"];
+$data_cuda := content[dataset.executor="cuda"];
+
+$solvers_hip := $data_hip.solver~>$keys();
+$solvers_cuda := $data_cuda.solver~>$keys();
+
+$matrices := [
+"rajat31",
+"atmosmodj",
+"nlpkkt160",
+"thermal2",
+"CurlCurl_4",
+"Bump_2911",
+"Cube_Coup_dt0",
+"StocF-1465",
+"circuit5M",
+"FullChip"];
+
+$getColor := function($num_colors, $id) {
+  "hsl(" & $floor(360 * $id / $num_colors) & ",40%,55%)"
+};
+
+
+$flops := function($name, $n, $nnz, $loops) {
+  ($name = "bicgstab" ? ((5*$n + 2*$nnz)*8 + 2*$nnz*4 + $loops*((29*$n + 4*$nnz)*8 + 4*$nnz*4)) :
+    $name = "cg" ? ((4*$n + 2*$nnz)*8 + 2*$nnz*4 + $loops*((15*$n + 2*$nnz)*8 + 2*$nnz*4)) :
+    $name = "cgs" ? ((5*$n + 2*$nnz)*8 + 2*$nnz*4 + $loops*((20*$n + 4*$nnz)*8 + 4*$nnz*4)) :
+    $name = "fcg" ? ((4*$n + 2*$nnz)*8 + 2*$nnz*4 + $loops*((17*$n + 2*$nnz)*8 + 2*$nnz*4)) :
+    $name = "gmres"? ((4*$n + 2*$nnz)*8 + 2*$nnz*4 + $loops*((17*$n + 2*$nnz)*8 + 2*$nnz*4)) :
+    -1000000000) / 1000000000
+};
+
+$plot_hip := $solvers_hip~>$map(function($v, $i) {{
+  "label": $v,
+  "data": $data_hip.{
+    "x": problem.name,
+    "y": $flops($v, problem.rows, problem.nonzeros, (solver~>$lookup($v)).apply.iterations) / ((solver~>$lookup($v)).apply.time/1000000000)
+  },
+  "backgroundColor": $solvers_hip~>$count()~>$getColor($i)
+}});
+
+{
+  "type": "scatter",
+  "data": { "datasets": $plot_hip },
+  "options": {
+    "title": {
+      "display": true,
+      "text": "Performance vs Nonzero Count"
+    },
+    "tooltips": {
+      "mode": "index",
+      "intersect": true
+    },
+    "scales": {
+      "xAxes": [{
+        "type": "category",
+        "labels": $matrices,
+        "ticks": {
+          "autoSkip": false
+        },
+        "scaleLabel": {
+          "display": true,
+          "labelString": "Problem"
+        }
+      }],
+      "yAxes": [{ "scaleLabel": {
+          "display": true,
+          "labelString": "Time (s)"
+      }}]
+    }
+  }
+}
+)
