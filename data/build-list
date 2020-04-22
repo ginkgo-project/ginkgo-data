@@ -16,6 +16,11 @@ def main():
             'name': '{}({}) {} {}/{}'.format(*path.parts),
             'file': str(path)
         })
+    for path in Path(sys.argv[1]).glob('RadeonVII/*/*/*/*.json'):
+        dataset_list.append({
+            'name': '{}({}) {} {}/{}'.format(*path.parts),
+            'file': str(path)
+        })
     json.dump(dataset_list, sys.stdout)
 
 
