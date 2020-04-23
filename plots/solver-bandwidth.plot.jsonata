@@ -22,21 +22,23 @@ $getColor := function($num_colors, $id) {
   "hsl(" & $floor(360 * $id / $num_colors) & ",40%,55%)"
 };
 
+$floor := $string ~> $substringBefore(?, '.') ~> $number;
 
-$flops := function($name, $n, $nnz, $loops) {
-  ($name = "bicgstab" ? ((5*$n + 2*$nnz)*8 + 2*$nnz*4 + $loops*((29*$n + 4*$nnz)*8 + 4*$nnz*4)) :
-    $name = "cg" ? ((4*$n + 2*$nnz)*8 + 2*$nnz*4 + $loops*((15*$n + 2*$nnz)*8 + 2*$nnz*4)) :
-    $name = "cgs" ? ((5*$n + 2*$nnz)*8 + 2*$nnz*4 + $loops*((20*$n + 4*$nnz)*8 + 4*$nnz*4)) :
-    $name = "fcg" ? ((4*$n + 2*$nnz)*8 + 2*$nnz*4 + $loops*((17*$n + 2*$nnz)*8 + 2*$nnz*4)) :
-    $name = "gmres"? ((4*$n + 2*$nnz)*8 + 2*$nnz*4 + $loops*((17*$n + 2*$nnz)*8 + 2*$nnz*4)) :
+$memops := function($name, $n, $nnz, $it, $k, $r) {
+  ($name = "bicgstab" ? ((5*$n + 2*$nnz)*8 + 2*$nnz*4 + $it/2*((29*$n + 4*$nnz)*8 + 4*$nnz*4)+ ((10*$n + 6)*8 + $it*((8*$n + 5)*8))) :
+   $name = "cg" ? ((4*$n + 2*$nnz)*8 + 2*$nnz*4 + $it*((15*$n + 2*$nnz)*8 + 2*$nnz*4)) + ((5*$n + 2)*8 + $it*((5 * $n + 2)*8)) :
+   $name = "cgs" ? ((5*$n + 2*$nnz)*8 + 2*$nnz*4 + $it/2*((20*$n + 4*$nnz)*8 + 4*$nnz*4) + ((10*$n + 2)*8 + $it*((10*$n + 3)*8))) :
+   $name = "fcg" ? ((4*$n + 2*$nnz)*8 + 2*$nnz*4 + $it*((17*$n + 2*$nnz)*8 + 2*$nnz*4) + ((6*$n + 3)*8 + $it*((6*$n + 3)*8))) :
+   $name = "gmres"? (((($r*$r + 3*$r)/2 + 9*$n + 2*$nnz)*8 + 2*$nnz * 4 + $floor($it/$k) * (($k*$k/2 + 3*$k/2 + 2*$nnz + 9*$n)*8 + 2*$nnz*4) + $it*((3*$n + 8 + 2*$nnz)*8 + 2*$nnz*4) + ($floor($it/$k)*($k - 1)*$k/2 + ($r-1)*$r/2)*((2*$n + 5)*8)) + ((2 + 3*$k + 6*$n + $r)*8 + 8 + $floor($it/$k)*((2*$k + 6*$n + 1)*8 + 8) + $it*((4 * $n + 7)*8) + ($floor($it/$k)*($k-1)*$k/2 + ($r-1)*$r/2)*(($n+3)*8))) :
     -1000000000) / 1000000000
 };
 
+
 $plot_hip := $solvers_hip~>$map(function($v, $i) {{
   "label": $v,
-  "data": $data_hip.{
+  "data": $data_cuda.{
     "x": problem.name,
-    "y": $flops($v, problem.rows, problem.nonzeros, (solver~>$lookup($v)).apply.iterations) / ((solver~>$lookup($v)).apply.time/1000000000)
+    "y": $memops($v, problem.rows, problem.nonzeros, (solver~>$lookup($v)).apply.iterations, 100, ((solver~>$lookup($v)).apply.iterations)%100) / ((solver~>$lookup($v)).apply.time/1000000000)
   },
   "backgroundColor": $solvers_hip~>$count()~>$getColor($i)
 }});
