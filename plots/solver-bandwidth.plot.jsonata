@@ -2,8 +2,7 @@
 $data_hip := content[dataset.executor="hip"];
 $data_cuda := content[dataset.executor="cuda"];
 
-$solvers_hip := $data_hip.solver~>$keys();
-$solvers_cuda := $data_cuda.solver~>$keys();
+$solvers := $data_hip.solver~>$keys();
 
 $matrices := [
 "rajat31",
@@ -23,6 +22,11 @@ $getColor := function($num_colors, $id) {
 
 $floor := $string ~> $substringBefore(?, '.') ~> $number;
 
+$get_bandwidth := function($executor) {(
+    $hip_bw := 809.753534;
+    $cuda_bw := 812.617488;
+    $executor = "hip" ? $hip_bw : $executor = "cuda" ? $cuda_bw : -1
+)};
 
 $memops := function($name, $n, $nnz, $it, $k, $r, $vtype, $itype) {
   (
@@ -42,22 +46,47 @@ $memops := function($name, $n, $nnz, $it, $k, $r, $vtype, $itype) {
 };
 
 
-$plot_hip := $solvers_hip~>$map(function($v, $i) {{
+$plot := $solvers~>$map(function($v, $i) {{
   "label": $v,
-  "data": $data_cuda.{
-    "x": problem.name,
-    "y": $memops($v, problem.rows, problem.nonzeros, (solver~>$lookup($v)).apply.iterations, 100, ((solver~>$lookup($v)).apply.iterations)%100, 8, 4) / ((solver~>$lookup($v)).apply.time/1000000000)
-  },
-  "backgroundColor": $solvers_hip~>$count()~>$getColor($i)
+  "data": $data_hip.{
+      "x": problem.name,
+      "y": $memops($v, problem.rows, problem.nonzeros, (solver~>$lookup($v)).apply.iterations, 100, ((solver~>$lookup($v)).apply.iterations)%100, 8, 4) / ((solver~>$lookup($v)).apply.time/1000000000)
+    },
+    "type": "scatter",
+    "fill" : false,
+    "showLine": false,
+    "pointRadius": 5,
+    "backgroundColor": $solvers~>$count()~>$getColor($i)
 }});
 
+$bw := $matrices~>$map(function($v, $i) {
+   $get_bandwidth("hip")
+});
+
 {
-  "type": "scatter",
-  "data": { "datasets": $plot_hip },
+
+  "data": {
+    "datasets":
+      {
+        "label": "STREAM TRIAD",
+        "data": $bw,
+        "backgroundColor": "rgba(0,0,0,1)",
+        "borderColor": "rgba(0,0,0,1)",
+        "type": "line",
+        "fill": false,
+        "showLine": true
+      }~>$append($plot)
+  },
   "options": {
+    "legend": {
+      "labels": {
+        "fontSize": 20
+      }
+    },
     "title": {
       "display": true,
-      "text": "Bandwidth of selected problems for Ginkgo solvers on RadeonVII(HIP)"
+      "text": "Bandwidth of selected problems for Ginkgo solvers on RadeonVII(HIP)",
+      "fontSize": 20
     },
     "tooltips": {
       "mode": "index",
@@ -68,17 +97,27 @@ $plot_hip := $solvers_hip~>$map(function($v, $i) {{
         "type": "category",
         "labels": $matrices,
         "ticks": {
-          "autoSkip": false
+          "autoSkip": false,
+          "fontSize": 20
         },
         "scaleLabel": {
           "display": true,
-          "labelString": "Problem"
+          "labelString": "Problem",
+          "fontSize": 20
         }
       }],
-      "yAxes": [{ "scaleLabel": {
-          "display": true,
-          "labelString": "Bandwidth (GB/s)"
-      }}]
+      "yAxes": [{
+          "scaleLabel": {
+            "display": true,
+            "labelString": "Bandwidth (GB/s)",
+            "fontSize": 20
+          },
+          "offset": true,
+          "ticks": {
+              "fontSize": 20,
+              "beginAtZero" : true
+          }
+      }]
     }
   }
 }
