@@ -28,15 +28,16 @@ $get_bandwidth := function($executor) {(
     $executor = "hip" ? $hip_bw : $executor = "cuda" ? $cuda_bw : -1
 )};
 
-$memops := function($name, $n, $nnz, $it, $k, $r, $vtype, $itype) {
+$memops := function($name, $n, $nnz, $it, $k, $vtype, $itype) {
   (
-    $loops_r := ($floor($it/$k)*($k-1)*$k/2 + ($r-1)*$r/2);
+	  $r := $it%k
+    $iter_r := ($floor($it/$k)*($k-1)*$k/2 + ($r-1)*$r/2);
     $bicgstab := (5*$n + 2*$nnz)*$vtype + 2*$nnz*$itype + $it/2*((29*$n + 4*$nnz)*$vtype + 4*$nnz*$itype)+ ((10*$n + 6)*$vtype + $it*((8*$n + 5)*$vtype));
     $cg := ((4*$n + 2*$nnz)*$vtype + 2*$nnz*$itype + $it*((15*$n + 2*$nnz)*$vtype + 2*$nnz*$itype)) + ((5*$n + 2)*$vtype + $it*((5 * $n + 2)*$vtype));
     $cgs := ((5*$n + 2*$nnz)*$vtype + 2*$nnz*$itype + $it/2*((20*$n + 4*$nnz)*$vtype + 4*$nnz*$itype) + ((10*$n + 2)*$vtype + $it*((10*$n + 3)*$vtype)));
     $fcg := ((4*$n + 2*$nnz)*$vtype + 2*$nnz*$itype + $it*((17*$n + 2*$nnz)*$vtype + 2*$nnz*$itype) + ((6*$n + 3)*$vtype + $it*((6*$n + 3)*$vtype)));
-    $gmres_read := ((11 * $n + 2 * $nnz + 5/2 * $r + $n * $r + $r*$r/2 + 1) * $vtype + 2 * $nnz * $itype + $floor($it/$k) * ((1 + 5/2 * $k + 10 * $n + 2 * $nnz + $k*$k/2 + $k * $n) * $vtype + 2 * $nnz * $itype) + $it * ((7 * $n + 5 + 2 * $nnz) * $vtype + 2 * $nnz * $itype + 8) + ($loops_r) * ((4 * $n + 4) * $vtype));
-    $gmres_write := ((6 * $n + $r + 2 * $k + 3) * $vtype + 8 + $floor($it/$k) * (($k + 6 * $n + 2) * $vtype + 8) + $it * ((4 * $n + 8) * $vtype + 8) + ($loops_r) * (($n + 2) * $vtype));
+    $gmres_read := ((11 * $n + 2 * $nnz + 5/2 * $r + $n * $r + $r*$r/2 + 1) * $vtype + 2 * $nnz * $itype + $floor($it/$k) * ((1 + 5/2 * $k + 10 * $n + 2 * $nnz + $k*$k/2 + $k * $n) * $vtype + 2 * $nnz * $itype) + $it * ((7 * $n + 5 + 2 * $nnz) * $vtype + 2 * $nnz * $itype + 8) + ($iter_r) * ((4 * $n + 4) * $vtype));
+    $gmres_write := ((6 * $n + $r + 2 * $k + 3) * $vtype + 8 + $floor($it/$k) * (($k + 6 * $n + 2) * $vtype + 8) + $it * ((4 * $n + 8) * $vtype + 8) + ($iter_r) * (($n + 2) * $vtype));
   ($name = "bicgstab" ? $bicgstab :
    $name = "cg" ? $cg :
    $name = "cgs" ? $cgs :
@@ -50,7 +51,7 @@ $plot := $solvers~>$map(function($v, $i) {{
   "label": $v,
   "data": $data_hip.{
       "x": problem.name,
-      "y": $memops($v, problem.rows, problem.nonzeros, (solver~>$lookup($v)).apply.iterations, 100, ((solver~>$lookup($v)).apply.iterations)%100, 8, 4) / ((solver~>$lookup($v)).apply.time/1000000000)
+      "y": $memops($v, problem.rows, problem.nonzeros, (solver~>$lookup($v)).apply.iterations, 100, 8, 4) / ((solver~>$lookup($v)).apply.time/1000000000)
     },
     "type": "scatter",
     "fill" : false,
