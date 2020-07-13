@@ -11,11 +11,6 @@ def main():
         sys.stderr.write("Usage: {} ROOTDIR\n".format(sys.argv[0]))
         sys.exit(1)
     dataset_list = [{ 'name': 'Result Summary', 'file': 'agregate.json'}]
-    for path in Path(sys.argv[1]).glob('V100_summit/*/*/*/*.json'):
-        dataset_list.append({
-            'name': '{}({}) {} {}/{}'.format(*path.parts),
-            'file': str(path)
-        })
     for path in Path(sys.argv[1]).glob('V100_SXM2/*/*/*/*.json'):
         dataset_list.append({
             'name': '{}({}) {} {}/{}'.format(*path.parts),
