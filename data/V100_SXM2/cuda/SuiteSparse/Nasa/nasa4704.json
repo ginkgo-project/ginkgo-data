@@ -1,6 +1,6 @@
 [
     {
-        "filename": "/gpfs/work/slkit/slkit003/ssget/MM/Nasa/nasa4704/nasa4704.mtx",
+        "filename": "/home/kit/scc/pw7656/.config/ssget/MM/Nasa/nasa4704/nasa4704.mtx",
         "problem": {
             "id": 760,
             "group": "Nasa",
@@ -26,7 +26,7 @@
                 "skewness": 0.37165061514892369,
                 "kurtosis": 3.1132021476031497,
                 "hyperskewness": 4.46153163821917,
-                "hyperflatness": 19.174808873319358
+                "hyperflatness": 19.17480887331936
             },
             "col_distribution": {
                 "min": 6,
@@ -39,38 +39,72 @@
                 "skewness": 0.37165061514892369,
                 "kurtosis": 3.1132021476031497,
                 "hyperskewness": 4.46153163821917,
-                "hyperflatness": 19.174808873319358
+                "hyperflatness": 19.17480887331936
             }
         },
         "spmv": {
             "csr": {
-                "storage": 1275892,
-                "time": 16153.0,
-                "completed": true
-            },
-            "coo": {
-                "storage": 1676096,
-                "time": 15876.1,
-                "completed": true
-            },
-            "hybrid": {
-                "storage": 1567712,
-                "time": 24768.3,
-                "completed": true
-            },
-            "sellp": {
-                "storage": 2142376,
-                "time": 26148.2,
-                "completed": true
-            },
-            "ell": {
-                "storage": 2370816,
-                "time": 27616.0,
+                "storage": 1281012,
+                "max_relative_norm2": 1.1463194746641733e-16,
+                "time": 12186.4,
                 "completed": true
             }
         },
         "optimal": {
-            "spmv": "coo"
+            "spmv": "csr"
+        },
+        "solver": {
+            "bicgstab": {
+                "recurrent_residuals": [],
+                "true_residuals": [],
+                "iteration_timestamps": [],
+                "rhs_norm": 39.54881041170942,
+                "generate": {
+                    "components": {},
+                    "time": 7404.0
+                },
+                "apply": {
+                    "components": {},
+                    "iterations": 10000,
+                    "time": 877692557.0
+                },
+                "residual_norm": 0.809187180045547,
+                "completed": true
+            },
+            "bicgstab-jacobi": {
+                "recurrent_residuals": [],
+                "true_residuals": [],
+                "iteration_timestamps": [],
+                "rhs_norm": 39.54881041170942,
+                "generate": {
+                    "components": {},
+                    "time": 1903487.0
+                },
+                "apply": {
+                    "components": {},
+                    "iterations": 10000,
+                    "time": 849003539.0
+                },
+                "residual_norm": 231.1091233780315,
+                "completed": true
+            },
+            "bicgstab-adaptive-jacobi": {
+                "recurrent_residuals": [],
+                "true_residuals": [],
+                "iteration_timestamps": [],
+                "rhs_norm": 39.54881041170942,
+                "generate": {
+                    "components": {},
+                    "time": 1655088.0
+                },
+                "apply": {
+                    "components": {},
+                    "iterations": 10000,
+                    "time": 850382340.0
+                },
+                "residual_norm": 2.1882155476327407,
+                "completed": true
+            }
         }
     }
 ]

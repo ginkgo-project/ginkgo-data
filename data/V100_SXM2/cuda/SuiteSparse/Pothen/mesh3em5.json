@@ -1,6 +1,6 @@
 [
     {
-        "filename": "/gpfs/work/slkit/slkit003/ssget/MM/Pothen/mesh3em5/mesh3em5.mtx",
+        "filename": "/home/kit/scc/pw7656/.config/ssget/MM/Pothen/mesh3em5/mesh3em5.mtx",
         "problem": {
             "id": 878,
             "group": "Pothen",
@@ -44,33 +44,67 @@
         },
         "spmv": {
             "csr": {
-                "storage": 17684,
-                "time": 13768.5,
-                "completed": true
-            },
-            "coo": {
-                "storage": 22032,
-                "time": 13409.9,
-                "completed": true
-            },
-            "hybrid": {
-                "storage": 17340,
-                "time": 12175.6,
-                "completed": true
-            },
-            "sellp": {
-                "storage": 18520,
-                "time": 10999.7,
-                "completed": true
-            },
-            "ell": {
-                "storage": 17340,
-                "time": 11103.2,
+                "storage": 17860,
+                "max_relative_norm2": 8.632586325447478e-17,
+                "time": 9784.6,
                 "completed": true
             }
         },
         "optimal": {
-            "spmv": "sellp"
+            "spmv": "csr"
+        },
+        "solver": {
+            "bicgstab": {
+                "recurrent_residuals": [],
+                "true_residuals": [],
+                "iteration_timestamps": [],
+                "rhs_norm": 9.769580129340103,
+                "generate": {
+                    "components": {},
+                    "time": 4715.0
+                },
+                "apply": {
+                    "components": {},
+                    "iterations": 29,
+                    "time": 2868834.0
+                },
+                "residual_norm": 9.577946486139656e-10,
+                "completed": true
+            },
+            "bicgstab-jacobi": {
+                "recurrent_residuals": [],
+                "true_residuals": [],
+                "iteration_timestamps": [],
+                "rhs_norm": 9.769580129340103,
+                "generate": {
+                    "components": {},
+                    "time": 338746.0
+                },
+                "apply": {
+                    "components": {},
+                    "iterations": 22,
+                    "time": 2262468.0
+                },
+                "residual_norm": 7.325228281491626e-10,
+                "completed": true
+            },
+            "bicgstab-adaptive-jacobi": {
+                "recurrent_residuals": [],
+                "true_residuals": [],
+                "iteration_timestamps": [],
+                "rhs_norm": 9.769580129340103,
+                "generate": {
+                    "components": {},
+                    "time": 466983.0
+                },
+                "apply": {
+                    "components": {},
+                    "iterations": 22,
+                    "time": 2272089.0
+                },
+                "residual_norm": 7.468805056842416e-10,
+                "completed": true
+            }
         }
     }
 ]

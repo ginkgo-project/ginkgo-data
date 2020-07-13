@@ -1,6 +1,6 @@
 [
     {
-        "filename": "/gpfs/work/slkit/slkit003/ssget/MM/Boeing/bcsstk34/bcsstk34.mtx",
+        "filename": "/home/kit/scc/pw7656/.config/ssget/MM/Boeing/bcsstk34/bcsstk34.mtx",
         "problem": {
             "id": 339,
             "group": "Boeing",
@@ -25,7 +25,7 @@
                 "variance": 86.6355569438659,
                 "skewness": -0.6712761539286678,
                 "kurtosis": 2.283630271854929,
-                "hyperskewness": -3.2809168835094959,
+                "hyperskewness": -3.280916883509496,
                 "hyperflatness": 7.98402486084875
             },
             "col_distribution": {
@@ -38,39 +38,73 @@
                 "variance": 86.6355569438659,
                 "skewness": -0.6712761539286678,
                 "kurtosis": 2.283630271854929,
-                "hyperskewness": -3.2809168835094959,
+                "hyperskewness": -3.280916883509496,
                 "hyperflatness": 7.98402486084875
             }
         },
         "spmv": {
             "csr": {
-                "storage": 259372,
-                "time": 15987.3,
-                "completed": true
-            },
-            "coo": {
-                "storage": 342688,
-                "time": 14445.8,
-                "completed": true
-            },
-            "hybrid": {
-                "storage": 325472,
-                "time": 32772.4,
-                "completed": true
-            },
-            "sellp": {
-                "storage": 340392,
-                "time": 27927.8,
-                "completed": true
-            },
-            "ell": {
-                "storage": 331632,
-                "time": 29915.4,
+                "storage": 262052,
+                "max_relative_norm2": 9.721635559862478e-17,
+                "time": 11483.7,
                 "completed": true
             }
         },
         "optimal": {
-            "spmv": "coo"
+            "spmv": "csr"
+        },
+        "solver": {
+            "bicgstab": {
+                "recurrent_residuals": [],
+                "true_residuals": [],
+                "iteration_timestamps": [],
+                "rhs_norm": 14.13699952475917,
+                "generate": {
+                    "components": {},
+                    "time": 6221.0
+                },
+                "apply": {
+                    "components": {},
+                    "iterations": 2323,
+                    "time": 206371462.0
+                },
+                "residual_norm": 1.0727822119033633e-9,
+                "completed": true
+            },
+            "bicgstab-jacobi": {
+                "recurrent_residuals": [],
+                "true_residuals": [],
+                "iteration_timestamps": [],
+                "rhs_norm": 14.13699952475917,
+                "generate": {
+                    "components": {},
+                    "time": 497363.0
+                },
+                "apply": {
+                    "components": {},
+                    "iterations": 193,
+                    "time": 16927852.0
+                },
+                "residual_norm": 1.2069147929257639e-9,
+                "completed": true
+            },
+            "bicgstab-adaptive-jacobi": {
+                "recurrent_residuals": [],
+                "true_residuals": [],
+                "iteration_timestamps": [],
+                "rhs_norm": 14.13699952475917,
+                "generate": {
+                    "components": {},
+                    "time": 580907.0
+                },
+                "apply": {
+                    "components": {},
+                    "iterations": 181,
+                    "time": 15884339.0
+                },
+                "residual_norm": 1.3742718076811157e-9,
+                "completed": true
+            }
         }
     }
 ]

@@ -1,6 +1,6 @@
 [
     {
-        "filename": "/gpfs/work/slkit/slkit003/ssget/MM/HB/plat1919/plat1919.mtx",
+        "filename": "/home/kit/scc/pw7656/.config/ssget/MM/HB/plat1919/plat1919.mtx",
         "problem": {
             "id": 228,
             "group": "HB",
@@ -21,7 +21,7 @@
                 "median": 17.0,
                 "q3": 19.0,
                 "max": 19,
-                "mean": 16.883272537780099,
+                "mean": 16.8832725377801,
                 "variance": 8.260475793883776,
                 "skewness": -1.7057970441224498,
                 "kurtosis": 5.578661481078474,
@@ -34,7 +34,7 @@
                 "median": 17.0,
                 "q3": 19.0,
                 "max": 19,
-                "mean": 16.883272537780099,
+                "mean": 16.8832725377801,
                 "variance": 8.260475793883776,
                 "skewness": -1.7057970441224498,
                 "kurtosis": 5.578661481078474,
@@ -44,33 +44,67 @@
         },
         "spmv": {
             "csr": {
-                "storage": 396468,
-                "time": 15328.0,
-                "completed": true
-            },
-            "coo": {
-                "storage": 518384,
-                "time": 14444.7,
-                "completed": true
-            },
-            "hybrid": {
-                "storage": 437532,
-                "time": 17778.7,
-                "completed": true
-            },
-            "sellp": {
-                "storage": 422888,
-                "time": 17259.4,
-                "completed": true
-            },
-            "ell": {
-                "storage": 437532,
-                "time": 18090.4,
+                "storage": 400520,
+                "max_relative_norm2": 1.1779088046718989e-16,
+                "time": 11594.0,
                 "completed": true
             }
         },
         "optimal": {
-            "spmv": "coo"
+            "spmv": "csr"
+        },
+        "solver": {
+            "bicgstab": {
+                "recurrent_residuals": [],
+                "true_residuals": [],
+                "iteration_timestamps": [],
+                "rhs_norm": 25.802457020048668,
+                "generate": {
+                    "components": {},
+                    "time": 5856.0
+                },
+                "apply": {
+                    "components": {},
+                    "iterations": 10000,
+                    "time": 895172419.0
+                },
+                "residual_norm": 9.100742899376073,
+                "completed": true
+            },
+            "bicgstab-jacobi": {
+                "recurrent_residuals": [],
+                "true_residuals": [],
+                "iteration_timestamps": [],
+                "rhs_norm": 25.802457020048668,
+                "generate": {
+                    "components": {},
+                    "time": 795551.0
+                },
+                "apply": {
+                    "components": {},
+                    "iterations": 10000,
+                    "time": 873229199.0
+                },
+                "residual_norm": 83.83086787171098,
+                "completed": true
+            },
+            "bicgstab-adaptive-jacobi": {
+                "recurrent_residuals": [],
+                "true_residuals": [],
+                "iteration_timestamps": [],
+                "rhs_norm": 25.802457020048668,
+                "generate": {
+                    "components": {},
+                    "time": 842409.0
+                },
+                "apply": {
+                    "components": {},
+                    "iterations": 10000,
+                    "time": 872967146.0
+                },
+                "residual_norm": 1437.865178321868,
+                "completed": true
+            }
         }
     }
 ]
