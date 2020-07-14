@@ -10,29 +10,43 @@ def main():
     if (len(sys.argv)) != 1:
         sys.stderr.write("Usage: {}\n".format(sys.argv[0]))
         sys.exit(1)
-    properties = { 'file', 'problem', 'spmv', 'optimal' }
+    properties = { 'problem', 'spmv', 'optimal' }
     datasets = json.load(sys.stdin)
     result = []
+    matrix_set = set()
+    system_executor_set = set()
     for dataset in datasets:
         if dataset['file'] == 'agregate.json' or dataset['file'] == 'represent.json':
             continue
-        try:
-            with open(dataset['file'], 'r') as f:
-                data = json.load(f)
-            parts = PurePath(dataset['file']).parts
-            for item in data:
+        parts = PurePath(dataset['file']).parts
+        # provider/collection/problem.json
+        matrix_set.add(parts[2] + '/' + parts[3] + '/' + parts[4])
+        # system/executor
+        system_executor_set.add(parts[0] + '/' + parts[1])
+    for system_executor in system_executor_set:
+        for matrix in matrix_set:
+            system_executor_parts = PurePath(system_executor).parts
+            matrix_parts = PurePath(matrix).parts
+            filename = system_executor + '/' + matrix
+            # each json file only contains one matrix
+            agregate = {}
+            try:
+                with open(filename, 'r') as f:
+                    data = json.load(f)
+                item = data[0]
                 agregate = { k : item[k]
                     for k in item.keys() & properties }
-                agregate['dataset'] = {
-                    'system': parts[0],
-                    'executor': parts[1],
-                    'provider': parts[2],
-                    'collection': parts[3],
-                    'problem': parts[4]
-                }
-                result.append(agregate)
-        except:
-            pass
+            except:
+                sys.stderr.write("Do not find " + filename + " Insert item with base information\n")
+            agregate['file'] = filename
+            agregate['dataset'] = {
+                'system': system_executor_parts[0],
+                'executor': system_executor_parts[1],
+                'provider': matrix_parts[0],
+                'collection': matrix_parts[1],
+                'problem': matrix_parts[2]
+            }
+            result.append(agregate) 
     json.dump(result, sys.stdout)
 
 
