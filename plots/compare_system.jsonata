@@ -1,0 +1,84 @@
+(
+"Select the format:";
+$format := "cusp_coo";
+$data_first := content[dataset.system = "A100" and dataset.executor = "cuda"]^(dataset.collection & "/" & dataset.problem);
+$data_second := content[dataset.system = "V100" and dataset.executor = "cuda"]^(dataset.collection & "/" & dataset.problem);
+$getColor := function ($num_colors, $id) {
+  "hsl(" & $floor(360 * $id / $num_colors) & ",40%,55%)"
+};
+$turn_format := function ($str, $lib) {
+  $replace($str, /sparselib|splib|cusp|hipsp/, $lib)
+};
+
+$format_first := $format;
+$format_second := $format;
+
+$data := $zip($data_first, $data_second);
+
+$plot_data := $map($data, function ($v) {
+  {
+    "x": $v[0].problem.nonzeros,
+    "y": ($v[0].problem.group = $v[1].problem.group and $v[0].problem.name = $v[1].problem.name)
+        ? ($v[1].spmv~> $lookup($format_second)).time / ($v[0].spmv~> $lookup($format_first)).time
+        : null
+  }
+});
+
+$av_data := $plot_data[y != null];
+{
+  "type": "scatter",
+  "data": {
+    "datasets": [
+      {
+        "label": "A100 is faster",
+        "data":  [$av_data[y >= 1]],
+        "backgroundColor": "hsl(0,40%,55%)"
+      },
+      {
+        "label": "V100 is faster",
+        "data": [$av_data[y < 1]],
+        "backgroundColor": "hsl(120,40%,55%)"
+      }
+    ]
+  },
+  "options": {
+    "legend": {
+        "labels" : {
+          "fontSize": 36
+        }
+      },
+    "title": {
+      "display": true,
+      "text": $turn_format($format, "splib") & " : Relative Performance vs Nonzero Count",
+      "fontSize": 48
+    },
+    "tooltips": {
+      "mode": "index",
+      "intersect": true
+    },
+    "scales": {
+      "xAxes": [{
+        "type": "logarithmic",
+        "scaleLabel": {
+          "display": true,
+          "labelString": "Nonzero Count",
+          "fontSize": 36
+        },
+        "ticks": {
+          "fontSize": 36
+        }  
+          }],
+      "yAxes": [{
+        "scaleLabel": {
+          "display": true,
+          "labelString": "Speedup",
+          "fontSize": 36
+        },
+        "ticks": {
+          "fontSize": 36
+        }
+      }]
+    }
+  }
+}
+)
