@@ -1,6 +1,6 @@
 [
     {
-        "filename": "",
+        "filename": "/gpfs/alpine/scratch/hanzt1/gen010/ssget/MM/PowerSystem/power197k/power197k.mtx",
         "problem": {
             "id": 2816,
             "group": "PowerSystem",
@@ -14,8 +14,86 @@
             "posdef": false,
             "psym": 0.2139400937122758,
             "nsym": 0.02415229830828888,
-            "kind": "power network problem"
+            "kind": "power network problem",
+            "row_distribution": {
+                "min": 1,
+                "q1": 2.0,
+                "median": 6.0,
+                "q3": 13.0,
+                "max": 1000,
+                "mean": 18.75853131530362,
+                "variance": 4346.167093064784,
+                "skewness": 9.574885466775653,
+                "kurtosis": 108.5909925319553,
+                "hyperskewness": 1292.7471254026085,
+                "hyperflatness": 15805.37985731798
+            },
+            "col_distribution": {
+                "min": 1,
+                "q1": 3.0,
+                "median": 6.0,
+                "q3": 12.0,
+                "max": 5478,
+                "mean": 18.75853131530362,
+                "variance": 5542.380335370434,
+                "skewness": 13.259214809038806,
+                "kurtosis": 301.0808150677398,
+                "hyperskewness": 13075.716123599295,
+                "hyperflatness": 827045.4134388442
+            }
         },
-        "spmv": {}
+        "spmv": {
+            "coo": {
+                "storage": 12893424,
+                "max_relative_norm2": 0.0,
+                "time": 48945.5,
+                "completed": true
+            },
+            "csr": {
+                "storage": 10479176,
+                "max_relative_norm2": 2.681521086628952e-17,
+                "time": 133380.5,
+                "completed": true
+            },
+            "ell": {
+                "storage": 85171392,
+                "max_relative_norm2": 1.256194020316512e-16,
+                "time": 59537.9,
+                "completed": true
+            },
+            "hybrid": {
+                "storage": 11518000,
+                "max_relative_norm2": 9.141795452087358e-17,
+                "time": 46343.7,
+                "completed": true
+            },
+            "sellp": {
+                "storage": 15846296,
+                "max_relative_norm2": 1.256194020316512e-16,
+                "time": 56119.9,
+                "completed": true
+            },
+            "cusp_coo": {
+                "storage": 12893440,
+                "max_relative_norm2": 1.243774926545913e-16,
+                "time": 50408.5,
+                "completed": true
+            },
+            "cusp_csr": {
+                "storage": 10458712,
+                "max_relative_norm2": 1.220183108393574e-16,
+                "time": 48311.4,
+                "completed": true
+            },
+            "cusp_gcsr2": {
+                "storage": 10458712,
+                "max_relative_norm2": 1.2604543108530659e-16,
+                "time": 42387.6,
+                "completed": true
+            }
+        },
+        "optimal": {
+            "spmv": "cusp_gcsr2"
+        }
     }
 ]

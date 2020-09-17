@@ -1,6 +1,6 @@
 [
     {
-        "filename": "",
+        "filename": "/gpfs/alpine/scratch/hanzt1/gen010/ssget/MM/HVDC/hvdc2/hvdc2.mtx",
         "problem": {
             "id": 1875,
             "group": "HVDC",
@@ -14,8 +14,86 @@
             "posdef": false,
             "psym": 0.9885955341075688,
             "nsym": 0.06323365458033523,
-            "kind": "power network problem"
+            "kind": "power network problem",
+            "row_distribution": {
+                "min": 1,
+                "q1": 4.0,
+                "median": 6.0,
+                "q3": 8.0,
+                "max": 60,
+                "mean": 7.096139260507743,
+                "variance": 14.79383846035805,
+                "skewness": 2.9810166300492497,
+                "kurtosis": 17.832746817630658,
+                "hyperskewness": 121.1799238630442,
+                "hyperflatness": 963.7140765001396
+            },
+            "col_distribution": {
+                "min": 1,
+                "q1": 4.0,
+                "median": 6.0,
+                "q3": 8.0,
+                "max": 60,
+                "mean": 7.096139260507743,
+                "variance": 14.599231908161377,
+                "skewness": 2.9882136661098874,
+                "kurtosis": 17.92184118051378,
+                "hyperskewness": 122.1915402886732,
+                "hyperflatness": 976.133315113769
+            }
         },
-        "spmv": {}
+        "spmv": {
+            "coo": {
+                "storage": 21434208,
+                "max_relative_norm2": 0.0,
+                "time": 62835.0,
+                "completed": true
+            },
+            "csr": {
+                "storage": 16855580,
+                "max_relative_norm2": 1.1318784469683835e-17,
+                "time": 67641.9,
+                "completed": true
+            },
+            "ell": {
+                "storage": 136699200,
+                "max_relative_norm2": 1.3274331801616997e-16,
+                "time": 99246.8,
+                "completed": true
+            },
+            "hybrid": {
+                "storage": 18778640,
+                "max_relative_norm2": 1.056430030166491e-16,
+                "time": 58884.6,
+                "completed": true
+            },
+            "sellp": {
+                "storage": 35075192,
+                "max_relative_norm2": 1.3274331801616997e-16,
+                "time": 93742.8,
+                "completed": true
+            },
+            "cusp_coo": {
+                "storage": 21434224,
+                "max_relative_norm2": 1.212916893935454e-16,
+                "time": 63140.9,
+                "completed": true
+            },
+            "cusp_csr": {
+                "storage": 16835116,
+                "max_relative_norm2": 8.057439059648299e-17,
+                "time": 67908.4,
+                "completed": true
+            },
+            "cusp_gcsr2": {
+                "storage": 16835116,
+                "max_relative_norm2": 1.5223487557454577e-16,
+                "time": 55211.5,
+                "completed": true
+            }
+        },
+        "optimal": {
+            "spmv": "cusp_gcsr2"
+        }
     }
 ]
