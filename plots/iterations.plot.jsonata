@@ -13,25 +13,24 @@ $formats := ["coo", "csr", "ell", "hybrid", "sellp",
   $turn_format("splib_ell", $lib),
   $turn_format("splib_hybrid", $lib)];
 
-$solvers := ["idr-general-isai", "idr", "idr-parilu-isai"];
+$solvers := ["idr-general-isai", "idr", "idr-parilu-isai", "idr-ilu-isai"];
 
 $matrices := [
-    "trans4",
-    "dc1",
-    "dc2",
+    "memplus",
+    "poli_large",
+    "cavity26",
+    "FEM_3D_thermal2",
     "1138_bus",
     "crystm02",
-    "chipcool01",
     "cage11",
     "cage14",
-    "memplus",
-    "FEM_3D_thermal2",
     "stomach",
+    "lung2",
     "torso2",
     "torso3",
-    "lung2",
-    "circuit_4",
-    "poli_large"
+    "trans4",
+    "dc2",
+    "chipcool1"
 ];
 
 $getColor := function($num_colors, $id) {
