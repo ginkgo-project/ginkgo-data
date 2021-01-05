@@ -1,8 +1,8 @@
-("Select the system name and executor to show the results for:";
+(
 $data_hip := content[dataset.executor="hip"];
 $data_cuda := content[dataset.executor="cuda"];
 
-$solvers := $data_hip.solver~>$keys();
+$solvers := $data_cuda.solver~>$keys();
 
 $matrices := [
 "rajat31",
@@ -30,7 +30,7 @@ $get_bandwidth := function($executor) {(
 
 $memops := function($name, $n, $nnz, $it, $k, $vtype, $itype) {
   (
-	  $r := $it%k
+    $r := ($it%$k);
     $iter_r := ($floor($it/$k)*($k-1)*$k/2 + ($r-1)*$r/2);
     $bicgstab := (5*$n + 2*$nnz)*$vtype + 2*$nnz*$itype + $it/2*((29*$n + 4*$nnz)*$vtype + 4*$nnz*$itype)+ ((10*$n + 6)*$vtype + $it*((8*$n + 5)*$vtype));
     $cg := ((4*$n + 2*$nnz)*$vtype + 2*$nnz*$itype + $it*((15*$n + 2*$nnz)*$vtype + 2*$nnz*$itype)) + ((5*$n + 2)*$vtype + $it*((5 * $n + 2)*$vtype));
@@ -42,14 +42,14 @@ $memops := function($name, $n, $nnz, $it, $k, $vtype, $itype) {
    $name = "cg" ? $cg :
    $name = "cgs" ? $cgs :
    $name = "fcg" ? $fcg :
-   $name = "gmres"? $gmres_read+$gmres_write : -1000000000) / 1000000000
+   $name = "gmres"? ($gmres_read+$gmres_write) : -1000000000) / 1000000000
   )
 };
 
 
 $plot := $solvers~>$map(function($v, $i) {{
   "label": $v,
-  "data": $data_hip.{
+  "data": $data_cuda.{
       "x": problem.name,
       "y": $memops($v, problem.rows, problem.nonzeros, (solver~>$lookup($v)).apply.iterations, 100, 8, 4) / ((solver~>$lookup($v)).apply.time/1000000000)
     },
@@ -61,11 +61,10 @@ $plot := $solvers~>$map(function($v, $i) {{
 }});
 
 $bw := $matrices~>$map(function($v, $i) {
-   $get_bandwidth("hip")
+   $get_bandwidth("cuda")
 });
 
 {
-
   "data": {
     "datasets":
       {
@@ -86,7 +85,7 @@ $bw := $matrices~>$map(function($v, $i) {
     },
     "title": {
       "display": true,
-      "text": "Bandwidth of selected problems for Ginkgo solvers on RadeonVII(HIP)",
+      "text": "Bandwidth of selected problems for Ginkgo solvers on V100(CUDA)",
       "fontSize": 20
     },
     "tooltips": {
