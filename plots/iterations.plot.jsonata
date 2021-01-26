@@ -1,6 +1,6 @@
 (
 "Select the system name and executor to show the results for:";
-$system := "v100-2d3d";
+$system := "v100-spd-isai";
 $executor := "cuda";
 $data := content[dataset.system=$system and dataset.executor=$executor];
 $lib := $contains($executor, "cuda") ? "cusp" : "hipsp";
@@ -13,42 +13,17 @@ $formats := ["coo", "csr", "ell", "hybrid", "sellp",
   $turn_format("splib_ell", $lib),
   $turn_format("splib_hybrid", $lib)];
 
-$solvers := ["bicgstab", "bicgstab-general-isai", "bicgstab-ilu-isai"];
+$solvers := ["cg", "cg-spd-isai", "cg-ic-isai", "cg-ic"];
 
 $matrices := [
-    "pde2961",
-    "pde900",
-    "atmosmodd",
-    "atmosmodj",
-    "atmosmodl",
-    "atmosmodm",
-    "t2em",
-    "memchip",
-    "poli3",
-    "poli4",
-    "poli_large",
-    "1138_bus",
-    "mcca",
-    "mcfe",
-    "pores_3",
-    "lung2",
-    "stomach",
-    "torso2",
-    "torso3",
-    "chipcool0",
-    "chipcool1",
-    "filter2D",
-    "flowmeter0",
-    "flowmeter5",
-    "piston",
-    "rail_1357",
-    "rail_20209",
-    "rail_5177",
-    "rail_79841",
-    "spiral",
-    "majorbasis",
-    "venkat01",
-    "chem_master1"
+    "ecology2",
+    "bcsstk10",
+    "G3_circuit",
+    "apache2",
+    "offshore",
+    "parabolic_fem",
+    "af_shell3",
+    "thermal2"
 ];
 
 $getColor := function($num_colors, $id) {
