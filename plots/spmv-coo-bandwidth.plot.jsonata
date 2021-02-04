@@ -1,8 +1,8 @@
 (
-$data_hip := content[dataset.executor="hip" and dataset.system="MI100_solvers"];
-$data_cuda := content[dataset.executor="cuda" and dataset.system="A100_solvers"];
+$data_hip := content[dataset.executor="hip" and dataset.system="MI100"];
+$data_cuda := content[dataset.executor="cuda" and dataset.system="A100"];
 
-$solvers := $data_cuda.solver~>$keys();
+$solvers := $data_hip.solver~>$keys();
 
 $matrices := [
 "rajat31",
@@ -23,48 +23,33 @@ $getColor := function($num_colors, $id) {
 $floor := $string ~> $substringBefore(?, '.') ~> $number;
 
 $get_bandwidth := function($executor) {(
-    $hip_bw := 980.516;
+    $hip_bw := 1085.22;
     $cuda_bw := 1399.518;
     $executor = "hip" ? $hip_bw : $executor = "cuda" ? $cuda_bw : -1
 )};
 
-$memops := function($name, $n, $nnz, $it, $k, $vtype, $itype) {
-  (
-    $bicgstab := ((15.5 * $n * $vtype + $nnz*$vtype + 2*$nnz*$itype)*$it);
-    $cg := ((18 * $n * $vtype + $nnz*$vtype + 2*$nnz*$itype)*$it);
-    $cgs := ((14 * $n * $vtype + $nnz*$vtype + 2*$nnz*$itype)*$it);
-    $fcg := ((21 * $n * $vtype + $nnz*$vtype + 2*$nnz*$itype)*$it);
-    $gmres := (((5/2*$k+21/2+14/$k)*$n * $vtype + (1+1/$k) * ($nnz*$vtype + 2*$nnz*$itype))*$it);
-  ($name = "bicgstab" ? $bicgstab :
-   $name = "cg" ? $cg :
-   $name = "cgs" ? $cgs :
-   $name = "fcg" ? $fcg :
-   $name = "gmres"? $gmres : -1000000000) / 1000000000
-  )
+$memops := function($n, $nnz, $vtype, $itype) {
+    ((2.0*$n*$vtype+1.0*$nnz*$vtype+2.0*$nnz*$itype)/1000000000.0)
 };
 
-
-$plot := $solvers~>$map(function($v, $i) {{
-  "label": $v,
-  "data": $data_cuda.{
-      "x": problem.name,
-      "y": $memops($v, problem.rows, problem.nonzeros, (solver~>$lookup($v)).apply.iterations, 100, 8, 4) / ((solver~>$lookup($v)).apply.time/1000000000)
-    },
-    "type": "scatter",
-    "fill" : false,
-    "showLine": false,
-    "pointRadius": 5,
-    "backgroundColor": $solvers~>$count()~>$getColor($i)
-}});
-
 $bw := $matrices~>$map(function($v, $i) {
-   $get_bandwidth("cuda")
+   $get_bandwidth("hip")
 });
+
+$plot_data_cuda := $data_cuda.{
+      "x": problem.name,
+      "y": $memops(problem.rows, problem.nonzeros, 8, 4) / spmv.coo.time * 1000000000
+};
+
+$plot_data_hip := $data_hip.{
+      "x": problem.name,
+      "y": $memops(problem.rows, problem.nonzeros, 8, 4) / spmv.coo.time
+};
 
 {
   "data": {
     "datasets":
-      {
+      [{
         "label": "STREAM TRIAD",
         "data": $bw,
         "backgroundColor": "rgba(0,0,0,1)",
@@ -72,7 +57,18 @@ $bw := $matrices~>$map(function($v, $i) {
         "type": "line",
         "fill": false,
         "showLine": true
-      }~>$append($plot)
+      },
+      {
+          "label": "COO",
+          "data": $plot_data_cuda,
+        "backgroundColor": "rgba(240,0,0,1)",
+
+    "type": "scatter",
+    "fill" : false,
+    "showLine": false,
+    "pointRadius": 5
+      }
+      ]
   },
   "options": {
     "legend": {
@@ -82,7 +78,7 @@ $bw := $matrices~>$map(function($v, $i) {
     },
     "title": {
       "display": true,
-      "text": "Bandwidth of selected problems for Ginkgo solvers on A100(CUDA)",
+      "text": "Bandwidth of selected problems for Ginkgo solvers on MI100(HIP)",
       "fontSize": 20
     },
     "tooltips": {
