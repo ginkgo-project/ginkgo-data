@@ -1,0 +1,254 @@
+[
+    {
+        "filename": "/home/fritzgoebel/.config/ssget/MM/Grund/poli_large/poli_large.mtx",
+        "problem": {
+            "id": 468,
+            "group": "Grund",
+            "name": "poli_large",
+            "rows": 15575,
+            "cols": 15575,
+            "nonzeros": 33033,
+            "real": true,
+            "binary": false,
+            "2d3d": false,
+            "posdef": false,
+            "psym": 0.003543059603405909,
+            "nsym": 0.0004582426394776034,
+            "kind": "economic problem",
+            "row_distribution": {
+                "min": 1,
+                "q1": 1.0,
+                "median": 1.0,
+                "q3": 1.0,
+                "max": 491,
+                "mean": 2.1235313001605138,
+                "variance": 79.74486842879574,
+                "skewness": 26.047791004077465,
+                "kurtosis": 1033.380356444258,
+                "hyperskewness": 48242.27526401417,
+                "hyperflatness": 2411591.4563015585
+            },
+            "col_distribution": {
+                "min": 1,
+                "q1": 2.0,
+                "median": 2.0,
+                "q3": 2.0,
+                "max": 18,
+                "mean": 2.1235313001605138,
+                "variance": 0.2353981238196571,
+                "skewness": 8.551681820964135,
+                "kurtosis": 147.42210714419606,
+                "hyperskewness": 3497.056371628814,
+                "hyperflatness": 96796.73685872686
+            }
+        },
+        "spmv": {
+            "csrc": {
+                "storage": 458700,
+                "max_relative_norm2": 9.913536837389516e-17,
+                "time": 17818.4,
+                "completed": true
+            }
+        },
+        "optimal": {
+            "spmv": "csrc"
+        },
+        "solver": {
+            "bicgstab-general-isai": {
+                "recurrent_residuals": [
+                    863.6891665284813,
+                    863.6891665284813,
+                    210.12889276986688,
+                    210.12889276986688,
+                    9.879936874760024,
+                    9.879936874760024,
+                    0.36511165644059537,
+                    0.36511165644059537,
+                    0.02266823254488471,
+                    0.02266823254488471,
+                    0.00030448576331330586,
+                    0.00030448576331330586,
+                    0.00004140929102866503
+                ],
+                "true_residuals": [
+                    863.6891665284813,
+                    -1.0,
+                    210.12889276986688,
+                    -1.0,
+                    9.879936874760022,
+                    -1.0,
+                    0.36511165644059087,
+                    -1.0,
+                    0.022668232544875465,
+                    -1.0,
+                    0.0003044857633753312,
+                    -1.0,
+                    0.00004140929093844493
+                ],
+                "iteration_timestamps": [
+                    272070,
+                    662437,
+                    767239,
+                    1148621,
+                    1250025,
+                    1628762,
+                    1730679,
+                    2116378,
+                    2216381,
+                    2590300,
+                    2690274,
+                    3066531,
+                    3166729
+                ],
+                "rhs_norm": 124.79983974348686,
+                "generate": {
+                    "components": {
+                        "allocate": 1722095,
+                        "copy": 169456,
+                        "csr::advanced_spmv#5": 13803,
+                        "csr::calculate_max_nnz_per_row#2": 36079,
+                        "csr::convert_to_ell#2": 134010,
+                        "csr::sort_by_column_index#1": 2363005,
+                        "csr::spmv#3": 91238,
+                        "csr::transpose#2": 371850,
+                        "dense::add_scaled#3": 10020,
+                        "dense::compute_norm2#2": 91604,
+                        "free": 629522,
+                        "gmres::initialize_1#6": 14445,
+                        "gmres::initialize_2#6": 22030,
+                        "gmres::step_1#10": 631740,
+                        "gmres::step_2#6": 24470,
+                        "isai::generate_excess_system#8": 2637981,
+                        "isai::generate_general_inverse#5": 2480496,
+                        "isai::scatter_excess_solution#5": 27471,
+                        "jacobi::find_blocks#4": 1332356,
+                        "jacobi::generate#9": 161073,
+                        "jacobi::simple_apply#8": 185347,
+                        "residual_norm::residual_norm#9": 273287
+                    },
+                    "time": 131255169.0
+                },
+                "apply": {
+                    "components": {
+                        "allocate": 230085,
+                        "bicgstab::initialize#16": 16384,
+                        "bicgstab::step_1#8": 60204,
+                        "bicgstab::step_2#7": 60192,
+                        "bicgstab::step_3#11": 61292,
+                        "copy": 30204,
+                        "csr::advanced_spmv#5": 25021,
+                        "csr::spmv#3": 220852,
+                        "dense::compute_dot#3": 331098,
+                        "dense::compute_norm2#2": 588643,
+                        "ell::spmv#3": 291865,
+                        "free": 191088,
+                        "residual_norm::residual_norm#9": 354804
+                    },
+                    "iterations": 12,
+                    "time": 1826177.0
+                },
+                "preconditioner": {},
+                "residual_norm": 0.00004140929100965563,
+                "completed": true
+            },
+            "bicgstab-general-mp-isai": {
+                "recurrent_residuals": [
+                    863.6891665284813,
+                    863.6891665284813,
+                    210.12889767698645,
+                    210.12889767698645,
+                    9.87993713611289,
+                    9.87993713611289,
+                    0.3651115727221642,
+                    0.3651115727221642,
+                    0.02266822259791264,
+                    0.02266822259791264,
+                    0.00030448575079262974,
+                    0.00030448575079262974,
+                    0.00004140927565487518
+                ],
+                "true_residuals": [
+                    863.6891665284813,
+                    -1.0,
+                    210.1288976769865,
+                    -1.0,
+                    9.879937136112881,
+                    -1.0,
+                    0.36511157272223018,
+                    -1.0,
+                    0.022668222597863085,
+                    -1.0,
+                    0.00030448575091323725,
+                    -1.0,
+                    0.000041409275605364057
+                ],
+                "iteration_timestamps": [
+                    271798,
+                    676370,
+                    781890,
+                    1163587,
+                    1265684,
+                    1649977,
+                    1752314,
+                    2128374,
+                    2230255,
+                    2609346,
+                    2711212,
+                    3084706,
+                    3186434
+                ],
+                "rhs_norm": 124.79983974348686,
+                "generate": {
+                    "components": {
+                        "allocate": 1745235,
+                        "components::convert_precision#3": 14202,
+                        "copy": 192104,
+                        "csr::advanced_spmv#5": 12646,
+                        "csr::calculate_max_nnz_per_row#2": 33850,
+                        "csr::convert_to_ell#2": 98280,
+                        "csr::sort_by_column_index#1": 2377569,
+                        "csr::spmv#3": 90921,
+                        "csr::transpose#2": 376628,
+                        "dense::add_scaled#3": 11194,
+                        "dense::compute_norm2#2": 91025,
+                        "free": 649576,
+                        "gmres::initialize_1#6": 14292,
+                        "gmres::initialize_2#6": 13834,
+                        "gmres::step_1#10": 627992,
+                        "gmres::step_2#6": 23930,
+                        "isai::generate_excess_system#8": 2636869,
+                        "isai::generate_general_inverse#5": 2415364,
+                        "isai::scatter_excess_solution#5": 27223,
+                        "jacobi::find_blocks#4": 1339726,
+                        "jacobi::generate#9": 160930,
+                        "jacobi::simple_apply#8": 182205,
+                        "residual_norm::residual_norm#9": 269552
+                    },
+                    "time": 131447397.0
+                },
+                "apply": {
+                    "components": {
+                        "allocate": 223465,
+                        "bicgstab::initialize#16": 15415,
+                        "bicgstab::step_1#8": 58766,
+                        "bicgstab::step_2#7": 58681,
+                        "bicgstab::step_3#11": 61089,
+                        "copy": 29511,
+                        "csr::advanced_spmv#5": 25768,
+                        "csr::spmv#3": 216619,
+                        "dense::compute_dot#3": 331840,
+                        "dense::compute_norm2#2": 587190,
+                        "ell::spmv#3": 281727,
+                        "free": 186253,
+                        "residual_norm::residual_norm#9": 352485
+                    },
+                    "iterations": 12,
+                    "time": 1818041.0
+                },
+                "preconditioner": {},
+                "residual_norm": 0.000041409275622245376,
+                "completed": true
+            }
+        }
+    }
+]
