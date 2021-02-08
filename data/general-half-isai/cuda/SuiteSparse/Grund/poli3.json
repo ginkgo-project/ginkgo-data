@@ -1,0 +1,254 @@
+[
+    {
+        "filename": "/gpfs/alpine/scratch/hanzt1/gen010/ssget/MM/Grund/poli3/poli3.mtx",
+        "problem": {
+            "id": 2278,
+            "group": "Grund",
+            "name": "poli3",
+            "rows": 16955,
+            "cols": 16955,
+            "nonzeros": 37849,
+            "real": true,
+            "binary": false,
+            "2d3d": false,
+            "posdef": false,
+            "psym": 0.00507322676366421,
+            "nsym": 0.0005743275581506652,
+            "kind": "economic problem",
+            "row_distribution": {
+                "min": 1,
+                "q1": 1.0,
+                "median": 1.0,
+                "q3": 2.0,
+                "max": 336,
+                "mean": 2.23232084930699,
+                "variance": 39.473541030644899,
+                "skewness": 20.75209775043971,
+                "kurtosis": 732.9849961864436,
+                "hyperskewness": 31790.52617626103,
+                "hyperflatness": 1517230.0638845596
+            },
+            "col_distribution": {
+                "min": 1,
+                "q1": 2.0,
+                "median": 2.0,
+                "q3": 2.0,
+                "max": 41,
+                "mean": 2.23232084930699,
+                "variance": 0.9827123665337918,
+                "skewness": 9.368254464196554,
+                "kurtosis": 216.65436590419618,
+                "hyperskewness": 6816.706349622348,
+                "hyperflatness": 241783.06471577125
+            }
+        },
+        "spmv": {
+            "csr": {
+                "storage": 526744,
+                "max_relative_norm2": 7.196999894316597e-17,
+                "time": 0.000024120800000000009,
+                "completed": true
+            }
+        },
+        "optimal": {
+            "spmv": "csr"
+        },
+        "solver": {
+            "bicgstab-general-isai": {
+                "recurrent_residuals": [
+                    604.4789054985956,
+                    604.4789054985956,
+                    368.90742957490769,
+                    368.90742957490769,
+                    13.555809887386359,
+                    13.555809887386359,
+                    0.5638542943161039,
+                    0.5638542943161039,
+                    0.1297393349556147,
+                    0.1297393349556147,
+                    0.00036460639228385515,
+                    0.00036460639228385515,
+                    0.000010395921637695757
+                ],
+                "true_residuals": [
+                    604.4789054985956,
+                    -1.0,
+                    368.9074295749078,
+                    -1.0,
+                    13.555809887386335,
+                    -1.0,
+                    0.563854294316067,
+                    -1.0,
+                    0.1297393349556525,
+                    -1.0,
+                    0.0003646063922834595,
+                    -1.0,
+                    0.000010395921662374978
+                ],
+                "iteration_timestamps": [
+                    0.000816605,
+                    0.001392284,
+                    0.001566917,
+                    0.002132765,
+                    0.002304901,
+                    0.002873726,
+                    0.003045236,
+                    0.00361208,
+                    0.003782789,
+                    0.004357269,
+                    0.004530095,
+                    0.005097826,
+                    0.00526858
+                ],
+                "rhs_norm": 130.2113666313352,
+                "generate": {
+                    "components": {
+                        "allocate": 0.004202735,
+                        "copy": 0.000261316,
+                        "csr::advanced_spmv#5": 0.00002281,
+                        "csr::calculate_max_nnz_per_row#2": 0.000087501,
+                        "csr::convert_to_ell#2": 0.000117867,
+                        "csr::sort_by_column_index#1": 0.002207402,
+                        "csr::spmv#3": 0.000143478,
+                        "csr::transpose#2": 0.001499351,
+                        "dense::add_scaled#3": 0.00001807,
+                        "dense::compute_norm2#2": 0.000120133,
+                        "free": 0.001571511,
+                        "gmres::initialize_1#6": 0.000022843,
+                        "gmres::initialize_2#6": 0.000039525,
+                        "gmres::step_1#10": 0.001256158,
+                        "gmres::step_2#6": 0.000030284,
+                        "isai::generate_excess_system#8": 0.001577659,
+                        "isai::generate_general_inverse#5": 0.001849102,
+                        "isai::scatter_excess_solution#5": 0.00003464,
+                        "jacobi::find_blocks#4": 0.00088289,
+                        "jacobi::generate#9": 0.000181133,
+                        "jacobi::simple_apply#8": 0.000240249,
+                        "residual_norm::residual_norm#9": 0.000495101
+                    },
+                    "time": 0.281869473
+                },
+                "apply": {
+                    "components": {
+                        "allocate": 0.000839444,
+                        "bicgstab::initialize#16": 0.000022935,
+                        "bicgstab::step_1#8": 0.000107223,
+                        "bicgstab::step_2#7": 0.000104546,
+                        "bicgstab::step_3#11": 0.000112445,
+                        "copy": 0.000058566,
+                        "csr::advanced_spmv#5": 0.000030975,
+                        "csr::spmv#3": 0.000293958,
+                        "dense::compute_dot#3": 0.000779706,
+                        "dense::compute_norm2#2": 0.000787141,
+                        "ell::spmv#3": 0.000374824,
+                        "free": 0.000725851,
+                        "residual_norm::residual_norm#9": 0.000714344
+                    },
+                    "iterations": 12,
+                    "time": 0.00346067
+                },
+                "preconditioner": {},
+                "residual_norm": 0.0000103959215994303,
+                "completed": true
+            },
+            "bicgstab-general-mp-isai": {
+                "recurrent_residuals": [
+                    604.4789054985956,
+                    604.4789054985956,
+                    368.92378469821866,
+                    368.92378469821866,
+                    13.557926480698317,
+                    13.557926480698317,
+                    0.565366755910641,
+                    0.565366755910641,
+                    0.13643162521169456,
+                    0.13643162521169456,
+                    0.00036516139589860857,
+                    0.00036516139589860857,
+                    0.000010402971407897746
+                ],
+                "true_residuals": [
+                    604.4789054985956,
+                    -1.0,
+                    368.92378469821866,
+                    -1.0,
+                    13.557926480698387,
+                    -1.0,
+                    0.565366755910635,
+                    -1.0,
+                    0.1364316252117379,
+                    -1.0,
+                    0.0003651613958572398,
+                    -1.0,
+                    0.000010402971392778352
+                ],
+                "iteration_timestamps": [
+                    0.000816671,
+                    0.001394183,
+                    0.001567647,
+                    0.002132357,
+                    0.002306516,
+                    0.002879491,
+                    0.003052042,
+                    0.003619317,
+                    0.003791181,
+                    0.004365796,
+                    0.004538885,
+                    0.005105223,
+                    0.005278635
+                ],
+                "rhs_norm": 130.2113666313352,
+                "generate": {
+                    "components": {
+                        "allocate": 0.006455079,
+                        "components::convert_precision#3": 0.00009737,
+                        "copy": 0.000450725,
+                        "csr::advanced_spmv#5": 0.000023373,
+                        "csr::calculate_max_nnz_per_row#2": 0.000091352,
+                        "csr::convert_to_ell#2": 0.000117926,
+                        "csr::sort_by_column_index#1": 0.002238646,
+                        "csr::spmv#3": 0.000142939,
+                        "csr::transpose#2": 0.001494055,
+                        "dense::add_scaled#3": 0.00001816,
+                        "dense::compute_norm2#2": 0.000118552,
+                        "free": 0.002952769,
+                        "gmres::initialize_1#6": 0.000023126,
+                        "gmres::initialize_2#6": 0.000027326,
+                        "gmres::step_1#10": 0.001240062,
+                        "gmres::step_2#6": 0.00003068,
+                        "isai::generate_excess_system#8": 0.001580512,
+                        "isai::generate_general_inverse#5": 0.001846122,
+                        "isai::scatter_excess_solution#5": 0.000034616,
+                        "jacobi::find_blocks#4": 0.000883565,
+                        "jacobi::generate#9": 0.000180814,
+                        "jacobi::simple_apply#8": 0.000239365,
+                        "residual_norm::residual_norm#9": 0.000491954
+                    },
+                    "time": 0.285384873
+                },
+                "apply": {
+                    "components": {
+                        "allocate": 0.000833171,
+                        "bicgstab::initialize#16": 0.000023177,
+                        "bicgstab::step_1#8": 0.000106103,
+                        "bicgstab::step_2#7": 0.000104823,
+                        "bicgstab::step_3#11": 0.00010935,
+                        "copy": 0.000061477,
+                        "csr::advanced_spmv#5": 0.000029976,
+                        "csr::spmv#3": 0.000287716,
+                        "cvcsr::spmv#3": 0.00036243,
+                        "dense::compute_dot#3": 0.000776525,
+                        "dense::compute_norm2#2": 0.000785479,
+                        "free": 0.000725476,
+                        "residual_norm::residual_norm#9": 0.000707388
+                    },
+                    "iterations": 12,
+                    "time": 0.003489841
+                },
+                "preconditioner": {},
+                "residual_norm": 0.00001040297126239937,
+                "completed": true
+            }
+        }
+    }
+]
