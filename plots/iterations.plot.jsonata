@@ -1,6 +1,6 @@
 (
 "Select the system name and executor to show the results for:";
-$system := "isaitest";
+$system := "v100-paper-nonsym";
 $executor := "cuda";
 $data := content[dataset.system=$system and dataset.executor=$executor];
 $lib := $contains($executor, "cuda") ? "cusp" : "hipsp";
@@ -13,25 +13,33 @@ $formats := ["coo", "csr", "ell", "hybrid", "sellp",
   $turn_format("splib_ell", $lib),
   $turn_format("splib_hybrid", $lib)];
 
-$solvers := ["idr-general-isai", "idr", "idr-parilu-isai"];
+$solvers := ["bicgstab", "bicgstab-general-isai", "bicgstab-ilu-isai", "bicgstab-ilu"];
 
 $matrices := [
-    "trans4",
-    "dc1",
-    "dc2",
     "1138_bus",
-    "crystm02",
-    "chipcool01",
-    "cage11",
-    "cage14",
-    "memplus",
-    "FEM_3D_thermal2",
+    "atmosmodd",
+    "atmosmodj",
+    "atmosmodl",
+    "atmosmodm",
+    "chem_master1",
+    "chipcool0",
+    "chipcool1",
+    "flowmeter0",
+    "flowmeter5",
+    "lung2",
+    "majorbasis",
+    "memchip",
+    "pde2961",
+    "poli3",
+    "poli4",
+    "poli_large",
+    "rail_20209",
+    "rail_79841",
     "stomach",
+    "t2em",
     "torso2",
     "torso3",
-    "lung2",
-    "circuit_4",
-    "poli_large"
+    "venkat_01"
 ];
 
 $getColor := function($num_colors, $id) {
@@ -42,9 +50,10 @@ $plot_data := $solvers~>$map(function($v, $i) {{
   "label": $v,
   "data": $data.{
     "x": problem.name,
-    "y": (solver~>$lookup($v)).apply.iterations
+    "y": (solver~>$lookup($v)).apply.iterations < 20000 ? (solver~>$lookup($v)).apply.iterations : $v = "bicgstab" ? 20000 : $v = "bicgstab-ilu-isai" ? 1.41 * 20000 : 40000
   },
-  "backgroundColor": $solvers~>$count()~>$getColor($i)
+  "backgroundColor": $solvers~>$count()~>$getColor($i),
+  "pointRadius": 5
 }});
 
 {
@@ -53,7 +62,12 @@ $plot_data := $solvers~>$map(function($v, $i) {{
   "options": {
     "title": {
       "display": true,
-      "text": "Iteration Count"
+      "text": "Iteration Count",
+      "fontSize": 20
+    },
+    "legend": {
+        "labels": { "fontSize": 16 },
+        "display": true
     },
     "tooltips": {
       "mode": "index",
@@ -62,6 +76,10 @@ $plot_data := $solvers~>$map(function($v, $i) {{
     "scales": {
       "xAxes": [{
         "type": "category",
+        "ticks": {
+          "autoSkip": false,
+          "fontSize": 16
+        },
         "labels": $matrices,
         "scaleLabel": {
           "display": true
@@ -69,9 +87,13 @@ $plot_data := $solvers~>$map(function($v, $i) {{
       }],
       "yAxes": [{ 
           "type": "logarithmic",
+          "ticks": {
+              "fontSize": 16
+          },
           "scaleLabel": {
           "display": true,
-          "labelString": "iterations"
+          "labelString": "iterations",
+          "fontSize": 20
       }}]
     }
   }
