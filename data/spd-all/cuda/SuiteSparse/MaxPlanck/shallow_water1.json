@@ -1,0 +1,337 @@
+[
+    {
+        "filename": "/gpfs/alpine/scratch/hanzt1/gen010/ssget/MM/MaxPlanck/shallow_water1/shallow_water1.mtx",
+        "problem": {
+            "id": 2261,
+            "group": "MaxPlanck",
+            "name": "shallow_water1",
+            "rows": 81920,
+            "cols": 81920,
+            "nonzeros": 327680,
+            "real": true,
+            "binary": false,
+            "2d3d": true,
+            "posdef": true,
+            "psym": 1,
+            "nsym": 1,
+            "kind": "computational fluid dynamics problem",
+            "row_distribution": {
+                "min": 4,
+                "q1": 4.0,
+                "median": 4.0,
+                "q3": 4.0,
+                "max": 4,
+                "mean": 4.0,
+                "variance": 0.0,
+                "skewness": 0.0,
+                "kurtosis": 0.0,
+                "hyperskewness": 0.0,
+                "hyperflatness": 0.0
+            },
+            "col_distribution": {
+                "min": 4,
+                "q1": 4.0,
+                "median": 4.0,
+                "q3": 4.0,
+                "max": 4,
+                "mean": 4.0,
+                "variance": 0.0,
+                "skewness": 0.0,
+                "kurtosis": 0.0,
+                "hyperskewness": 0.0,
+                "hyperflatness": 0.0
+            }
+        },
+        "spmv": {
+            "csr": {
+                "storage": 4280324,
+                "max_relative_norm2": 0.0,
+                "time": 0.00002890060000000001,
+                "completed": true
+            }
+        },
+        "optimal": {
+            "spmv": "csr"
+        },
+        "solver": {
+            "cg": {
+                "recurrent_residuals": [
+                    1788492898964.1465,
+                    163582124851.43898,
+                    33004448733.126436,
+                    6819302443.583106,
+                    2477219493.668334,
+                    731922396.4767178,
+                    218528989.8228796,
+                    68260404.47125666,
+                    20872039.58584418,
+                    5794424.920925012,
+                    1725211.6374865489,
+                    538856.6213870052,
+                    175661.3066793555
+                ],
+                "true_residuals": [
+                    1788492898964.1465,
+                    163582124851.43898,
+                    33004448733.126443,
+                    6819302443.583105,
+                    2477219493.6683337,
+                    731922396.4767196,
+                    218528989.82287926,
+                    68260404.47125659,
+                    20872039.58584233,
+                    5794424.920925661,
+                    1725211.6374845184,
+                    538856.6213876902,
+                    175661.30667949414
+                ],
+                "iteration_timestamps": [
+                    0.000770147,
+                    0.001262124,
+                    0.001743344,
+                    0.002223195,
+                    0.002702692,
+                    0.003181292,
+                    0.003661729,
+                    0.00414012,
+                    0.004615448,
+                    0.005102046,
+                    0.005582045,
+                    0.006059337,
+                    0.006533614
+                ],
+                "rhs_norm": 286.2167011199731,
+                "generate": {
+                    "components": {},
+                    "time": 0.000013168
+                },
+                "apply": {
+                    "components": {
+                        "allocate": 0.001243777,
+                        "cg::initialize#8": 0.000023745,
+                        "cg::step_1#5": 0.000203291,
+                        "cg::step_2#7": 0.000231691,
+                        "copy": 0.000339055,
+                        "csr::advanced_spmv#5": 0.000033292,
+                        "csr::spmv#3": 0.000294948,
+                        "dense::compute_dot#3": 0.000832189,
+                        "dense::compute_norm2#2": 0.00078782,
+                        "free": 0.00099879,
+                        "residual_norm::residual_norm#9": 0.000717167
+                    },
+                    "iterations": 12,
+                    "time": 0.00431791
+                },
+                "preconditioner": {},
+                "residual_norm": 175661.30667949414,
+                "completed": true
+            },
+            "cg-spd-isai": {
+                "recurrent_residuals": [
+                    1788492898964.1465,
+                    133857960537.93091,
+                    8532935091.737246,
+                    833931801.073848,
+                    62996699.51458049,
+                    4918598.346999565,
+                    445652.2025015776,
+                    35579.6190771584
+                ],
+                "true_residuals": [
+                    1788492898964.1465,
+                    133857960537.93091,
+                    8532935091.737243,
+                    833931801.0738469,
+                    62996699.514579128,
+                    4918598.347000376,
+                    445652.20249996907,
+                    35579.619077837095
+                ],
+                "iteration_timestamps": [
+                    0.000789725,
+                    0.002206551,
+                    0.003622717,
+                    0.005030373,
+                    0.006434004,
+                    0.007846581,
+                    0.009249399,
+                    0.010653302
+                ],
+                "rhs_norm": 286.2167011199731,
+                "generate": {
+                    "components": {
+                        "allocate": 0.008323204,
+                        "copy": 0.000325324,
+                        "csr::calculate_max_nnz_per_row#2": 0.00017855,
+                        "csr::convert_to_ell#2": 0.000116611,
+                        "csr::transpose#2": 0.003528667,
+                        "factorization::initialize_l#3": 0.000037098,
+                        "factorization::initialize_row_ptrs_l#2": 0.000058923,
+                        "free": 0.003367261,
+                        "isai::generate_general_inverse#5": 0.004940151
+                    },
+                    "time": 0.020106223
+                },
+                "apply": {
+                    "components": {
+                        "allocate": 0.000736499,
+                        "cg::initialize#8": 0.000023366,
+                        "cg::step_1#5": 0.000121915,
+                        "cg::step_2#7": 0.000135935,
+                        "copy": 0.000039534,
+                        "csr::advanced_spmv#5": 0.000030091,
+                        "csr::spmv#3": 0.000174108,
+                        "cvcsr::spmv#3": 0.000368255,
+                        "dense::compute_dot#3": 0.000503345,
+                        "dense::compute_norm2#2": 0.000509226,
+                        "free": 0.00062356,
+                        "residual_norm::residual_norm#9": 0.000446436
+                    },
+                    "iterations": 7,
+                    "time": 0.0026521
+                },
+                "preconditioner": {},
+                "residual_norm": 35579.619077837095,
+                "completed": true
+            },
+            "cg-spd-single-isai": {
+                "recurrent_residuals": [
+                    1788492898964.1465,
+                    133857960343.29521,
+                    8532934985.923334,
+                    833931796.8193795,
+                    62996698.7910368,
+                    4918598.162693944,
+                    445652.18368787257,
+                    35579.61772420262
+                ],
+                "true_residuals": [
+                    1788492898964.1465,
+                    133857960343.29521,
+                    8532934985.923334,
+                    833931796.8193804,
+                    62996698.79103555,
+                    4918598.162692883,
+                    445652.18368875156,
+                    35579.61772276937
+                ],
+                "iteration_timestamps": [
+                    0.000786938,
+                    0.001288683,
+                    0.00179022,
+                    0.002281291,
+                    0.002769721,
+                    0.003257831,
+                    0.003744217,
+                    0.004231149
+                ],
+                "rhs_norm": 286.2167011199731,
+                "generate": {
+                    "components": {
+                        "allocate": 0.008250329,
+                        "components::convert_precision#3": 0.000048772,
+                        "copy": 0.000253363,
+                        "csr::calculate_max_nnz_per_row#2": 0.000179496,
+                        "csr::convert_to_ell#2": 0.000117265,
+                        "csr::transpose#2": 0.003622301,
+                        "factorization::initialize_l#3": 0.00003521,
+                        "factorization::initialize_row_ptrs_l#2": 0.000058853,
+                        "free": 0.003376139,
+                        "isai::generate_general_inverse#5": 0.004948011
+                    },
+                    "time": 0.020168163
+                },
+                "apply": {
+                    "components": {
+                        "allocate": 0.00073486,
+                        "cg::initialize#8": 0.000024575,
+                        "cg::step_1#5": 0.000121052,
+                        "cg::step_2#7": 0.000137065,
+                        "copy": 0.000035536,
+                        "csr::advanced_spmv#5": 0.000032813,
+                        "csr::spmv#3": 0.000177314,
+                        "cvcsr::spmv#3": 0.000348561,
+                        "dense::compute_dot#3": 0.000502153,
+                        "dense::compute_norm2#2": 0.000506851,
+                        "free": 0.000631544,
+                        "residual_norm::residual_norm#9": 0.000448068
+                    },
+                    "iterations": 7,
+                    "time": 0.002650971
+                },
+                "preconditioner": {},
+                "residual_norm": 35579.61772276937,
+                "completed": true
+            },
+            "cg-spd-half-isai": {
+                "recurrent_residuals": [
+                    1788492898964.1465,
+                    134400441852.04909,
+                    8634013366.620999,
+                    842021441.2154524,
+                    64125564.68386049,
+                    5036176.977680291,
+                    453092.76190405929,
+                    37128.013958455245
+                ],
+                "true_residuals": [
+                    1788492898964.1465,
+                    134400441852.04909,
+                    8634013366.620997,
+                    842021441.2154521,
+                    64125564.683858979,
+                    5036176.9776803669,
+                    453092.76190354189,
+                    37128.013958230455
+                ],
+                "iteration_timestamps": [
+                    0.000781713,
+                    0.001283591,
+                    0.001805621,
+                    0.002301647,
+                    0.002794263,
+                    0.003283277,
+                    0.003771395,
+                    0.004259777
+                ],
+                "rhs_norm": 286.2167011199731,
+                "generate": {
+                    "components": {
+                        "allocate": 0.006735328,
+                        "components::convert_precision#3": 0.000039082,
+                        "copy": 0.000248649,
+                        "csr::calculate_max_nnz_per_row#2": 0.000176528,
+                        "csr::convert_to_ell#2": 0.00011951,
+                        "csr::transpose#2": 0.003607922,
+                        "factorization::initialize_l#3": 0.00003585,
+                        "factorization::initialize_row_ptrs_l#2": 0.000058197,
+                        "free": 0.002639062,
+                        "isai::generate_general_inverse#5": 0.004944145
+                    },
+                    "time": 0.017875384
+                },
+                "apply": {
+                    "components": {
+                        "allocate": 0.000734113,
+                        "cg::initialize#8": 0.000023072,
+                        "cg::step_1#5": 0.000122102,
+                        "cg::step_2#7": 0.000136821,
+                        "copy": 0.000035187,
+                        "csr::advanced_spmv#5": 0.000030319,
+                        "csr::spmv#3": 0.000177046,
+                        "cvcsr::spmv#3": 0.000337126,
+                        "dense::compute_dot#3": 0.000497554,
+                        "dense::compute_norm2#2": 0.000505647,
+                        "free": 0.000623298,
+                        "residual_norm::residual_norm#9": 0.000442475
+                    },
+                    "iterations": 7,
+                    "time": 0.002645695
+                },
+                "preconditioner": {},
+                "residual_norm": 37128.013958230455,
+                "completed": true
+            }
+        }
+    }
+]
