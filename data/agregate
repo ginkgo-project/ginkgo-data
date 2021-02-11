@@ -21,6 +21,11 @@ def main():
                 data = json.load(f)
             parts = PurePath(dataset['file']).parts
             for item in data:
+                for k in item['solver'].keys():
+                    item['solver'][k]['recurrent_residuals'] = [];
+                    item['solver'][k]['true_residuals'] = [];
+                    item['solver'][k]['iteration_timestamps'] = [];
+            for item in data:
                 agregate = { k : item[k]
                     for k in item.keys() & properties }
                 agregate['dataset'] = {
