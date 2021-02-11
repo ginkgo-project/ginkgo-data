@@ -5,16 +5,16 @@ $data_cuda := content[dataset.executor="cuda" and dataset.system="A100_solvers"]
 $solvers := $data_cuda.solver~>$keys();
 
 $matrices := [
-"rajat31",
-"atmosmodj",
-"nlpkkt160",
 "thermal2",
+"atmosmodj",
+"StocF-1465",
+"Cube_Coup_dt0",
 "CurlCurl_4",
 "Bump_2911",
-"Cube_Coup_dt0",
-"StocF-1465",
+"FullChip",
+"rajat31",
 "circuit5M",
-"FullChip"];
+"nlpkkt160"];
 
 $getColor := function($num_colors, $id) {
   "hsl(" & $floor(360 * $id / $num_colors) & ",40%,55%)"
