@@ -51,7 +51,7 @@ $plot := $solvers~>$map(function($v, $i) {{
       "y": $memops($v, problem.rows, problem.nonzeros, (solver~>$lookup($v)).apply.iterations, 100, 8, 4) / ((solver~>$lookup($v)).apply.time/1000000000)
     },
     "type": "scatter",
-    "fill" : false,
+    "fill" : true,
     "showLine": false,
     "pointRadius": 5,
     "backgroundColor": $solvers~>$count()~>$getColor($i)
