@@ -1,6 +1,6 @@
 [
     {
-        "filename": "/gpfs/work/slkit/slkit003/ssget/MM/SNAP/email-Enron/email-Enron.mtx",
+        "filename": "/home/kit/scc/au7114/.config/ssget/MM/SNAP/email-Enron/email-Enron.mtx",
         "problem": {
             "id": 2290,
             "group": "SNAP",
@@ -15,6 +15,7 @@
             "psym": 1,
             "nsym": 1,
             "kind": "directed graph",
+            "columns": 36692,
             "row_distribution": {
                 "min": 1,
                 "q1": 1.0,
@@ -44,33 +45,89 @@
         },
         "spmv": {
             "csr": {
-                "storage": 4558716,
-                "time": 112010.0,
+                "storage": 4579196,
+                "max_relative_norm2": 1.2137358238157444e-16,
+                "time": 0.00001721808426028921,
+                "repetitions": 3596,
                 "completed": true
             },
             "coo": {
                 "storage": 5882592,
-                "time": 20104.6,
-                "completed": true
-            },
-            "hybrid": {
-                "storage": 7144624,
-                "time": 23645.7,
-                "completed": true
-            },
-            "sellp": {
-                "storage": 34367976,
-                "time": 874604.9,
+                "max_relative_norm2": 4.5427466852419148e-17,
+                "time": 0.000011729889877641824,
+                "repetitions": 5394,
                 "completed": true
             },
             "ell": {
-                "storage": 608940432,
-                "time": 927442.0,
+                "completed": false
+            },
+            "sellp": {
+                "storage": 34302696,
+                "max_relative_norm2": 3.677494389457409e-16,
+                "time": 0.0007274934946236559,
+                "repetitions": 93,
+                "completed": true
+            },
+            "hybrid": {
+                "storage": 5768432,
+                "max_relative_norm2": 1.5113944433086337e-16,
+                "time": 0.000011534184093437152,
+                "repetitions": 5394,
                 "completed": true
             }
         },
         "optimal": {
-            "spmv": "coo"
+            "spmv": "hybrid"
+        },
+        "conversions": {
+            "csr-coo": {
+                "time": 0.0013766041951219512,
+                "repetitions": 41,
+                "completed": true
+            },
+            "csr-ell": {
+                "time": 0.004154618777777778,
+                "repetitions": 18,
+                "completed": true
+            },
+            "csr-sellp": {
+                "time": 0.003961572166666667,
+                "repetitions": 18,
+                "completed": true
+            },
+            "csr-hybrid": {
+                "time": 0.0036857662777777784,
+                "repetitions": 18,
+                "completed": true
+            },
+            "coo-csr": {
+                "time": 0.015494632583333335,
+                "repetitions": 12,
+                "completed": true
+            },
+            "coo-ell": {
+                "completed": false
+            },
+            "coo-sellp": {
+                "completed": false
+            },
+            "coo-hybrid": {
+                "completed": false
+            },
+            "sellp-csr": {
+                "time": 0.0046159645,
+                "repetitions": 12,
+                "completed": true
+            },
+            "sellp-coo": {
+                "completed": false
+            },
+            "sellp-ell": {
+                "completed": false
+            },
+            "sellp-hybrid": {
+                "completed": false
+            }
         }
     }
 ]

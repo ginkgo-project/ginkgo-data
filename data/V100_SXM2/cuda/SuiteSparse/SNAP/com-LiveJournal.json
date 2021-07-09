@@ -1,8 +1,8 @@
 [
     {
-        "filename": "/gpfs/work/slkit/slkit003/ssget/MM/SNAP/com-LiveJournal/com-LiveJournal.mtx",
+        "filename": "/home/kit/scc/au7114/.config/ssget/MM/SNAP/com-LiveJournal/com-LiveJournal.mtx",
         "problem": {
-            "id": 329,
+            "id": 2781,
             "group": "SNAP",
             "name": "com-LiveJournal",
             "rows": 3997962,
@@ -15,6 +15,7 @@
             "psym": 1,
             "nsym": 1,
             "kind": "undirected graph with communities",
+            "columns": 3997962,
             "row_distribution": {
                 "min": 1,
                 "q1": 2.0,
@@ -44,31 +45,101 @@
         },
         "spmv": {
             "csr": {
-                "storage": 848340388,
-                "time": 4737473.7,
+                "storage": 848668068,
+                "max_relative_norm2": 1.270154469224678e-16,
+                "time": 0.005671101416666667,
+                "repetitions": 12,
                 "completed": true
             },
             "coo": {
                 "storage": 1109798048,
-                "time": 5657888.0,
-                "completed": true
-            },
-            "hybrid": {
-                "storage": 1604639224,
-                "time": 4749834.6,
-                "completed": true
-            },
-            "sellp": {
-                "storage": 4192649816,
-                "time": 15461279.0,
+                "max_relative_norm2": 1.1353867150750554e-17,
+                "time": 0.00622574325,
+                "repetitions": 12,
                 "completed": true
             },
             "ell": {
                 "completed": false
+            },
+            "sellp": {
+                "storage": 4194676568,
+                "max_relative_norm2": 4.06215250720014e-16,
+                "time": 0.014856245200000002,
+                "repetitions": 10,
+                "completed": true
+            },
+            "hybrid": {
+                "storage": 1093844392,
+                "max_relative_norm2": 1.6044470992489169e-16,
+                "time": 0.0057758155,
+                "repetitions": 12,
+                "completed": true
             }
         },
         "optimal": {
             "spmv": "csr"
+        },
+        "conversions": {
+            "csr-coo": {
+                "time": 0.015152522800000002,
+                "repetitions": 10,
+                "completed": true
+            },
+            "csr-ell": {
+                "completed": false
+            },
+            "csr-sellp": {
+                "time": 0.2324320342,
+                "repetitions": 10,
+                "completed": true
+            },
+            "csr-hybrid": {
+                "time": 0.13329469249999999,
+                "repetitions": 10,
+                "completed": true
+            },
+            "coo-csr": {
+                "time": 0.0072909454,
+                "repetitions": 10,
+                "completed": true
+            },
+            "coo-ell": {
+                "completed": false
+            },
+            "coo-sellp": {
+                "completed": false
+            },
+            "coo-hybrid": {
+                "completed": false
+            },
+            "sellp-csr": {
+                "time": 0.0707638377,
+                "repetitions": 10,
+                "completed": true
+            },
+            "sellp-coo": {
+                "completed": false
+            },
+            "sellp-ell": {
+                "completed": false
+            },
+            "sellp-hybrid": {
+                "completed": false
+            },
+            "hybrid-csr": {
+                "time": 0.0611266632,
+                "repetitions": 10,
+                "completed": true
+            },
+            "hybrid-coo": {
+                "completed": false
+            },
+            "hybrid-ell": {
+                "completed": false
+            },
+            "hybrid-sellp": {
+                "completed": false
+            }
         }
     }
 ]

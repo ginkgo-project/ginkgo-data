@@ -1,6 +1,6 @@
 [
     {
-        "filename": "/gpfs/work/slkit/slkit003/ssget/MM/Schenk_IBMNA/c-32/c-32.mtx",
+        "filename": "/home/kit/scc/au7114/.config/ssget/MM/Schenk_IBMNA/c-32/c-32.mtx",
         "problem": {
             "id": 1551,
             "group": "Schenk_IBMNA",
@@ -15,6 +15,7 @@
             "psym": 1,
             "nsym": 1,
             "kind": "optimization problem",
+            "columns": 5975,
             "row_distribution": {
                 "min": 2,
                 "q1": 2.0,
@@ -44,33 +45,103 @@
         },
         "spmv": {
             "csr": {
-                "storage": 677556,
-                "time": 217974.7,
+                "storage": 682676,
+                "max_relative_norm2": 4.2353258118516999e-18,
+                "time": 0.000008415239525398592,
+                "repetitions": 8091,
                 "completed": true
             },
             "coo": {
                 "storage": 871536,
-                "time": 15047.6,
-                "completed": true
-            },
-            "hybrid": {
-                "storage": 1069560,
-                "time": 20384.8,
-                "completed": true
-            },
-            "sellp": {
-                "storage": 2618088,
-                "time": 750690.4,
+                "max_relative_norm2": 1.6692414330430016e-18,
+                "time": 0.000005750146329405949,
+                "repetitions": 12137,
                 "completed": true
             },
             "ell": {
-                "storage": 142396200,
-                "time": 798959.7,
+                "completed": false
+            },
+            "sellp": {
+                "storage": 2618088,
+                "max_relative_norm2": 1.8115277639851209e-17,
+                "time": 0.0004940437142857142,
+                "repetitions": 140,
+                "completed": true
+            },
+            "hybrid": {
+                "storage": 823736,
+                "max_relative_norm2": 3.09136674229576e-18,
+                "time": 0.000008083604993202324,
+                "repetitions": 8091,
                 "completed": true
             }
         },
         "optimal": {
             "spmv": "coo"
+        },
+        "conversions": {
+            "csr-coo": {
+                "time": 0.0004341267,
+                "repetitions": 140,
+                "completed": true
+            },
+            "csr-ell": {
+                "time": 0.0074111878999999999,
+                "repetitions": 10,
+                "completed": true
+            },
+            "csr-sellp": {
+                "time": 0.0008084047096774194,
+                "repetitions": 62,
+                "completed": true
+            },
+            "csr-hybrid": {
+                "time": 0.00023440980317460317,
+                "repetitions": 315,
+                "completed": true
+            },
+            "coo-csr": {
+                "time": 0.00042185599999999997,
+                "repetitions": 140,
+                "completed": true
+            },
+            "coo-ell": {
+                "completed": false
+            },
+            "coo-sellp": {
+                "completed": false
+            },
+            "coo-hybrid": {
+                "completed": false
+            },
+            "sellp-csr": {
+                "time": 0.0015765056829268295,
+                "repetitions": 41,
+                "completed": true
+            },
+            "sellp-coo": {
+                "completed": false
+            },
+            "sellp-ell": {
+                "completed": false
+            },
+            "sellp-hybrid": {
+                "completed": false
+            },
+            "hybrid-csr": {
+                "time": 0.0007861319677419356,
+                "repetitions": 93,
+                "completed": true
+            },
+            "hybrid-coo": {
+                "completed": false
+            },
+            "hybrid-ell": {
+                "completed": false
+            },
+            "hybrid-sellp": {
+                "completed": false
+            }
         }
     }
 ]

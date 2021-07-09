@@ -1,6 +1,6 @@
 [
     {
-        "filename": "/gpfs/work/slkit/slkit003/ssget/MM/Gupta/gupta1/gupta1.mtx",
+        "filename": "/home/kit/scc/au7114/.config/ssget/MM/Gupta/gupta1/gupta1.mtx",
         "problem": {
             "id": 536,
             "group": "Gupta",
@@ -15,6 +15,7 @@
             "psym": 1,
             "nsym": 1,
             "kind": "optimization problem",
+            "columns": 31802,
             "row_distribution": {
                 "min": 3,
                 "q1": 25.0,
@@ -44,33 +45,89 @@
         },
         "spmv": {
             "csr": {
-                "storage": 26097732,
-                "time": 429379.5,
+                "storage": 26179652,
+                "max_relative_norm2": 2.368487557419929e-16,
+                "time": 0.00004943660469483569,
+                "repetitions": 1065,
                 "completed": true
             },
             "coo": {
                 "storage": 34627360,
-                "time": 59372.4,
-                "completed": true
-            },
-            "hybrid": {
-                "storage": 35372424,
-                "time": 78726.0,
-                "completed": true
-            },
-            "sellp": {
-                "storage": 88542232,
-                "time": 5710887.0,
+                "max_relative_norm2": 1.8753122741042807e-16,
+                "time": 0.00005106419718309859,
+                "repetitions": 1065,
                 "completed": true
             },
             "ell": {
-                "storage": 3210602712,
-                "time": 5838605.6,
+                "completed": false
+            },
+            "sellp": {
+                "storage": 91946776,
+                "max_relative_norm2": 1.208212121585124e-15,
+                "time": 0.0043502025,
+                "repetitions": 12,
+                "completed": true
+            },
+            "hybrid": {
+                "storage": 32574328,
+                "max_relative_norm2": 2.855381955475318e-16,
+                "time": 0.00006365487323943661,
+                "repetitions": 1065,
                 "completed": true
             }
         },
         "optimal": {
-            "spmv": "coo"
+            "spmv": "csr"
+        },
+        "conversions": {
+            "csr-coo": {
+                "time": 0.026171657299999996,
+                "repetitions": 10,
+                "completed": true
+            },
+            "csr-ell": {
+                "time": 0.04168901070000001,
+                "repetitions": 10,
+                "completed": true
+            },
+            "csr-sellp": {
+                "time": 0.0569776304,
+                "repetitions": 10,
+                "completed": true
+            },
+            "csr-hybrid": {
+                "time": 0.0131146052,
+                "repetitions": 10,
+                "completed": true
+            },
+            "coo-csr": {
+                "time": 0.005139183416666667,
+                "repetitions": 12,
+                "completed": true
+            },
+            "coo-ell": {
+                "completed": false
+            },
+            "coo-sellp": {
+                "completed": false
+            },
+            "coo-hybrid": {
+                "completed": false
+            },
+            "sellp-csr": {
+                "time": 0.0261576411,
+                "repetitions": 10,
+                "completed": true
+            },
+            "sellp-coo": {
+                "completed": false
+            },
+            "sellp-ell": {
+                "completed": false
+            },
+            "sellp-hybrid": {
+                "completed": false
+            }
         }
     }
 ]

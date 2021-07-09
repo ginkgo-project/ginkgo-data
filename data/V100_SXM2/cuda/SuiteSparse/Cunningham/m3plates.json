@@ -1,6 +1,6 @@
 [
     {
-        "filename": "/gpfs/work/slkit/slkit003/ssget/MM/Cunningham/m3plates/m3plates.mtx",
+        "filename": "/home/kit/scc/au7114/.config/ssget/MM/Cunningham/m3plates/m3plates.mtx",
         "problem": {
             "id": 843,
             "group": "Cunningham",
@@ -15,6 +15,7 @@
             "psym": 1,
             "nsym": 1,
             "kind": "acoustics problem",
+            "columns": 11107,
             "row_distribution": {
                 "min": 0,
                 "q1": 0.0,
@@ -44,33 +45,93 @@
         },
         "spmv": {
             "csr": {
-                "storage": 124100,
-                "time": 13788.1,
+                "storage": 124932,
+                "max_relative_norm2": 0.0,
+                "time": 0.000004300586965477466,
+                "repetitions": 12137,
                 "completed": true
             },
             "coo": {
                 "storage": 106224,
-                "time": 14998.2,
-                "completed": true
-            },
-            "hybrid": {
-                "storage": 133284,
-                "time": 10164.9,
-                "completed": true
-            },
-            "sellp": {
-                "storage": 136424,
-                "time": 10822.3,
+                "max_relative_norm2": 0.0,
+                "time": 0.000006233183908045977,
+                "repetitions": 8091,
                 "completed": true
             },
             "ell": {
                 "storage": 133284,
-                "time": 9994.4,
+                "max_relative_norm2": 0.0,
+                "time": 0.000003653556739536417,
+                "repetitions": 18206,
+                "completed": true
+            },
+            "sellp": {
+                "storage": 136424,
+                "max_relative_norm2": 0.0,
+                "time": 0.000003597944249148633,
+                "repetitions": 18206,
+                "completed": true
+            },
+            "hybrid": {
+                "storage": 106224,
+                "max_relative_norm2": 0.0,
+                "time": 0.000008092751699419107,
+                "repetitions": 8091,
                 "completed": true
             }
         },
         "optimal": {
-            "spmv": "ell"
+            "spmv": "sellp"
+        },
+        "conversions": {
+            "csr-coo": {
+                "time": 0.00004036967459324155,
+                "repetitions": 1598,
+                "completed": true
+            },
+            "csr-ell": {
+                "time": 0.00007225098450704226,
+                "repetitions": 710,
+                "completed": true
+            },
+            "csr-sellp": {
+                "time": 0.00012210214376321354,
+                "repetitions": 473,
+                "completed": true
+            },
+            "csr-hybrid": {
+                "time": 0.00023646033015873019,
+                "repetitions": 315,
+                "completed": true
+            },
+            "coo-csr": {
+                "time": 0.00004135822778473092,
+                "repetitions": 1598,
+                "completed": true
+            },
+            "coo-ell": {
+                "completed": false
+            },
+            "coo-sellp": {
+                "completed": false
+            },
+            "coo-hybrid": {
+                "completed": false
+            },
+            "ell-csr": {
+                "time": 0.00011333108456659619,
+                "repetitions": 473,
+                "completed": true
+            },
+            "ell-coo": {
+                "completed": false
+            },
+            "ell-sellp": {
+                "completed": false
+            },
+            "ell-hybrid": {
+                "completed": false
+            }
         }
     }
 ]

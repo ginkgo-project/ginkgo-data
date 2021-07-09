@@ -1,6 +1,6 @@
 [
     {
-        "filename": "/gpfs/work/slkit/slkit003/ssget/MM/SNAP/email-EuAll/email-EuAll.mtx",
+        "filename": "/home/kit/scc/au7114/.config/ssget/MM/SNAP/email-EuAll/email-EuAll.mtx",
         "problem": {
             "id": 2289,
             "group": "SNAP",
@@ -15,6 +15,7 @@
             "psym": 0.2600511748250413,
             "nsym": 0.2600511748250413,
             "kind": "directed graph",
+            "columns": 265214,
             "row_distribution": {
                 "min": 0,
                 "q1": 1.0,
@@ -44,33 +45,103 @@
         },
         "spmv": {
             "csr": {
-                "storage": 6101400,
-                "time": 132872.6,
+                "storage": 6121880,
+                "max_relative_norm2": 1.117774191218628e-16,
+                "time": 0.000126472399577167,
+                "repetitions": 473,
                 "completed": true
             },
             "coo": {
                 "storage": 6720720,
-                "time": 30950.0,
+                "max_relative_norm2": 3.9667461502163539e-17,
+                "time": 0.00003455995994993743,
+                "repetitions": 2397,
+                "completed": true
+            },
+            "ell": {
+                "completed": false
+            },
+            "sellp": {
+                "storage": 51789576,
+                "max_relative_norm2": 2.9402663599140099e-16,
+                "time": 0.0006754041290322581,
+                "repetitions": 93,
                 "completed": true
             },
             "hybrid": {
                 "storage": 6296744,
-                "time": 32186.7,
-                "completed": true
-            },
-            "sellp": {
-                "storage": 51795720,
-                "time": 642251.9,
-                "completed": true
-            },
-            "ell": {
-                "storage": 2959788240,
-                "time": 673430.2,
+                "max_relative_norm2": 1.0784217939569728e-16,
+                "time": 0.000032405480183562788,
+                "repetitions": 2397,
                 "completed": true
             }
         },
         "optimal": {
-            "spmv": "coo"
+            "spmv": "hybrid"
+        },
+        "conversions": {
+            "csr-coo": {
+                "time": 0.001878523037037037,
+                "repetitions": 27,
+                "completed": true
+            },
+            "csr-ell": {
+                "time": 0.0126436085,
+                "repetitions": 10,
+                "completed": true
+            },
+            "csr-sellp": {
+                "time": 0.0104210827,
+                "repetitions": 10,
+                "completed": true
+            },
+            "csr-hybrid": {
+                "time": 0.0221284553,
+                "repetitions": 10,
+                "completed": true
+            },
+            "coo-csr": {
+                "time": 0.0062376395,
+                "repetitions": 12,
+                "completed": true
+            },
+            "coo-ell": {
+                "completed": false
+            },
+            "coo-sellp": {
+                "completed": false
+            },
+            "coo-hybrid": {
+                "completed": false
+            },
+            "sellp-csr": {
+                "time": 0.0107395928,
+                "repetitions": 10,
+                "completed": true
+            },
+            "sellp-coo": {
+                "completed": false
+            },
+            "sellp-ell": {
+                "completed": false
+            },
+            "sellp-hybrid": {
+                "completed": false
+            },
+            "hybrid-csr": {
+                "time": 0.1580369539,
+                "repetitions": 10,
+                "completed": true
+            },
+            "hybrid-coo": {
+                "completed": false
+            },
+            "hybrid-ell": {
+                "completed": false
+            },
+            "hybrid-sellp": {
+                "completed": false
+            }
         }
     }
 ]

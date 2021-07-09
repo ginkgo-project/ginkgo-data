@@ -1,6 +1,6 @@
 [
     {
-        "filename": "/gpfs/work/slkit/slkit003/ssget/MM/SNAP/Oregon-1/Oregon-1.mtx",
+        "filename": "/home/kit/scc/au7114/.config/ssget/MM/SNAP/Oregon-1/Oregon-1.mtx",
         "problem": {
             "id": 2323,
             "group": "SNAP",
@@ -15,6 +15,7 @@
             "psym": 1,
             "nsym": 1,
             "kind": "undirected graph sequence",
+            "columns": 11492,
             "row_distribution": {
                 "min": 0,
                 "q1": 1.0,
@@ -44,33 +45,89 @@
         },
         "spmv": {
             "csr": {
-                "storage": 607788,
-                "time": 186171.4,
+                "storage": 612908,
+                "max_relative_norm2": 1.6914050703890675e-16,
+                "time": 0.000009838416017797553,
+                "repetitions": 5394,
                 "completed": true
             },
             "coo": {
                 "storage": 749088,
-                "time": 14380.9,
-                "completed": true
-            },
-            "hybrid": {
-                "storage": 821904,
-                "time": 15014.3,
-                "completed": true
-            },
-            "sellp": {
-                "storage": 11067464,
-                "time": 1514813.0,
+                "max_relative_norm2": 6.785451370889148e-17,
+                "time": 0.000006249810653812878,
+                "repetitions": 8091,
                 "completed": true
             },
             "ell": {
-                "storage": 329452656,
-                "time": 1028209.6,
+                "completed": false
+            },
+            "sellp": {
+                "storage": 11095112,
+                "max_relative_norm2": 3.2918245904266008e-16,
+                "time": 0.0011940854838709678,
+                "repetitions": 62,
+                "completed": true
+            },
+            "hybrid": {
+                "storage": 708208,
+                "max_relative_norm2": 2.377769720717098e-16,
+                "time": 0.000008097687059695958,
+                "repetitions": 8091,
                 "completed": true
             }
         },
         "optimal": {
             "spmv": "coo"
+        },
+        "conversions": {
+            "csr-coo": {
+                "time": 0.0005788619928571428,
+                "repetitions": 140,
+                "completed": true
+            },
+            "csr-ell": {
+                "time": 0.005592568666666666,
+                "repetitions": 12,
+                "completed": true
+            },
+            "csr-sellp": {
+                "time": 0.0072328532,
+                "repetitions": 10,
+                "completed": true
+            },
+            "csr-hybrid": {
+                "time": 0.00038547905714285716,
+                "repetitions": 140,
+                "completed": true
+            },
+            "coo-csr": {
+                "time": 0.005320909699999999,
+                "repetitions": 10,
+                "completed": true
+            },
+            "coo-ell": {
+                "completed": false
+            },
+            "coo-sellp": {
+                "completed": false
+            },
+            "coo-hybrid": {
+                "completed": false
+            },
+            "sellp-csr": {
+                "time": 0.0017427817317073173,
+                "repetitions": 41,
+                "completed": true
+            },
+            "sellp-coo": {
+                "completed": false
+            },
+            "sellp-ell": {
+                "completed": false
+            },
+            "sellp-hybrid": {
+                "completed": false
+            }
         }
     }
 ]

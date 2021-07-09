@@ -1,13 +1,13 @@
 [
     {
-        "filename": "/gpfs/work/slkit/slkit003/ssget/MM/Boeing/ct20stif/ct20stif.mtx",
+        "filename": "/home/kit/scc/au7114/.config/ssget/MM/Boeing/ct20stif/ct20stif.mtx",
         "problem": {
             "id": 356,
             "group": "Boeing",
             "name": "ct20stif",
             "rows": 52329,
             "cols": 52329,
-            "nonzeros": 2600295,
+            "nonzeros": 2698463,
             "real": true,
             "binary": false,
             "2d3d": true,
@@ -15,6 +15,7 @@
             "psym": 1,
             "nsym": 1,
             "kind": "structural problem",
+            "columns": 52329,
             "row_distribution": {
                 "min": 2,
                 "q1": 42.0,
@@ -44,33 +45,93 @@
         },
         "spmv": {
             "csr": {
-                "storage": 31412860,
-                "time": 76087.1,
+                "storage": 31494780,
+                "max_relative_norm2": 2.170104065621807e-16,
+                "time": 0.000054720163380281689,
+                "repetitions": 1065,
                 "completed": true
             },
             "coo": {
                 "storage": 41604720,
-                "time": 68923.7,
-                "completed": true
-            },
-            "hybrid": {
-                "storage": 39812784,
-                "time": 82759.1,
-                "completed": true
-            },
-            "sellp": {
-                "storage": 46033192,
-                "time": 173688.4,
+                "max_relative_norm2": 3.8968493750510269e-19,
+                "time": 0.00006041828075117371,
+                "repetitions": 1065,
                 "completed": true
             },
             "ell": {
                 "storage": 129985236,
-                "time": 176326.0,
+                "max_relative_norm2": 1.7674753026571019e-16,
+                "time": 0.00017426406031746032,
+                "repetitions": 315,
+                "completed": true
+            },
+            "sellp": {
+                "storage": 46065448,
+                "max_relative_norm2": 1.7674753026571019e-16,
+                "time": 0.00014473905285412262,
+                "repetitions": 473,
+                "completed": true
+            },
+            "hybrid": {
+                "storage": 35809388,
+                "max_relative_norm2": 1.4140006630586835e-16,
+                "time": 0.00007166121549295775,
+                "repetitions": 710,
                 "completed": true
             }
         },
         "optimal": {
-            "spmv": "coo"
+            "spmv": "csr"
+        },
+        "conversions": {
+            "csr-coo": {
+                "time": 0.07312985350000001,
+                "repetitions": 10,
+                "completed": true
+            },
+            "csr-ell": {
+                "time": 0.0357758574,
+                "repetitions": 10,
+                "completed": true
+            },
+            "csr-sellp": {
+                "time": 0.020974254999999998,
+                "repetitions": 10,
+                "completed": true
+            },
+            "csr-hybrid": {
+                "time": 0.0133653039,
+                "repetitions": 10,
+                "completed": true
+            },
+            "coo-csr": {
+                "time": 0.004616298083333334,
+                "repetitions": 12,
+                "completed": true
+            },
+            "coo-ell": {
+                "completed": false
+            },
+            "coo-sellp": {
+                "completed": false
+            },
+            "coo-hybrid": {
+                "completed": false
+            },
+            "ell-csr": {
+                "time": 0.008523984600000002,
+                "repetitions": 10,
+                "completed": true
+            },
+            "ell-coo": {
+                "completed": false
+            },
+            "ell-sellp": {
+                "completed": false
+            },
+            "ell-hybrid": {
+                "completed": false
+            }
         }
     }
 ]

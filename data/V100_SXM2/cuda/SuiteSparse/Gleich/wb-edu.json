@@ -1,6 +1,6 @@
 [
     {
-        "filename": "/gpfs/work/slkit/slkit003/ssget/MM/Gleich/wb-edu/wb-edu.mtx",
+        "filename": "/home/kit/scc/au7114/.config/ssget/MM/Gleich/wb-edu/wb-edu.mtx",
         "problem": {
             "id": 1842,
             "group": "Gleich",
@@ -15,6 +15,7 @@
             "psym": 0.3281596169311674,
             "nsym": 0.3281596169311674,
             "kind": "directed graph",
+            "columns": 9845725,
             "row_distribution": {
                 "min": 0,
                 "q1": 0.0,
@@ -44,31 +45,87 @@
         },
         "spmv": {
             "csr": {
-                "storage": 725261348,
-                "time": 2121941.8,
+                "storage": 725589028,
+                "max_relative_norm2": 8.177176122525093e-17,
+                "time": 0.002149530851851852,
+                "repetitions": 27,
                 "completed": true
             },
             "coo": {
                 "storage": 914504592,
-                "time": 2223994.5,
-                "completed": true
-            },
-            "hybrid": {
-                "storage": 1335761424,
-                "time": 2116493.0,
-                "completed": true
-            },
-            "sellp": {
-                "storage": 4472577800,
-                "time": 7793886.1,
+                "max_relative_norm2": 9.33597177347845e-18,
+                "time": 0.002234888296296297,
+                "repetitions": 27,
                 "completed": true
             },
             "ell": {
                 "completed": false
+            },
+            "sellp": {
+                "storage": 4460159240,
+                "max_relative_norm2": 2.930748397120224e-16,
+                "time": 0.0079872033,
+                "repetitions": 10,
+                "completed": true
+            },
+            "hybrid": {
+                "storage": 921928396,
+                "max_relative_norm2": 1.380458123111788e-16,
+                "time": 0.0021871276666666666,
+                "repetitions": 27,
+                "completed": true
             }
         },
         "optimal": {
-            "spmv": "hybrid"
+            "spmv": "csr"
+        },
+        "conversions": {
+            "csr-coo": {
+                "time": 0.012944629800000002,
+                "repetitions": 10,
+                "completed": true
+            },
+            "csr-ell": {
+                "completed": false
+            },
+            "csr-sellp": {
+                "time": 0.0960818051,
+                "repetitions": 10,
+                "completed": true
+            },
+            "csr-hybrid": {
+                "time": 0.3871266385,
+                "repetitions": 10,
+                "completed": true
+            },
+            "coo-csr": {
+                "time": 0.009124758,
+                "repetitions": 10,
+                "completed": true
+            },
+            "coo-ell": {
+                "completed": false
+            },
+            "coo-sellp": {
+                "completed": false
+            },
+            "coo-hybrid": {
+                "completed": false
+            },
+            "sellp-csr": {
+                "time": 0.07460293809999999,
+                "repetitions": 10,
+                "completed": true
+            },
+            "sellp-coo": {
+                "completed": false
+            },
+            "sellp-ell": {
+                "completed": false
+            },
+            "sellp-hybrid": {
+                "completed": false
+            }
         }
     }
 ]

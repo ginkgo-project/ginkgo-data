@@ -1,8 +1,8 @@
 [
     {
-        "filename": "/gpfs/work/slkit/slkit003/ssget/MM/DIMACS10/rgg_n_2_20_s0/rgg_n_2_20_s0.mtx",
+        "filename": "/home/kit/scc/au7114/.config/ssget/MM/DIMACS10/rgg_n_2_20_s0/rgg_n_2_20_s0.mtx",
         "problem": {
-            "id": 52,
+            "id": 2504,
             "group": "DIMACS10",
             "name": "rgg_n_2_20_s0",
             "rows": 1048576,
@@ -15,6 +15,7 @@
             "psym": 1,
             "nsym": 1,
             "kind": "undirected random graph",
+            "columns": 1048576,
             "row_distribution": {
                 "min": 0,
                 "q1": 11.0,
@@ -44,33 +45,107 @@
         },
         "spmv": {
             "csr": {
-                "storage": 169593188,
-                "time": 319591.1,
+                "storage": 169675108,
+                "max_relative_norm2": 6.967098602438974e-19,
+                "time": 0.00044323564999999994,
+                "repetitions": 140,
                 "completed": true
             },
             "coo": {
                 "storage": 220531840,
-                "time": 408950.5,
-                "completed": true
-            },
-            "hybrid": {
-                "storage": 209304768,
-                "time": 329354.7,
-                "completed": true
-            },
-            "sellp": {
-                "storage": 277927176,
-                "time": 400730.5,
+                "max_relative_norm2": 0.0,
+                "time": 0.00046108652142857136,
+                "repetitions": 140,
                 "completed": true
             },
             "ell": {
                 "storage": 452984832,
-                "time": 358612.9,
+                "max_relative_norm2": 1.583045675745863e-16,
+                "time": 0.0003906199928571429,
+                "repetitions": 140,
+                "completed": true
+            },
+            "sellp": {
+                "storage": 277926408,
+                "max_relative_norm2": 1.583045675745863e-16,
+                "time": 0.0004153398571428571,
+                "repetitions": 140,
+                "completed": true
+            },
+            "hybrid": {
+                "storage": 184117056,
+                "max_relative_norm2": 1.4204852113315655e-16,
+                "time": 0.0003414526,
+                "repetitions": 210,
                 "completed": true
             }
         },
         "optimal": {
-            "spmv": "csr"
+            "spmv": "hybrid"
+        },
+        "conversions": {
+            "csr-coo": {
+                "time": 0.08905168659999999,
+                "repetitions": 10,
+                "completed": true
+            },
+            "csr-ell": {
+                "time": 0.04192784410000001,
+                "repetitions": 10,
+                "completed": true
+            },
+            "csr-sellp": {
+                "time": 0.027903950600000006,
+                "repetitions": 10,
+                "completed": true
+            },
+            "csr-hybrid": {
+                "time": 0.1382456601,
+                "repetitions": 10,
+                "completed": true
+            },
+            "coo-csr": {
+                "time": 0.007044370200000001,
+                "repetitions": 10,
+                "completed": true
+            },
+            "coo-ell": {
+                "completed": false
+            },
+            "coo-sellp": {
+                "completed": false
+            },
+            "coo-hybrid": {
+                "completed": false
+            },
+            "ell-csr": {
+                "time": 0.010462335,
+                "repetitions": 10,
+                "completed": true
+            },
+            "ell-coo": {
+                "completed": false
+            },
+            "ell-sellp": {
+                "completed": false
+            },
+            "ell-hybrid": {
+                "completed": false
+            },
+            "sellp-csr": {
+                "time": 0.0189210473,
+                "repetitions": 10,
+                "completed": true
+            },
+            "sellp-coo": {
+                "completed": false
+            },
+            "sellp-ell": {
+                "completed": false
+            },
+            "sellp-hybrid": {
+                "completed": false
+            }
         }
     }
 ]

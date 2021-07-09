@@ -1,8 +1,8 @@
 [
     {
-        "filename": "/gpfs/work/slkit/slkit003/ssget/MM/VDOL/spaceShuttleEntry_4/spaceShuttleEntry_4.mtx",
+        "filename": "/home/kit/scc/au7114/.config/ssget/MM/VDOL/spaceShuttleEntry_4/spaceShuttleEntry_4.mtx",
         "problem": {
-            "id": 281,
+            "id": 2733,
             "group": "VDOL",
             "name": "spaceShuttleEntry_4",
             "rows": 2450,
@@ -15,6 +15,7 @@
             "psym": 1,
             "nsym": 1,
             "kind": "optimal control problem",
+            "columns": 2450,
             "row_distribution": {
                 "min": 2,
                 "q1": 11.0,
@@ -44,33 +45,89 @@
         },
         "spmv": {
             "csr": {
-                "storage": 485832,
-                "time": 174393.6,
+                "storage": 490792,
+                "max_relative_norm2": 1.561424306626928e-17,
+                "time": 0.000006683955876900261,
+                "repetitions": 8091,
                 "completed": true
             },
             "coo": {
                 "storage": 634704,
-                "time": 13830.8,
-                "completed": true
-            },
-            "hybrid": {
-                "storage": 647584,
-                "time": 19952.6,
-                "completed": true
-            },
-            "sellp": {
-                "storage": 2360696,
-                "time": 713654.3,
+                "max_relative_norm2": 6.245697226507712e-17,
+                "time": 0.000006219830799653936,
+                "repetitions": 8091,
                 "completed": true
             },
             "ell": {
-                "storage": 66796800,
-                "time": 744021.4,
+                "completed": false
+            },
+            "sellp": {
+                "storage": 2360696,
+                "max_relative_norm2": 1.934302393477465e-16,
+                "time": 0.0005367893642857143,
+                "repetitions": 140,
+                "completed": true
+            },
+            "hybrid": {
+                "storage": 615104,
+                "max_relative_norm2": 1.4476868526132754e-16,
+                "time": 0.000009085387838338897,
+                "repetitions": 8091,
                 "completed": true
             }
         },
         "optimal": {
             "spmv": "coo"
+        },
+        "conversions": {
+            "csr-coo": {
+                "time": 0.000057333684507042259,
+                "repetitions": 1065,
+                "completed": true
+            },
+            "csr-ell": {
+                "time": 0.00205107762962963,
+                "repetitions": 27,
+                "completed": true
+            },
+            "csr-sellp": {
+                "time": 0.0006149686666666667,
+                "repetitions": 93,
+                "completed": true
+            },
+            "csr-hybrid": {
+                "time": 0.00019388999365079363,
+                "repetitions": 315,
+                "completed": true
+            },
+            "coo-csr": {
+                "time": 0.00004436002065081351,
+                "repetitions": 1598,
+                "completed": true
+            },
+            "coo-ell": {
+                "completed": false
+            },
+            "coo-sellp": {
+                "completed": false
+            },
+            "coo-hybrid": {
+                "completed": false
+            },
+            "sellp-csr": {
+                "time": 0.0008924776774193549,
+                "repetitions": 62,
+                "completed": true
+            },
+            "sellp-coo": {
+                "completed": false
+            },
+            "sellp-ell": {
+                "completed": false
+            },
+            "sellp-hybrid": {
+                "completed": false
+            }
         }
     }
 ]

@@ -1,13 +1,13 @@
 [
     {
-        "filename": "/gpfs/work/slkit/slkit003/ssget/MM/Hollinger/g7jac020sc/g7jac020sc.mtx",
+        "filename": "/home/kit/scc/au7114/.config/ssget/MM/Hollinger/g7jac020sc/g7jac020sc.mtx",
         "problem": {
             "id": 548,
             "group": "Hollinger",
             "name": "g7jac020sc",
             "rows": 5850,
             "cols": 5850,
-            "nonzeros": 42568,
+            "nonzeros": 45465,
             "real": true,
             "binary": false,
             "2d3d": false,
@@ -15,6 +15,7 @@
             "psym": 0.06184526063359838,
             "nsym": 0,
             "kind": "economic problem",
+            "columns": 5850,
             "row_distribution": {
                 "min": 2,
                 "q1": 3.0,
@@ -44,33 +45,93 @@
         },
         "spmv": {
             "csr": {
-                "storage": 534220,
-                "time": 17616.0,
+                "storage": 539340,
+                "max_relative_norm2": 5.701393379950728e-17,
+                "time": 0.000004461082063112795,
+                "repetitions": 12137,
                 "completed": true
             },
             "coo": {
                 "storage": 681088,
-                "time": 15049.4,
-                "completed": true
-            },
-            "hybrid": {
-                "storage": 796096,
-                "time": 15714.8,
-                "completed": true
-            },
-            "sellp": {
-                "storage": 1940680,
-                "time": 28800.0,
+                "max_relative_norm2": 2.385916497115367e-19,
+                "time": 0.000006163543626925928,
+                "repetitions": 12137,
                 "completed": true
             },
             "ell": {
                 "storage": 4212000,
-                "time": 30232.1,
+                "max_relative_norm2": 7.965755917793915e-17,
+                "time": 0.000006210093807934743,
+                "repetitions": 8091,
+                "completed": true
+            },
+            "sellp": {
+                "storage": 1960648,
+                "max_relative_norm2": 1.180769372111419e-16,
+                "time": 0.00001641668576195773,
+                "repetitions": 3596,
+                "completed": true
+            },
+            "hybrid": {
+                "storage": 636296,
+                "max_relative_norm2": 5.849904308013774e-17,
+                "time": 0.00000850731615375108,
+                "repetitions": 8091,
                 "completed": true
             }
         },
         "optimal": {
-            "spmv": "coo"
+            "spmv": "csr"
+        },
+        "conversions": {
+            "csr-coo": {
+                "time": 0.00004178169774718398,
+                "repetitions": 1598,
+                "completed": true
+            },
+            "csr-ell": {
+                "time": 0.027163190000000005,
+                "repetitions": 10,
+                "completed": true
+            },
+            "csr-sellp": {
+                "time": 0.007272250499999999,
+                "repetitions": 10,
+                "completed": true
+            },
+            "csr-hybrid": {
+                "time": 0.0002448958428571429,
+                "repetitions": 210,
+                "completed": true
+            },
+            "coo-csr": {
+                "time": 0.00004003975594493117,
+                "repetitions": 1598,
+                "completed": true
+            },
+            "coo-ell": {
+                "completed": false
+            },
+            "coo-sellp": {
+                "completed": false
+            },
+            "coo-hybrid": {
+                "completed": false
+            },
+            "ell-csr": {
+                "time": 0.0124993424,
+                "repetitions": 10,
+                "completed": true
+            },
+            "ell-coo": {
+                "completed": false
+            },
+            "ell-sellp": {
+                "completed": false
+            },
+            "ell-hybrid": {
+                "completed": false
+            }
         }
     }
 ]

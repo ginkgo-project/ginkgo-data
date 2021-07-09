@@ -1,8 +1,8 @@
 [
     {
-        "filename": "/gpfs/work/slkit/slkit003/ssget/MM/Schulthess/N_pid/N_pid.mtx",
+        "filename": "/home/kit/scc/au7114/.config/ssget/MM/Schulthess/N_pid/N_pid.mtx",
         "problem": {
-            "id": 101,
+            "id": 2553,
             "group": "Schulthess",
             "name": "N_pid",
             "rows": 3625,
@@ -15,6 +15,7 @@
             "psym": 0,
             "nsym": 0,
             "kind": "biochemical network",
+            "columns": 3923,
             "row_distribution": {
                 "min": 0,
                 "q1": 1.0,
@@ -44,33 +45,93 @@
         },
         "spmv": {
             "csr": {
-                "storage": 111152,
-                "time": 25216.5,
+                "storage": 112160,
+                "max_relative_norm2": 6.465813678180666e-17,
+                "time": 0.000008444102459522928,
+                "repetitions": 8091,
                 "completed": true
             },
             "coo": {
                 "storage": 128864,
-                "time": 13454.2,
-                "completed": true
-            },
-            "hybrid": {
-                "storage": 149320,
-                "time": 14690.8,
-                "completed": true
-            },
-            "sellp": {
-                "storage": 1289624,
-                "time": 63914.3,
+                "max_relative_norm2": 3.104928361331247e-17,
+                "time": 0.000008637738722036832,
+                "repetitions": 8091,
                 "completed": true
             },
             "ell": {
                 "storage": 7873500,
-                "time": 69718.2,
+                "max_relative_norm2": 1.417798876703666e-16,
+                "time": 0.000010613447905079718,
+                "repetitions": 5394,
+                "completed": true
+            },
+            "sellp": {
+                "storage": 1286552,
+                "max_relative_norm2": 1.6564593026484303e-16,
+                "time": 0.00006630215680751173,
+                "repetitions": 1065,
+                "completed": true
+            },
+            "hybrid": {
+                "storage": 126700,
+                "max_relative_norm2": 9.832796903605742e-17,
+                "time": 0.000011671818131256952,
+                "repetitions": 5394,
                 "completed": true
             }
         },
         "optimal": {
-            "spmv": "coo"
+            "spmv": "csr"
+        },
+        "conversions": {
+            "csr-coo": {
+                "time": 0.0000772022352112676,
+                "repetitions": 710,
+                "completed": true
+            },
+            "csr-ell": {
+                "time": 0.0029124928333333335,
+                "repetitions": 18,
+                "completed": true
+            },
+            "csr-sellp": {
+                "time": 0.0006200763978494625,
+                "repetitions": 93,
+                "completed": true
+            },
+            "csr-hybrid": {
+                "time": 0.0004794069928571429,
+                "repetitions": 140,
+                "completed": true
+            },
+            "coo-csr": {
+                "time": 0.00006908795399061033,
+                "repetitions": 1065,
+                "completed": true
+            },
+            "coo-ell": {
+                "completed": false
+            },
+            "coo-sellp": {
+                "completed": false
+            },
+            "coo-hybrid": {
+                "completed": false
+            },
+            "ell-csr": {
+                "time": 0.0001900806,
+                "repetitions": 315,
+                "completed": true
+            },
+            "ell-coo": {
+                "completed": false
+            },
+            "ell-sellp": {
+                "completed": false
+            },
+            "ell-hybrid": {
+                "completed": false
+            }
         }
     }
 ]

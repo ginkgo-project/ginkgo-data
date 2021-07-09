@@ -1,8 +1,8 @@
 [
     {
-        "filename": "/gpfs/work/slkit/slkit003/ssget/MM/SNAP/loc-Gowalla/loc-Gowalla.mtx",
+        "filename": "/home/kit/scc/au7114/.config/ssget/MM/SNAP/loc-Gowalla/loc-Gowalla.mtx",
         "problem": {
-            "id": 336,
+            "id": 2788,
             "group": "SNAP",
             "name": "loc-Gowalla",
             "rows": 196591,
@@ -15,6 +15,7 @@
             "psym": 1,
             "nsym": 1,
             "kind": "undirected graph",
+            "columns": 196591,
             "row_distribution": {
                 "min": 1,
                 "q1": 1.0,
@@ -44,31 +45,87 @@
         },
         "spmv": {
             "csr": {
-                "storage": 23594216,
-                "time": 1471377.7,
+                "storage": 23614696,
+                "max_relative_norm2": 1.170198918037115e-16,
+                "time": 0.00007861297887323944,
+                "repetitions": 710,
                 "completed": true
             },
             "coo": {
                 "storage": 30410464,
-                "time": 66592.5,
-                "completed": true
-            },
-            "hybrid": {
-                "storage": 41088716,
-                "time": 75337.3,
-                "completed": true
-            },
-            "sellp": {
-                "storage": 179136008,
-                "time": 9228495.0,
+                "max_relative_norm2": 2.6812442562646274e-17,
+                "time": 0.00006543616713615024,
+                "repetitions": 1065,
                 "completed": true
             },
             "ell": {
                 "completed": false
+            },
+            "sellp": {
+                "storage": 179198984,
+                "max_relative_norm2": 4.457935973604698e-16,
+                "time": 0.008100668,
+                "repetitions": 10,
+                "completed": true
+            },
+            "hybrid": {
+                "storage": 29628968,
+                "max_relative_norm2": 1.4549214228545773e-16,
+                "time": 0.00006147141408450703,
+                "repetitions": 1065,
+                "completed": true
             }
         },
         "optimal": {
-            "spmv": "coo"
+            "spmv": "hybrid"
+        },
+        "conversions": {
+            "csr-coo": {
+                "time": 0.0016812081219512196,
+                "repetitions": 41,
+                "completed": true
+            },
+            "csr-ell": {
+                "completed": false
+            },
+            "csr-sellp": {
+                "time": 0.014717406200000002,
+                "repetitions": 10,
+                "completed": true
+            },
+            "csr-hybrid": {
+                "time": 0.0141060059,
+                "repetitions": 10,
+                "completed": true
+            },
+            "coo-csr": {
+                "time": 0.0021166647037037039,
+                "repetitions": 27,
+                "completed": true
+            },
+            "coo-ell": {
+                "completed": false
+            },
+            "coo-sellp": {
+                "completed": false
+            },
+            "coo-hybrid": {
+                "completed": false
+            },
+            "sellp-csr": {
+                "time": 0.0124801038,
+                "repetitions": 10,
+                "completed": true
+            },
+            "sellp-coo": {
+                "completed": false
+            },
+            "sellp-ell": {
+                "completed": false
+            },
+            "sellp-hybrid": {
+                "completed": false
+            }
         }
     }
 ]

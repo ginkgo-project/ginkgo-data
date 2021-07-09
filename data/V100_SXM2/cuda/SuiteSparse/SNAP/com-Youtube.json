@@ -1,8 +1,8 @@
 [
     {
-        "filename": "/gpfs/work/slkit/slkit003/ssget/MM/SNAP/com-Youtube/com-Youtube.mtx",
+        "filename": "/home/kit/scc/au7114/.config/ssget/MM/SNAP/com-Youtube/com-Youtube.mtx",
         "problem": {
-            "id": 331,
+            "id": 2783,
             "group": "SNAP",
             "name": "com-Youtube",
             "rows": 1134890,
@@ -15,6 +15,7 @@
             "psym": 1,
             "nsym": 1,
             "kind": "undirected graph with communities",
+            "columns": 1134890,
             "row_distribution": {
                 "min": 1,
                 "q1": 1.0,
@@ -44,31 +45,87 @@
         },
         "spmv": {
             "csr": {
-                "storage": 76242540,
-                "time": 3115078.3,
+                "storage": 76324460,
+                "max_relative_norm2": 1.3421153421452145e-16,
+                "time": 0.00030981694761904755,
+                "repetitions": 210,
                 "completed": true
             },
             "coo": {
                 "storage": 95603968,
-                "time": 278561.6,
-                "completed": true
-            },
-            "hybrid": {
-                "storage": 113684944,
-                "time": 263769.9,
-                "completed": true
-            },
-            "sellp": {
-                "storage": 929119832,
-                "time": 18522962.1,
+                "max_relative_norm2": 6.880146289102891e-17,
+                "time": 0.0003122951904761905,
+                "repetitions": 210,
                 "completed": true
             },
             "ell": {
                 "completed": false
+            },
+            "sellp": {
+                "storage": 926180696,
+                "max_relative_norm2": 5.399191679541293e-16,
+                "time": 0.0156356607,
+                "repetitions": 10,
+                "completed": true
+            },
+            "hybrid": {
+                "storage": 91064408,
+                "max_relative_norm2": 1.5553424954707289e-16,
+                "time": 0.0002896654380952381,
+                "repetitions": 210,
+                "completed": true
             }
         },
         "optimal": {
             "spmv": "hybrid"
+        },
+        "conversions": {
+            "csr-coo": {
+                "time": 0.0031293898888888895,
+                "repetitions": 18,
+                "completed": true
+            },
+            "csr-ell": {
+                "completed": false
+            },
+            "csr-sellp": {
+                "time": 0.0365535775,
+                "repetitions": 10,
+                "completed": true
+            },
+            "csr-hybrid": {
+                "time": 0.029041148699999999,
+                "repetitions": 10,
+                "completed": true
+            },
+            "coo-csr": {
+                "time": 0.002693334851851852,
+                "repetitions": 27,
+                "completed": true
+            },
+            "coo-ell": {
+                "completed": false
+            },
+            "coo-sellp": {
+                "completed": false
+            },
+            "coo-hybrid": {
+                "completed": false
+            },
+            "sellp-csr": {
+                "time": 0.025873193500000004,
+                "repetitions": 10,
+                "completed": true
+            },
+            "sellp-coo": {
+                "completed": false
+            },
+            "sellp-ell": {
+                "completed": false
+            },
+            "sellp-hybrid": {
+                "completed": false
+            }
         }
     }
 ]

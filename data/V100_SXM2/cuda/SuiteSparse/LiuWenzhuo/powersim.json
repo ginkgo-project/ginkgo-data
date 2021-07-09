@@ -1,13 +1,13 @@
 [
     {
-        "filename": "/gpfs/work/slkit/slkit003/ssget/MM/LiuWenzhuo/powersim/powersim.mtx",
+        "filename": "/home/kit/scc/au7114/.config/ssget/MM/LiuWenzhuo/powersim/powersim.mtx",
         "problem": {
             "id": 1212,
             "group": "LiuWenzhuo",
             "name": "powersim",
             "rows": 15838,
             "cols": 15838,
-            "nonzeros": 64424,
+            "nonzeros": 67562,
             "real": true,
             "binary": false,
             "2d3d": false,
@@ -15,6 +15,7 @@
             "psym": 0.5913695769855386,
             "nsym": 0.5337339974478245,
             "kind": "power network problem",
+            "columns": 15838,
             "row_distribution": {
                 "min": 2,
                 "q1": 3.0,
@@ -44,33 +45,93 @@
         },
         "spmv": {
             "csr": {
-                "storage": 836444,
-                "time": 16194.8,
+                "storage": 841564,
+                "max_relative_norm2": 2.934858660733489e-17,
+                "time": 0.000006884354097144976,
+                "repetitions": 8091,
                 "completed": true
             },
             "coo": {
                 "storage": 1030784,
-                "time": 15109.7,
-                "completed": true
-            },
-            "hybrid": {
-                "storage": 1261296,
-                "time": 14354.7,
-                "completed": true
-            },
-            "sellp": {
-                "storage": 1302664,
-                "time": 22422.2,
+                "max_relative_norm2": 0.0,
+                "time": 0.000006345936719812137,
+                "repetitions": 8091,
                 "completed": true
             },
             "ell": {
                 "storage": 7602240,
-                "time": 22194.7,
+                "max_relative_norm2": 9.089217843823327e-17,
+                "time": 0.000015496518631813124,
+                "repetitions": 3596,
+                "completed": true
+            },
+            "sellp": {
+                "storage": 1302664,
+                "max_relative_norm2": 9.089217843823327e-17,
+                "time": 0.000012238617538005193,
+                "repetitions": 5394,
+                "completed": true
+            },
+            "hybrid": {
+                "storage": 924872,
+                "max_relative_norm2": 1.0336031867810434e-16,
+                "time": 0.00000814582536151279,
+                "repetitions": 8091,
                 "completed": true
             }
         },
         "optimal": {
-            "spmv": "hybrid"
+            "spmv": "coo"
+        },
+        "conversions": {
+            "csr-coo": {
+                "time": 0.000061998179342723,
+                "repetitions": 1065,
+                "completed": true
+            },
+            "csr-ell": {
+                "time": 0.027189985399999999,
+                "repetitions": 10,
+                "completed": true
+            },
+            "csr-sellp": {
+                "time": 0.00013781242494714587,
+                "repetitions": 473,
+                "completed": true
+            },
+            "csr-hybrid": {
+                "time": 0.0008995999032258065,
+                "repetitions": 62,
+                "completed": true
+            },
+            "coo-csr": {
+                "time": 0.0087910089,
+                "repetitions": 10,
+                "completed": true
+            },
+            "coo-ell": {
+                "completed": false
+            },
+            "coo-sellp": {
+                "completed": false
+            },
+            "coo-hybrid": {
+                "completed": false
+            },
+            "ell-csr": {
+                "time": 0.00013461909936575054,
+                "repetitions": 473,
+                "completed": true
+            },
+            "ell-coo": {
+                "completed": false
+            },
+            "ell-sellp": {
+                "completed": false
+            },
+            "ell-hybrid": {
+                "completed": false
+            }
         }
     }
 ]

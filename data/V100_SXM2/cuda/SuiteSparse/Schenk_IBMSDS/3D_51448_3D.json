@@ -1,13 +1,13 @@
 [
     {
-        "filename": "/gpfs/work/slkit/slkit003/ssget/MM/Schenk_IBMSDS/3D_51448_3D/3D_51448_3D.mtx",
+        "filename": "/home/kit/scc/au7114/.config/ssget/MM/Schenk_IBMSDS/3D_51448_3D/3D_51448_3D.mtx",
         "problem": {
             "id": 957,
             "group": "Schenk_IBMSDS",
             "name": "3D_51448_3D",
             "rows": 51448,
             "cols": 51448,
-            "nonzeros": 537038,
+            "nonzeros": 1056610,
             "real": true,
             "binary": false,
             "2d3d": true,
@@ -15,6 +15,7 @@
             "psym": 0.9920908271502504,
             "nsym": 0.1870343293725159,
             "kind": "semiconductor device problem",
+            "columns": 51448,
             "row_distribution": {
                 "min": 12,
                 "q1": 21.0,
@@ -44,33 +45,89 @@
         },
         "spmv": {
             "csr": {
-                "storage": 6650252,
-                "time": 72219.7,
+                "storage": 6670732,
+                "max_relative_norm2": 1.899096509461135e-16,
+                "time": 0.000025592118481435129,
+                "repetitions": 2397,
                 "completed": true
             },
             "coo": {
                 "storage": 8592608,
-                "time": 27813.9,
-                "completed": true
-            },
-            "hybrid": {
-                "storage": 8655808,
-                "time": 29310.0,
-                "completed": true
-            },
-            "sellp": {
-                "storage": 8795720,
-                "time": 294469.8,
+                "max_relative_norm2": 0.0,
+                "time": 0.000016106715239154618,
+                "repetitions": 3596,
                 "completed": true
             },
             "ell": {
-                "storage": 250654656,
-                "time": 288576.1,
+                "completed": false
+            },
+            "sellp": {
+                "storage": 8795720,
+                "max_relative_norm2": 1.7068184975829587e-16,
+                "time": 0.00020976859365079363,
+                "repetitions": 315,
+                "completed": true
+            },
+            "hybrid": {
+                "storage": 7659456,
+                "max_relative_norm2": 8.607301824703132e-17,
+                "time": 0.000022291866916979556,
+                "repetitions": 2397,
                 "completed": true
             }
         },
         "optimal": {
             "spmv": "coo"
+        },
+        "conversions": {
+            "csr-coo": {
+                "time": 0.0734598578,
+                "repetitions": 10,
+                "completed": true
+            },
+            "csr-ell": {
+                "time": 0.0078952823,
+                "repetitions": 10,
+                "completed": true
+            },
+            "csr-sellp": {
+                "time": 0.007031148699999999,
+                "repetitions": 10,
+                "completed": true
+            },
+            "csr-hybrid": {
+                "time": 0.0129866558,
+                "repetitions": 10,
+                "completed": true
+            },
+            "coo-csr": {
+                "time": 0.007517819833333334,
+                "repetitions": 18,
+                "completed": true
+            },
+            "coo-ell": {
+                "completed": false
+            },
+            "coo-sellp": {
+                "completed": false
+            },
+            "coo-hybrid": {
+                "completed": false
+            },
+            "sellp-csr": {
+                "time": 0.0045662766666666669,
+                "repetitions": 12,
+                "completed": true
+            },
+            "sellp-coo": {
+                "completed": false
+            },
+            "sellp-ell": {
+                "completed": false
+            },
+            "sellp-hybrid": {
+                "completed": false
+            }
         }
     }
 ]

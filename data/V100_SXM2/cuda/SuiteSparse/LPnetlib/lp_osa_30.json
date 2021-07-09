@@ -1,6 +1,6 @@
 [
     {
-        "filename": "/gpfs/work/slkit/slkit003/ssget/MM/LPnetlib/lp_osa_30/lp_osa_30.mtx",
+        "filename": "/home/kit/scc/au7114/.config/ssget/MM/LPnetlib/lp_osa_30/lp_osa_30.mtx",
         "problem": {
             "id": 647,
             "group": "LPnetlib",
@@ -15,6 +15,7 @@
             "psym": 0,
             "nsym": 0,
             "kind": "linear programming problem",
+            "columns": 104374,
             "row_distribution": {
                 "min": 18,
                 "q1": 18.0,
@@ -44,33 +45,103 @@
         },
         "spmv": {
             "csr": {
-                "storage": 7271260,
-                "time": 2898224.4,
+                "storage": 7291740,
+                "max_relative_norm2": 3.712583290788947e-16,
+                "time": 0.00001892252697441602,
+                "repetitions": 3596,
                 "completed": true
             },
             "coo": {
                 "storage": 9671808,
-                "time": 27236.9,
-                "completed": true
-            },
-            "hybrid": {
-                "storage": 9784216,
-                "time": 50578.1,
-                "completed": true
-            },
-            "sellp": {
-                "storage": 60776008,
-                "time": 44918623.9,
+                "max_relative_norm2": 3.0267685812631465e-16,
+                "time": 0.00001951727502780868,
+                "repetitions": 3596,
                 "completed": true
             },
             "ell": {
-                "storage": 3787371000,
-                "time": 45159734.3,
+                "completed": false
+            },
+            "sellp": {
+                "storage": 60776008,
+                "max_relative_norm2": 2.048147043949073e-15,
+                "time": 0.03621809620000001,
+                "repetitions": 10,
+                "completed": true
+            },
+            "hybrid": {
+                "storage": 9602208,
+                "max_relative_norm2": 3.81298322704579e-16,
+                "time": 0.00002135751689612015,
+                "repetitions": 2397,
                 "completed": true
             }
         },
         "optimal": {
-            "spmv": "coo"
+            "spmv": "csr"
+        },
+        "conversions": {
+            "csr-coo": {
+                "time": 0.011147719,
+                "repetitions": 10,
+                "completed": true
+            },
+            "csr-ell": {
+                "time": 0.0452183578,
+                "repetitions": 10,
+                "completed": true
+            },
+            "csr-sellp": {
+                "time": 0.0482430714,
+                "repetitions": 10,
+                "completed": true
+            },
+            "csr-hybrid": {
+                "time": 0.0116698424,
+                "repetitions": 10,
+                "completed": true
+            },
+            "coo-csr": {
+                "time": 0.0083107037,
+                "repetitions": 10,
+                "completed": true
+            },
+            "coo-ell": {
+                "completed": false
+            },
+            "coo-sellp": {
+                "completed": false
+            },
+            "coo-hybrid": {
+                "completed": false
+            },
+            "sellp-csr": {
+                "time": 0.08843606820000001,
+                "repetitions": 10,
+                "completed": true
+            },
+            "sellp-coo": {
+                "completed": false
+            },
+            "sellp-ell": {
+                "completed": false
+            },
+            "sellp-hybrid": {
+                "completed": false
+            },
+            "hybrid-csr": {
+                "time": 0.017950713200000004,
+                "repetitions": 10,
+                "completed": true
+            },
+            "hybrid-coo": {
+                "completed": false
+            },
+            "hybrid-ell": {
+                "completed": false
+            },
+            "hybrid-sellp": {
+                "completed": false
+            }
         }
     }
 ]

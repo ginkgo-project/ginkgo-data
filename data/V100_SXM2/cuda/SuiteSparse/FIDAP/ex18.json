@@ -1,13 +1,13 @@
 [
     {
-        "filename": "/gpfs/work/slkit/slkit003/ssget/MM/FIDAP/ex18/ex18.mtx",
+        "filename": "/home/kit/scc/au7114/.config/ssget/MM/FIDAP/ex18/ex18.mtx",
         "problem": {
             "id": 414,
             "group": "FIDAP",
             "name": "ex18",
             "rows": 5773,
             "cols": 5773,
-            "nonzeros": 71701,
+            "nonzeros": 71805,
             "real": true,
             "binary": false,
             "2d3d": true,
@@ -15,6 +15,7 @@
             "psym": 1,
             "nsym": 0.4973910933139182,
             "kind": "computational fluid dynamics problem",
+            "columns": 5773,
             "row_distribution": {
                 "min": 1,
                 "q1": 9.0,
@@ -44,33 +45,93 @@
         },
         "spmv": {
             "csr": {
-                "storage": 883508,
-                "time": 15515.7,
+                "storage": 888628,
+                "max_relative_norm2": 9.574013421713243e-17,
+                "time": 0.000004466479772596194,
+                "repetitions": 12137,
                 "completed": true
             },
             "coo": {
                 "storage": 1147216,
-                "time": 15646.0,
-                "completed": true
-            },
-            "hybrid": {
-                "storage": 1246968,
-                "time": 17687.8,
-                "completed": true
-            },
-            "sellp": {
-                "storage": 1241016,
-                "time": 17182.0,
+                "max_relative_norm2": 0.0,
+                "time": 0.0000064328814732418739,
+                "repetitions": 8091,
                 "completed": true
             },
             "ell": {
                 "storage": 1246968,
-                "time": 17928.4,
+                "max_relative_norm2": 1.7973026225472475e-16,
+                "time": 0.000008895973056482512,
+                "repetitions": 8091,
+                "completed": true
+            },
+            "sellp": {
+                "storage": 1241016,
+                "max_relative_norm2": 1.7973026225472475e-16,
+                "time": 0.000006920614633543444,
+                "repetitions": 8091,
+                "completed": true
+            },
+            "hybrid": {
+                "storage": 1043788,
+                "max_relative_norm2": 1.4167726584719219e-16,
+                "time": 0.000008291865900383142,
+                "repetitions": 8091,
                 "completed": true
             }
         },
         "optimal": {
             "spmv": "csr"
+        },
+        "conversions": {
+            "csr-coo": {
+                "time": 0.000049256009389671359,
+                "repetitions": 1065,
+                "completed": true
+            },
+            "csr-ell": {
+                "time": 0.00008189355774647887,
+                "repetitions": 710,
+                "completed": true
+            },
+            "csr-sellp": {
+                "time": 0.0002725263714285714,
+                "repetitions": 210,
+                "completed": true
+            },
+            "csr-hybrid": {
+                "time": 0.0002471895666666667,
+                "repetitions": 210,
+                "completed": true
+            },
+            "coo-csr": {
+                "time": 0.000042760567584480609,
+                "repetitions": 1598,
+                "completed": true
+            },
+            "coo-ell": {
+                "completed": false
+            },
+            "coo-sellp": {
+                "completed": false
+            },
+            "coo-hybrid": {
+                "completed": false
+            },
+            "ell-csr": {
+                "time": 0.00014142722832980972,
+                "repetitions": 473,
+                "completed": true
+            },
+            "ell-coo": {
+                "completed": false
+            },
+            "ell-sellp": {
+                "completed": false
+            },
+            "ell-hybrid": {
+                "completed": false
+            }
         }
     }
 ]

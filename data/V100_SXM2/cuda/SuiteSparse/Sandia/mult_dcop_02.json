@@ -1,6 +1,6 @@
 [
     {
-        "filename": "/gpfs/work/slkit/slkit003/ssget/MM/Sandia/mult_dcop_02/mult_dcop_02.mtx",
+        "filename": "/home/kit/scc/au7114/.config/ssget/MM/Sandia/mult_dcop_02/mult_dcop_02.mtx",
         "problem": {
             "id": 1110,
             "group": "Sandia",
@@ -15,6 +15,7 @@
             "psym": 0.6144759258929472,
             "nsym": 0.003383612629779353,
             "kind": "subsequent circuit simulation problem",
+            "columns": 25187,
             "row_distribution": {
                 "min": 1,
                 "q1": 5.0,
@@ -44,33 +45,89 @@
         },
         "spmv": {
             "csr": {
-                "storage": 2420064,
-                "time": 1616493.1,
+                "storage": 2425184,
+                "max_relative_norm2": 5.270570206562921e-16,
+                "time": 0.000019408935483870969,
+                "repetitions": 3596,
                 "completed": true
             },
             "coo": {
                 "storage": 3092416,
-                "time": 17932.4,
-                "completed": true
-            },
-            "hybrid": {
-                "storage": 2746792,
-                "time": 16523.7,
-                "completed": true
-            },
-            "sellp": {
-                "storage": 28102824,
-                "time": 14077210.2,
+                "max_relative_norm2": 5.270550560800519e-16,
+                "time": 0.000008038872203683105,
+                "repetitions": 8091,
                 "completed": true
             },
             "ell": {
-                "storage": 6881189148,
-                "time": 14102243.3,
+                "completed": false
+            },
+            "sellp": {
+                "storage": 28102056,
+                "max_relative_norm2": 6.072334513253044e-16,
+                "time": 0.0114374532,
+                "repetitions": 10,
+                "completed": true
+            },
+            "hybrid": {
+                "storage": 2698340,
+                "max_relative_norm2": 6.0723739258125139e-16,
+                "time": 0.00000865534346805092,
+                "repetitions": 8091,
                 "completed": true
             }
         },
         "optimal": {
-            "spmv": "hybrid"
+            "spmv": "coo"
+        },
+        "conversions": {
+            "csr-coo": {
+                "time": 0.0059308513,
+                "repetitions": 10,
+                "completed": true
+            },
+            "csr-ell": {
+                "time": 0.1313439965,
+                "repetitions": 10,
+                "completed": true
+            },
+            "csr-sellp": {
+                "time": 0.0073653656,
+                "repetitions": 10,
+                "completed": true
+            },
+            "csr-hybrid": {
+                "time": 0.0010470054677419355,
+                "repetitions": 62,
+                "completed": true
+            },
+            "coo-csr": {
+                "time": 0.0011739354677419354,
+                "repetitions": 62,
+                "completed": true
+            },
+            "coo-ell": {
+                "completed": false
+            },
+            "coo-sellp": {
+                "completed": false
+            },
+            "coo-hybrid": {
+                "completed": false
+            },
+            "sellp-csr": {
+                "time": 0.022478480100000005,
+                "repetitions": 10,
+                "completed": true
+            },
+            "sellp-coo": {
+                "completed": false
+            },
+            "sellp-ell": {
+                "completed": false
+            },
+            "sellp-hybrid": {
+                "completed": false
+            }
         }
     }
 ]

@@ -1,13 +1,13 @@
 [
     {
-        "filename": "/gpfs/work/slkit/slkit003/ssget/MM/Rajat/rajat18/rajat18.mtx",
+        "filename": "/home/kit/scc/au7114/.config/ssget/MM/Rajat/rajat18/rajat18.mtx",
         "problem": {
             "id": 1345,
             "group": "Rajat",
             "name": "rajat18",
             "rows": 94294,
             "cols": 94294,
-            "nonzeros": 479151,
+            "nonzeros": 485143,
             "real": true,
             "binary": false,
             "2d3d": false,
@@ -15,6 +15,7 @@
             "psym": 0.626033640830624,
             "nsym": 0.2849580148146621,
             "kind": "circuit simulation problem",
+            "columns": 94294,
             "row_distribution": {
                 "min": 1,
                 "q1": 3.0,
@@ -44,31 +45,87 @@
         },
         "spmv": {
             "csr": {
-                "storage": 6126992,
-                "time": 3065001.5,
+                "storage": 6147472,
+                "max_relative_norm2": 2.5302266334915409e-17,
+                "time": 0.000021901246558197748,
+                "repetitions": 2397,
                 "completed": true
             },
             "coo": {
                 "storage": 7666416,
-                "time": 29398.9,
-                "completed": true
-            },
-            "hybrid": {
-                "storage": 8474592,
-                "time": 27060.4,
-                "completed": true
-            },
-            "sellp": {
-                "storage": 52541736,
-                "time": 18292402.1,
+                "max_relative_norm2": 7.68687549310497e-18,
+                "time": 0.00001694377892102336,
+                "repetitions": 3596,
                 "completed": true
             },
             "ell": {
                 "completed": false
+            },
+            "sellp": {
+                "storage": 52578600,
+                "max_relative_norm2": 1.1098083518893071e-16,
+                "time": 0.014306279900000002,
+                "repetitions": 10,
+                "completed": true
+            },
+            "hybrid": {
+                "storage": 6793480,
+                "max_relative_norm2": 4.0529567782267907e-17,
+                "time": 0.00001561299860956619,
+                "repetitions": 3596,
+                "completed": true
             }
         },
         "optimal": {
             "spmv": "hybrid"
+        },
+        "conversions": {
+            "csr-coo": {
+                "time": 0.0063825298,
+                "repetitions": 10,
+                "completed": true
+            },
+            "csr-ell": {
+                "completed": false
+            },
+            "csr-sellp": {
+                "time": 0.030692487499999998,
+                "repetitions": 10,
+                "completed": true
+            },
+            "csr-hybrid": {
+                "time": 0.0660402881,
+                "repetitions": 10,
+                "completed": true
+            },
+            "coo-csr": {
+                "time": 0.0236814752,
+                "repetitions": 10,
+                "completed": true
+            },
+            "coo-ell": {
+                "completed": false
+            },
+            "coo-sellp": {
+                "completed": false
+            },
+            "coo-hybrid": {
+                "completed": false
+            },
+            "sellp-csr": {
+                "time": 0.025326728899999996,
+                "repetitions": 10,
+                "completed": true
+            },
+            "sellp-coo": {
+                "completed": false
+            },
+            "sellp-ell": {
+                "completed": false
+            },
+            "sellp-hybrid": {
+                "completed": false
+            }
         }
     }
 ]

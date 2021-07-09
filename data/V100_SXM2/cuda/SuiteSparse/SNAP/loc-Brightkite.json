@@ -1,8 +1,8 @@
 [
     {
-        "filename": "/gpfs/work/slkit/slkit003/ssget/MM/SNAP/loc-Brightkite/loc-Brightkite.mtx",
+        "filename": "/home/kit/scc/au7114/.config/ssget/MM/SNAP/loc-Brightkite/loc-Brightkite.mtx",
         "problem": {
-            "id": 335,
+            "id": 2787,
             "group": "SNAP",
             "name": "loc-Brightkite",
             "rows": 58228,
@@ -15,6 +15,7 @@
             "psym": 1,
             "nsym": 1,
             "kind": "undirected graph",
+            "columns": 58228,
             "row_distribution": {
                 "min": 1,
                 "q1": 1.0,
@@ -44,33 +45,89 @@
         },
         "spmv": {
             "csr": {
-                "storage": 5370788,
-                "time": 174185.8,
+                "storage": 5391268,
+                "max_relative_norm2": 1.0362515088622564e-16,
+                "time": 0.000022214979140592409,
+                "repetitions": 2397,
                 "completed": true
             },
             "coo": {
                 "storage": 6850496,
-                "time": 23811.1,
-                "completed": true
-            },
-            "hybrid": {
-                "storage": 9139808,
-                "time": 25413.4,
-                "completed": true
-            },
-            "sellp": {
-                "storage": 32087016,
-                "time": 733486.9,
+                "max_relative_norm2": 2.660552989771621e-17,
+                "time": 0.0000160751446051168,
+                "repetitions": 3596,
                 "completed": true
             },
             "ell": {
-                "storage": 792366624,
-                "time": 772424.7,
+                "completed": false
+            },
+            "sellp": {
+                "storage": 31821288,
+                "max_relative_norm2": 3.0393013579434106e-16,
+                "time": 0.0006093553548387096,
+                "repetitions": 93,
+                "completed": true
+            },
+            "hybrid": {
+                "storage": 6617584,
+                "max_relative_norm2": 1.4223863261648678e-16,
+                "time": 0.000015388136540600668,
+                "repetitions": 3596,
                 "completed": true
             }
         },
         "optimal": {
-            "spmv": "coo"
+            "spmv": "hybrid"
+        },
+        "conversions": {
+            "csr-coo": {
+                "time": 0.0010665563709677418,
+                "repetitions": 62,
+                "completed": true
+            },
+            "csr-ell": {
+                "time": 0.004311526166666667,
+                "repetitions": 12,
+                "completed": true
+            },
+            "csr-sellp": {
+                "time": 0.0031649061111111117,
+                "repetitions": 18,
+                "completed": true
+            },
+            "csr-hybrid": {
+                "time": 0.0025861001851851855,
+                "repetitions": 27,
+                "completed": true
+            },
+            "coo-csr": {
+                "time": 0.0018817462592592594,
+                "repetitions": 27,
+                "completed": true
+            },
+            "coo-ell": {
+                "completed": false
+            },
+            "coo-sellp": {
+                "completed": false
+            },
+            "coo-hybrid": {
+                "completed": false
+            },
+            "sellp-csr": {
+                "time": 0.0018069858292682926,
+                "repetitions": 41,
+                "completed": true
+            },
+            "sellp-coo": {
+                "completed": false
+            },
+            "sellp-ell": {
+                "completed": false
+            },
+            "sellp-hybrid": {
+                "completed": false
+            }
         }
     }
 ]

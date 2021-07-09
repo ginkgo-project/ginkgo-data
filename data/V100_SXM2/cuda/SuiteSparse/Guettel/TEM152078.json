@@ -1,8 +1,8 @@
 [
     {
-        "filename": "/gpfs/work/slkit/slkit003/ssget/MM/Guettel/TEM152078/TEM152078.mtx",
+        "filename": "/home/kit/scc/au7114/.config/ssget/MM/Guettel/TEM152078/TEM152078.mtx",
         "problem": {
-            "id": 360,
+            "id": 2812,
             "group": "Guettel",
             "name": "TEM152078",
             "rows": 152078,
@@ -15,6 +15,7 @@
             "psym": 1,
             "nsym": 1,
             "kind": "electromagnetics problem",
+            "columns": 152078,
             "row_distribution": {
                 "min": 12,
                 "q1": 32.0,
@@ -44,33 +45,93 @@
         },
         "spmv": {
             "csr": {
-                "storage": 78120228,
-                "time": 143409.3,
+                "storage": 78202148,
+                "max_relative_norm2": 7.19314608226376e-17,
+                "time": 0.00012965027484143765,
+                "repetitions": 473,
                 "completed": true
             },
             "coo": {
                 "storage": 103349216,
-                "time": 148186.7,
-                "completed": true
-            },
-            "hybrid": {
-                "storage": 117042448,
-                "time": 156277.0,
-                "completed": true
-            },
-            "sellp": {
-                "storage": 146471064,
-                "time": 219287.7,
+                "max_relative_norm2": 0.0,
+                "time": 0.00014934978224101478,
+                "repetitions": 473,
                 "completed": true
             },
             "ell": {
                 "storage": 200742960,
-                "time": 188204.3,
+                "max_relative_norm2": 2.5016392689885516e-16,
+                "time": 0.00019066245714285715,
+                "repetitions": 315,
+                "completed": true
+            },
+            "sellp": {
+                "storage": 146165400,
+                "max_relative_norm2": 2.5016392689885516e-16,
+                "time": 0.0002206239650793651,
+                "repetitions": 315,
+                "completed": true
+            },
+            "hybrid": {
+                "storage": 85144592,
+                "max_relative_norm2": 2.212594558589914e-16,
+                "time": 0.00013513728118393238,
+                "repetitions": 473,
                 "completed": true
             }
         },
         "optimal": {
             "spmv": "csr"
+        },
+        "conversions": {
+            "csr-coo": {
+                "time": 0.004576387583333333,
+                "repetitions": 12,
+                "completed": true
+            },
+            "csr-ell": {
+                "time": 0.0037713684444444447,
+                "repetitions": 18,
+                "completed": true
+            },
+            "csr-sellp": {
+                "time": 0.00619102375,
+                "repetitions": 12,
+                "completed": true
+            },
+            "csr-hybrid": {
+                "time": 0.005759861000000001,
+                "repetitions": 12,
+                "completed": true
+            },
+            "coo-csr": {
+                "time": 0.002433733333333333,
+                "repetitions": 27,
+                "completed": true
+            },
+            "coo-ell": {
+                "completed": false
+            },
+            "coo-sellp": {
+                "completed": false
+            },
+            "coo-hybrid": {
+                "completed": false
+            },
+            "ell-csr": {
+                "time": 0.0073903102,
+                "repetitions": 10,
+                "completed": true
+            },
+            "ell-coo": {
+                "completed": false
+            },
+            "ell-sellp": {
+                "completed": false
+            },
+            "ell-hybrid": {
+                "completed": false
+            }
         }
     }
 ]

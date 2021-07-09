@@ -1,13 +1,13 @@
 [
     {
-        "filename": "/gpfs/work/slkit/slkit003/ssget/MM/Grund/poli_large/poli_large.mtx",
+        "filename": "/home/kit/scc/au7114/.config/ssget/MM/Grund/poli_large/poli_large.mtx",
         "problem": {
             "id": 468,
             "group": "Grund",
             "name": "poli_large",
             "rows": 15575,
             "cols": 15575,
-            "nonzeros": 33033,
+            "nonzeros": 33074,
             "real": true,
             "binary": false,
             "2d3d": false,
@@ -15,6 +15,7 @@
             "psym": 0.003543059603405909,
             "nsym": 0.0004582426394776034,
             "kind": "economic problem",
+            "columns": 15575,
             "row_distribution": {
                 "min": 1,
                 "q1": 1.0,
@@ -44,33 +45,89 @@
         },
         "spmv": {
             "csr": {
-                "storage": 458700,
-                "time": 53371.2,
+                "storage": 462832,
+                "max_relative_norm2": 8.391957344857989e-17,
+                "time": 0.000007374607465084662,
+                "repetitions": 8091,
                 "completed": true
             },
             "coo": {
                 "storage": 528528,
-                "time": 14679.9,
+                "max_relative_norm2": 3.241893213916871e-17,
+                "time": 0.000005640500865123178,
+                "repetitions": 12137,
+                "completed": true
+            },
+            "ell": {
+                "completed": false
+            },
+            "sellp": {
+                "storage": 6078024,
+                "max_relative_norm2": 2.2194824770686193e-16,
+                "time": 0.00013548229809725156,
+                "repetitions": 473,
                 "completed": true
             },
             "hybrid": {
                 "storage": 466228,
-                "time": 16023.7,
-                "completed": true
-            },
-            "sellp": {
-                "storage": 5962824,
-                "time": 228542.0,
-                "completed": true
-            },
-            "ell": {
-                "storage": 91767900,
-                "time": 206908.7,
+                "max_relative_norm2": 1.382319157650113e-16,
+                "time": 0.000007592145717463849,
+                "repetitions": 8091,
                 "completed": true
             }
         },
         "optimal": {
             "spmv": "coo"
+        },
+        "conversions": {
+            "csr-coo": {
+                "time": 0.00004530456195244055,
+                "repetitions": 1598,
+                "completed": true
+            },
+            "csr-ell": {
+                "time": 0.0113235438,
+                "repetitions": 10,
+                "completed": true
+            },
+            "csr-sellp": {
+                "time": 0.005795488888888888,
+                "repetitions": 18,
+                "completed": true
+            },
+            "csr-hybrid": {
+                "time": 0.0003850003357142858,
+                "repetitions": 140,
+                "completed": true
+            },
+            "coo-csr": {
+                "time": 0.00004133940362953692,
+                "repetitions": 1598,
+                "completed": true
+            },
+            "coo-ell": {
+                "completed": false
+            },
+            "coo-sellp": {
+                "completed": false
+            },
+            "coo-hybrid": {
+                "completed": false
+            },
+            "sellp-csr": {
+                "time": 0.00035141419047619046,
+                "repetitions": 210,
+                "completed": true
+            },
+            "sellp-coo": {
+                "completed": false
+            },
+            "sellp-ell": {
+                "completed": false
+            },
+            "sellp-hybrid": {
+                "completed": false
+            }
         }
     }
 ]

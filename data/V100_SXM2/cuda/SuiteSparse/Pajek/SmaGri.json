@@ -1,6 +1,6 @@
 [
     {
-        "filename": "/gpfs/work/slkit/slkit003/ssget/MM/Pajek/SmaGri/SmaGri.mtx",
+        "filename": "/home/kit/scc/au7114/.config/ssget/MM/Pajek/SmaGri/SmaGri.mtx",
         "problem": {
             "id": 1522,
             "group": "Pajek",
@@ -15,6 +15,7 @@
             "psym": 0.0008133387555917039,
             "nsym": 0.0008133387555917039,
             "kind": "directed multigraph",
+            "columns": 1059,
             "row_distribution": {
                 "min": 0,
                 "q1": 0.0,
@@ -44,33 +45,93 @@
         },
         "spmv": {
             "csr": {
-                "storage": 63268,
-                "time": 32651.1,
+                "storage": 63884,
+                "max_relative_norm2": 1.0657456270312948e-16,
+                "time": 0.000003991871690651433,
+                "repetitions": 18206,
                 "completed": true
             },
             "coo": {
                 "storage": 78704,
-                "time": 13842.4,
-                "completed": true
-            },
-            "hybrid": {
-                "storage": 111780,
-                "time": 15677.9,
-                "completed": true
-            },
-            "sellp": {
-                "storage": 629272,
-                "time": 96915.3,
+                "max_relative_norm2": 3.314165554818725e-17,
+                "time": 0.000005606997033863392,
+                "repetitions": 12137,
                 "completed": true
             },
             "ell": {
                 "storage": 2948256,
-                "time": 103367.8,
+                "max_relative_norm2": 1.473694583546726e-16,
+                "time": 0.000006035265222048283,
+                "repetitions": 12137,
+                "completed": true
+            },
+            "sellp": {
+                "storage": 636184,
+                "max_relative_norm2": 2.560325737035026e-16,
+                "time": 0.00005958800469483569,
+                "repetitions": 1065,
+                "completed": true
+            },
+            "hybrid": {
+                "storage": 78704,
+                "max_relative_norm2": 2.3076886849278338e-17,
+                "time": 0.000007612200593251762,
+                "repetitions": 8091,
                 "completed": true
             }
         },
         "optimal": {
-            "spmv": "coo"
+            "spmv": "csr"
+        },
+        "conversions": {
+            "csr-coo": {
+                "time": 0.00004415392678347935,
+                "repetitions": 1598,
+                "completed": true
+            },
+            "csr-ell": {
+                "time": 0.0006410900967741936,
+                "repetitions": 93,
+                "completed": true
+            },
+            "csr-sellp": {
+                "time": 0.00018886368888888888,
+                "repetitions": 315,
+                "completed": true
+            },
+            "csr-hybrid": {
+                "time": 0.0001247812748414376,
+                "repetitions": 473,
+                "completed": true
+            },
+            "coo-csr": {
+                "time": 0.00004348259887359199,
+                "repetitions": 1598,
+                "completed": true
+            },
+            "coo-ell": {
+                "completed": false
+            },
+            "coo-sellp": {
+                "completed": false
+            },
+            "coo-hybrid": {
+                "completed": false
+            },
+            "ell-csr": {
+                "time": 0.00015135806976744186,
+                "repetitions": 473,
+                "completed": true
+            },
+            "ell-coo": {
+                "completed": false
+            },
+            "ell-sellp": {
+                "completed": false
+            },
+            "ell-hybrid": {
+                "completed": false
+            }
         }
     }
 ]

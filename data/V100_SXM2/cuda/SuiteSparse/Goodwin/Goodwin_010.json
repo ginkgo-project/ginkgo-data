@@ -1,8 +1,8 @@
 [
     {
-        "filename": "/gpfs/work/slkit/slkit003/ssget/MM/Goodwin/Goodwin_010/Goodwin_010.mtx",
+        "filename": "/home/kit/scc/au7114/.config/ssget/MM/Goodwin/Goodwin_010/Goodwin_010.mtx",
         "problem": {
-            "id": 365,
+            "id": 2817,
             "group": "Goodwin",
             "name": "Goodwin_010",
             "rows": 1182,
@@ -15,6 +15,7 @@
             "psym": 0.901812159622918,
             "nsym": 0.05496990350011147,
             "kind": "computational fluid dynamics",
+            "columns": 1182,
             "row_distribution": {
                 "min": 1,
                 "q1": 18.0,
@@ -44,33 +45,93 @@
         },
         "spmv": {
             "csr": {
-                "storage": 392116,
-                "time": 16818.3,
+                "storage": 396152,
+                "max_relative_norm2": 7.841729138101466e-17,
+                "time": 0.000003882137097660112,
+                "repetitions": 18206,
                 "completed": true
             },
             "coo": {
                 "storage": 516512,
-                "time": 14639.2,
-                "completed": true
-            },
-            "hybrid": {
-                "storage": 578016,
-                "time": 28116.7,
-                "completed": true
-            },
-            "sellp": {
-                "storage": 865080,
-                "time": 33039.8,
+                "max_relative_norm2": 1.4712610097640509e-17,
+                "time": 0.0000058099691027436769,
+                "repetitions": 12137,
                 "completed": true
             },
             "ell": {
                 "storage": 879408,
-                "time": 35969.2,
+                "max_relative_norm2": 1.3594336582933079e-16,
+                "time": 0.000004354824421191398,
+                "repetitions": 12137,
+                "completed": true
+            },
+            "sellp": {
+                "storage": 865080,
+                "max_relative_norm2": 1.5328430154910287e-16,
+                "time": 0.000017753300333704116,
+                "repetitions": 3596,
+                "completed": true
+            },
+            "hybrid": {
+                "storage": 511784,
+                "max_relative_norm2": 1.0201129632297515e-16,
+                "time": 0.000007373822024471635,
+                "repetitions": 8091,
                 "completed": true
             }
         },
         "optimal": {
-            "spmv": "coo"
+            "spmv": "csr"
+        },
+        "conversions": {
+            "csr-coo": {
+                "time": 0.00005801024131455399,
+                "repetitions": 1065,
+                "completed": true
+            },
+            "csr-ell": {
+                "time": 0.000274525680952381,
+                "repetitions": 210,
+                "completed": true
+            },
+            "csr-sellp": {
+                "time": 0.00037522933571428567,
+                "repetitions": 140,
+                "completed": true
+            },
+            "csr-hybrid": {
+                "time": 0.0001539599978858351,
+                "repetitions": 473,
+                "completed": true
+            },
+            "coo-csr": {
+                "time": 0.00004071880100125156,
+                "repetitions": 1598,
+                "completed": true
+            },
+            "coo-ell": {
+                "completed": false
+            },
+            "coo-sellp": {
+                "completed": false
+            },
+            "coo-hybrid": {
+                "completed": false
+            },
+            "ell-csr": {
+                "time": 0.0001477142515856237,
+                "repetitions": 473,
+                "completed": true
+            },
+            "ell-coo": {
+                "completed": false
+            },
+            "ell-sellp": {
+                "completed": false
+            },
+            "ell-hybrid": {
+                "completed": false
+            }
         }
     }
 ]

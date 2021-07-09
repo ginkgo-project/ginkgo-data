@@ -1,6 +1,6 @@
 [
     {
-        "filename": "/gpfs/work/slkit/slkit003/ssget/MM/Mittelmann/neos3/neos3.mtx",
+        "filename": "/home/kit/scc/au7114/.config/ssget/MM/Mittelmann/neos3/neos3.mtx",
         "problem": {
             "id": 1673,
             "group": "Mittelmann",
@@ -15,6 +15,7 @@
             "psym": 0,
             "nsym": 0,
             "kind": "linear programming problem",
+            "columns": 518832,
             "row_distribution": {
                 "min": 3,
                 "q1": 4.0,
@@ -44,31 +45,101 @@
         },
         "spmv": {
             "csr": {
-                "storage": 26709128,
-                "time": 748482.1,
+                "storage": 26791048,
+                "max_relative_norm2": 2.5774050862762267e-17,
+                "time": 0.00008417371549295775,
+                "repetitions": 710,
                 "completed": true
             },
             "coo": {
                 "storage": 32880384,
-                "time": 80704.3,
-                "completed": true
-            },
-            "hybrid": {
-                "storage": 24689648,
-                "time": 59824.9,
-                "completed": true
-            },
-            "sellp": {
-                "storage": 29687624,
-                "time": 4494187.1,
+                "max_relative_norm2": 3.8661076294143389e-17,
+                "time": 0.00008168286478873239,
+                "repetitions": 710,
                 "completed": true
             },
             "ell": {
                 "completed": false
+            },
+            "sellp": {
+                "storage": 29687624,
+                "max_relative_norm2": 1.6008871582622054e-16,
+                "time": 0.003569615388888889,
+                "repetitions": 18,
+                "completed": true
+            },
+            "hybrid": {
+                "storage": 24689648,
+                "max_relative_norm2": 6.680573873218713e-17,
+                "time": 0.000054219810328638506,
+                "repetitions": 1065,
+                "completed": true
             }
         },
         "optimal": {
             "spmv": "hybrid"
+        },
+        "conversions": {
+            "csr-coo": {
+                "time": 0.009638017833333334,
+                "repetitions": 12,
+                "completed": true
+            },
+            "csr-ell": {
+                "completed": false
+            },
+            "csr-sellp": {
+                "time": 0.0058263845,
+                "repetitions": 12,
+                "completed": true
+            },
+            "csr-hybrid": {
+                "time": 0.014922518499999999,
+                "repetitions": 10,
+                "completed": true
+            },
+            "coo-csr": {
+                "time": 0.006929220583333333,
+                "repetitions": 12,
+                "completed": true
+            },
+            "coo-ell": {
+                "completed": false
+            },
+            "coo-sellp": {
+                "completed": false
+            },
+            "coo-hybrid": {
+                "completed": false
+            },
+            "sellp-csr": {
+                "time": 0.024538327399999998,
+                "repetitions": 10,
+                "completed": true
+            },
+            "sellp-coo": {
+                "completed": false
+            },
+            "sellp-ell": {
+                "completed": false
+            },
+            "sellp-hybrid": {
+                "completed": false
+            },
+            "hybrid-csr": {
+                "time": 0.0158859247,
+                "repetitions": 10,
+                "completed": true
+            },
+            "hybrid-coo": {
+                "completed": false
+            },
+            "hybrid-ell": {
+                "completed": false
+            },
+            "hybrid-sellp": {
+                "completed": false
+            }
         }
     }
 ]

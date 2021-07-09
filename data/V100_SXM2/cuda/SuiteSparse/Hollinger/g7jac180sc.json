@@ -1,13 +1,13 @@
 [
     {
-        "filename": "/gpfs/work/slkit/slkit003/ssget/MM/Hollinger/g7jac180sc/g7jac180sc.mtx",
+        "filename": "/home/kit/scc/au7114/.config/ssget/MM/Hollinger/g7jac180sc/g7jac180sc.mtx",
         "problem": {
             "id": 565,
             "group": "Hollinger",
             "name": "g7jac180sc",
             "rows": 53370,
             "cols": 53370,
-            "nonzeros": 641290,
+            "nonzeros": 747276,
             "real": true,
             "binary": false,
             "2d3d": false,
@@ -15,6 +15,7 @@
             "psym": 0.03258366406977314,
             "nsym": 0,
             "kind": "economic problem",
+            "columns": 53370,
             "row_distribution": {
                 "min": 2,
                 "q1": 3.0,
@@ -36,7 +37,7 @@
                 "max": 120,
                 "mean": 14.001798763350197,
                 "variance": 588.5954249076199,
-                "skewness": 2.7428964934683579,
+                "skewness": 2.742896493468358,
                 "kurtosis": 9.824864617400078,
                 "hyperskewness": 35.93938431652018,
                 "hyperflatness": 136.31112063654545
@@ -44,33 +45,121 @@
         },
         "spmv": {
             "csr": {
-                "storage": 7908964,
-                "time": 45403.1,
+                "storage": 7929444,
+                "max_relative_norm2": 1.9499804469340142e-16,
+                "time": 0.000027475766791823116,
+                "repetitions": 2397,
                 "completed": true
             },
             "coo": {
                 "storage": 10260640,
-                "time": 28970.8,
-                "completed": true
-            },
-            "hybrid": {
-                "storage": 11642616,
-                "time": 32168.2,
-                "completed": true
-            },
-            "sellp": {
-                "storage": 44753960,
-                "time": 129554.9,
+                "max_relative_norm2": 1.0651510174592933e-17,
+                "time": 0.00001931248748609566,
+                "repetitions": 3596,
                 "completed": true
             },
             "ell": {
                 "storage": 90302040,
-                "time": 127058.5,
+                "max_relative_norm2": 5.582924873119721e-16,
+                "time": 0.00012768203171247358,
+                "repetitions": 473,
+                "completed": true
+            },
+            "sellp": {
+                "storage": 44788520,
+                "max_relative_norm2": 5.582924873119721e-16,
+                "time": 0.00011221677378435518,
+                "repetitions": 473,
+                "completed": true
+            },
+            "hybrid": {
+                "storage": 9845288,
+                "max_relative_norm2": 1.5794462344575866e-16,
+                "time": 0.00002116093199833125,
+                "repetitions": 2397,
                 "completed": true
             }
         },
         "optimal": {
             "spmv": "coo"
+        },
+        "conversions": {
+            "csr-coo": {
+                "time": 0.0601548777,
+                "repetitions": 10,
+                "completed": true
+            },
+            "csr-ell": {
+                "time": 0.0387168163,
+                "repetitions": 10,
+                "completed": true
+            },
+            "csr-sellp": {
+                "time": 0.027501363900000004,
+                "repetitions": 10,
+                "completed": true
+            },
+            "csr-hybrid": {
+                "time": 0.09076653359999999,
+                "repetitions": 10,
+                "completed": true
+            },
+            "coo-csr": {
+                "time": 0.020696456800000003,
+                "repetitions": 10,
+                "completed": true
+            },
+            "coo-ell": {
+                "completed": false
+            },
+            "coo-sellp": {
+                "completed": false
+            },
+            "coo-hybrid": {
+                "completed": false
+            },
+            "ell-csr": {
+                "time": 0.006308148099999999,
+                "repetitions": 10,
+                "completed": true
+            },
+            "ell-coo": {
+                "completed": false
+            },
+            "ell-sellp": {
+                "completed": false
+            },
+            "ell-hybrid": {
+                "completed": false
+            },
+            "sellp-csr": {
+                "time": 0.0184477831,
+                "repetitions": 10,
+                "completed": true
+            },
+            "sellp-coo": {
+                "completed": false
+            },
+            "sellp-ell": {
+                "completed": false
+            },
+            "sellp-hybrid": {
+                "completed": false
+            },
+            "hybrid-csr": {
+                "time": 0.0068165178000000009,
+                "repetitions": 10,
+                "completed": true
+            },
+            "hybrid-coo": {
+                "completed": false
+            },
+            "hybrid-ell": {
+                "completed": false
+            },
+            "hybrid-sellp": {
+                "completed": false
+            }
         }
     }
 ]

@@ -1,6 +1,6 @@
 [
     {
-        "filename": "/gpfs/work/slkit/slkit003/ssget/MM/AG-Monien/grid2_dual/grid2_dual.mtx",
+        "filename": "/home/kit/scc/au7114/.config/ssget/MM/AG-Monien/grid2_dual/grid2_dual.mtx",
         "problem": {
             "id": 2419,
             "group": "AG-Monien",
@@ -15,6 +15,7 @@
             "psym": 1,
             "nsym": 1,
             "kind": "2D/3D problem",
+            "columns": 3136,
             "row_distribution": {
                 "min": 2,
                 "q1": 4.0,
@@ -44,33 +45,93 @@
         },
         "spmv": {
             "csr": {
-                "storage": 159236,
-                "time": 13879.8,
+                "storage": 160764,
+                "max_relative_norm2": 1.6630560991280207e-17,
+                "time": 0.000004306442201532503,
+                "repetitions": 12137,
                 "completed": true
             },
             "coo": {
                 "storage": 195584,
-                "time": 13935.5,
-                "completed": true
-            },
-            "hybrid": {
-                "storage": 150528,
-                "time": 11638.2,
-                "completed": true
-            },
-            "sellp": {
-                "storage": 151320,
-                "time": 11234.9,
+                "max_relative_norm2": 0.0,
+                "time": 0.0000062522962550982578,
+                "repetitions": 8091,
                 "completed": true
             },
             "ell": {
                 "storage": 150528,
-                "time": 11317.1,
+                "max_relative_norm2": 5.495753650941747e-17,
+                "time": 0.000003625602603537295,
+                "repetitions": 18206,
+                "completed": true
+            },
+            "sellp": {
+                "storage": 151320,
+                "max_relative_norm2": 5.495753650941747e-17,
+                "time": 0.000003728758431286389,
+                "repetitions": 18206,
+                "completed": true
+            },
+            "hybrid": {
+                "storage": 158016,
+                "max_relative_norm2": 5.495753650941747e-17,
+                "time": 0.000008039233345692745,
+                "repetitions": 8091,
                 "completed": true
             }
         },
         "optimal": {
-            "spmv": "sellp"
+            "spmv": "ell"
+        },
+        "conversions": {
+            "csr-coo": {
+                "time": 0.000039464407384230289,
+                "repetitions": 1598,
+                "completed": true
+            },
+            "csr-ell": {
+                "time": 0.00006302673615023474,
+                "repetitions": 1065,
+                "completed": true
+            },
+            "csr-sellp": {
+                "time": 0.00011531601479915435,
+                "repetitions": 473,
+                "completed": true
+            },
+            "csr-hybrid": {
+                "time": 0.0001643560603174603,
+                "repetitions": 315,
+                "completed": true
+            },
+            "coo-csr": {
+                "time": 0.00003821474030037547,
+                "repetitions": 1598,
+                "completed": true
+            },
+            "coo-ell": {
+                "completed": false
+            },
+            "coo-sellp": {
+                "completed": false
+            },
+            "coo-hybrid": {
+                "completed": false
+            },
+            "ell-csr": {
+                "time": 0.00009789474366197184,
+                "repetitions": 710,
+                "completed": true
+            },
+            "ell-coo": {
+                "completed": false
+            },
+            "ell-sellp": {
+                "completed": false
+            },
+            "ell-hybrid": {
+                "completed": false
+            }
         }
     }
 ]

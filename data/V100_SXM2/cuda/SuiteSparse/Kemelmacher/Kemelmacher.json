@@ -1,6 +1,6 @@
 [
     {
-        "filename": "/gpfs/work/slkit/slkit003/ssget/MM/Kemelmacher/Kemelmacher/Kemelmacher.mtx",
+        "filename": "/home/kit/scc/au7114/.config/ssget/MM/Kemelmacher/Kemelmacher/Kemelmacher.mtx",
         "problem": {
             "id": 1329,
             "group": "Kemelmacher",
@@ -15,6 +15,7 @@
             "psym": 0,
             "nsym": 0,
             "kind": "computer graphics/vision problem",
+            "columns": 9693,
             "row_distribution": {
                 "min": 1,
                 "q1": 3.0,
@@ -44,33 +45,93 @@
         },
         "spmv": {
             "csr": {
-                "storage": 1324312,
-                "time": 15423.6,
+                "storage": 1329432,
+                "max_relative_norm2": 5.798758813910849e-17,
+                "time": 0.0000040941909260683289,
+                "repetitions": 18206,
                 "completed": true
             },
             "coo": {
                 "storage": 1614000,
-                "time": 16060.7,
-                "completed": true
-            },
-            "hybrid": {
-                "storage": 1713568,
-                "time": 16693.8,
-                "completed": true
-            },
-            "sellp": {
-                "storage": 1562328,
-                "time": 12837.9,
+                "max_relative_norm2": 0.0,
+                "time": 0.000006129695311856308,
+                "repetitions": 12137,
                 "completed": true
             },
             "ell": {
                 "storage": 2389968,
-                "time": 12688.6,
+                "max_relative_norm2": 9.890603294878132e-17,
+                "time": 0.000004666412952129851,
+                "repetitions": 12137,
+                "completed": true
+            },
+            "sellp": {
+                "storage": 1562328,
+                "max_relative_norm2": 9.890603294878132e-17,
+                "time": 0.000004299300898080251,
+                "repetitions": 12137,
+                "completed": true
+            },
+            "hybrid": {
+                "storage": 1272608,
+                "max_relative_norm2": 9.970497247992199e-17,
+                "time": 0.000007493717587442838,
+                "repetitions": 8091,
                 "completed": true
             }
         },
         "optimal": {
-            "spmv": "ell"
+            "spmv": "csr"
+        },
+        "conversions": {
+            "csr-coo": {
+                "time": 0.0008913852903225806,
+                "repetitions": 62,
+                "completed": true
+            },
+            "csr-ell": {
+                "time": 0.0154208981,
+                "repetitions": 10,
+                "completed": true
+            },
+            "csr-sellp": {
+                "time": 0.013989731700000003,
+                "repetitions": 10,
+                "completed": true
+            },
+            "csr-hybrid": {
+                "time": 0.0006469808817204301,
+                "repetitions": 93,
+                "completed": true
+            },
+            "coo-csr": {
+                "time": 0.006516154200000001,
+                "repetitions": 10,
+                "completed": true
+            },
+            "coo-ell": {
+                "completed": false
+            },
+            "coo-sellp": {
+                "completed": false
+            },
+            "coo-hybrid": {
+                "completed": false
+            },
+            "ell-csr": {
+                "time": 0.000179355473015873,
+                "repetitions": 315,
+                "completed": true
+            },
+            "ell-coo": {
+                "completed": false
+            },
+            "ell-sellp": {
+                "completed": false
+            },
+            "ell-hybrid": {
+                "completed": false
+            }
         }
     }
 ]

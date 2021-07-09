@@ -1,13 +1,13 @@
 [
     {
-        "filename": "/gpfs/work/slkit/slkit003/ssget/MM/Lucifora/cell1/cell1.mtx",
+        "filename": "/home/kit/scc/au7114/.config/ssget/MM/Lucifora/cell1/cell1.mtx",
         "problem": {
             "id": 934,
             "group": "Lucifora",
             "name": "cell1",
             "rows": 7055,
             "cols": 7055,
-            "nonzeros": 30082,
+            "nonzeros": 34855,
             "real": true,
             "binary": false,
             "2d3d": false,
@@ -15,6 +15,7 @@
             "psym": 0.9970503597122302,
             "nsym": 0,
             "kind": "directed weighted graph",
+            "columns": 7055,
             "row_distribution": {
                 "min": 2,
                 "q1": 5.0,
@@ -44,33 +45,93 @@
         },
         "spmv": {
             "csr": {
-                "storage": 389208,
-                "time": 14487.9,
+                "storage": 392972,
+                "max_relative_norm2": 6.043667863193815e-17,
+                "time": 0.0000039486592332198179,
+                "repetitions": 18206,
                 "completed": true
             },
             "coo": {
                 "storage": 481312,
-                "time": 14385.4,
-                "completed": true
-            },
-            "hybrid": {
-                "storage": 423300,
-                "time": 12399.6,
-                "completed": true
-            },
-            "sellp": {
-                "storage": 398840,
-                "time": 11848.8,
+                "max_relative_norm2": 0.0,
+                "time": 0.000005725602455301969,
+                "repetitions": 12137,
                 "completed": true
             },
             "ell": {
                 "storage": 423300,
-                "time": 11980.1,
+                "max_relative_norm2": 1.0831492112839848e-16,
+                "time": 0.000003877422937493134,
+                "repetitions": 18206,
+                "completed": true
+            },
+            "sellp": {
+                "storage": 398840,
+                "max_relative_norm2": 1.0831492112839848e-16,
+                "time": 0.000003529254696253982,
+                "repetitions": 18206,
+                "completed": true
+            },
+            "hybrid": {
+                "storage": 372016,
+                "max_relative_norm2": 1.0757702039460957e-16,
+                "time": 0.000007305285378815968,
+                "repetitions": 8091,
                 "completed": true
             }
         },
         "optimal": {
             "spmv": "sellp"
+        },
+        "conversions": {
+            "csr-coo": {
+                "time": 0.00003991408135168961,
+                "repetitions": 1598,
+                "completed": true
+            },
+            "csr-ell": {
+                "time": 0.00007022543755868545,
+                "repetitions": 1065,
+                "completed": true
+            },
+            "csr-sellp": {
+                "time": 0.00012026622198731501,
+                "repetitions": 473,
+                "completed": true
+            },
+            "csr-hybrid": {
+                "time": 0.0002084641873015873,
+                "repetitions": 315,
+                "completed": true
+            },
+            "coo-csr": {
+                "time": 0.00003928539987484355,
+                "repetitions": 1598,
+                "completed": true
+            },
+            "coo-ell": {
+                "completed": false
+            },
+            "coo-sellp": {
+                "completed": false
+            },
+            "coo-hybrid": {
+                "completed": false
+            },
+            "ell-csr": {
+                "time": 0.00011239069978858351,
+                "repetitions": 473,
+                "completed": true
+            },
+            "ell-coo": {
+                "completed": false
+            },
+            "ell-sellp": {
+                "completed": false
+            },
+            "ell-hybrid": {
+                "completed": false
+            }
         }
     }
 ]

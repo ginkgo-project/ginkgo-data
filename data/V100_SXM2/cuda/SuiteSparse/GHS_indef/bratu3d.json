@@ -1,6 +1,6 @@
 [
     {
-        "filename": "/gpfs/work/slkit/slkit003/ssget/MM/GHS_indef/bratu3d/bratu3d.mtx",
+        "filename": "/home/kit/scc/au7114/.config/ssget/MM/GHS_indef/bratu3d/bratu3d.mtx",
         "problem": {
             "id": 1299,
             "group": "GHS_indef",
@@ -15,6 +15,7 @@
             "psym": 1,
             "nsym": 1,
             "kind": "2D/3D problem",
+            "columns": 27792,
             "row_distribution": {
                 "min": 1,
                 "q1": 7.0,
@@ -44,33 +45,93 @@
         },
         "spmv": {
             "csr": {
-                "storage": 2196724,
-                "time": 15233.2,
+                "storage": 2201844,
+                "max_relative_norm2": 1.0614720727569643e-16,
+                "time": 0.000004236502924940266,
+                "repetitions": 12137,
                 "completed": true
             },
             "coo": {
                 "storage": 2780736,
-                "time": 16871.8,
-                "completed": true
-            },
-            "hybrid": {
-                "storage": 2334528,
-                "time": 12227.8,
-                "completed": true
-            },
-            "sellp": {
-                "storage": 2244152,
-                "time": 12634.5,
+                "max_relative_norm2": 0.0,
+                "time": 0.000007710668026201953,
+                "repetitions": 8091,
                 "completed": true
             },
             "ell": {
                 "storage": 2334528,
-                "time": 12469.3,
+                "max_relative_norm2": 1.3118892035656308e-16,
+                "time": 0.000005052578314245695,
+                "repetitions": 12137,
+                "completed": true
+            },
+            "sellp": {
+                "storage": 2244152,
+                "max_relative_norm2": 1.3118892035656308e-16,
+                "time": 0.0000050562092774161659,
+                "repetitions": 12137,
+                "completed": true
+            },
+            "hybrid": {
+                "storage": 2334528,
+                "max_relative_norm2": 1.3118892035656308e-16,
+                "time": 0.000005002941665980061,
+                "repetitions": 12137,
                 "completed": true
             }
         },
         "optimal": {
-            "spmv": "hybrid"
+            "spmv": "csr"
+        },
+        "conversions": {
+            "csr-coo": {
+                "time": 0.002322467195121951,
+                "repetitions": 41,
+                "completed": true
+            },
+            "csr-ell": {
+                "time": 0.013071575999999998,
+                "repetitions": 10,
+                "completed": true
+            },
+            "csr-sellp": {
+                "time": 0.0268612767,
+                "repetitions": 10,
+                "completed": true
+            },
+            "csr-hybrid": {
+                "time": 0.035116427900000007,
+                "repetitions": 10,
+                "completed": true
+            },
+            "coo-csr": {
+                "time": 0.0008396945322580647,
+                "repetitions": 62,
+                "completed": true
+            },
+            "coo-ell": {
+                "completed": false
+            },
+            "coo-sellp": {
+                "completed": false
+            },
+            "coo-hybrid": {
+                "completed": false
+            },
+            "ell-csr": {
+                "time": 0.0260078999,
+                "repetitions": 10,
+                "completed": true
+            },
+            "ell-coo": {
+                "completed": false
+            },
+            "ell-sellp": {
+                "completed": false
+            },
+            "ell-hybrid": {
+                "completed": false
+            }
         }
     }
 ]

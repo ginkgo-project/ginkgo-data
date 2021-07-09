@@ -1,8 +1,8 @@
 [
     {
-        "filename": "/gpfs/work/slkit/slkit003/ssget/MM/Sorensen/Linux_call_graph/Linux_call_graph.mtx",
+        "filename": "/home/kit/scc/au7114/.config/ssget/MM/Sorensen/Linux_call_graph/Linux_call_graph.mtx",
         "problem": {
-            "id": 202,
+            "id": 2654,
             "group": "Sorensen",
             "name": "Linux_call_graph",
             "rows": 324085,
@@ -15,6 +15,7 @@
             "psym": 0.0006324084497715383,
             "nsym": 0.0006125422157473015,
             "kind": "directed weighted graph",
+            "columns": 324085,
             "row_distribution": {
                 "min": 0,
                 "q1": 1.0,
@@ -44,33 +45,89 @@
         },
         "spmv": {
             "csr": {
-                "storage": 15803240,
-                "time": 135449.4,
+                "storage": 15823720,
+                "max_relative_norm2": 6.332282181807737e-17,
+                "time": 0.00006393407042253521,
+                "repetitions": 1065,
                 "completed": true
             },
             "coo": {
                 "storage": 19342528,
-                "time": 55238.8,
-                "completed": true
-            },
-            "hybrid": {
-                "storage": 28745192,
-                "time": 67886.5,
-                "completed": true
-            },
-            "sellp": {
-                "storage": 96629384,
-                "time": 598268.3,
+                "max_relative_norm2": 2.0399154735650567e-17,
+                "time": 0.000054580063849765256,
+                "repetitions": 1065,
                 "completed": true
             },
             "ell": {
-                "storage": 2768982240,
-                "time": 550922.9,
+                "completed": false
+            },
+            "sellp": {
+                "storage": 96809864,
+                "max_relative_norm2": 1.901172791974163e-16,
+                "time": 0.0005083591571428571,
+                "repetitions": 140,
+                "completed": true
+            },
+            "hybrid": {
+                "storage": 19325740,
+                "max_relative_norm2": 1.222404427848258e-16,
+                "time": 0.00005372133427230046,
+                "repetitions": 1065,
                 "completed": true
             }
         },
         "optimal": {
-            "spmv": "coo"
+            "spmv": "hybrid"
+        },
+        "conversions": {
+            "csr-coo": {
+                "time": 0.0020739281481481485,
+                "repetitions": 27,
+                "completed": true
+            },
+            "csr-ell": {
+                "time": 0.010268666800000002,
+                "repetitions": 10,
+                "completed": true
+            },
+            "csr-sellp": {
+                "time": 0.0104201053,
+                "repetitions": 10,
+                "completed": true
+            },
+            "csr-hybrid": {
+                "time": 0.0172350428,
+                "repetitions": 10,
+                "completed": true
+            },
+            "coo-csr": {
+                "time": 0.002709873111111111,
+                "repetitions": 27,
+                "completed": true
+            },
+            "coo-ell": {
+                "completed": false
+            },
+            "coo-sellp": {
+                "completed": false
+            },
+            "coo-hybrid": {
+                "completed": false
+            },
+            "sellp-csr": {
+                "time": 0.004843935,
+                "repetitions": 12,
+                "completed": true
+            },
+            "sellp-coo": {
+                "completed": false
+            },
+            "sellp-ell": {
+                "completed": false
+            },
+            "sellp-hybrid": {
+                "completed": false
+            }
         }
     }
 ]

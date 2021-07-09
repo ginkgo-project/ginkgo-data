@@ -1,8 +1,8 @@
 [
     {
-        "filename": "/gpfs/work/slkit/slkit003/ssget/MM/MAWI/mawi_201512020030/mawi_201512020030.mtx",
+        "filename": "/home/kit/scc/au7114/.config/ssget/MM/MAWI/mawi_201512020030/mawi_201512020030.mtx",
         "problem": {
-            "id": 350,
+            "id": 2802,
             "group": "MAWI",
             "name": "mawi_201512020030",
             "rows": 68863315,
@@ -15,6 +15,7 @@
             "psym": 1,
             "nsym": 1,
             "kind": "undirected weighted graph",
+            "columns": 68863315,
             "row_distribution": {
                 "min": 1,
                 "q1": 1.0,
@@ -44,29 +45,67 @@
         },
         "spmv": {
             "csr": {
-                "storage": 1996432784,
-                "time": 6549125891.2,
+                "storage": 1996760464,
+                "max_relative_norm2": 1.5346984936840107e-16,
+                "time": 0.0107579139,
+                "repetitions": 10,
                 "completed": true
             },
             "coo": {
                 "storage": 2294639360,
-                "time": 7091941.5,
+                "max_relative_norm2": 5.3796508330698e-17,
+                "time": 0.008742589799999999,
+                "repetitions": 10,
                 "completed": true
             },
-            "hybrid": {
-                "storage": 2019186100,
-                "time": 5097426.7,
-                "completed": true
+            "ell": {
+                "completed": false
             },
             "sellp": {
                 "completed": false
             },
-            "ell": {
-                "completed": false
+            "hybrid": {
+                "storage": 2019186100,
+                "max_relative_norm2": 2.989457482931466e-16,
+                "time": 0.00514239525,
+                "repetitions": 12,
+                "completed": true
             }
         },
         "optimal": {
             "spmv": "hybrid"
+        },
+        "conversions": {
+            "csr-coo": {
+                "time": 0.3128606438,
+                "repetitions": 10,
+                "completed": true
+            },
+            "csr-ell": {
+                "completed": false
+            },
+            "csr-sellp": {
+                "completed": false
+            },
+            "csr-hybrid": {
+                "time": 5.0171248006,
+                "repetitions": 10,
+                "completed": true
+            },
+            "coo-csr": {
+                "time": 0.0122560633,
+                "repetitions": 10,
+                "completed": true
+            },
+            "coo-ell": {
+                "completed": false
+            },
+            "coo-sellp": {
+                "completed": false
+            },
+            "coo-hybrid": {
+                "completed": false
+            }
         }
     }
 ]

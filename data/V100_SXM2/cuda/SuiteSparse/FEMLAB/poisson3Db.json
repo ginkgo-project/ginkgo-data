@@ -1,6 +1,6 @@
 [
     {
-        "filename": "/gpfs/work/slkit/slkit003/ssget/MM/FEMLAB/poisson3Db/poisson3Db.mtx",
+        "filename": "/home/kit/scc/au7114/.config/ssget/MM/FEMLAB/poisson3Db/poisson3Db.mtx",
         "problem": {
             "id": 928,
             "group": "FEMLAB",
@@ -15,6 +15,7 @@
             "psym": 1,
             "nsym": 0,
             "kind": "computational fluid dynamics problem",
+            "columns": 85623,
             "row_distribution": {
                 "min": 6,
                 "q1": 19.0,
@@ -44,33 +45,93 @@
         },
         "spmv": {
             "csr": {
-                "storage": 28841884,
-                "time": 66480.6,
+                "storage": 28923804,
+                "max_relative_norm2": 3.357126632050807e-17,
+                "time": 0.00006047354647887324,
+                "repetitions": 1065,
                 "completed": true
             },
             "coo": {
                 "storage": 37999184,
-                "time": 67069.6,
-                "completed": true
-            },
-            "hybrid": {
-                "storage": 34079996,
-                "time": 68173.8,
-                "completed": true
-            },
-            "sellp": {
-                "storage": 40714664,
-                "time": 138919.6,
+                "max_relative_norm2": 8.979621676797988e-19,
+                "time": 0.00006141580845070422,
+                "repetitions": 1065,
                 "completed": true
             },
             "ell": {
                 "storage": 148984020,
-                "time": 137630.2,
+                "max_relative_norm2": 1.9227158970237433e-16,
+                "time": 0.00013655831923890062,
+                "repetitions": 473,
+                "completed": true
+            },
+            "sellp": {
+                "storage": 40713128,
+                "max_relative_norm2": 1.9227158970237433e-16,
+                "time": 0.00011241317547568712,
+                "repetitions": 473,
+                "completed": true
+            },
+            "hybrid": {
+                "storage": 32064668,
+                "max_relative_norm2": 1.742621357897961e-16,
+                "time": 0.00005891576525821597,
+                "repetitions": 1065,
                 "completed": true
             }
         },
         "optimal": {
-            "spmv": "csr"
+            "spmv": "hybrid"
+        },
+        "conversions": {
+            "csr-coo": {
+                "time": 0.005427955583333334,
+                "repetitions": 12,
+                "completed": true
+            },
+            "csr-ell": {
+                "time": 0.0181880392,
+                "repetitions": 10,
+                "completed": true
+            },
+            "csr-sellp": {
+                "time": 0.0230458263,
+                "repetitions": 10,
+                "completed": true
+            },
+            "csr-hybrid": {
+                "time": 0.0756210381,
+                "repetitions": 10,
+                "completed": true
+            },
+            "coo-csr": {
+                "time": 0.0188501946,
+                "repetitions": 10,
+                "completed": true
+            },
+            "coo-ell": {
+                "completed": false
+            },
+            "coo-sellp": {
+                "completed": false
+            },
+            "coo-hybrid": {
+                "completed": false
+            },
+            "ell-csr": {
+                "time": 0.0090331035,
+                "repetitions": 10,
+                "completed": true
+            },
+            "ell-coo": {
+                "completed": false
+            },
+            "ell-sellp": {
+                "completed": false
+            },
+            "ell-hybrid": {
+                "completed": false
+            }
         }
     }
 ]

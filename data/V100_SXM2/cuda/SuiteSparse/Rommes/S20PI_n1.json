@@ -1,6 +1,6 @@
 [
     {
-        "filename": "/gpfs/work/slkit/slkit003/ssget/MM/Rommes/S20PI_n1/S20PI_n1.mtx",
+        "filename": "/home/kit/scc/au7114/.config/ssget/MM/Rommes/S20PI_n1/S20PI_n1.mtx",
         "problem": {
             "id": 2366,
             "group": "Rommes",
@@ -15,6 +15,7 @@
             "psym": 1,
             "nsym": 0,
             "kind": "eigenvalue/model reduction problem",
+            "columns": 1028,
             "row_distribution": {
                 "min": 0,
                 "q1": 2.0,
@@ -44,33 +45,93 @@
         },
         "spmv": {
             "csr": {
-                "storage": 34680,
-                "time": 14521.8,
+                "storage": 35000,
+                "max_relative_norm2": 8.256542930229143e-18,
+                "time": 0.000003837033615291662,
+                "repetitions": 18206,
                 "completed": true
             },
             "coo": {
                 "storage": 40752,
-                "time": 14425.7,
-                "completed": true
-            },
-            "hybrid": {
-                "storage": 37328,
-                "time": 15037.6,
-                "completed": true
-            },
-            "sellp": {
-                "storage": 53272,
-                "time": 12532.6,
+                "max_relative_norm2": 0.0,
+                "time": 0.000005475290269424076,
+                "repetitions": 12137,
                 "completed": true
             },
             "ell": {
                 "storage": 98688,
-                "time": 12903.0,
+                "max_relative_norm2": 2.270549305813014e-17,
+                "time": 0.000005398387987146741,
+                "repetitions": 12137,
+                "completed": true
+            },
+            "sellp": {
+                "storage": 53272,
+                "max_relative_norm2": 2.270549305813014e-17,
+                "time": 0.00000455643041937876,
+                "repetitions": 12137,
+                "completed": true
+            },
+            "hybrid": {
+                "storage": 36656,
+                "max_relative_norm2": 3.407485026547342e-17,
+                "time": 0.000007248584600173032,
+                "repetitions": 8091,
                 "completed": true
             }
         },
         "optimal": {
-            "spmv": "sellp"
+            "spmv": "csr"
+        },
+        "conversions": {
+            "csr-coo": {
+                "time": 0.000038979635168961207,
+                "repetitions": 1598,
+                "completed": true
+            },
+            "csr-ell": {
+                "time": 0.00006730204507042255,
+                "repetitions": 1065,
+                "completed": true
+            },
+            "csr-sellp": {
+                "time": 0.00012090171247357295,
+                "repetitions": 473,
+                "completed": true
+            },
+            "csr-hybrid": {
+                "time": 0.00014290421141649047,
+                "repetitions": 473,
+                "completed": true
+            },
+            "coo-csr": {
+                "time": 0.00004102836795994994,
+                "repetitions": 1598,
+                "completed": true
+            },
+            "coo-ell": {
+                "completed": false
+            },
+            "coo-sellp": {
+                "completed": false
+            },
+            "coo-hybrid": {
+                "completed": false
+            },
+            "ell-csr": {
+                "time": 0.00010280660422535212,
+                "repetitions": 710,
+                "completed": true
+            },
+            "ell-coo": {
+                "completed": false
+            },
+            "ell-sellp": {
+                "completed": false
+            },
+            "ell-hybrid": {
+                "completed": false
+            }
         }
     }
 ]

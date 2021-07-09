@@ -1,8 +1,8 @@
 [
     {
-        "filename": "/gpfs/work/slkit/slkit003/ssget/MM/VDOL/spaceStation_9/spaceStation_9.mtx",
+        "filename": "/home/kit/scc/au7114/.config/ssget/MM/VDOL/spaceStation_9/spaceStation_9.mtx",
         "problem": {
-            "id": 290,
+            "id": 2742,
             "group": "VDOL",
             "name": "spaceStation_9",
             "rows": 1180,
@@ -15,6 +15,7 @@
             "psym": 1,
             "nsym": 1,
             "kind": "optimal control problem",
+            "columns": 1180,
             "row_distribution": {
                 "min": 1,
                 "q1": 10.0,
@@ -44,33 +45,107 @@
         },
         "spmv": {
             "csr": {
-                "storage": 240812,
-                "time": 22735.8,
+                "storage": 243272,
+                "max_relative_norm2": 7.219804660134509e-17,
+                "time": 0.000003831639514445787,
+                "repetitions": 18206,
                 "completed": true
             },
             "coo": {
                 "storage": 314784,
-                "time": 13380.0,
-                "completed": true
-            },
-            "hybrid": {
-                "storage": 353968,
-                "time": 21330.9,
-                "completed": true
-            },
-            "sellp": {
-                "storage": 453432,
-                "time": 57140.6,
+                "max_relative_norm2": 3.313823054531671e-20,
+                "time": 0.000005474532998269753,
+                "repetitions": 12137,
                 "completed": true
             },
             "ell": {
                 "storage": 2180640,
-                "time": 59009.0,
+                "max_relative_norm2": 1.4522782631563843e-16,
+                "time": 0.000004974007827304936,
+                "repetitions": 12137,
+                "completed": true
+            },
+            "sellp": {
+                "storage": 453432,
+                "max_relative_norm2": 1.3187775627350374e-16,
+                "time": 0.00003897466708385482,
+                "repetitions": 1598,
+                "completed": true
+            },
+            "hybrid": {
+                "storage": 310064,
+                "max_relative_norm2": 1.210551665154137e-16,
+                "time": 0.000007131103695464096,
+                "repetitions": 8091,
                 "completed": true
             }
         },
         "optimal": {
-            "spmv": "coo"
+            "spmv": "csr"
+        },
+        "conversions": {
+            "csr-coo": {
+                "time": 0.00005173254647887324,
+                "repetitions": 1065,
+                "completed": true
+            },
+            "csr-ell": {
+                "time": 0.0004241779357142857,
+                "repetitions": 140,
+                "completed": true
+            },
+            "csr-sellp": {
+                "time": 0.00012951811205073996,
+                "repetitions": 473,
+                "completed": true
+            },
+            "csr-hybrid": {
+                "time": 0.00015139838900634248,
+                "repetitions": 473,
+                "completed": true
+            },
+            "coo-csr": {
+                "time": 0.00004023761076345432,
+                "repetitions": 1598,
+                "completed": true
+            },
+            "coo-ell": {
+                "completed": false
+            },
+            "coo-sellp": {
+                "completed": false
+            },
+            "coo-hybrid": {
+                "completed": false
+            },
+            "ell-csr": {
+                "time": 0.00014515931501057083,
+                "repetitions": 473,
+                "completed": true
+            },
+            "ell-coo": {
+                "completed": false
+            },
+            "ell-sellp": {
+                "completed": false
+            },
+            "ell-hybrid": {
+                "completed": false
+            },
+            "sellp-csr": {
+                "time": 0.0001603295746031746,
+                "repetitions": 315,
+                "completed": true
+            },
+            "sellp-coo": {
+                "completed": false
+            },
+            "sellp-ell": {
+                "completed": false
+            },
+            "sellp-hybrid": {
+                "completed": false
+            }
         }
     }
 ]

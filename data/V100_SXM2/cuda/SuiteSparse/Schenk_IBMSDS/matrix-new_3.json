@@ -1,13 +1,13 @@
 [
     {
-        "filename": "/gpfs/work/slkit/slkit003/ssget/MM/Schenk_IBMSDS/matrix-new_3/matrix-new_3.mtx",
+        "filename": "/home/kit/scc/au7114/.config/ssget/MM/Schenk_IBMSDS/matrix-new_3/matrix-new_3.mtx",
         "problem": {
             "id": 960,
             "group": "Schenk_IBMSDS",
             "name": "matrix-new_3",
             "rows": 125329,
             "cols": 125329,
-            "nonzeros": 893984,
+            "nonzeros": 2678750,
             "real": true,
             "binary": false,
             "2d3d": true,
@@ -15,6 +15,7 @@
             "psym": 0.9871118002084264,
             "nsym": 0.2826079320371298,
             "kind": "semiconductor device problem",
+            "columns": 125329,
             "row_distribution": {
                 "min": 12,
                 "q1": 21.0,
@@ -44,33 +45,89 @@
         },
         "spmv": {
             "csr": {
-                "storage": 11229128,
-                "time": 35883.7,
+                "storage": 11249608,
+                "max_relative_norm2": 1.0997105860379557e-19,
+                "time": 0.000026910067167292449,
+                "repetitions": 2397,
                 "completed": true
             },
             "coo": {
                 "storage": 14303744,
-                "time": 37180.4,
-                "completed": true
-            },
-            "hybrid": {
-                "storage": 21055272,
-                "time": 36219.2,
-                "completed": true
-            },
-            "sellp": {
-                "storage": 20240504,
-                "time": 40689.7,
+                "max_relative_norm2": 0.0,
+                "time": 0.00003059619858156029,
+                "repetitions": 2397,
                 "completed": true
             },
             "ell": {
-                "storage": 21055272,
-                "time": 36112.4,
+                "completed": false
+            },
+            "sellp": {
+                "storage": 20240504,
+                "max_relative_norm2": 1.4466858929980873e-19,
+                "time": 0.00003573532040050063,
+                "repetitions": 1598,
+                "completed": true
+            },
+            "hybrid": {
+                "storage": 13802428,
+                "max_relative_norm2": 1.321580654841069e-19,
+                "time": 0.000028959204839382564,
+                "repetitions": 2397,
                 "completed": true
             }
         },
         "optimal": {
             "spmv": "csr"
+        },
+        "conversions": {
+            "csr-coo": {
+                "time": 0.002364778296296296,
+                "repetitions": 27,
+                "completed": true
+            },
+            "csr-ell": {
+                "time": 0.0014818038048780489,
+                "repetitions": 41,
+                "completed": true
+            },
+            "csr-sellp": {
+                "time": 0.0055513418,
+                "repetitions": 10,
+                "completed": true
+            },
+            "csr-hybrid": {
+                "time": 0.0048727394166666669,
+                "repetitions": 12,
+                "completed": true
+            },
+            "coo-csr": {
+                "time": 0.001608060414634146,
+                "repetitions": 41,
+                "completed": true
+            },
+            "coo-ell": {
+                "completed": false
+            },
+            "coo-sellp": {
+                "completed": false
+            },
+            "coo-hybrid": {
+                "completed": false
+            },
+            "sellp-csr": {
+                "time": 0.0015206230975609757,
+                "repetitions": 41,
+                "completed": true
+            },
+            "sellp-coo": {
+                "completed": false
+            },
+            "sellp-ell": {
+                "completed": false
+            },
+            "sellp-hybrid": {
+                "completed": false
+            }
         }
     }
 ]

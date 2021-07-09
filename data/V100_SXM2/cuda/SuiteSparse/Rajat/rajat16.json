@@ -1,13 +1,13 @@
 [
     {
-        "filename": "/gpfs/work/slkit/slkit003/ssget/MM/Rajat/rajat16/rajat16.mtx",
+        "filename": "/home/kit/scc/au7114/.config/ssget/MM/Rajat/rajat16/rajat16.mtx",
         "problem": {
             "id": 1343,
             "group": "Rajat",
             "name": "rajat16",
             "rows": 94294,
             "cols": 94294,
-            "nonzeros": 476766,
+            "nonzeros": 641159,
             "real": true,
             "binary": false,
             "2d3d": false,
@@ -15,6 +15,7 @@
             "psym": 0.9900237892855388,
             "nsym": 0.6363336955309653,
             "kind": "circuit simulation problem",
+            "columns": 94294,
             "row_distribution": {
                 "min": 1,
                 "q1": 3.0,
@@ -38,37 +39,93 @@
                 "variance": 9546.468780016356,
                 "skewness": 273.96247263185537,
                 "kurtosis": 79733.02905035585,
-                "hyperskewness": 23403478.132210439,
+                "hyperskewness": 23403478.13221044,
                 "hyperflatness": 6882185657.070295
             }
         },
         "spmv": {
             "csr": {
-                "storage": 6098372,
-                "time": 3048164.1,
+                "storage": 6118852,
+                "max_relative_norm2": 2.004441156239798e-17,
+                "time": 0.000022839116812682517,
+                "repetitions": 2397,
                 "completed": true
             },
             "coo": {
                 "storage": 7628256,
-                "time": 29791.1,
-                "completed": true
-            },
-            "hybrid": {
-                "storage": 8447344,
-                "time": 27110.2,
-                "completed": true
-            },
-            "sellp": {
-                "storage": 52418088,
-                "time": 18296388.3,
+                "max_relative_norm2": 9.362780737787924e-19,
+                "time": 0.00001684157814238043,
+                "repetitions": 3596,
                 "completed": true
             },
             "ell": {
                 "completed": false
+            },
+            "sellp": {
+                "storage": 52454184,
+                "max_relative_norm2": 8.174508282840304e-17,
+                "time": 0.014367930799999998,
+                "repetitions": 10,
+                "completed": true
+            },
+            "hybrid": {
+                "storage": 6756152,
+                "max_relative_norm2": 3.8262993560562848e-17,
+                "time": 0.000015693288375973306,
+                "repetitions": 3596,
+                "completed": true
             }
         },
         "optimal": {
             "spmv": "hybrid"
+        },
+        "conversions": {
+            "csr-coo": {
+                "time": 0.0195806385,
+                "repetitions": 10,
+                "completed": true
+            },
+            "csr-ell": {
+                "completed": false
+            },
+            "csr-sellp": {
+                "time": 0.0416254931,
+                "repetitions": 10,
+                "completed": true
+            },
+            "csr-hybrid": {
+                "time": 0.08960432519999999,
+                "repetitions": 10,
+                "completed": true
+            },
+            "coo-csr": {
+                "time": 0.009029961,
+                "repetitions": 10,
+                "completed": true
+            },
+            "coo-ell": {
+                "completed": false
+            },
+            "coo-sellp": {
+                "completed": false
+            },
+            "coo-hybrid": {
+                "completed": false
+            },
+            "sellp-csr": {
+                "time": 0.030554402599999997,
+                "repetitions": 10,
+                "completed": true
+            },
+            "sellp-coo": {
+                "completed": false
+            },
+            "sellp-ell": {
+                "completed": false
+            },
+            "sellp-hybrid": {
+                "completed": false
+            }
         }
     }
 ]

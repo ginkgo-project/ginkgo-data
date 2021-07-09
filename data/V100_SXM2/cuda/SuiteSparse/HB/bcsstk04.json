@@ -1,6 +1,6 @@
 [
     {
-        "filename": "/gpfs/work/slkit/slkit003/ssget/MM/HB/bcsstk04/bcsstk04.mtx",
+        "filename": "/home/kit/scc/au7114/.config/ssget/MM/HB/bcsstk04/bcsstk04.mtx",
         "problem": {
             "id": 26,
             "group": "HB",
@@ -15,6 +15,7 @@
             "psym": 1,
             "nsym": 1,
             "kind": "structural problem",
+            "columns": 132,
             "row_distribution": {
                 "min": 15,
                 "q1": 18.0,
@@ -24,8 +25,8 @@
                 "mean": 27.63636363636364,
                 "variance": 115.56473829201096,
                 "skewness": 0.6504847965823145,
-                "kurtosis": 1.8667950193274566,
-                "hyperskewness": 2.0797294053354999,
+                "kurtosis": 1.8667950193274568,
+                "hyperskewness": 2.0797294053355,
                 "hyperflatness": 4.168849704251225
             },
             "col_distribution": {
@@ -37,40 +38,128 @@
                 "mean": 27.63636363636364,
                 "variance": 115.56473829201096,
                 "skewness": 0.6504847965823145,
-                "kurtosis": 1.8667950193274566,
-                "hyperskewness": 2.0797294053354999,
+                "kurtosis": 1.8667950193274568,
+                "hyperskewness": 2.0797294053355,
                 "hyperflatness": 4.168849704251225
             }
         },
         "spmv": {
             "csr": {
-                "storage": 44308,
-                "time": 15953.4,
+                "storage": 44764,
+                "max_relative_norm2": 8.978796194570939e-17,
+                "time": 0.000003845313962429967,
+                "repetitions": 18206,
                 "completed": true
             },
             "coo": {
                 "storage": 58368,
-                "time": 14075.7,
-                "completed": true
-            },
-            "hybrid": {
-                "storage": 68816,
-                "time": 30400.4,
-                "completed": true
-            },
-            "sellp": {
-                "storage": 83000,
-                "time": 28732.8,
+                "max_relative_norm2": 1.0010364228441052e-17,
+                "time": 0.0000056038885226991849,
+                "repetitions": 12137,
                 "completed": true
             },
             "ell": {
                 "storage": 72864,
-                "time": 28456.1,
+                "max_relative_norm2": 2.2046967607609133e-16,
+                "time": 0.000003916447709546304,
+                "repetitions": 18206,
+                "completed": true
+            },
+            "sellp": {
+                "storage": 83000,
+                "max_relative_norm2": 2.671555052589575e-16,
+                "time": 0.000013467349462365592,
+                "repetitions": 5394,
+                "completed": true
+            },
+            "hybrid": {
+                "storage": 58368,
+                "max_relative_norm2": 1.0010287856588293e-17,
+                "time": 0.000007583074898034854,
+                "repetitions": 8091,
                 "completed": true
             }
         },
         "optimal": {
-            "spmv": "coo"
+            "spmv": "csr"
+        },
+        "conversions": {
+            "csr-coo": {
+                "time": 0.00004052893491864831,
+                "repetitions": 1598,
+                "completed": true
+            },
+            "csr-ell": {
+                "time": 0.00006760570046948356,
+                "repetitions": 1065,
+                "completed": true
+            },
+            "csr-sellp": {
+                "time": 0.00011857188794926003,
+                "repetitions": 473,
+                "completed": true
+            },
+            "csr-hybrid": {
+                "time": 0.00008309057605633804,
+                "repetitions": 710,
+                "completed": true
+            },
+            "coo-csr": {
+                "time": 0.00003674622090112641,
+                "repetitions": 1598,
+                "completed": true
+            },
+            "coo-ell": {
+                "completed": false
+            },
+            "coo-sellp": {
+                "completed": false
+            },
+            "coo-hybrid": {
+                "completed": false
+            },
+            "ell-csr": {
+                "time": 0.0000803972985915493,
+                "repetitions": 710,
+                "completed": true
+            },
+            "ell-coo": {
+                "completed": false
+            },
+            "ell-sellp": {
+                "completed": false
+            },
+            "ell-hybrid": {
+                "completed": false
+            },
+            "sellp-csr": {
+                "time": 0.00010964965211267607,
+                "repetitions": 710,
+                "completed": true
+            },
+            "sellp-coo": {
+                "completed": false
+            },
+            "sellp-ell": {
+                "completed": false
+            },
+            "sellp-hybrid": {
+                "completed": false
+            },
+            "hybrid-csr": {
+                "time": 0.00015149601902748414,
+                "repetitions": 473,
+                "completed": true
+            },
+            "hybrid-coo": {
+                "completed": false
+            },
+            "hybrid-ell": {
+                "completed": false
+            },
+            "hybrid-sellp": {
+                "completed": false
+            }
         }
     }
 ]

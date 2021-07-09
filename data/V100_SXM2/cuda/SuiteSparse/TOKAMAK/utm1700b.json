@@ -1,6 +1,6 @@
 [
     {
-        "filename": "/gpfs/work/slkit/slkit003/ssget/MM/TOKAMAK/utm1700b/utm1700b.mtx",
+        "filename": "/home/kit/scc/au7114/.config/ssget/MM/TOKAMAK/utm1700b/utm1700b.mtx",
         "problem": {
             "id": 823,
             "group": "TOKAMAK",
@@ -15,6 +15,7 @@
             "psym": 0.5232974910394266,
             "nsym": 0,
             "kind": "electromagnetics problem",
+            "columns": 1700,
             "row_distribution": {
                 "min": 1,
                 "q1": 10.0,
@@ -44,33 +45,93 @@
         },
         "spmv": {
             "csr": {
-                "storage": 264912,
-                "time": 16018.8,
+                "storage": 267604,
+                "max_relative_norm2": 7.376302958895403e-17,
+                "time": 0.000004020307096561573,
+                "repetitions": 18206,
                 "completed": true
             },
             "coo": {
                 "storage": 344144,
-                "time": 14214.3,
-                "completed": true
-            },
-            "hybrid": {
-                "storage": 345840,
-                "time": 19949.6,
-                "completed": true
-            },
-            "sellp": {
-                "storage": 478136,
-                "time": 20924.7,
+                "max_relative_norm2": 0.0,
+                "time": 0.000005811762544286068,
+                "repetitions": 12137,
                 "completed": true
             },
             "ell": {
                 "storage": 591600,
-                "time": 21968.8,
+                "max_relative_norm2": 1.5381401581673595e-16,
+                "time": 0.0000036476367680984288,
+                "repetitions": 18206,
+                "completed": true
+            },
+            "sellp": {
+                "storage": 478136,
+                "max_relative_norm2": 1.6524118388102599e-16,
+                "time": 0.000009000077493511308,
+                "repetitions": 8091,
+                "completed": true
+            },
+            "hybrid": {
+                "storage": 337344,
+                "max_relative_norm2": 1.484393805048561e-16,
+                "time": 0.00000759561315041404,
+                "repetitions": 8091,
                 "completed": true
             }
         },
         "optimal": {
-            "spmv": "coo"
+            "spmv": "ell"
+        },
+        "conversions": {
+            "csr-coo": {
+                "time": 0.00004754404319248826,
+                "repetitions": 1065,
+                "completed": true
+            },
+            "csr-ell": {
+                "time": 0.0000720106647887324,
+                "repetitions": 710,
+                "completed": true
+            },
+            "csr-sellp": {
+                "time": 0.00013328037632135306,
+                "repetitions": 473,
+                "completed": true
+            },
+            "csr-hybrid": {
+                "time": 0.0001673745111111111,
+                "repetitions": 315,
+                "completed": true
+            },
+            "coo-csr": {
+                "time": 0.00003912717334167709,
+                "repetitions": 1598,
+                "completed": true
+            },
+            "coo-ell": {
+                "completed": false
+            },
+            "coo-sellp": {
+                "completed": false
+            },
+            "coo-hybrid": {
+                "completed": false
+            },
+            "ell-csr": {
+                "time": 0.00012810702325581397,
+                "repetitions": 473,
+                "completed": true
+            },
+            "ell-coo": {
+                "completed": false
+            },
+            "ell-sellp": {
+                "completed": false
+            },
+            "ell-hybrid": {
+                "completed": false
+            }
         }
     }
 ]

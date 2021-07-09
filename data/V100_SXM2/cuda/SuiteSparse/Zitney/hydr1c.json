@@ -1,13 +1,13 @@
 [
     {
-        "filename": "/gpfs/work/slkit/slkit003/ssget/MM/Zitney/hydr1c/hydr1c.mtx",
+        "filename": "/home/kit/scc/au7114/.config/ssget/MM/Zitney/hydr1c/hydr1c.mtx",
         "problem": {
             "id": 1536,
             "group": "Zitney",
             "name": "hydr1c",
             "rows": 5308,
             "cols": 5308,
-            "nonzeros": 22592,
+            "nonzeros": 23752,
             "real": true,
             "binary": false,
             "2d3d": false,
@@ -15,6 +15,7 @@
             "psym": 0.004126315789473685,
             "nsym": 0.0006197432492253209,
             "kind": "chemical process simulation problem sequence",
+            "columns": 5308,
             "row_distribution": {
                 "min": 1,
                 "q1": 2.0,
@@ -44,33 +45,93 @@
         },
         "spmv": {
             "csr": {
-                "storage": 292340,
-                "time": 15288.7,
+                "storage": 295164,
+                "max_relative_norm2": 8.112984861945453e-17,
+                "time": 0.000004639349509763533,
+                "repetitions": 12137,
                 "completed": true
             },
             "coo": {
                 "storage": 361472,
-                "time": 14403.3,
-                "completed": true
-            },
-            "hybrid": {
-                "storage": 524704,
-                "time": 16303.3,
-                "completed": true
-            },
-            "sellp": {
-                "storage": 865336,
-                "time": 15623.3,
+                "max_relative_norm2": 0.0,
+                "time": 0.0000069445047583735019,
+                "repetitions": 8091,
                 "completed": true
             },
             "ell": {
                 "storage": 891744,
-                "time": 16701.8,
+                "max_relative_norm2": 1.6530071327153623e-16,
+                "time": 0.000007284692497837103,
+                "repetitions": 8091,
+                "completed": true
+            },
+            "sellp": {
+                "storage": 865336,
+                "max_relative_norm2": 1.6530071327153623e-16,
+                "time": 0.000005919167009969515,
+                "repetitions": 12137,
+                "completed": true
+            },
+            "hybrid": {
+                "storage": 328208,
+                "max_relative_norm2": 1.339794837031886e-16,
+                "time": 0.00000886695464095909,
+                "repetitions": 8091,
                 "completed": true
             }
         },
         "optimal": {
-            "spmv": "coo"
+            "spmv": "csr"
+        },
+        "conversions": {
+            "csr-coo": {
+                "time": 0.00004112344993742178,
+                "repetitions": 1598,
+                "completed": true
+            },
+            "csr-ell": {
+                "time": 0.014608471000000003,
+                "repetitions": 10,
+                "completed": true
+            },
+            "csr-sellp": {
+                "time": 0.0057021555833333338,
+                "repetitions": 12,
+                "completed": true
+            },
+            "csr-hybrid": {
+                "time": 0.0002389402444444444,
+                "repetitions": 315,
+                "completed": true
+            },
+            "coo-csr": {
+                "time": 0.00003969902315394243,
+                "repetitions": 1598,
+                "completed": true
+            },
+            "coo-ell": {
+                "completed": false
+            },
+            "coo-sellp": {
+                "completed": false
+            },
+            "coo-hybrid": {
+                "completed": false
+            },
+            "ell-csr": {
+                "time": 0.0001231320803382664,
+                "repetitions": 473,
+                "completed": true
+            },
+            "ell-coo": {
+                "completed": false
+            },
+            "ell-sellp": {
+                "completed": false
+            },
+            "ell-hybrid": {
+                "completed": false
+            }
         }
     }
 ]

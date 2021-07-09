@@ -1,13 +1,13 @@
 [
     {
-        "filename": "/gpfs/work/slkit/slkit003/ssget/MM/Sandia/ASIC_680k/ASIC_680k.mtx",
+        "filename": "/home/kit/scc/au7114/.config/ssget/MM/Sandia/ASIC_680k/ASIC_680k.mtx",
         "problem": {
             "id": 1419,
             "group": "Sandia",
             "name": "ASIC_680k",
             "rows": 682862,
             "cols": 682862,
-            "nonzeros": 2638997,
+            "nonzeros": 3871773,
             "real": true,
             "binary": false,
             "2d3d": false,
@@ -15,6 +15,7 @@
             "psym": 1,
             "nsym": 0.004444308126428144,
             "kind": "circuit simulation problem",
+            "columns": 682862,
             "row_distribution": {
                 "min": 1,
                 "q1": 3.0,
@@ -44,31 +45,87 @@
         },
         "spmv": {
             "csr": {
-                "storage": 34399416,
-                "time": 39894352.9,
+                "storage": 34481336,
+                "max_relative_norm2": 7.805414958607291e-20,
+                "time": 0.0001290371691331924,
+                "repetitions": 473,
                 "completed": true
             },
             "coo": {
                 "storage": 42223952,
-                "time": 112283.6,
-                "completed": true
-            },
-            "hybrid": {
-                "storage": 39492504,
-                "time": 106615.0,
-                "completed": true
-            },
-            "sellp": {
-                "storage": 626543848,
-                "time": 237937085.1,
+                "max_relative_norm2": 6.24358199635839e-20,
+                "time": 0.0001164907463002114,
+                "repetitions": 473,
                 "completed": true
             },
             "ell": {
                 "completed": false
+            },
+            "sellp": {
+                "storage": 626523880,
+                "max_relative_norm2": 9.215183173476614e-17,
+                "time": 0.1953002983,
+                "repetitions": 10,
+                "completed": true
+            },
+            "hybrid": {
+                "storage": 39492504,
+                "max_relative_norm2": 6.55275383067802e-17,
+                "time": 0.00010610912112676056,
+                "repetitions": 710,
+                "completed": true
             }
         },
         "optimal": {
             "spmv": "hybrid"
+        },
+        "conversions": {
+            "csr-coo": {
+                "time": 0.0367880416,
+                "repetitions": 10,
+                "completed": true
+            },
+            "csr-ell": {
+                "completed": false
+            },
+            "csr-sellp": {
+                "time": 0.1306934651,
+                "repetitions": 10,
+                "completed": true
+            },
+            "csr-hybrid": {
+                "time": 0.29982417840000005,
+                "repetitions": 10,
+                "completed": true
+            },
+            "coo-csr": {
+                "time": 0.0329204832,
+                "repetitions": 10,
+                "completed": true
+            },
+            "coo-ell": {
+                "completed": false
+            },
+            "coo-sellp": {
+                "completed": false
+            },
+            "coo-hybrid": {
+                "completed": false
+            },
+            "sellp-csr": {
+                "time": 0.38426309,
+                "repetitions": 10,
+                "completed": true
+            },
+            "sellp-coo": {
+                "completed": false
+            },
+            "sellp-ell": {
+                "completed": false
+            },
+            "sellp-hybrid": {
+                "completed": false
+            }
         }
     }
 ]

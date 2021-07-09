@@ -1,6 +1,6 @@
 [
     {
-        "filename": "/gpfs/work/slkit/slkit003/ssget/MM/Rajat/rajat08/rajat08.mtx",
+        "filename": "/home/kit/scc/au7114/.config/ssget/MM/Rajat/rajat08/rajat08.mtx",
         "problem": {
             "id": 1192,
             "group": "Rajat",
@@ -15,6 +15,7 @@
             "psym": 1,
             "nsym": 1,
             "kind": "circuit simulation problem",
+            "columns": 19362,
             "row_distribution": {
                 "min": 1,
                 "q1": 3.0,
@@ -44,33 +45,93 @@
         },
         "spmv": {
             "csr": {
-                "storage": 1078768,
-                "time": 19980.9,
+                "storage": 1083888,
+                "max_relative_norm2": 2.7646341199807949e-17,
+                "time": 0.000007589561611667284,
+                "repetitions": 8091,
                 "completed": true
             },
             "coo": {
                 "storage": 1335088,
-                "time": 16037.9,
-                "completed": true
-            },
-            "hybrid": {
-                "storage": 1162952,
-                "time": 15342.3,
-                "completed": true
-            },
-            "sellp": {
-                "storage": 1166072,
-                "time": 41244.7,
+                "max_relative_norm2": 0.0,
+                "time": 0.000006191309232480534,
+                "repetitions": 8091,
                 "completed": true
             },
             "ell": {
                 "storage": 19052208,
-                "time": 42715.7,
+                "max_relative_norm2": 5.5407961386052458e-17,
+                "time": 0.0000311113362536504,
+                "repetitions": 2397,
+                "completed": true
+            },
+            "sellp": {
+                "storage": 1165304,
+                "max_relative_norm2": 5.5407961386052458e-17,
+                "time": 0.000021787892365456825,
+                "repetitions": 2397,
+                "completed": true
+            },
+            "hybrid": {
+                "storage": 1105336,
+                "max_relative_norm2": 6.892683448322026e-17,
+                "time": 0.000007624247311827957,
+                "repetitions": 8091,
                 "completed": true
             }
         },
         "optimal": {
-            "spmv": "hybrid"
+            "spmv": "coo"
+        },
+        "conversions": {
+            "csr-coo": {
+                "time": 0.00004138179349186483,
+                "repetitions": 1598,
+                "completed": true
+            },
+            "csr-ell": {
+                "time": 0.001118383451612903,
+                "repetitions": 62,
+                "completed": true
+            },
+            "csr-sellp": {
+                "time": 0.00012784014376321354,
+                "repetitions": 473,
+                "completed": true
+            },
+            "csr-hybrid": {
+                "time": 0.00033779643333333337,
+                "repetitions": 210,
+                "completed": true
+            },
+            "coo-csr": {
+                "time": 0.00004156031539424281,
+                "repetitions": 1598,
+                "completed": true
+            },
+            "coo-ell": {
+                "completed": false
+            },
+            "coo-sellp": {
+                "completed": false
+            },
+            "coo-hybrid": {
+                "completed": false
+            },
+            "ell-csr": {
+                "time": 0.00040595895,
+                "repetitions": 140,
+                "completed": true
+            },
+            "ell-coo": {
+                "completed": false
+            },
+            "ell-sellp": {
+                "completed": false
+            },
+            "ell-hybrid": {
+                "completed": false
+            }
         }
     }
 ]

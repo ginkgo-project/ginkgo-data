@@ -1,6 +1,6 @@
 [
     {
-        "filename": "/gpfs/work/slkit/slkit003/ssget/MM/Zitney/rdist3a/rdist3a.mtx",
+        "filename": "/home/kit/scc/au7114/.config/ssget/MM/Zitney/rdist3a/rdist3a.mtx",
         "problem": {
             "id": 841,
             "group": "Zitney",
@@ -15,6 +15,7 @@
             "psym": 0.1404154186743065,
             "nsym": 0,
             "kind": "chemical process simulation problem",
+            "columns": 2398,
             "row_distribution": {
                 "min": 1,
                 "q1": 6.0,
@@ -44,33 +45,93 @@
         },
         "spmv": {
             "csr": {
-                "storage": 752348,
-                "time": 18359.7,
+                "storage": 757468,
+                "max_relative_norm2": 2.0597908150638055e-16,
+                "time": 0.000003989709326595628,
+                "repetitions": 18206,
                 "completed": true
             },
             "coo": {
                 "storage": 990336,
-                "time": 15014.5,
-                "completed": true
-            },
-            "hybrid": {
-                "storage": 1331784,
-                "time": 30983.4,
-                "completed": true
-            },
-            "sellp": {
-                "storage": 2536552,
-                "time": 43590.1,
+                "max_relative_norm2": 1.3512513317454129e-17,
+                "time": 0.000005642812721430337,
+                "repetitions": 12137,
                 "completed": true
             },
             "ell": {
                 "storage": 2676168,
-                "time": 46370.0,
+                "max_relative_norm2": 3.078820621714173e-16,
+                "time": 0.000005116574277004202,
+                "repetitions": 12137,
+                "completed": true
+            },
+            "sellp": {
+                "storage": 2536552,
+                "max_relative_norm2": 3.379694111542562e-16,
+                "time": 0.000025410836879432625,
+                "repetitions": 2397,
+                "completed": true
+            },
+            "hybrid": {
+                "storage": 972720,
+                "max_relative_norm2": 2.214036912537968e-16,
+                "time": 0.0000074211848967989138,
+                "repetitions": 8091,
                 "completed": true
             }
         },
         "optimal": {
-            "spmv": "coo"
+            "spmv": "csr"
+        },
+        "conversions": {
+            "csr-coo": {
+                "time": 0.00007302020704225352,
+                "repetitions": 710,
+                "completed": true
+            },
+            "csr-ell": {
+                "time": 0.0113846298,
+                "repetitions": 10,
+                "completed": true
+            },
+            "csr-sellp": {
+                "time": 0.0122392219,
+                "repetitions": 10,
+                "completed": true
+            },
+            "csr-hybrid": {
+                "time": 0.00019809409206349203,
+                "repetitions": 315,
+                "completed": true
+            },
+            "coo-csr": {
+                "time": 0.0014345743170731708,
+                "repetitions": 41,
+                "completed": true
+            },
+            "coo-ell": {
+                "completed": false
+            },
+            "coo-sellp": {
+                "completed": false
+            },
+            "coo-hybrid": {
+                "completed": false
+            },
+            "ell-csr": {
+                "time": 0.0015432852195121953,
+                "repetitions": 41,
+                "completed": true
+            },
+            "ell-coo": {
+                "completed": false
+            },
+            "ell-sellp": {
+                "completed": false
+            },
+            "ell-hybrid": {
+                "completed": false
+            }
         }
     }
 ]

@@ -1,13 +1,13 @@
 [
     {
-        "filename": "/gpfs/work/slkit/slkit003/ssget/MM/Freescale/FullChip/FullChip.mtx",
+        "filename": "/home/kit/scc/au7114/.config/ssget/MM/Freescale/FullChip/FullChip.mtx",
         "problem": {
             "id": 2380,
             "group": "Freescale",
             "name": "FullChip",
             "rows": 2987012,
             "cols": 2987012,
-            "nonzeros": 26621983,
+            "nonzeros": 26621990,
             "real": true,
             "binary": false,
             "2d3d": false,
@@ -15,6 +15,7 @@
             "psym": 0.9999996192108144,
             "nsym": 0.005614865134161801,
             "kind": "circuit simulation problem",
+            "columns": 2987012,
             "row_distribution": {
                 "min": 1,
                 "q1": 5.0,
@@ -44,31 +45,87 @@
         },
         "spmv": {
             "csr": {
-                "storage": 331411848,
-                "time": 311064129.8,
+                "storage": 331739528,
+                "max_relative_norm2": 1.3910088494197842e-16,
+                "time": 0.0009247597258064516,
+                "repetitions": 62,
                 "completed": true
             },
             "coo": {
                 "storage": 425951728,
-                "time": 1043184.8,
-                "completed": true
-            },
-            "hybrid": {
-                "storage": 431835344,
-                "time": 821981.2,
-                "completed": true
-            },
-            "sellp": {
-                "storage": 2428594456,
-                "time": 1411496460.4,
+                "max_relative_norm2": 8.843487137687546e-17,
+                "time": 0.001038209741935484,
+                "repetitions": 62,
                 "completed": true
             },
             "ell": {
                 "completed": false
+            },
+            "sellp": {
+                "storage": 2428917016,
+                "max_relative_norm2": 3.8387340852110987e-15,
+                "time": 1.1516337787000002,
+                "repetitions": 10,
+                "completed": true
+            },
+            "hybrid": {
+                "storage": 366739312,
+                "max_relative_norm2": 1.9185094928554922e-16,
+                "time": 0.0009404169193548386,
+                "repetitions": 62,
+                "completed": true
             }
         },
         "optimal": {
-            "spmv": "hybrid"
+            "spmv": "csr"
+        },
+        "conversions": {
+            "csr-coo": {
+                "time": 0.017676768000000004,
+                "repetitions": 10,
+                "completed": true
+            },
+            "csr-ell": {
+                "completed": false
+            },
+            "csr-sellp": {
+                "time": 0.3381649076,
+                "repetitions": 10,
+                "completed": true
+            },
+            "csr-hybrid": {
+                "time": 0.3448008224,
+                "repetitions": 10,
+                "completed": true
+            },
+            "coo-csr": {
+                "time": 0.0068502513000000008,
+                "repetitions": 10,
+                "completed": true
+            },
+            "coo-ell": {
+                "completed": false
+            },
+            "coo-sellp": {
+                "completed": false
+            },
+            "coo-hybrid": {
+                "completed": false
+            },
+            "sellp-csr": {
+                "time": 1.5793146875000002,
+                "repetitions": 10,
+                "completed": true
+            },
+            "sellp-coo": {
+                "completed": false
+            },
+            "sellp-ell": {
+                "completed": false
+            },
+            "sellp-hybrid": {
+                "completed": false
+            }
         }
     }
 ]

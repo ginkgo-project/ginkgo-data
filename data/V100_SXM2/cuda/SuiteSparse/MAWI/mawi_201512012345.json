@@ -1,8 +1,8 @@
 [
     {
-        "filename": "/gpfs/work/slkit/slkit003/ssget/MM/MAWI/mawi_201512012345/mawi_201512012345.mtx",
+        "filename": "/home/kit/scc/au7114/.config/ssget/MM/MAWI/mawi_201512012345/mawi_201512012345.mtx",
         "problem": {
-            "id": 348,
+            "id": 2800,
             "group": "MAWI",
             "name": "mawi_201512012345",
             "rows": 18571154,
@@ -15,6 +15,7 @@
             "psym": 1,
             "nsym": 1,
             "kind": "undirected weighted graph",
+            "columns": 18571154,
             "row_distribution": {
                 "min": 1,
                 "q1": 1.0,
@@ -44,31 +45,87 @@
         },
         "spmv": {
             "csr": {
-                "storage": 530768460,
-                "time": 1715269433.5,
+                "storage": 531096140,
+                "max_relative_norm2": 3.5335554328619315e-16,
+                "time": 0.0019558829629629629,
+                "repetitions": 27,
                 "completed": true
             },
             "coo": {
                 "storage": 608645120,
-                "time": 1910302.3,
-                "completed": true
-            },
-            "hybrid": {
-                "storage": 534360504,
-                "time": 1377823.4,
-                "completed": true
-            },
-            "sellp": {
-                "storage": 14334229496,
-                "time": 10106471435.0,
+                "max_relative_norm2": 8.895661419349023e-17,
+                "time": 0.0018701185555555557,
+                "repetitions": 27,
                 "completed": true
             },
             "ell": {
                 "completed": false
+            },
+            "sellp": {
+                "storage": 14334692600,
+                "max_relative_norm2": 6.473237626315357e-15,
+                "time": 8.199233129300002,
+                "repetitions": 10,
+                "completed": true
+            },
+            "hybrid": {
+                "storage": 534360504,
+                "max_relative_norm2": 1.0456610701018537e-15,
+                "time": 0.0013869861951219512,
+                "repetitions": 41,
+                "completed": true
             }
         },
         "optimal": {
             "spmv": "hybrid"
+        },
+        "conversions": {
+            "csr-coo": {
+                "time": 0.0832631541,
+                "repetitions": 10,
+                "completed": true
+            },
+            "csr-ell": {
+                "completed": false
+            },
+            "csr-sellp": {
+                "time": 2.2307408323,
+                "repetitions": 10,
+                "completed": true
+            },
+            "csr-hybrid": {
+                "time": 0.7817275234000001,
+                "repetitions": 10,
+                "completed": true
+            },
+            "coo-csr": {
+                "time": 0.005721292,
+                "repetitions": 12,
+                "completed": true
+            },
+            "coo-ell": {
+                "completed": false
+            },
+            "coo-sellp": {
+                "completed": false
+            },
+            "coo-hybrid": {
+                "completed": false
+            },
+            "sellp-csr": {
+                "time": 11.152613929200001,
+                "repetitions": 10,
+                "completed": true
+            },
+            "sellp-coo": {
+                "completed": false
+            },
+            "sellp-ell": {
+                "completed": false
+            },
+            "sellp-hybrid": {
+                "completed": false
+            }
         }
     }
 ]

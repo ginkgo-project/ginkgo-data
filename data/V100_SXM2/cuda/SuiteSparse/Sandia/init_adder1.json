@@ -1,6 +1,6 @@
 [
     {
-        "filename": "/gpfs/work/slkit/slkit003/ssget/MM/Sandia/init_adder1/init_adder1.mtx",
+        "filename": "/home/kit/scc/au7114/.config/ssget/MM/Sandia/init_adder1/init_adder1.mtx",
         "problem": {
             "id": 1108,
             "group": "Sandia",
@@ -15,6 +15,7 @@
             "psym": 0.6544094067343667,
             "nsym": 0.01582041688936398,
             "kind": "circuit simulation problem sequence",
+            "columns": 1813,
             "row_distribution": {
                 "min": 1,
                 "q1": 3.25,
@@ -44,33 +45,103 @@
         },
         "spmv": {
             "csr": {
-                "storage": 141128,
-                "time": 114361.9,
+                "storage": 142524,
+                "max_relative_norm2": 0.0,
+                "time": 0.0000063575853417377339,
+                "repetitions": 8091,
                 "completed": true
             },
             "coo": {
                 "storage": 178496,
-                "time": 14228.8,
-                "completed": true
-            },
-            "hybrid": {
-                "storage": 180452,
-                "time": 18254.0,
-                "completed": true
-            },
-            "sellp": {
-                "storage": 1289176,
-                "time": 461194.1,
+                "max_relative_norm2": 4.1158294204150226e-17,
+                "time": 0.00000611521570404548,
+                "repetitions": 12137,
                 "completed": true
             },
             "ell": {
-                "storage": 28500360,
-                "time": 527327.9,
+                "completed": false
+            },
+            "sellp": {
+                "storage": 1289176,
+                "max_relative_norm2": 1.2347503399926506e-16,
+                "time": 0.0002984235904761905,
+                "repetitions": 210,
+                "completed": true
+            },
+            "hybrid": {
+                "storage": 171244,
+                "max_relative_norm2": 5.820693391495019e-17,
+                "time": 0.000007806601408972932,
+                "repetitions": 8091,
                 "completed": true
             }
         },
         "optimal": {
             "spmv": "coo"
+        },
+        "conversions": {
+            "csr-coo": {
+                "time": 0.000048421546478873247,
+                "repetitions": 1065,
+                "completed": true
+            },
+            "csr-ell": {
+                "time": 0.0370138202,
+                "repetitions": 10,
+                "completed": true
+            },
+            "csr-sellp": {
+                "time": 0.0045659335,
+                "repetitions": 12,
+                "completed": true
+            },
+            "csr-hybrid": {
+                "time": 0.0001821746984126984,
+                "repetitions": 315,
+                "completed": true
+            },
+            "coo-csr": {
+                "time": 0.00003938079224030037,
+                "repetitions": 1598,
+                "completed": true
+            },
+            "coo-ell": {
+                "completed": false
+            },
+            "coo-sellp": {
+                "completed": false
+            },
+            "coo-hybrid": {
+                "completed": false
+            },
+            "sellp-csr": {
+                "time": 0.0006077492150537634,
+                "repetitions": 93,
+                "completed": true
+            },
+            "sellp-coo": {
+                "completed": false
+            },
+            "sellp-ell": {
+                "completed": false
+            },
+            "sellp-hybrid": {
+                "completed": false
+            },
+            "hybrid-csr": {
+                "time": 0.0002878561571428572,
+                "repetitions": 210,
+                "completed": true
+            },
+            "hybrid-coo": {
+                "completed": false
+            },
+            "hybrid-ell": {
+                "completed": false
+            },
+            "hybrid-sellp": {
+                "completed": false
+            }
         }
     }
 ]

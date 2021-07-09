@@ -1,6 +1,6 @@
 [
     {
-        "filename": "/gpfs/work/slkit/slkit003/ssget/MM/Sandia/fpga_dcop_08/fpga_dcop_08.mtx",
+        "filename": "/home/kit/scc/au7114/.config/ssget/MM/Sandia/fpga_dcop_08/fpga_dcop_08.mtx",
         "problem": {
             "id": 1062,
             "group": "Sandia",
@@ -15,6 +15,7 @@
             "psym": 0.8186026936026936,
             "nsym": 0.3425925925925926,
             "kind": "subsequent circuit simulation problem",
+            "columns": 1220,
             "row_distribution": {
                 "min": 1,
                 "q1": 4.0,
@@ -37,40 +38,100 @@
                 "mean": 4.826229508196722,
                 "variance": 20.50914807847344,
                 "skewness": 4.870211566211899,
-                "kurtosis": 31.649775133767219,
+                "kurtosis": 31.64977513376722,
                 "hyperskewness": 212.39265635335944,
                 "hyperflatness": 1447.590737493406
             }
         },
         "spmv": {
             "csr": {
-                "storage": 75540,
-                "time": 16788.3,
+                "storage": 76276,
+                "max_relative_norm2": 7.681948258602123e-17,
+                "time": 0.000004195318777292576,
+                "repetitions": 12137,
                 "completed": true
             },
             "coo": {
                 "storage": 94208,
-                "time": 14422.1,
-                "completed": true
-            },
-            "hybrid": {
-                "storage": 84848,
-                "time": 15826.4,
-                "completed": true
-            },
-            "sellp": {
-                "storage": 97096,
-                "time": 23182.6,
+                "max_relative_norm2": 0.0,
+                "time": 0.0000063031789642813,
+                "repetitions": 8091,
                 "completed": true
             },
             "ell": {
                 "storage": 527040,
-                "time": 23804.7,
+                "max_relative_norm2": 1.2737095346030024e-16,
+                "time": 0.000004470747713603032,
+                "repetitions": 12137,
+                "completed": true
+            },
+            "sellp": {
+                "storage": 105544,
+                "max_relative_norm2": 9.43136876126218e-17,
+                "time": 0.000011570101779755285,
+                "repetitions": 5394,
+                "completed": true
+            },
+            "hybrid": {
+                "storage": 89328,
+                "max_relative_norm2": 1.0143399704949539e-16,
+                "time": 0.000007960390681003584,
+                "repetitions": 8091,
                 "completed": true
             }
         },
         "optimal": {
-            "spmv": "coo"
+            "spmv": "csr"
+        },
+        "conversions": {
+            "csr-coo": {
+                "time": 0.00003368923466833542,
+                "repetitions": 1598,
+                "completed": true
+            },
+            "csr-ell": {
+                "time": 0.00006862218122065728,
+                "repetitions": 1065,
+                "completed": true
+            },
+            "csr-sellp": {
+                "time": 0.00011887691543340378,
+                "repetitions": 473,
+                "completed": true
+            },
+            "csr-hybrid": {
+                "time": 0.00014393700000000001,
+                "repetitions": 473,
+                "completed": true
+            },
+            "coo-csr": {
+                "time": 0.000034368637046307886,
+                "repetitions": 1598,
+                "completed": true
+            },
+            "coo-ell": {
+                "completed": false
+            },
+            "coo-sellp": {
+                "completed": false
+            },
+            "coo-hybrid": {
+                "completed": false
+            },
+            "ell-csr": {
+                "time": 0.0001014097957746479,
+                "repetitions": 710,
+                "completed": true
+            },
+            "ell-coo": {
+                "completed": false
+            },
+            "ell-sellp": {
+                "completed": false
+            },
+            "ell-hybrid": {
+                "completed": false
+            }
         }
     }
 ]

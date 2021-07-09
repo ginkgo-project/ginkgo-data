@@ -1,8 +1,8 @@
 [
     {
-        "filename": "/gpfs/work/slkit/slkit003/ssget/MM/DIMACS10/az2010/az2010.mtx",
+        "filename": "/home/kit/scc/au7114/.config/ssget/MM/DIMACS10/az2010/az2010.mtx",
         "problem": {
-            "id": 133,
+            "id": 2585,
             "group": "DIMACS10",
             "name": "az2010",
             "rows": 241666,
@@ -15,6 +15,7 @@
             "psym": 1,
             "nsym": 1,
             "kind": "undirected weighted graph",
+            "columns": 241666,
             "row_distribution": {
                 "min": 1,
                 "q1": 3.0,
@@ -44,33 +45,93 @@
         },
         "spmv": {
             "csr": {
-                "storage": 15319796,
-                "time": 58743.0,
+                "storage": 15340276,
+                "max_relative_norm2": 3.348642401540586e-17,
+                "time": 0.0000793432028169014,
+                "repetitions": 710,
                 "completed": true
             },
             "coo": {
                 "storage": 19137504,
-                "time": 51004.1,
-                "completed": true
-            },
-            "hybrid": {
-                "storage": 20411616,
-                "time": 53164.5,
-                "completed": true
-            },
-            "sellp": {
-                "storage": 61630232,
-                "time": 156225.4,
+                "max_relative_norm2": 0.0,
+                "time": 0.00007862993521126761,
+                "repetitions": 710,
                 "completed": true
             },
             "ell": {
                 "storage": 397298904,
-                "time": 130768.9,
+                "max_relative_norm2": 1.6902738423222154e-16,
+                "time": 0.0001921495015873016,
+                "repetitions": 315,
+                "completed": true
+            },
+            "sellp": {
+                "storage": 61616408,
+                "max_relative_norm2": 1.6902738423222154e-16,
+                "time": 0.0002385075190476191,
+                "repetitions": 210,
+                "completed": true
+            },
+            "hybrid": {
+                "storage": 17146352,
+                "max_relative_norm2": 1.1679221615404187e-16,
+                "time": 0.00007290603098591549,
+                "repetitions": 710,
                 "completed": true
             }
         },
         "optimal": {
-            "spmv": "coo"
+            "spmv": "hybrid"
+        },
+        "conversions": {
+            "csr-coo": {
+                "time": 0.0022314135185185189,
+                "repetitions": 27,
+                "completed": true
+            },
+            "csr-ell": {
+                "time": 0.0075606682,
+                "repetitions": 10,
+                "completed": true
+            },
+            "csr-sellp": {
+                "time": 0.006162050749999999,
+                "repetitions": 12,
+                "completed": true
+            },
+            "csr-hybrid": {
+                "time": 0.017404943099999998,
+                "repetitions": 10,
+                "completed": true
+            },
+            "coo-csr": {
+                "time": 0.0017582691707317073,
+                "repetitions": 41,
+                "completed": true
+            },
+            "coo-ell": {
+                "completed": false
+            },
+            "coo-sellp": {
+                "completed": false
+            },
+            "coo-hybrid": {
+                "completed": false
+            },
+            "ell-csr": {
+                "time": 0.007445221100000001,
+                "repetitions": 10,
+                "completed": true
+            },
+            "ell-coo": {
+                "completed": false
+            },
+            "ell-sellp": {
+                "completed": false
+            },
+            "ell-hybrid": {
+                "completed": false
+            }
         }
     }
 ]

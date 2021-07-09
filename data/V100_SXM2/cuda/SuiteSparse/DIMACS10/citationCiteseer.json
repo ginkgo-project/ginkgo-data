@@ -1,8 +1,8 @@
 [
     {
-        "filename": "/gpfs/work/slkit/slkit003/ssget/MM/DIMACS10/citationCiteseer/citationCiteseer.mtx",
+        "filename": "/home/kit/scc/au7114/.config/ssget/MM/DIMACS10/citationCiteseer/citationCiteseer.mtx",
         "problem": {
-            "id": 8,
+            "id": 2460,
             "group": "DIMACS10",
             "name": "citationCiteseer",
             "rows": 268495,
@@ -15,6 +15,7 @@
             "psym": 1,
             "nsym": 1,
             "kind": "undirected graph",
+            "columns": 268495,
             "row_distribution": {
                 "min": 1,
                 "q1": 2.0,
@@ -44,33 +45,89 @@
         },
         "spmv": {
             "csr": {
-                "storage": 28833512,
-                "time": 210542.4,
+                "storage": 28915432,
+                "max_relative_norm2": 7.185257707539856e-17,
+                "time": 0.00008169507323943662,
+                "repetitions": 710,
                 "completed": true
             },
             "coo": {
                 "storage": 37012704,
-                "time": 77747.7,
-                "completed": true
-            },
-            "hybrid": {
-                "storage": 47981244,
-                "time": 95323.6,
-                "completed": true
-            },
-            "sellp": {
-                "storage": 258856264,
-                "time": 1073848.3,
+                "max_relative_norm2": 1.669345793492517e-17,
+                "time": 0.00007692999295774648,
+                "repetitions": 710,
                 "completed": true
             },
             "ell": {
-                "storage": 4246516920,
-                "time": 944083.7,
+                "completed": false
+            },
+            "sellp": {
+                "storage": 258834760,
+                "max_relative_norm2": 2.377773793807972e-16,
+                "time": 0.0010369969032258066,
+                "repetitions": 62,
+                "completed": true
+            },
+            "hybrid": {
+                "storage": 35554588,
+                "max_relative_norm2": 1.2925015378843625e-16,
+                "time": 0.00008381185352112676,
+                "repetitions": 710,
                 "completed": true
             }
         },
         "optimal": {
             "spmv": "coo"
+        },
+        "conversions": {
+            "csr-coo": {
+                "time": 0.0398717157,
+                "repetitions": 10,
+                "completed": true
+            },
+            "csr-ell": {
+                "time": 0.11218875510000001,
+                "repetitions": 10,
+                "completed": true
+            },
+            "csr-sellp": {
+                "time": 0.2761193673,
+                "repetitions": 10,
+                "completed": true
+            },
+            "csr-hybrid": {
+                "time": 0.010203448300000001,
+                "repetitions": 10,
+                "completed": true
+            },
+            "coo-csr": {
+                "time": 0.0013709465609756098,
+                "repetitions": 41,
+                "completed": true
+            },
+            "coo-ell": {
+                "completed": false
+            },
+            "coo-sellp": {
+                "completed": false
+            },
+            "coo-hybrid": {
+                "completed": false
+            },
+            "sellp-csr": {
+                "time": 0.008241587666666667,
+                "repetitions": 12,
+                "completed": true
+            },
+            "sellp-coo": {
+                "completed": false
+            },
+            "sellp-ell": {
+                "completed": false
+            },
+            "sellp-hybrid": {
+                "completed": false
+            }
         }
     }
 ]

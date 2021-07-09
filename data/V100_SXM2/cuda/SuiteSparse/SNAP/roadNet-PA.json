@@ -1,6 +1,6 @@
 [
     {
-        "filename": "/gpfs/work/slkit/slkit003/ssget/MM/SNAP/roadNet-PA/roadNet-PA.mtx",
+        "filename": "/home/kit/scc/au7114/.config/ssget/MM/SNAP/roadNet-PA/roadNet-PA.mtx",
         "problem": {
             "id": 2318,
             "group": "SNAP",
@@ -15,6 +15,7 @@
             "psym": 1,
             "nsym": 1,
             "kind": "undirected graph",
+            "columns": 1090920,
             "row_distribution": {
                 "min": 0,
                 "q1": 2.0,
@@ -44,33 +45,93 @@
         },
         "spmv": {
             "csr": {
-                "storage": 41369236,
-                "time": 129058.2,
+                "storage": 41451156,
+                "max_relative_norm2": 0.0,
+                "time": 0.00015135450739957716,
+                "repetitions": 473,
                 "completed": true
             },
             "coo": {
                 "storage": 49340736,
-                "time": 132352.9,
-                "completed": true
-            },
-            "hybrid": {
-                "storage": 52532880,
-                "time": 107250.9,
-                "completed": true
-            },
-            "sellp": {
-                "storage": 58002536,
-                "time": 113553.6,
+                "max_relative_norm2": 0.0,
+                "time": 0.00013778202536997888,
+                "repetitions": 473,
                 "completed": true
             },
             "ell": {
                 "storage": 117819360,
-                "time": 110771.4,
+                "max_relative_norm2": 3.757566243769246e-17,
+                "time": 0.0001190437399577167,
+                "repetitions": 473,
+                "completed": true
+            },
+            "sellp": {
+                "storage": 58001768,
+                "max_relative_norm2": 3.757566243769246e-17,
+                "time": 0.00011660766173361524,
+                "repetitions": 473,
+                "completed": true
+            },
+            "hybrid": {
+                "storage": 43863424,
+                "max_relative_norm2": 3.797735755049062e-17,
+                "time": 0.00012435828118393234,
+                "repetitions": 473,
                 "completed": true
             }
         },
         "optimal": {
-            "spmv": "hybrid"
+            "spmv": "sellp"
+        },
+        "conversions": {
+            "csr-coo": {
+                "time": 0.0037335368333333335,
+                "repetitions": 18,
+                "completed": true
+            },
+            "csr-ell": {
+                "time": 0.0044189331666666669,
+                "repetitions": 12,
+                "completed": true
+            },
+            "csr-sellp": {
+                "time": 0.004234786,
+                "repetitions": 12,
+                "completed": true
+            },
+            "csr-hybrid": {
+                "time": 0.02924559,
+                "repetitions": 10,
+                "completed": true
+            },
+            "coo-csr": {
+                "time": 0.0023292698518518515,
+                "repetitions": 27,
+                "completed": true
+            },
+            "coo-ell": {
+                "completed": false
+            },
+            "coo-sellp": {
+                "completed": false
+            },
+            "coo-hybrid": {
+                "completed": false
+            },
+            "ell-csr": {
+                "time": 0.008192377083333334,
+                "repetitions": 12,
+                "completed": true
+            },
+            "ell-coo": {
+                "completed": false
+            },
+            "ell-sellp": {
+                "completed": false
+            },
+            "ell-hybrid": {
+                "completed": false
+            }
         }
     }
 ]

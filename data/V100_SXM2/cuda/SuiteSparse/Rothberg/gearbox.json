@@ -1,6 +1,6 @@
 [
     {
-        "filename": "/gpfs/work/slkit/slkit003/ssget/MM/Rothberg/gearbox/gearbox.mtx",
+        "filename": "/home/kit/scc/au7114/.config/ssget/MM/Rothberg/gearbox/gearbox.mtx",
         "problem": {
             "id": 806,
             "group": "Rothberg",
@@ -15,6 +15,7 @@
             "psym": 1,
             "nsym": 1,
             "kind": "structural problem",
+            "columns": 153746,
             "row_distribution": {
                 "min": 6,
                 "q1": 54.0,
@@ -44,33 +45,93 @@
         },
         "spmv": {
             "csr": {
-                "storage": 109579836,
-                "time": 183215.3,
+                "storage": 109661756,
+                "max_relative_norm2": 1.3978143208430706e-16,
+                "time": 0.00017001220952380953,
+                "repetitions": 315,
                 "completed": true
             },
             "coo": {
                 "storage": 145286464,
-                "time": 195788.8,
-                "completed": true
-            },
-            "hybrid": {
-                "storage": 149855960,
-                "time": 179322.1,
-                "completed": true
-            },
-            "sellp": {
-                "storage": 146875448,
-                "time": 210908.1,
+                "max_relative_norm2": 0.0,
+                "time": 0.00020806545714285716,
+                "repetitions": 315,
                 "completed": true
             },
             "ell": {
                 "storage": 182650248,
-                "time": 181081.9,
+                "max_relative_norm2": 3.0485335930397577e-16,
+                "time": 0.0001924704507936508,
+                "repetitions": 315,
+                "completed": true
+            },
+            "sellp": {
+                "storage": 146843192,
+                "max_relative_norm2": 3.0485335930397577e-16,
+                "time": 0.00021677038095238097,
+                "repetitions": 315,
+                "completed": true
+            },
+            "hybrid": {
+                "storage": 119965376,
+                "max_relative_norm2": 2.699083681526755e-16,
+                "time": 0.00017446501904761906,
+                "repetitions": 315,
                 "completed": true
             }
         },
         "optimal": {
-            "spmv": "hybrid"
+            "spmv": "csr"
+        },
+        "conversions": {
+            "csr-coo": {
+                "time": 0.05806798540000001,
+                "repetitions": 10,
+                "completed": true
+            },
+            "csr-ell": {
+                "time": 0.023024655,
+                "repetitions": 10,
+                "completed": true
+            },
+            "csr-sellp": {
+                "time": 0.013087208500000003,
+                "repetitions": 10,
+                "completed": true
+            },
+            "csr-hybrid": {
+                "time": 0.013746729099999999,
+                "repetitions": 10,
+                "completed": true
+            },
+            "coo-csr": {
+                "time": 0.013464627583333333,
+                "repetitions": 12,
+                "completed": true
+            },
+            "coo-ell": {
+                "completed": false
+            },
+            "coo-sellp": {
+                "completed": false
+            },
+            "coo-hybrid": {
+                "completed": false
+            },
+            "ell-csr": {
+                "time": 0.050620477799999997,
+                "repetitions": 10,
+                "completed": true
+            },
+            "ell-coo": {
+                "completed": false
+            },
+            "ell-sellp": {
+                "completed": false
+            },
+            "ell-hybrid": {
+                "completed": false
+            }
         }
     }
 ]

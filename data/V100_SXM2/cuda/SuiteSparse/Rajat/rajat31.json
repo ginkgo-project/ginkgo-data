@@ -1,6 +1,6 @@
 [
     {
-        "filename": "/gpfs/work/slkit/slkit003/ssget/MM/Rajat/rajat31/rajat31.mtx",
+        "filename": "/home/kit/scc/au7114/.config/ssget/MM/Rajat/rajat31/rajat31.mtx",
         "problem": {
             "id": 1398,
             "group": "Rajat",
@@ -15,6 +15,7 @@
             "psym": 1,
             "nsym": 0.4000960614178773,
             "kind": "circuit simulation problem",
+            "columns": 4690002,
             "row_distribution": {
                 "min": 1,
                 "q1": 3.0,
@@ -44,31 +45,87 @@
         },
         "spmv": {
             "csr": {
-                "storage": 262555048,
-                "time": 493562.4,
+                "storage": 262882728,
+                "max_relative_norm2": 4.545375811102867e-18,
+                "time": 0.0007634021827956989,
+                "repetitions": 93,
                 "completed": true
             },
             "coo": {
                 "storage": 325060048,
-                "time": 990182.0,
-                "completed": true
-            },
-            "hybrid": {
-                "storage": 281420072,
-                "time": 446105.2,
-                "completed": true
-            },
-            "sellp": {
-                "storage": 268441896,
-                "time": 1181836.4,
+                "max_relative_norm2": 4.545375811102867e-18,
+                "time": 0.000782445311827957,
+                "repetitions": 93,
                 "completed": true
             },
             "ell": {
                 "completed": false
+            },
+            "sellp": {
+                "storage": 269942568,
+                "max_relative_norm2": 1.123942645683285e-16,
+                "time": 0.001033562,
+                "repetitions": 62,
+                "completed": true
+            },
+            "hybrid": {
+                "storage": 268820056,
+                "max_relative_norm2": 1.1840405184889536e-16,
+                "time": 0.0007733450215053764,
+                "repetitions": 93,
+                "completed": true
             }
         },
         "optimal": {
-            "spmv": "hybrid"
+            "spmv": "csr"
+        },
+        "conversions": {
+            "csr-coo": {
+                "time": 0.007333184499999999,
+                "repetitions": 10,
+                "completed": true
+            },
+            "csr-ell": {
+                "completed": false
+            },
+            "csr-sellp": {
+                "time": 0.0140096629,
+                "repetitions": 10,
+                "completed": true
+            },
+            "csr-hybrid": {
+                "time": 0.09572536379999999,
+                "repetitions": 10,
+                "completed": true
+            },
+            "coo-csr": {
+                "time": 0.004922942333333334,
+                "repetitions": 12,
+                "completed": true
+            },
+            "coo-ell": {
+                "completed": false
+            },
+            "coo-sellp": {
+                "completed": false
+            },
+            "coo-hybrid": {
+                "completed": false
+            },
+            "sellp-csr": {
+                "time": 0.021854233600000003,
+                "repetitions": 10,
+                "completed": true
+            },
+            "sellp-coo": {
+                "completed": false
+            },
+            "sellp-ell": {
+                "completed": false
+            },
+            "sellp-hybrid": {
+                "completed": false
+            }
         }
     }
 ]

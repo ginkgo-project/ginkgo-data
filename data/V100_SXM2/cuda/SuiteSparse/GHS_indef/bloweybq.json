@@ -1,13 +1,13 @@
 [
     {
-        "filename": "/gpfs/work/slkit/slkit003/ssget/MM/GHS_indef/bloweybq/bloweybq.mtx",
+        "filename": "/home/kit/scc/au7114/.config/ssget/MM/GHS_indef/bloweybq/bloweybq.mtx",
         "problem": {
             "id": 1425,
             "group": "GHS_indef",
             "name": "bloweybq",
             "rows": 10001,
             "cols": 10001,
-            "nonzeros": 49999,
+            "nonzeros": 69991,
             "real": true,
             "binary": false,
             "2d3d": true,
@@ -15,6 +15,7 @@
             "psym": 1,
             "nsym": 1,
             "kind": "materials problem",
+            "columns": 10001,
             "row_distribution": {
                 "min": 4,
                 "q1": 6.0,
@@ -44,33 +45,89 @@
         },
         "spmv": {
             "csr": {
-                "storage": 639996,
-                "time": 13791.4,
+                "storage": 645116,
+                "max_relative_norm2": 5.751321506431692e-18,
+                "time": 0.00000383902554103043,
+                "repetitions": 18206,
                 "completed": true
             },
             "coo": {
                 "storage": 799984,
-                "time": 14314.7,
+                "max_relative_norm2": 0.0,
+                "time": 0.000005569659883002389,
+                "repetitions": 12137,
+                "completed": true
+            },
+            "ell": {
+                "completed": false
+            },
+            "sellp": {
+                "storage": 605400,
+                "max_relative_norm2": 1.2041196517143058e-16,
+                "time": 0.000003671937602988026,
+                "repetitions": 18206,
                 "completed": true
             },
             "hybrid": {
                 "storage": 600060,
-                "time": 11285.4,
-                "completed": true
-            },
-            "sellp": {
-                "storage": 605400,
-                "time": 11330.5,
-                "completed": true
-            },
-            "ell": {
-                "storage": 600060,
-                "time": 11078.3,
+                "max_relative_norm2": 1.2041196517143058e-16,
+                "time": 0.000004694000988712202,
+                "repetitions": 12137,
                 "completed": true
             }
         },
         "optimal": {
-            "spmv": "ell"
+            "spmv": "sellp"
+        },
+        "conversions": {
+            "csr-coo": {
+                "time": 0.002214439111111111,
+                "repetitions": 27,
+                "completed": true
+            },
+            "csr-ell": {
+                "time": 0.00007124595492957746,
+                "repetitions": 710,
+                "completed": true
+            },
+            "csr-sellp": {
+                "time": 0.00011546694503171247,
+                "repetitions": 473,
+                "completed": true
+            },
+            "csr-hybrid": {
+                "time": 0.003069763722222222,
+                "repetitions": 18,
+                "completed": true
+            },
+            "coo-csr": {
+                "time": 0.006930073799999999,
+                "repetitions": 10,
+                "completed": true
+            },
+            "coo-ell": {
+                "completed": false
+            },
+            "coo-sellp": {
+                "completed": false
+            },
+            "coo-hybrid": {
+                "completed": false
+            },
+            "sellp-csr": {
+                "time": 0.0001142156490486258,
+                "repetitions": 473,
+                "completed": true
+            },
+            "sellp-coo": {
+                "completed": false
+            },
+            "sellp-ell": {
+                "completed": false
+            },
+            "sellp-hybrid": {
+                "completed": false
+            }
         }
     }
 ]

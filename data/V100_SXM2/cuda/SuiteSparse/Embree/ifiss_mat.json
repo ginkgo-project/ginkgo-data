@@ -1,8 +1,8 @@
 [
     {
-        "filename": "/gpfs/work/slkit/slkit003/ssget/MM/Embree/ifiss_mat/ifiss_mat.mtx",
+        "filename": "/home/kit/scc/au7114/.config/ssget/MM/Embree/ifiss_mat/ifiss_mat.mtx",
         "problem": {
-            "id": 378,
+            "id": 2830,
             "group": "Embree",
             "name": "ifiss_mat",
             "rows": 96307,
@@ -15,6 +15,7 @@
             "psym": 1,
             "nsym": 0.2845118352876235,
             "kind": "computational fluid dynamics",
+            "columns": 96307,
             "row_distribution": {
                 "min": 6,
                 "q1": 22.0,
@@ -44,33 +45,93 @@
         },
         "spmv": {
             "csr": {
-                "storage": 43584416,
-                "time": 87372.9,
+                "storage": 43666336,
+                "max_relative_norm2": 1.3881794065940008e-17,
+                "time": 0.0000828857676056338,
+                "repetitions": 710,
                 "completed": true
             },
             "coo": {
                 "storage": 57598912,
-                "time": 93265.7,
-                "completed": true
-            },
-            "hybrid": {
-                "storage": 63736376,
-                "time": 96957.7,
-                "completed": true
-            },
-            "sellp": {
-                "storage": 64960792,
-                "time": 103150.3,
+                "max_relative_norm2": 0.0,
+                "time": 0.00008770749577464788,
+                "repetitions": 710,
                 "completed": true
             },
             "ell": {
                 "storage": 68185356,
-                "time": 95730.4,
+                "max_relative_norm2": 1.3223942780477699e-16,
+                "time": 0.00009650084929577465,
+                "repetitions": 710,
+                "completed": true
+            },
+            "sellp": {
+                "storage": 64963096,
+                "max_relative_norm2": 1.3223942780477699e-16,
+                "time": 0.00010057714225352112,
+                "repetitions": 710,
+                "completed": true
+            },
+            "hybrid": {
+                "storage": 49905992,
+                "max_relative_norm2": 1.3164372910853788e-16,
+                "time": 0.00008337781408450704,
+                "repetitions": 710,
                 "completed": true
             }
         },
         "optimal": {
             "spmv": "csr"
+        },
+        "conversions": {
+            "csr-coo": {
+                "time": 0.002650764259259259,
+                "repetitions": 27,
+                "completed": true
+            },
+            "csr-ell": {
+                "time": 0.0023445854074074076,
+                "repetitions": 27,
+                "completed": true
+            },
+            "csr-sellp": {
+                "time": 0.002712792222222222,
+                "repetitions": 27,
+                "completed": true
+            },
+            "csr-hybrid": {
+                "time": 0.004662607583333333,
+                "repetitions": 12,
+                "completed": true
+            },
+            "coo-csr": {
+                "time": 0.0016198463170731706,
+                "repetitions": 41,
+                "completed": true
+            },
+            "coo-ell": {
+                "completed": false
+            },
+            "coo-sellp": {
+                "completed": false
+            },
+            "coo-hybrid": {
+                "completed": false
+            },
+            "ell-csr": {
+                "time": 0.0038280614999999997,
+                "repetitions": 18,
+                "completed": true
+            },
+            "ell-coo": {
+                "completed": false
+            },
+            "ell-sellp": {
+                "completed": false
+            },
+            "ell-hybrid": {
+                "completed": false
+            }
         }
     }
 ]

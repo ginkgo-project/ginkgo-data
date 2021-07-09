@@ -1,8 +1,8 @@
 [
     {
-        "filename": "/gpfs/work/slkit/slkit003/ssget/MM/DIMACS10/nv2010/nv2010.mtx",
+        "filename": "/home/kit/scc/au7114/.config/ssget/MM/DIMACS10/nv2010/nv2010.mtx",
         "problem": {
-            "id": 162,
+            "id": 2614,
             "group": "DIMACS10",
             "name": "nv2010",
             "rows": 84538,
@@ -15,6 +15,7 @@
             "psym": 1,
             "nsym": 1,
             "kind": "undirected weighted graph",
+            "columns": 84538,
             "row_distribution": {
                 "min": 1,
                 "q1": 3.0,
@@ -44,33 +45,121 @@
         },
         "spmv": {
             "csr": {
-                "storage": 5342132,
-                "time": 30796.8,
+                "storage": 5362612,
+                "max_relative_norm2": 6.743123176282479e-17,
+                "time": 0.0000315833423028786,
+                "repetitions": 1598,
                 "completed": true
             },
             "coo": {
                 "storage": 6671968,
-                "time": 26427.2,
-                "completed": true
-            },
-            "hybrid": {
-                "storage": 7129232,
-                "time": 28640.2,
-                "completed": true
-            },
-            "sellp": {
-                "storage": 21428376,
-                "time": 85948.2,
+                "max_relative_norm2": 0.0,
+                "time": 0.000015600299777530589,
+                "repetitions": 3596,
                 "completed": true
             },
             "ell": {
                 "storage": 95358864,
-                "time": 78039.2,
+                "max_relative_norm2": 1.6356285200257286e-16,
+                "time": 0.00007815289999999999,
+                "repetitions": 710,
+                "completed": true
+            },
+            "sellp": {
+                "storage": 21399960,
+                "max_relative_norm2": 1.6356285200257286e-16,
+                "time": 0.00007060508309859156,
+                "repetitions": 710,
+                "completed": true
+            },
+            "hybrid": {
+                "storage": 5864104,
+                "max_relative_norm2": 1.2145027191185564e-16,
+                "time": 0.000017181080645161293,
+                "repetitions": 3596,
                 "completed": true
             }
         },
         "optimal": {
             "spmv": "coo"
+        },
+        "conversions": {
+            "csr-coo": {
+                "time": 0.0010638985483870966,
+                "repetitions": 62,
+                "completed": true
+            },
+            "csr-ell": {
+                "time": 0.0024906293333333336,
+                "repetitions": 27,
+                "completed": true
+            },
+            "csr-sellp": {
+                "time": 0.0012785347317073172,
+                "repetitions": 41,
+                "completed": true
+            },
+            "csr-hybrid": {
+                "time": 0.0033099245555555558,
+                "repetitions": 18,
+                "completed": true
+            },
+            "coo-csr": {
+                "time": 0.0006177004516129032,
+                "repetitions": 93,
+                "completed": true
+            },
+            "coo-ell": {
+                "completed": false
+            },
+            "coo-sellp": {
+                "completed": false
+            },
+            "coo-hybrid": {
+                "completed": false
+            },
+            "ell-csr": {
+                "time": 0.0008853599032258064,
+                "repetitions": 62,
+                "completed": true
+            },
+            "ell-coo": {
+                "completed": false
+            },
+            "ell-sellp": {
+                "completed": false
+            },
+            "ell-hybrid": {
+                "completed": false
+            },
+            "sellp-csr": {
+                "time": 0.000741874806451613,
+                "repetitions": 93,
+                "completed": true
+            },
+            "sellp-coo": {
+                "completed": false
+            },
+            "sellp-ell": {
+                "completed": false
+            },
+            "sellp-hybrid": {
+                "completed": false
+            },
+            "hybrid-csr": {
+                "time": 0.0011186617741935485,
+                "repetitions": 62,
+                "completed": true
+            },
+            "hybrid-coo": {
+                "completed": false
+            },
+            "hybrid-ell": {
+                "completed": false
+            },
+            "hybrid-sellp": {
+                "completed": false
+            }
         }
     }
 ]

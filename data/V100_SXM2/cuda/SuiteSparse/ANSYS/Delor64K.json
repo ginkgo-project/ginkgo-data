@@ -1,8 +1,8 @@
 [
     {
-        "filename": "/gpfs/work/slkit/slkit003/ssget/MM/ANSYS/Delor64K/Delor64K.mtx",
+        "filename": "/home/kit/scc/au7114/.config/ssget/MM/ANSYS/Delor64K/Delor64K.mtx",
         "problem": {
-            "id": 199,
+            "id": 2651,
             "group": "ANSYS",
             "name": "Delor64K",
             "rows": 64719,
@@ -15,6 +15,7 @@
             "psym": 0,
             "nsym": 0,
             "kind": "least squares problem",
+            "columns": 1785345,
             "row_distribution": {
                 "min": 2,
                 "q1": 11.0,
@@ -44,33 +45,93 @@
         },
         "spmv": {
             "csr": {
-                "storage": 8084560,
-                "time": 33824.2,
+                "storage": 8105040,
+                "max_relative_norm2": 1.0949387247601618e-16,
+                "time": 0.0000215970563204005,
+                "repetitions": 2397,
                 "completed": true
             },
             "coo": {
                 "storage": 10434240,
-                "time": 34024.1,
-                "completed": true
-            },
-            "hybrid": {
-                "storage": 8543484,
-                "time": 29417.2,
-                "completed": true
-            },
-            "sellp": {
-                "storage": 8191560,
-                "time": 28738.5,
+                "max_relative_norm2": 0.0,
+                "time": 0.000026197977889027954,
+                "repetitions": 2397,
                 "completed": true
             },
             "ell": {
                 "storage": 10872792,
-                "time": 26963.2,
+                "max_relative_norm2": 1.4167052541379423e-16,
+                "time": 0.00002341723779724656,
+                "repetitions": 2397,
+                "completed": true
+            },
+            "sellp": {
+                "storage": 8191560,
+                "max_relative_norm2": 1.4167052541379423e-16,
+                "time": 0.00002310533333333333,
+                "repetitions": 2397,
+                "completed": true
+            },
+            "hybrid": {
+                "storage": 8543484,
+                "max_relative_norm2": 1.416748974152947e-16,
+                "time": 0.000024954746766791826,
+                "repetitions": 2397,
                 "completed": true
             }
         },
         "optimal": {
-            "spmv": "ell"
+            "spmv": "csr"
+        },
+        "conversions": {
+            "csr-coo": {
+                "time": 0.0013181620731707318,
+                "repetitions": 41,
+                "completed": true
+            },
+            "csr-ell": {
+                "time": 0.0009428617580645162,
+                "repetitions": 62,
+                "completed": true
+            },
+            "csr-sellp": {
+                "time": 0.0012925483658536585,
+                "repetitions": 41,
+                "completed": true
+            },
+            "csr-hybrid": {
+                "time": 0.0056743655,
+                "repetitions": 12,
+                "completed": true
+            },
+            "coo-csr": {
+                "time": 0.0015538718536585366,
+                "repetitions": 41,
+                "completed": true
+            },
+            "coo-ell": {
+                "completed": false
+            },
+            "coo-sellp": {
+                "completed": false
+            },
+            "coo-hybrid": {
+                "completed": false
+            },
+            "ell-csr": {
+                "time": 0.002021316777777778,
+                "repetitions": 27,
+                "completed": true
+            },
+            "ell-coo": {
+                "completed": false
+            },
+            "ell-sellp": {
+                "completed": false
+            },
+            "ell-hybrid": {
+                "completed": false
+            }
         }
     }
 ]

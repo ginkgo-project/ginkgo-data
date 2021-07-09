@@ -1,6 +1,6 @@
 [
     {
-        "filename": "/gpfs/work/slkit/slkit003/ssget/MM/Hamrle/Hamrle3/Hamrle3.mtx",
+        "filename": "/home/kit/scc/au7114/.config/ssget/MM/Hamrle/Hamrle3/Hamrle3.mtx",
         "problem": {
             "id": 1201,
             "group": "Hamrle",
@@ -15,6 +15,7 @@
             "psym": 0.000002538882993038383,
             "nsym": 0,
             "kind": "circuit simulation problem",
+            "columns": 1447360,
             "row_distribution": {
                 "min": 2,
                 "q1": 2.0,
@@ -44,33 +45,93 @@
         },
         "spmv": {
             "csr": {
-                "storage": 71960348,
-                "time": 177305.9,
+                "storage": 72042268,
+                "max_relative_norm2": 0.0,
+                "time": 0.0002722351380952381,
+                "repetitions": 210,
                 "completed": true
             },
             "coo": {
                 "storage": 88227872,
-                "time": 245742.8,
-                "completed": true
-            },
-            "hybrid": {
-                "storage": 88334080,
-                "time": 169556.1,
-                "completed": true
-            },
-            "sellp": {
-                "storage": 66598008,
-                "time": 157396.5,
+                "max_relative_norm2": 0.0,
+                "time": 0.00026777025238095237,
+                "repetitions": 210,
                 "completed": true
             },
             "ell": {
                 "storage": 104209920,
-                "time": 163936.3,
+                "max_relative_norm2": 1.0358611498167691e-16,
+                "time": 0.00016803597460317458,
+                "repetitions": 315,
+                "completed": true
+            },
+            "sellp": {
+                "storage": 66598008,
+                "max_relative_norm2": 1.0358611498167691e-16,
+                "time": 0.00018157578095238095,
+                "repetitions": 315,
+                "completed": true
+            },
+            "hybrid": {
+                "storage": 76648992,
+                "max_relative_norm2": 9.27775649616086e-17,
+                "time": 0.00022876107619047617,
+                "repetitions": 315,
                 "completed": true
             }
         },
         "optimal": {
-            "spmv": "sellp"
+            "spmv": "ell"
+        },
+        "conversions": {
+            "csr-coo": {
+                "time": 0.1841270937,
+                "repetitions": 10,
+                "completed": true
+            },
+            "csr-ell": {
+                "time": 0.0089934082,
+                "repetitions": 10,
+                "completed": true
+            },
+            "csr-sellp": {
+                "time": 0.012527351400000001,
+                "repetitions": 10,
+                "completed": true
+            },
+            "csr-hybrid": {
+                "time": 0.0455526808,
+                "repetitions": 10,
+                "completed": true
+            },
+            "coo-csr": {
+                "time": 0.0026667440370370368,
+                "repetitions": 27,
+                "completed": true
+            },
+            "coo-ell": {
+                "completed": false
+            },
+            "coo-sellp": {
+                "completed": false
+            },
+            "coo-hybrid": {
+                "completed": false
+            },
+            "ell-csr": {
+                "time": 0.0068661061,
+                "repetitions": 10,
+                "completed": true
+            },
+            "ell-coo": {
+                "completed": false
+            },
+            "ell-sellp": {
+                "completed": false
+            },
+            "ell-hybrid": {
+                "completed": false
+            }
         }
     }
 ]

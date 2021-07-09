@@ -1,6 +1,6 @@
 [
     {
-        "filename": "/gpfs/work/slkit/slkit003/ssget/MM/Gaertner/pesa/pesa.mtx",
+        "filename": "/home/kit/scc/au7114/.config/ssget/MM/Gaertner/pesa/pesa.mtx",
         "problem": {
             "id": 443,
             "group": "Gaertner",
@@ -15,6 +15,7 @@
             "psym": 1,
             "nsym": 0.999970513652179,
             "kind": "directed weighted graph",
+            "columns": 11738,
             "row_distribution": {
                 "min": 3,
                 "q1": 7.0,
@@ -44,33 +45,93 @@
         },
         "spmv": {
             "csr": {
-                "storage": 1001748,
-                "time": 15156.5,
+                "storage": 1006868,
+                "max_relative_norm2": 1.2287666347640909e-18,
+                "time": 0.000004260127873444839,
+                "repetitions": 12137,
                 "completed": true
             },
             "coo": {
                 "storage": 1273056,
-                "time": 15297.1,
-                "completed": true
-            },
-            "hybrid": {
-                "storage": 1009480,
-                "time": 16387.4,
-                "completed": true
-            },
-            "sellp": {
-                "storage": 1088904,
-                "time": 14200.8,
+                "max_relative_norm2": 0.0,
+                "time": 0.000006563258682486715,
+                "repetitions": 8091,
                 "completed": true
             },
             "ell": {
                 "storage": 1408560,
-                "time": 14868.8,
+                "max_relative_norm2": 3.676636436981267e-18,
+                "time": 0.000006311269929551353,
+                "repetitions": 8091,
+                "completed": true
+            },
+            "sellp": {
+                "storage": 1088136,
+                "max_relative_norm2": 3.676636436981267e-18,
+                "time": 0.000005180953942489908,
+                "repetitions": 12137,
+                "completed": true
+            },
+            "hybrid": {
+                "storage": 1009480,
+                "max_relative_norm2": 3.675899716056072e-18,
+                "time": 0.000008232381040662465,
+                "repetitions": 8091,
                 "completed": true
             }
         },
         "optimal": {
-            "spmv": "sellp"
+            "spmv": "csr"
+        },
+        "conversions": {
+            "csr-coo": {
+                "time": 0.00005626507417840375,
+                "repetitions": 1065,
+                "completed": true
+            },
+            "csr-ell": {
+                "time": 0.0008166820483870967,
+                "repetitions": 62,
+                "completed": true
+            },
+            "csr-sellp": {
+                "time": 0.00014595149048625796,
+                "repetitions": 473,
+                "completed": true
+            },
+            "csr-hybrid": {
+                "time": 0.0005973335806451613,
+                "repetitions": 93,
+                "completed": true
+            },
+            "coo-csr": {
+                "time": 0.0000583927558685446,
+                "repetitions": 1065,
+                "completed": true
+            },
+            "coo-ell": {
+                "completed": false
+            },
+            "coo-sellp": {
+                "completed": false
+            },
+            "coo-hybrid": {
+                "completed": false
+            },
+            "ell-csr": {
+                "time": 0.00011873853699788583,
+                "repetitions": 473,
+                "completed": true
+            },
+            "ell-coo": {
+                "completed": false
+            },
+            "ell-sellp": {
+                "completed": false
+            },
+            "ell-hybrid": {
+                "completed": false
+            }
         }
     }
 ]

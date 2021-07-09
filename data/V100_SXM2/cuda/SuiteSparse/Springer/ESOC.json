@@ -1,6 +1,6 @@
 [
     {
-        "filename": "/gpfs/work/slkit/slkit003/ssget/MM/Springer/ESOC/ESOC.mtx",
+        "filename": "/home/kit/scc/au7114/.config/ssget/MM/Springer/ESOC/ESOC.mtx",
         "problem": {
             "id": 1860,
             "group": "Springer",
@@ -15,6 +15,7 @@
             "psym": 0,
             "nsym": 0,
             "kind": "least squares problem",
+            "columns": 37830,
             "row_distribution": {
                 "min": 8,
                 "q1": 18.0,
@@ -44,33 +45,93 @@
         },
         "spmv": {
             "csr": {
-                "storage": 73547520,
-                "time": 129859.4,
+                "storage": 73629440,
+                "max_relative_norm2": 0.0,
+                "time": 0.00013923876532769558,
+                "repetitions": 473,
                 "completed": true
             },
             "coo": {
                 "storage": 96319024,
-                "time": 144777.0,
-                "completed": true
-            },
-            "hybrid": {
-                "storage": 74570136,
-                "time": 110048.2,
-                "completed": true
-            },
-            "sellp": {
-                "storage": 74360440,
-                "time": 111104.3,
+                "max_relative_norm2": 0.0,
+                "time": 0.00015008814799154335,
+                "repetitions": 473,
                 "completed": true
             },
             "ell": {
                 "storage": 74570136,
-                "time": 108633.5,
+                "max_relative_norm2": 2.0603250323580113e-16,
+                "time": 0.00010542008591549296,
+                "repetitions": 710,
+                "completed": true
+            },
+            "sellp": {
+                "storage": 74361208,
+                "max_relative_norm2": 2.0603250323580113e-16,
+                "time": 0.00010728324735729386,
+                "repetitions": 473,
+                "completed": true
+            },
+            "hybrid": {
+                "storage": 73111456,
+                "max_relative_norm2": 2.0602758748981407e-16,
+                "time": 0.00011550601691331924,
+                "repetitions": 473,
                 "completed": true
             }
         },
         "optimal": {
             "spmv": "ell"
+        },
+        "conversions": {
+            "csr-coo": {
+                "time": 0.0168630296,
+                "repetitions": 10,
+                "completed": true
+            },
+            "csr-ell": {
+                "time": 0.007270808300000001,
+                "repetitions": 10,
+                "completed": true
+            },
+            "csr-sellp": {
+                "time": 0.009891436,
+                "repetitions": 10,
+                "completed": true
+            },
+            "csr-hybrid": {
+                "time": 0.0191822408,
+                "repetitions": 10,
+                "completed": true
+            },
+            "coo-csr": {
+                "time": 0.002606196555555555,
+                "repetitions": 27,
+                "completed": true
+            },
+            "coo-ell": {
+                "completed": false
+            },
+            "coo-sellp": {
+                "completed": false
+            },
+            "coo-hybrid": {
+                "completed": false
+            },
+            "ell-csr": {
+                "time": 0.005520097416666667,
+                "repetitions": 12,
+                "completed": true
+            },
+            "ell-coo": {
+                "completed": false
+            },
+            "ell-sellp": {
+                "completed": false
+            },
+            "ell-hybrid": {
+                "completed": false
+            }
         }
     }
 ]

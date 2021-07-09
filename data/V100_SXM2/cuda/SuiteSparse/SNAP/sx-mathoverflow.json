@@ -1,8 +1,8 @@
 [
     {
-        "filename": "/gpfs/work/slkit/slkit003/ssget/MM/SNAP/sx-mathoverflow/sx-mathoverflow.mtx",
+        "filename": "/home/kit/scc/au7114/.config/ssget/MM/SNAP/sx-mathoverflow/sx-mathoverflow.mtx",
         "problem": {
-            "id": 341,
+            "id": 2793,
             "group": "SNAP",
             "name": "sx-mathoverflow",
             "rows": 24818,
@@ -15,6 +15,7 @@
             "psym": 0.3509349053252102,
             "nsym": 0.1609975832379348,
             "kind": "directed temporal multigraph",
+            "columns": 24818,
             "row_distribution": {
                 "min": 0,
                 "q1": 1.0,
@@ -44,33 +45,89 @@
         },
         "spmv": {
             "csr": {
-                "storage": 2979012,
-                "time": 148292.0,
+                "storage": 2999492,
+                "max_relative_norm2": 2.2422464461165067e-16,
+                "time": 0.000014850916852057844,
+                "repetitions": 3596,
                 "completed": true
             },
             "coo": {
                 "storage": 3839648,
-                "time": 17736.8,
-                "completed": true
-            },
-            "hybrid": {
-                "storage": 4352032,
-                "time": 18269.0,
-                "completed": true
-            },
-            "sellp": {
-                "storage": 60396360,
-                "time": 1189633.9,
+                "max_relative_norm2": 1.4731485582975126e-16,
+                "time": 0.00000829100358422939,
+                "repetitions": 8091,
                 "completed": true
             },
             "ell": {
-                "storage": 550661784,
-                "time": 1230685.3,
+                "completed": false
+            },
+            "sellp": {
+                "storage": 60919368,
+                "max_relative_norm2": 8.918419632178118e-16,
+                "time": 0.0009821959193548388,
+                "repetitions": 62,
+                "completed": true
+            },
+            "hybrid": {
+                "storage": 3821080,
+                "max_relative_norm2": 1.881641333928876e-16,
+                "time": 0.000008892506365097023,
+                "repetitions": 8091,
                 "completed": true
             }
         },
         "optimal": {
             "spmv": "coo"
+        },
+        "conversions": {
+            "csr-coo": {
+                "time": 0.0007121665161290322,
+                "repetitions": 93,
+                "completed": true
+            },
+            "csr-ell": {
+                "time": 0.004171421166666666,
+                "repetitions": 18,
+                "completed": true
+            },
+            "csr-sellp": {
+                "time": 0.003691607944444445,
+                "repetitions": 18,
+                "completed": true
+            },
+            "csr-hybrid": {
+                "time": 0.002362662222222222,
+                "repetitions": 27,
+                "completed": true
+            },
+            "coo-csr": {
+                "time": 0.0005418421720430108,
+                "repetitions": 93,
+                "completed": true
+            },
+            "coo-ell": {
+                "completed": false
+            },
+            "coo-sellp": {
+                "completed": false
+            },
+            "coo-hybrid": {
+                "completed": false
+            },
+            "sellp-csr": {
+                "time": 0.001981815444444445,
+                "repetitions": 27,
+                "completed": true
+            },
+            "sellp-coo": {
+                "completed": false
+            },
+            "sellp-ell": {
+                "completed": false
+            },
+            "sellp-hybrid": {
+                "completed": false
+            }
         }
     }
 ]

@@ -1,6 +1,6 @@
 [
     {
-        "filename": "/gpfs/work/slkit/slkit003/ssget/MM/TSOPF/TSOPF_FS_b39_c19/TSOPF_FS_b39_c19.mtx",
+        "filename": "/home/kit/scc/au7114/.config/ssget/MM/TSOPF/TSOPF_FS_b39_c19/TSOPF_FS_b39_c19.mtx",
         "problem": {
             "id": 2227,
             "group": "TSOPF",
@@ -15,6 +15,7 @@
             "psym": 1,
             "nsym": 1,
             "kind": "power network problem",
+            "columns": 76216,
             "row_distribution": {
                 "min": 1,
                 "q1": 4.0,
@@ -44,31 +45,101 @@
         },
         "spmv": {
             "csr": {
-                "storage": 24036068,
-                "time": 3602107.1,
+                "storage": 24056548,
+                "max_relative_norm2": 4.58726614107202e-18,
+                "time": 0.00005279114366197184,
+                "repetitions": 1065,
                 "completed": true
             },
             "coo": {
                 "storage": 31641600,
-                "time": 59721.1,
-                "completed": true
-            },
-            "hybrid": {
-                "storage": 44818704,
-                "time": 69344.5,
-                "completed": true
-            },
-            "sellp": {
-                "storage": 49631096,
-                "time": 24772575.9,
+                "max_relative_norm2": 4.391563899199122e-21,
+                "time": 0.00005560203755868545,
+                "repetitions": 1065,
                 "completed": true
             },
             "ell": {
                 "completed": false
+            },
+            "sellp": {
+                "storage": 49633400,
+                "max_relative_norm2": 1.4417644186941278e-16,
+                "time": 0.0194550799,
+                "repetitions": 10,
+                "completed": true
+            },
+            "hybrid": {
+                "storage": 30431344,
+                "max_relative_norm2": 1.508593990384308e-16,
+                "time": 0.000050008521126760569,
+                "repetitions": 1065,
+                "completed": true
             }
         },
         "optimal": {
-            "spmv": "coo"
+            "spmv": "hybrid"
+        },
+        "conversions": {
+            "csr-coo": {
+                "time": 0.002379756814814815,
+                "repetitions": 27,
+                "completed": true
+            },
+            "csr-ell": {
+                "completed": false
+            },
+            "csr-sellp": {
+                "time": 0.008921501699999999,
+                "repetitions": 10,
+                "completed": true
+            },
+            "csr-hybrid": {
+                "time": 0.0093516978,
+                "repetitions": 10,
+                "completed": true
+            },
+            "coo-csr": {
+                "time": 0.0031719000555555556,
+                "repetitions": 18,
+                "completed": true
+            },
+            "coo-ell": {
+                "completed": false
+            },
+            "coo-sellp": {
+                "completed": false
+            },
+            "coo-hybrid": {
+                "completed": false
+            },
+            "sellp-csr": {
+                "time": 0.0400511199,
+                "repetitions": 10,
+                "completed": true
+            },
+            "sellp-coo": {
+                "completed": false
+            },
+            "sellp-ell": {
+                "completed": false
+            },
+            "sellp-hybrid": {
+                "completed": false
+            },
+            "hybrid-csr": {
+                "time": 0.0140400213,
+                "repetitions": 10,
+                "completed": true
+            },
+            "hybrid-coo": {
+                "completed": false
+            },
+            "hybrid-ell": {
+                "completed": false
+            },
+            "hybrid-sellp": {
+                "completed": false
+            }
         }
     }
 ]

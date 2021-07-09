@@ -1,13 +1,13 @@
 [
     {
-        "filename": "/gpfs/work/slkit/slkit003/ssget/MM/Rajat/rajat17/rajat17.mtx",
+        "filename": "/home/kit/scc/au7114/.config/ssget/MM/Rajat/rajat17/rajat17.mtx",
         "problem": {
             "id": 1344,
             "group": "Rajat",
             "name": "rajat17",
             "rows": 94294,
             "cols": 94294,
-            "nonzeros": 479246,
+            "nonzeros": 641159,
             "real": true,
             "binary": false,
             "2d3d": false,
@@ -15,6 +15,7 @@
             "psym": 0.9900237892855388,
             "nsym": 0.2705152684049277,
             "kind": "circuit simulation problem",
+            "columns": 94294,
             "row_distribution": {
                 "min": 1,
                 "q1": 3.0,
@@ -38,37 +39,93 @@
                 "variance": 9546.468780016356,
                 "skewness": 273.96247263185537,
                 "kurtosis": 79733.02905035585,
-                "hyperskewness": 23403478.132210439,
+                "hyperskewness": 23403478.13221044,
                 "hyperflatness": 6882185657.070295
             }
         },
         "spmv": {
             "csr": {
-                "storage": 6128132,
-                "time": 3082537.0,
+                "storage": 6148612,
+                "max_relative_norm2": 3.012850027841276e-17,
+                "time": 0.00002458411889862328,
+                "repetitions": 2397,
                 "completed": true
             },
             "coo": {
                 "storage": 7667936,
-                "time": 29289.2,
-                "completed": true
-            },
-            "hybrid": {
-                "storage": 8475248,
-                "time": 27178.9,
-                "completed": true
-            },
-            "sellp": {
-                "storage": 52553256,
-                "time": 18206484.6,
+                "max_relative_norm2": 1.879085120040289e-18,
+                "time": 0.0000178919969410456,
+                "repetitions": 3596,
                 "completed": true
             },
             "ell": {
                 "completed": false
+            },
+            "sellp": {
+                "storage": 52590120,
+                "max_relative_norm2": 1.2326740090403626e-16,
+                "time": 0.0143099576,
+                "repetitions": 10,
+                "completed": true
+            },
+            "hybrid": {
+                "storage": 6794968,
+                "max_relative_norm2": 2.3038955926735489e-17,
+                "time": 0.000015608383481646277,
+                "repetitions": 3596,
+                "completed": true
             }
         },
         "optimal": {
             "spmv": "hybrid"
+        },
+        "conversions": {
+            "csr-coo": {
+                "time": 0.002848608166666667,
+                "repetitions": 18,
+                "completed": true
+            },
+            "csr-ell": {
+                "completed": false
+            },
+            "csr-sellp": {
+                "time": 0.0064682279,
+                "repetitions": 10,
+                "completed": true
+            },
+            "csr-hybrid": {
+                "time": 0.11071945010000002,
+                "repetitions": 10,
+                "completed": true
+            },
+            "coo-csr": {
+                "time": 0.0012454074193548389,
+                "repetitions": 62,
+                "completed": true
+            },
+            "coo-ell": {
+                "completed": false
+            },
+            "coo-sellp": {
+                "completed": false
+            },
+            "coo-hybrid": {
+                "completed": false
+            },
+            "sellp-csr": {
+                "time": 0.0374718295,
+                "repetitions": 10,
+                "completed": true
+            },
+            "sellp-coo": {
+                "completed": false
+            },
+            "sellp-ell": {
+                "completed": false
+            },
+            "sellp-hybrid": {
+                "completed": false
+            }
         }
     }
 ]

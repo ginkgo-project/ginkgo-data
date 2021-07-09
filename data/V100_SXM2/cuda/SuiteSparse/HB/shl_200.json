@@ -1,6 +1,6 @@
 [
     {
-        "filename": "/gpfs/work/slkit/slkit003/ssget/MM/HB/shl_200/shl_200.mtx",
+        "filename": "/home/kit/scc/au7114/.config/ssget/MM/HB/shl_200/shl_200.mtx",
         "problem": {
             "id": 248,
             "group": "HB",
@@ -15,6 +15,7 @@
             "psym": 0,
             "nsym": 0,
             "kind": "subsequent optimization problem",
+            "columns": 663,
             "row_distribution": {
                 "min": 1,
                 "q1": 1.0,
@@ -44,33 +45,103 @@
         },
         "spmv": {
             "csr": {
-                "storage": 23368,
-                "time": 49155.6,
+                "storage": 23584,
+                "max_relative_norm2": 1.1636280290372226e-15,
+                "time": 0.000004390219329323556,
+                "repetitions": 12137,
                 "completed": true
             },
             "coo": {
                 "storage": 27616,
-                "time": 13776.7,
-                "completed": true
-            },
-            "hybrid": {
-                "storage": 27048,
-                "time": 15780.8,
-                "completed": true
-            },
-            "sellp": {
-                "storage": 398008,
-                "time": 174591.4,
+                "max_relative_norm2": 9.696891508064209e-16,
+                "time": 0.000005639816923457197,
+                "repetitions": 12137,
                 "completed": true
             },
             "ell": {
-                "storage": 3500640,
-                "time": 183678.3,
+                "completed": false
+            },
+            "sellp": {
+                "storage": 398008,
+                "max_relative_norm2": 7.758005167235372e-16,
+                "time": 0.00011179147780126852,
+                "repetitions": 473,
+                "completed": true
+            },
+            "hybrid": {
+                "storage": 27616,
+                "max_relative_norm2": 9.696891508064209e-16,
+                "time": 0.000007318355827462613,
+                "repetitions": 8091,
                 "completed": true
             }
         },
         "optimal": {
-            "spmv": "coo"
+            "spmv": "csr"
+        },
+        "conversions": {
+            "csr-coo": {
+                "time": 0.00004271925657071339,
+                "repetitions": 1598,
+                "completed": true
+            },
+            "csr-ell": {
+                "time": 0.031574762,
+                "repetitions": 10,
+                "completed": true
+            },
+            "csr-sellp": {
+                "time": 0.0001678756,
+                "repetitions": 315,
+                "completed": true
+            },
+            "csr-hybrid": {
+                "time": 0.00011857330866807612,
+                "repetitions": 473,
+                "completed": true
+            },
+            "coo-csr": {
+                "time": 0.00004135409762202754,
+                "repetitions": 1598,
+                "completed": true
+            },
+            "coo-ell": {
+                "completed": false
+            },
+            "coo-sellp": {
+                "completed": false
+            },
+            "coo-hybrid": {
+                "completed": false
+            },
+            "sellp-csr": {
+                "time": 0.00025600409523809524,
+                "repetitions": 210,
+                "completed": true
+            },
+            "sellp-coo": {
+                "completed": false
+            },
+            "sellp-ell": {
+                "completed": false
+            },
+            "sellp-hybrid": {
+                "completed": false
+            },
+            "hybrid-csr": {
+                "time": 0.0002488015857142857,
+                "repetitions": 210,
+                "completed": true
+            },
+            "hybrid-coo": {
+                "completed": false
+            },
+            "hybrid-ell": {
+                "completed": false
+            },
+            "hybrid-sellp": {
+                "completed": false
+            }
         }
     }
 ]

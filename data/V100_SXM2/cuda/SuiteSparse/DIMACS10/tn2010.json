@@ -1,8 +1,8 @@
 [
     {
-        "filename": "/gpfs/work/slkit/slkit003/ssget/MM/DIMACS10/tn2010/tn2010.mtx",
+        "filename": "/home/kit/scc/au7114/.config/ssget/MM/DIMACS10/tn2010/tn2010.mtx",
         "problem": {
-            "id": 171,
+            "id": 2623,
             "group": "DIMACS10",
             "name": "tn2010",
             "rows": 240116,
@@ -15,6 +15,7 @@
             "psym": 1,
             "nsym": 1,
             "kind": "undirected weighted graph",
+            "columns": 240116,
             "row_distribution": {
                 "min": 1,
                 "q1": 3.0,
@@ -44,33 +45,93 @@
         },
         "spmv": {
             "csr": {
-                "storage": 15288060,
-                "time": 62800.8,
+                "storage": 15308540,
+                "max_relative_norm2": 1.0083630018568369e-17,
+                "time": 0.00005039171079812207,
+                "repetitions": 1065,
                 "completed": true
             },
             "coo": {
                 "storage": 19103456,
-                "time": 51933.9,
-                "completed": true
-            },
-            "hybrid": {
-                "storage": 19890528,
-                "time": 52271.1,
-                "completed": true
-            },
-            "sellp": {
-                "storage": 49920136,
-                "time": 133341.3,
+                "max_relative_norm2": 0.0,
+                "time": 0.00004894064694835681,
+                "repetitions": 1065,
                 "completed": true
             },
             "ell": {
                 "storage": 256443888,
-                "time": 118761.0,
+                "max_relative_norm2": 1.3584804340886109e-16,
+                "time": 0.0001139216575052854,
+                "repetitions": 473,
+                "completed": true
+            },
+            "sellp": {
+                "storage": 49936264,
+                "max_relative_norm2": 1.3584804340886109e-16,
+                "time": 0.00011650567019027484,
+                "repetitions": 473,
+                "completed": true
+            },
+            "hybrid": {
+                "storage": 16904480,
+                "max_relative_norm2": 1.0751281335984062e-16,
+                "time": 0.00004315550000000001,
+                "repetitions": 1598,
                 "completed": true
             }
         },
         "optimal": {
-            "spmv": "coo"
+            "spmv": "hybrid"
+        },
+        "conversions": {
+            "csr-coo": {
+                "time": 0.002119932111111111,
+                "repetitions": 27,
+                "completed": true
+            },
+            "csr-ell": {
+                "time": 0.12297533860000001,
+                "repetitions": 10,
+                "completed": true
+            },
+            "csr-sellp": {
+                "time": 0.2337860326,
+                "repetitions": 10,
+                "completed": true
+            },
+            "csr-hybrid": {
+                "time": 0.0199547156,
+                "repetitions": 10,
+                "completed": true
+            },
+            "coo-csr": {
+                "time": 0.0033258890555555558,
+                "repetitions": 18,
+                "completed": true
+            },
+            "coo-ell": {
+                "completed": false
+            },
+            "coo-sellp": {
+                "completed": false
+            },
+            "coo-hybrid": {
+                "completed": false
+            },
+            "ell-csr": {
+                "time": 0.011791424499999998,
+                "repetitions": 10,
+                "completed": true
+            },
+            "ell-coo": {
+                "completed": false
+            },
+            "ell-sellp": {
+                "completed": false
+            },
+            "ell-hybrid": {
+                "completed": false
+            }
         }
     }
 ]

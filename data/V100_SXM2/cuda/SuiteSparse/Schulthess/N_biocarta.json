@@ -1,8 +1,8 @@
 [
     {
-        "filename": "/gpfs/work/slkit/slkit003/ssget/MM/Schulthess/N_biocarta/N_biocarta.mtx",
+        "filename": "/home/kit/scc/au7114/.config/ssget/MM/Schulthess/N_biocarta/N_biocarta.mtx",
         "problem": {
-            "id": 100,
+            "id": 2552,
             "group": "Schulthess",
             "name": "N_biocarta",
             "rows": 1922,
@@ -15,6 +15,7 @@
             "psym": 0,
             "nsym": 0,
             "kind": "biochemical network",
+            "columns": 1996,
             "row_distribution": {
                 "min": 0,
                 "q1": 1.0,
@@ -44,33 +45,93 @@
         },
         "spmv": {
             "csr": {
-                "storage": 59712,
-                "time": 17609.4,
+                "storage": 60256,
+                "max_relative_norm2": 4.528845778329486e-17,
+                "time": 0.000004572633764521711,
+                "repetitions": 12137,
                 "completed": true
             },
             "coo": {
                 "storage": 69360,
-                "time": 13408.5,
-                "completed": true
-            },
-            "hybrid": {
-                "storage": 94600,
-                "time": 14303.7,
-                "completed": true
-            },
-            "sellp": {
-                "storage": 415992,
-                "time": 31924.2,
+                "max_relative_norm2": 2.2512702732288928e-17,
+                "time": 0.000006293866518353727,
+                "repetitions": 8091,
                 "completed": true
             },
             "ell": {
                 "storage": 1545288,
-                "time": 32380.6,
+                "max_relative_norm2": 8.087749163878681e-17,
+                "time": 0.000004441344978165939,
+                "repetitions": 12137,
+                "completed": true
+            },
+            "sellp": {
+                "storage": 417528,
+                "max_relative_norm2": 9.497285897920996e-17,
+                "time": 0.000018497238598442714,
+                "repetitions": 3596,
+                "completed": true
+            },
+            "hybrid": {
+                "storage": 68456,
+                "max_relative_norm2": 9.307784309700263e-17,
+                "time": 0.000009668416388579905,
+                "repetitions": 8091,
                 "completed": true
             }
         },
         "optimal": {
-            "spmv": "coo"
+            "spmv": "ell"
+        },
+        "conversions": {
+            "csr-coo": {
+                "time": 0.0000395365788485607,
+                "repetitions": 1598,
+                "completed": true
+            },
+            "csr-ell": {
+                "time": 0.000071552061971831,
+                "repetitions": 710,
+                "completed": true
+            },
+            "csr-sellp": {
+                "time": 0.00013310789852008457,
+                "repetitions": 473,
+                "completed": true
+            },
+            "csr-hybrid": {
+                "time": 0.00016543399365079363,
+                "repetitions": 315,
+                "completed": true
+            },
+            "coo-csr": {
+                "time": 0.00003812662953692115,
+                "repetitions": 1598,
+                "completed": true
+            },
+            "coo-ell": {
+                "completed": false
+            },
+            "coo-sellp": {
+                "completed": false
+            },
+            "coo-hybrid": {
+                "completed": false
+            },
+            "ell-csr": {
+                "time": 0.00011658475264270611,
+                "repetitions": 473,
+                "completed": true
+            },
+            "ell-coo": {
+                "completed": false
+            },
+            "ell-sellp": {
+                "completed": false
+            },
+            "ell-hybrid": {
+                "completed": false
+            }
         }
     }
 ]

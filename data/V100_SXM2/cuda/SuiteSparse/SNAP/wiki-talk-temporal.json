@@ -1,8 +1,8 @@
 [
     {
-        "filename": "/gpfs/work/slkit/slkit003/ssget/MM/SNAP/wiki-talk-temporal/wiki-talk-temporal.mtx",
+        "filename": "/home/kit/scc/au7114/.config/ssget/MM/SNAP/wiki-talk-temporal/wiki-talk-temporal.mtx",
         "problem": {
-            "id": 346,
+            "id": 2798,
             "group": "SNAP",
             "name": "wiki-talk-temporal",
             "rows": 1140149,
@@ -15,6 +15,7 @@
             "psym": 0.2189736490582744,
             "nsym": 0.07817954976807415,
             "kind": "directed temporal multigraph",
+            "columns": 1140149,
             "row_distribution": {
                 "min": 0,
                 "q1": 0.0,
@@ -44,31 +45,87 @@
         },
         "spmv": {
             "csr": {
-                "storage": 44275704,
-                "time": 16760735.7,
+                "storage": 44357624,
+                "max_relative_norm2": 4.904936555814984e-16,
+                "time": 0.0003682404285714286,
+                "repetitions": 140,
                 "completed": true
             },
             "coo": {
                 "storage": 52953472,
-                "time": 180159.8,
-                "completed": true
-            },
-            "hybrid": {
-                "storage": 62616796,
-                "time": 186673.9,
-                "completed": true
-            },
-            "sellp": {
-                "storage": 845614200,
-                "time": 87679473.3,
+                "max_relative_norm2": 4.67298818923318e-16,
+                "time": 0.00018725245396825397,
+                "repetitions": 315,
                 "completed": true
             },
             "ell": {
                 "completed": false
+            },
+            "sellp": {
+                "storage": 845759352,
+                "max_relative_norm2": 5.108033970002931e-15,
+                "time": 0.0726343352,
+                "repetitions": 10,
+                "completed": true
+            },
+            "hybrid": {
+                "storage": 52953472,
+                "max_relative_norm2": 6.506270838878792e-16,
+                "time": 0.0001873537238095238,
+                "repetitions": 315,
+                "completed": true
             }
         },
         "optimal": {
             "spmv": "coo"
+        },
+        "conversions": {
+            "csr-coo": {
+                "time": 0.0027958695185185185,
+                "repetitions": 27,
+                "completed": true
+            },
+            "csr-ell": {
+                "completed": false
+            },
+            "csr-sellp": {
+                "time": 0.050190028,
+                "repetitions": 10,
+                "completed": true
+            },
+            "csr-hybrid": {
+                "time": 0.0239610866,
+                "repetitions": 10,
+                "completed": true
+            },
+            "coo-csr": {
+                "time": 0.0019722346666666667,
+                "repetitions": 27,
+                "completed": true
+            },
+            "coo-ell": {
+                "completed": false
+            },
+            "coo-sellp": {
+                "completed": false
+            },
+            "coo-hybrid": {
+                "completed": false
+            },
+            "sellp-csr": {
+                "time": 0.10171314179999999,
+                "repetitions": 10,
+                "completed": true
+            },
+            "sellp-coo": {
+                "completed": false
+            },
+            "sellp-ell": {
+                "completed": false
+            },
+            "sellp-hybrid": {
+                "completed": false
+            }
         }
     }
 ]

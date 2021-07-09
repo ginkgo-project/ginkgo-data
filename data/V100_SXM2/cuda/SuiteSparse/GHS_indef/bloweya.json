@@ -1,6 +1,6 @@
 [
     {
-        "filename": "/gpfs/work/slkit/slkit003/ssget/MM/GHS_indef/bloweya/bloweya.mtx",
+        "filename": "/home/kit/scc/au7114/.config/ssget/MM/GHS_indef/bloweya/bloweya.mtx",
         "problem": {
             "id": 1295,
             "group": "GHS_indef",
@@ -15,6 +15,7 @@
             "psym": 1,
             "nsym": 1,
             "kind": "materials problem",
+            "columns": 30004,
             "row_distribution": {
                 "min": 2,
                 "q1": 2.0,
@@ -44,33 +45,89 @@
         },
         "spmv": {
             "csr": {
-                "storage": 1920128,
-                "time": 812126.4,
+                "storage": 1925248,
+                "max_relative_norm2": 9.775263947858309e-18,
+                "time": 0.000010064889506859472,
+                "repetitions": 5394,
                 "completed": true
             },
             "coo": {
                 "storage": 2400144,
-                "time": 17593.4,
-                "completed": true
-            },
-            "hybrid": {
-                "storage": 3040272,
-                "time": 16901.8,
-                "completed": true
-            },
-            "sellp": {
-                "storage": 10084440,
-                "time": 6644356.9,
+                "max_relative_norm2": 4.8876319739291539e-17,
+                "time": 0.000006968918675071067,
+                "repetitions": 8091,
                 "completed": true
             },
             "ell": {
-                "storage": 3600840048,
-                "time": 4278563.0,
+                "completed": false
+            },
+            "sellp": {
+                "storage": 10084440,
+                "max_relative_norm2": 4.0443534332431625e-16,
+                "time": 0.004953337666666667,
+                "repetitions": 12,
+                "completed": true
+            },
+            "hybrid": {
+                "storage": 2200112,
+                "max_relative_norm2": 1.2678152616597038e-16,
+                "time": 0.000008498176121616612,
+                "repetitions": 8091,
                 "completed": true
             }
         },
         "optimal": {
-            "spmv": "hybrid"
+            "spmv": "coo"
+        },
+        "conversions": {
+            "csr-coo": {
+                "time": 0.007144013799999999,
+                "repetitions": 10,
+                "completed": true
+            },
+            "csr-ell": {
+                "time": 0.0302567586,
+                "repetitions": 10,
+                "completed": true
+            },
+            "csr-sellp": {
+                "time": 0.0253749267,
+                "repetitions": 10,
+                "completed": true
+            },
+            "csr-hybrid": {
+                "time": 0.0033464694999999998,
+                "repetitions": 18,
+                "completed": true
+            },
+            "coo-csr": {
+                "time": 0.010046920774193549,
+                "repetitions": 62,
+                "completed": true
+            },
+            "coo-ell": {
+                "completed": false
+            },
+            "coo-sellp": {
+                "completed": false
+            },
+            "coo-hybrid": {
+                "completed": false
+            },
+            "sellp-csr": {
+                "time": 0.035276543199999999,
+                "repetitions": 10,
+                "completed": true
+            },
+            "sellp-coo": {
+                "completed": false
+            },
+            "sellp-ell": {
+                "completed": false
+            },
+            "sellp-hybrid": {
+                "completed": false
+            }
         }
     }
 ]

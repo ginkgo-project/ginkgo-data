@@ -1,13 +1,13 @@
 [
     {
-        "filename": "/gpfs/work/slkit/slkit003/ssget/MM/Mallya/lhr04/lhr04.mtx",
+        "filename": "/home/kit/scc/au7114/.config/ssget/MM/Mallya/lhr04/lhr04.mtx",
         "problem": {
             "id": 736,
             "group": "Mallya",
             "name": "lhr04",
             "rows": 4101,
             "cols": 4101,
-            "nonzeros": 81057,
+            "nonzeros": 82682,
             "real": true,
             "binary": false,
             "2d3d": false,
@@ -15,6 +15,7 @@
             "psym": 0.01515885315769082,
             "nsym": 0,
             "kind": "chemical process simulation problem",
+            "columns": 4101,
             "row_distribution": {
                 "min": 1,
                 "q1": 4.0,
@@ -44,33 +45,93 @@
         },
         "spmv": {
             "csr": {
-                "storage": 989092,
-                "time": 17737.2,
+                "storage": 994212,
+                "max_relative_norm2": 9.615243184137208e-17,
+                "time": 0.00000418435947927824,
+                "repetitions": 12137,
                 "completed": true
             },
             "coo": {
                 "storage": 1296912,
-                "time": 15267.7,
-                "completed": true
-            },
-            "hybrid": {
-                "storage": 3017756,
-                "time": 40727.5,
-                "completed": true
-            },
-            "sellp": {
-                "storage": 2842648,
-                "time": 33972.5,
+                "max_relative_norm2": 1.715600093411411e-17,
+                "time": 0.0000056594757353547009,
+                "repetitions": 12137,
                 "completed": true
             },
             "ell": {
                 "storage": 3100356,
-                "time": 36313.8,
+                "max_relative_norm2": 1.556106275892947e-16,
+                "time": 0.000006047231029084617,
+                "repetitions": 12137,
+                "completed": true
+            },
+            "sellp": {
+                "storage": 2842648,
+                "max_relative_norm2": 1.8511845530474572e-16,
+                "time": 0.00001845332536151279,
+                "repetitions": 3596,
+                "completed": true
+            },
+            "hybrid": {
+                "storage": 1256048,
+                "max_relative_norm2": 1.1851861405434092e-16,
+                "time": 0.000007480598566308244,
+                "repetitions": 8091,
                 "completed": true
             }
         },
         "optimal": {
-            "spmv": "coo"
+            "spmv": "csr"
+        },
+        "conversions": {
+            "csr-coo": {
+                "time": 0.00008156544507042253,
+                "repetitions": 710,
+                "completed": true
+            },
+            "csr-ell": {
+                "time": 0.013255134600000001,
+                "repetitions": 10,
+                "completed": true
+            },
+            "csr-sellp": {
+                "time": 0.0235095072,
+                "repetitions": 10,
+                "completed": true
+            },
+            "csr-hybrid": {
+                "time": 0.0002549692619047619,
+                "repetitions": 210,
+                "completed": true
+            },
+            "coo-csr": {
+                "time": 0.00004436320150187735,
+                "repetitions": 1598,
+                "completed": true
+            },
+            "coo-ell": {
+                "completed": false
+            },
+            "coo-sellp": {
+                "completed": false
+            },
+            "coo-hybrid": {
+                "completed": false
+            },
+            "ell-csr": {
+                "time": 0.0002711436761904762,
+                "repetitions": 210,
+                "completed": true
+            },
+            "ell-coo": {
+                "completed": false
+            },
+            "ell-sellp": {
+                "completed": false
+            },
+            "ell-hybrid": {
+                "completed": false
+            }
         }
     }
 ]

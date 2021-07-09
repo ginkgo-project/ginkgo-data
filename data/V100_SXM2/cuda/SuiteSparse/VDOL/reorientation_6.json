@@ -1,8 +1,8 @@
 [
     {
-        "filename": "/gpfs/work/slkit/slkit003/ssget/MM/VDOL/reorientation_6/reorientation_6.mtx",
+        "filename": "/home/kit/scc/au7114/.config/ssget/MM/VDOL/reorientation_6/reorientation_6.mtx",
         "problem": {
-            "id": 275,
+            "id": 2727,
             "group": "VDOL",
             "name": "reorientation_6",
             "rows": 3006,
@@ -15,6 +15,7 @@
             "psym": 1,
             "nsym": 1,
             "kind": "optimal control problem",
+            "columns": 3006,
             "row_distribution": {
                 "min": 1,
                 "q1": 8.0,
@@ -44,33 +45,89 @@
         },
         "spmv": {
             "csr": {
-                "storage": 460132,
-                "time": 206822.2,
+                "storage": 464800,
+                "max_relative_norm2": 2.1903278316346343e-24,
+                "time": 0.000007179021010999876,
+                "repetitions": 8091,
                 "completed": true
             },
             "coo": {
                 "storage": 597472,
-                "time": 13759.8,
-                "completed": true
-            },
-            "hybrid": {
-                "storage": 680264,
-                "time": 19190.6,
-                "completed": true
-            },
-            "sellp": {
-                "storage": 2750200,
-                "time": 874730.7,
+                "max_relative_norm2": 0.0,
+                "time": 0.000006762115684093438,
+                "repetitions": 8091,
                 "completed": true
             },
             "ell": {
-                "storage": 101867328,
-                "time": 966981.8,
+                "completed": false
+            },
+            "sellp": {
+                "storage": 2750200,
+                "max_relative_norm2": 1.0339411174948716e-20,
+                "time": 0.0006481818279569893,
+                "repetitions": 93,
+                "completed": true
+            },
+            "hybrid": {
+                "storage": 561480,
+                "max_relative_norm2": 9.315494964843543e-21,
+                "time": 0.000008552512668396985,
+                "repetitions": 8091,
                 "completed": true
             }
         },
         "optimal": {
             "spmv": "coo"
+        },
+        "conversions": {
+            "csr-coo": {
+                "time": 0.000058693632863849757,
+                "repetitions": 1065,
+                "completed": true
+            },
+            "csr-ell": {
+                "time": 0.002099782555555556,
+                "repetitions": 27,
+                "completed": true
+            },
+            "csr-sellp": {
+                "time": 0.0033678618536585366,
+                "repetitions": 41,
+                "completed": true
+            },
+            "csr-hybrid": {
+                "time": 0.00020532852063492066,
+                "repetitions": 315,
+                "completed": true
+            },
+            "coo-csr": {
+                "time": 0.00004112739612015019,
+                "repetitions": 1598,
+                "completed": true
+            },
+            "coo-ell": {
+                "completed": false
+            },
+            "coo-sellp": {
+                "completed": false
+            },
+            "coo-hybrid": {
+                "completed": false
+            },
+            "sellp-csr": {
+                "time": 0.0010945807096774195,
+                "repetitions": 62,
+                "completed": true
+            },
+            "sellp-coo": {
+                "completed": false
+            },
+            "sellp-ell": {
+                "completed": false
+            },
+            "sellp-hybrid": {
+                "completed": false
+            }
         }
     }
 ]

@@ -1,6 +1,6 @@
 [
     {
-        "filename": "/gpfs/work/slkit/slkit003/ssget/MM/GHS_indef/c-59/c-59.mtx",
+        "filename": "/home/kit/scc/au7114/.config/ssget/MM/GHS_indef/c-59/c-59.mtx",
         "problem": {
             "id": 1222,
             "group": "GHS_indef",
@@ -15,6 +15,7 @@
             "psym": 1,
             "nsym": 1,
             "kind": "optimization problem",
+            "columns": 41282,
             "row_distribution": {
                 "min": 2,
                 "q1": 2.0,
@@ -44,33 +45,103 @@
         },
         "spmv": {
             "csr": {
-                "storage": 5931564,
-                "time": 304813.6,
+                "storage": 5952044,
+                "max_relative_norm2": 7.55363663011532e-18,
+                "time": 0.00001659654171301446,
+                "repetitions": 3596,
                 "completed": true
             },
             "coo": {
                 "storage": 7688576,
-                "time": 26364.0,
-                "completed": true
-            },
-            "hybrid": {
-                "storage": 10298544,
-                "time": 29399.3,
-                "completed": true
-            },
-            "sellp": {
-                "storage": 15286632,
-                "time": 1876916.3,
+                "max_relative_norm2": 9.418749305908384e-19,
+                "time": 0.000015605363737486096,
+                "repetitions": 3596,
                 "completed": true
             },
             "ell": {
-                "storage": 1530736560,
-                "time": 1966913.5,
+                "completed": false
+            },
+            "sellp": {
+                "storage": 15244392,
+                "max_relative_norm2": 1.5882149371819209e-17,
+                "time": 0.0016285170975609757,
+                "repetitions": 41,
+                "completed": true
+            },
+            "hybrid": {
+                "storage": 7358320,
+                "max_relative_norm2": 1.3496616778371398e-17,
+                "time": 0.000016387180756395998,
+                "repetitions": 3596,
                 "completed": true
             }
         },
         "optimal": {
             "spmv": "coo"
+        },
+        "conversions": {
+            "csr-coo": {
+                "time": 0.007607960499999999,
+                "repetitions": 10,
+                "completed": true
+            },
+            "csr-ell": {
+                "time": 0.008899251799999999,
+                "repetitions": 10,
+                "completed": true
+            },
+            "csr-sellp": {
+                "time": 0.0084606927,
+                "repetitions": 10,
+                "completed": true
+            },
+            "csr-hybrid": {
+                "time": 0.0033308652222222227,
+                "repetitions": 18,
+                "completed": true
+            },
+            "coo-csr": {
+                "time": 0.002450398925925926,
+                "repetitions": 27,
+                "completed": true
+            },
+            "coo-ell": {
+                "completed": false
+            },
+            "coo-sellp": {
+                "completed": false
+            },
+            "coo-hybrid": {
+                "completed": false
+            },
+            "sellp-csr": {
+                "time": 0.003839381055555556,
+                "repetitions": 18,
+                "completed": true
+            },
+            "sellp-coo": {
+                "completed": false
+            },
+            "sellp-ell": {
+                "completed": false
+            },
+            "sellp-hybrid": {
+                "completed": false
+            },
+            "hybrid-csr": {
+                "time": 0.0034931038333333335,
+                "repetitions": 18,
+                "completed": true
+            },
+            "hybrid-coo": {
+                "completed": false
+            },
+            "hybrid-ell": {
+                "completed": false
+            },
+            "hybrid-sellp": {
+                "completed": false
+            }
         }
     }
 ]

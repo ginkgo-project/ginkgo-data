@@ -1,6 +1,6 @@
 [
     {
-        "filename": "/gpfs/work/slkit/slkit003/ssget/MM/PARSEC/Ge99H100/Ge99H100.mtx",
+        "filename": "/home/kit/scc/au7114/.config/ssget/MM/PARSEC/Ge99H100/Ge99H100.mtx",
         "problem": {
             "id": 1356,
             "group": "PARSEC",
@@ -15,6 +15,7 @@
             "psym": 1,
             "nsym": 1,
             "kind": "theoretical/quantum chemistry problem",
+            "columns": 112985,
             "row_distribution": {
                 "min": 7,
                 "q1": 32.0,
@@ -44,33 +45,93 @@
         },
         "spmv": {
             "csr": {
-                "storage": 101868684,
-                "time": 177390.5,
+                "storage": 101950604,
+                "max_relative_norm2": 1.0748884154373365e-16,
+                "time": 0.00016825721904761902,
+                "repetitions": 315,
                 "completed": true
             },
             "coo": {
                 "storage": 135222320,
-                "time": 183812.9,
-                "completed": true
-            },
-            "hybrid": {
-                "storage": 124161180,
-                "time": 170054.8,
-                "completed": true
-            },
-            "sellp": {
-                "storage": 324815464,
-                "time": 509294.4,
+                "max_relative_norm2": 1.70283517934351e-18,
+                "time": 0.00019603920317460316,
+                "repetitions": 315,
                 "completed": true
             },
             "ell": {
                 "storage": 635879580,
-                "time": 459598.6,
+                "max_relative_norm2": 3.0723779467076655e-16,
+                "time": 0.0005494019784946237,
+                "repetitions": 93,
+                "completed": true
+            },
+            "sellp": {
+                "storage": 324541288,
+                "max_relative_norm2": 3.0723779467076655e-16,
+                "time": 0.0005298198285714285,
+                "repetitions": 140,
+                "completed": true
+            },
+            "hybrid": {
+                "storage": 123601988,
+                "max_relative_norm2": 2.2024905625878255e-16,
+                "time": 0.0001798279873015873,
+                "repetitions": 315,
                 "completed": true
             }
         },
         "optimal": {
-            "spmv": "hybrid"
+            "spmv": "csr"
+        },
+        "conversions": {
+            "csr-coo": {
+                "time": 0.09343979190000002,
+                "repetitions": 10,
+                "completed": true
+            },
+            "csr-ell": {
+                "time": 0.0246617267,
+                "repetitions": 10,
+                "completed": true
+            },
+            "csr-sellp": {
+                "time": 0.0349999904,
+                "repetitions": 10,
+                "completed": true
+            },
+            "csr-hybrid": {
+                "time": 0.0873349373,
+                "repetitions": 10,
+                "completed": true
+            },
+            "coo-csr": {
+                "time": 0.0035751161666666669,
+                "repetitions": 18,
+                "completed": true
+            },
+            "coo-ell": {
+                "completed": false
+            },
+            "coo-sellp": {
+                "completed": false
+            },
+            "coo-hybrid": {
+                "completed": false
+            },
+            "ell-csr": {
+                "time": 0.0574349891,
+                "repetitions": 10,
+                "completed": true
+            },
+            "ell-coo": {
+                "completed": false
+            },
+            "ell-sellp": {
+                "completed": false
+            },
+            "ell-hybrid": {
+                "completed": false
+            }
         }
     }
 ]

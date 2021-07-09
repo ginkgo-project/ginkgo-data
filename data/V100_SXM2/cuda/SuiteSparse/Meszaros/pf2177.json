@@ -1,6 +1,6 @@
 [
     {
-        "filename": "/gpfs/work/slkit/slkit003/ssget/MM/Meszaros/pf2177/pf2177.mtx",
+        "filename": "/home/kit/scc/au7114/.config/ssget/MM/Meszaros/pf2177/pf2177.mtx",
         "problem": {
             "id": 1753,
             "group": "Meszaros",
@@ -15,6 +15,7 @@
             "psym": 0,
             "nsym": 0,
             "kind": "linear programming problem",
+            "columns": 10178,
             "row_distribution": {
                 "min": 3,
                 "q1": 3.0,
@@ -44,33 +45,93 @@
         },
         "spmv": {
             "csr": {
-                "storage": 410724,
-                "time": 14526.5,
+                "storage": 414600,
+                "max_relative_norm2": 1.1562732576982865e-17,
+                "time": 0.000007339108639228772,
+                "repetitions": 8091,
                 "completed": true
             },
             "coo": {
                 "storage": 495744,
-                "time": 14854.7,
-                "completed": true
-            },
-            "hybrid": {
-                "storage": 379008,
-                "time": 14906.3,
-                "completed": true
-            },
-            "sellp": {
-                "storage": 380296,
-                "time": 13620.7,
+                "max_relative_norm2": 0.0,
+                "time": 0.000009518484983314794,
+                "repetitions": 8091,
                 "completed": true
             },
             "ell": {
                 "storage": 933888,
-                "time": 13197.8,
+                "max_relative_norm2": 3.33962969634289e-17,
+                "time": 0.000009696766963292548,
+                "repetitions": 5394,
+                "completed": true
+            },
+            "sellp": {
+                "storage": 380296,
+                "max_relative_norm2": 3.33962969634289e-17,
+                "time": 0.000007802537510814485,
+                "repetitions": 8091,
+                "completed": true
+            },
+            "hybrid": {
+                "storage": 379008,
+                "max_relative_norm2": 2.614823221174029e-17,
+                "time": 0.000009706808120133482,
+                "repetitions": 5394,
                 "completed": true
             }
         },
         "optimal": {
-            "spmv": "ell"
+            "spmv": "csr"
+        },
+        "conversions": {
+            "csr-coo": {
+                "time": 0.00004110857259073842,
+                "repetitions": 1598,
+                "completed": true
+            },
+            "csr-ell": {
+                "time": 0.004600093111111111,
+                "repetitions": 27,
+                "completed": true
+            },
+            "csr-sellp": {
+                "time": 0.00011396472938689216,
+                "repetitions": 473,
+                "completed": true
+            },
+            "csr-hybrid": {
+                "time": 0.00021073822539682542,
+                "repetitions": 315,
+                "completed": true
+            },
+            "coo-csr": {
+                "time": 0.000038946843554443059,
+                "repetitions": 1598,
+                "completed": true
+            },
+            "coo-ell": {
+                "completed": false
+            },
+            "coo-sellp": {
+                "completed": false
+            },
+            "coo-hybrid": {
+                "completed": false
+            },
+            "ell-csr": {
+                "time": 0.00010284751830985916,
+                "repetitions": 710,
+                "completed": true
+            },
+            "ell-coo": {
+                "completed": false
+            },
+            "ell-sellp": {
+                "completed": false
+            },
+            "ell-hybrid": {
+                "completed": false
+            }
         }
     }
 ]

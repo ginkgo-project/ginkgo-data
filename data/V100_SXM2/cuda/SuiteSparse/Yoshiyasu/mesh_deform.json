@@ -1,6 +1,6 @@
 [
     {
-        "filename": "/gpfs/work/slkit/slkit003/ssget/MM/Yoshiyasu/mesh_deform/mesh_deform.mtx",
+        "filename": "/home/kit/scc/au7114/.config/ssget/MM/Yoshiyasu/mesh_deform/mesh_deform.mtx",
         "problem": {
             "id": 2249,
             "group": "Yoshiyasu",
@@ -15,6 +15,7 @@
             "psym": 0,
             "nsym": 0,
             "kind": "computer graphics/vision problem",
+            "columns": 9393,
             "row_distribution": {
                 "min": 1,
                 "q1": 3.0,
@@ -44,33 +45,107 @@
         },
         "spmv": {
             "csr": {
-                "storage": 11182044,
-                "time": 35586.5,
+                "storage": 11202524,
+                "max_relative_norm2": 3.988515432057645e-18,
+                "time": 0.000024169172715894866,
+                "repetitions": 2397,
                 "completed": true
             },
             "coo": {
                 "storage": 13661264,
-                "time": 36611.6,
-                "completed": true
-            },
-            "hybrid": {
-                "storage": 11233104,
-                "time": 27773.2,
-                "completed": true
-            },
-            "sellp": {
-                "storage": 10305944,
-                "time": 28038.4,
+                "max_relative_norm2": 0.0,
+                "time": 0.00003122236670838548,
+                "repetitions": 2397,
                 "completed": true
             },
             "ell": {
                 "storage": 11233104,
-                "time": 27709.4,
+                "max_relative_norm2": 7.481991464690092e-17,
+                "time": 0.000023309297872340428,
+                "repetitions": 2397,
+                "completed": true
+            },
+            "sellp": {
+                "storage": 10305944,
+                "max_relative_norm2": 7.481991464690092e-17,
+                "time": 0.00002257410596579057,
+                "repetitions": 2397,
+                "completed": true
+            },
+            "hybrid": {
+                "storage": 11233104,
+                "max_relative_norm2": 7.481991464690092e-17,
+                "time": 0.000022245605757196498,
+                "repetitions": 2397,
                 "completed": true
             }
         },
         "optimal": {
-            "spmv": "ell"
+            "spmv": "hybrid"
+        },
+        "conversions": {
+            "csr-coo": {
+                "time": 0.006947008100000001,
+                "repetitions": 10,
+                "completed": true
+            },
+            "csr-ell": {
+                "time": 0.0302283727,
+                "repetitions": 10,
+                "completed": true
+            },
+            "csr-sellp": {
+                "time": 0.1785750461,
+                "repetitions": 10,
+                "completed": true
+            },
+            "csr-hybrid": {
+                "time": 0.0518020354,
+                "repetitions": 10,
+                "completed": true
+            },
+            "coo-csr": {
+                "time": 0.0308684103,
+                "repetitions": 10,
+                "completed": true
+            },
+            "coo-ell": {
+                "completed": false
+            },
+            "coo-sellp": {
+                "completed": false
+            },
+            "coo-hybrid": {
+                "completed": false
+            },
+            "ell-csr": {
+                "time": 0.0570244967,
+                "repetitions": 10,
+                "completed": true
+            },
+            "ell-coo": {
+                "completed": false
+            },
+            "ell-sellp": {
+                "completed": false
+            },
+            "ell-hybrid": {
+                "completed": false
+            },
+            "sellp-csr": {
+                "time": 0.013701326500000003,
+                "repetitions": 10,
+                "completed": true
+            },
+            "sellp-coo": {
+                "completed": false
+            },
+            "sellp-ell": {
+                "completed": false
+            },
+            "sellp-hybrid": {
+                "completed": false
+            }
         }
     }
 ]

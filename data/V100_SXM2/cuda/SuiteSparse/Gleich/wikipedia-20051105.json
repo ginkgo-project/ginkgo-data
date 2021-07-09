@@ -1,6 +1,6 @@
 [
     {
-        "filename": "/gpfs/work/slkit/slkit003/ssget/MM/Gleich/wikipedia-20051105/wikipedia-20051105.mtx",
+        "filename": "/home/kit/scc/au7114/.config/ssget/MM/Gleich/wikipedia-20051105/wikipedia-20051105.mtx",
         "problem": {
             "id": 1843,
             "group": "Gleich",
@@ -15,6 +15,7 @@
             "psym": 0.1211282592272251,
             "nsym": 0.1211282592272251,
             "kind": "directed graph",
+            "columns": 1634989,
             "row_distribution": {
                 "min": 0,
                 "q1": 1.0,
@@ -44,31 +45,101 @@
         },
         "spmv": {
             "csr": {
-                "storage": 243576896,
-                "time": 1614896.4,
+                "storage": 243658816,
+                "max_relative_norm2": 1.1197260755192667e-16,
+                "time": 0.001281054731707317,
+                "repetitions": 41,
                 "completed": true
             },
             "coo": {
                 "storage": 316049248,
-                "time": 1145845.5,
-                "completed": true
-            },
-            "hybrid": {
-                "storage": 493459928,
-                "time": 1158302.9,
-                "completed": true
-            },
-            "sellp": {
-                "storage": 2389945528,
-                "time": 5898291.5,
+                "max_relative_norm2": 3.912453869828635e-18,
+                "time": 0.0013669441463414637,
+                "repetitions": 41,
                 "completed": true
             },
             "ell": {
                 "completed": false
+            },
+            "sellp": {
+                "storage": 2388874168,
+                "max_relative_norm2": 3.466360110014522e-16,
+                "time": 0.005815381083333334,
+                "repetitions": 12,
+                "completed": true
+            },
+            "hybrid": {
+                "storage": 310670188,
+                "max_relative_norm2": 1.540152631529543e-16,
+                "time": 0.0013673364146341465,
+                "repetitions": 41,
+                "completed": true
             }
         },
         "optimal": {
-            "spmv": "coo"
+            "spmv": "csr"
+        },
+        "conversions": {
+            "csr-coo": {
+                "time": 0.006251306583333334,
+                "repetitions": 12,
+                "completed": true
+            },
+            "csr-ell": {
+                "completed": false
+            },
+            "csr-sellp": {
+                "time": 0.09817822089999999,
+                "repetitions": 10,
+                "completed": true
+            },
+            "csr-hybrid": {
+                "time": 0.0559694161,
+                "repetitions": 10,
+                "completed": true
+            },
+            "coo-csr": {
+                "time": 0.004461978583333334,
+                "repetitions": 12,
+                "completed": true
+            },
+            "coo-ell": {
+                "completed": false
+            },
+            "coo-sellp": {
+                "completed": false
+            },
+            "coo-hybrid": {
+                "completed": false
+            },
+            "sellp-csr": {
+                "time": 0.023003975200000003,
+                "repetitions": 10,
+                "completed": true
+            },
+            "sellp-coo": {
+                "completed": false
+            },
+            "sellp-ell": {
+                "completed": false
+            },
+            "sellp-hybrid": {
+                "completed": false
+            },
+            "hybrid-csr": {
+                "time": 0.016616643799999998,
+                "repetitions": 10,
+                "completed": true
+            },
+            "hybrid-coo": {
+                "completed": false
+            },
+            "hybrid-ell": {
+                "completed": false
+            },
+            "hybrid-sellp": {
+                "completed": false
+            }
         }
     }
 ]

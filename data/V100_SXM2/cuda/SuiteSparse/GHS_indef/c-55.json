@@ -1,6 +1,6 @@
 [
     {
-        "filename": "/gpfs/work/slkit/slkit003/ssget/MM/GHS_indef/c-55/c-55.mtx",
+        "filename": "/home/kit/scc/au7114/.config/ssget/MM/GHS_indef/c-55/c-55.mtx",
         "problem": {
             "id": 1220,
             "group": "GHS_indef",
@@ -15,6 +15,7 @@
             "psym": 1,
             "nsym": 1,
             "kind": "optimization problem",
+            "columns": 32780,
             "row_distribution": {
                 "min": 2,
                 "q1": 2.0,
@@ -44,33 +45,103 @@
         },
         "spmv": {
             "csr": {
-                "storage": 4972524,
-                "time": 232672.2,
+                "storage": 4993004,
+                "max_relative_norm2": 1.2338835983492645e-18,
+                "time": 0.0000155051031701891,
+                "repetitions": 3596,
                 "completed": true
             },
             "coo": {
                 "storage": 6455200,
-                "time": 23395.5,
-                "completed": true
-            },
-            "hybrid": {
-                "storage": 9223840,
-                "time": 31550.7,
-                "completed": true
-            },
-            "sellp": {
-                "storage": 14090264,
-                "time": 1836879.1,
+                "max_relative_norm2": 2.2451029968022834e-19,
+                "time": 0.000013219212458286988,
+                "repetitions": 5394,
                 "completed": true
             },
             "ell": {
-                "storage": 1148611200,
-                "time": 1939005.5,
+                "completed": false
+            },
+            "sellp": {
+                "storage": 14001176,
+                "max_relative_norm2": 5.4990998834194698e-18,
+                "time": 0.0014382352926829269,
+                "repetitions": 41,
+                "completed": true
+            },
+            "hybrid": {
+                "storage": 6192960,
+                "max_relative_norm2": 1.5367851344962438e-18,
+                "time": 0.000012327454022988506,
+                "repetitions": 5394,
                 "completed": true
             }
         },
         "optimal": {
-            "spmv": "coo"
+            "spmv": "hybrid"
+        },
+        "conversions": {
+            "csr-coo": {
+                "time": 0.037490827,
+                "repetitions": 10,
+                "completed": true
+            },
+            "csr-ell": {
+                "time": 0.0499484465,
+                "repetitions": 10,
+                "completed": true
+            },
+            "csr-sellp": {
+                "time": 0.033809017100000008,
+                "repetitions": 10,
+                "completed": true
+            },
+            "csr-hybrid": {
+                "time": 0.004514339388888889,
+                "repetitions": 18,
+                "completed": true
+            },
+            "coo-csr": {
+                "time": 0.0025507259999999999,
+                "repetitions": 41,
+                "completed": true
+            },
+            "coo-ell": {
+                "completed": false
+            },
+            "coo-sellp": {
+                "completed": false
+            },
+            "coo-hybrid": {
+                "completed": false
+            },
+            "sellp-csr": {
+                "time": 0.0035262045,
+                "repetitions": 18,
+                "completed": true
+            },
+            "sellp-coo": {
+                "completed": false
+            },
+            "sellp-ell": {
+                "completed": false
+            },
+            "sellp-hybrid": {
+                "completed": false
+            },
+            "hybrid-csr": {
+                "time": 0.008405089166666666,
+                "repetitions": 12,
+                "completed": true
+            },
+            "hybrid-coo": {
+                "completed": false
+            },
+            "hybrid-ell": {
+                "completed": false
+            },
+            "hybrid-sellp": {
+                "completed": false
+            }
         }
     }
 ]

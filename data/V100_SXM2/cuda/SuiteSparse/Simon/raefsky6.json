@@ -1,13 +1,13 @@
 [
     {
-        "filename": "/gpfs/work/slkit/slkit003/ssget/MM/Simon/raefsky6/raefsky6.mtx",
+        "filename": "/home/kit/scc/au7114/.config/ssget/MM/Simon/raefsky6/raefsky6.mtx",
         "problem": {
             "id": 819,
             "group": "Simon",
             "name": "raefsky6",
             "rows": 3402,
             "cols": 3402,
-            "nonzeros": 130371,
+            "nonzeros": 137845,
             "real": true,
             "binary": false,
             "2d3d": true,
@@ -15,6 +15,7 @@
             "psym": 0,
             "nsym": 0,
             "kind": "structural problem",
+            "columns": 3402,
             "row_distribution": {
                 "min": 1,
                 "q1": 12.0,
@@ -44,33 +45,93 @@
         },
         "spmv": {
             "csr": {
-                "storage": 1578064,
-                "time": 18477.6,
+                "storage": 1583184,
+                "max_relative_norm2": 5.786802788034857e-17,
+                "time": 0.0000047012654692263329,
+                "repetitions": 12137,
                 "completed": true
             },
             "coo": {
                 "storage": 2085936,
-                "time": 15681.4,
-                "completed": true
-            },
-            "hybrid": {
-                "storage": 2784920,
-                "time": 35465.3,
-                "completed": true
-            },
-            "sellp": {
-                "storage": 3655016,
-                "time": 47247.4,
+                "max_relative_norm2": 0.0,
+                "time": 0.00000674683463107156,
+                "repetitions": 8091,
                 "completed": true
             },
             "ell": {
                 "storage": 5062176,
-                "time": 53140.4,
+                "max_relative_norm2": 1.264418464381044e-16,
+                "time": 0.00000619535113088617,
+                "repetitions": 8091,
+                "completed": true
+            },
+            "sellp": {
+                "storage": 3650408,
+                "max_relative_norm2": 1.9737263626789399e-16,
+                "time": 0.00003334701689612015,
+                "repetitions": 1598,
+                "completed": true
+            },
+            "hybrid": {
+                "storage": 2051272,
+                "max_relative_norm2": 1.2951213837293467e-16,
+                "time": 0.000008041377827215427,
+                "repetitions": 8091,
                 "completed": true
             }
         },
         "optimal": {
-            "spmv": "coo"
+            "spmv": "csr"
+        },
+        "conversions": {
+            "csr-coo": {
+                "time": 0.005845995166666666,
+                "repetitions": 12,
+                "completed": true
+            },
+            "csr-ell": {
+                "time": 0.012437809,
+                "repetitions": 10,
+                "completed": true
+            },
+            "csr-sellp": {
+                "time": 0.004354709833333334,
+                "repetitions": 12,
+                "completed": true
+            },
+            "csr-hybrid": {
+                "time": 0.0002637335857142857,
+                "repetitions": 210,
+                "completed": true
+            },
+            "coo-csr": {
+                "time": 0.00010699543128964059,
+                "repetitions": 473,
+                "completed": true
+            },
+            "coo-ell": {
+                "completed": false
+            },
+            "coo-sellp": {
+                "completed": false
+            },
+            "coo-hybrid": {
+                "completed": false
+            },
+            "ell-csr": {
+                "time": 0.00033401232857142854,
+                "repetitions": 210,
+                "completed": true
+            },
+            "ell-coo": {
+                "completed": false
+            },
+            "ell-sellp": {
+                "completed": false
+            },
+            "ell-hybrid": {
+                "completed": false
+            }
         }
     }
 ]

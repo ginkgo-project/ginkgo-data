@@ -1,6 +1,6 @@
 [
     {
-        "filename": "/gpfs/work/slkit/slkit003/ssget/MM/JGD_Groebner/f855_mat9_I/f855_mat9_I.mtx",
+        "filename": "/home/kit/scc/au7114/.config/ssget/MM/JGD_Groebner/f855_mat9_I/f855_mat9_I.mtx",
         "problem": {
             "id": 2003,
             "group": "JGD_Groebner",
@@ -15,6 +15,7 @@
             "psym": 0,
             "nsym": 0,
             "kind": "combinatorial problem",
+            "columns": 2511,
             "row_distribution": {
                 "min": 2,
                 "q1": 57.0,
@@ -44,33 +45,93 @@
         },
         "spmv": {
             "csr": {
-                "storage": 2064396,
-                "time": 17577.7,
+                "storage": 2069516,
+                "max_relative_norm2": 1.7411710409782612e-16,
+                "time": 0.000005201095493120212,
+                "repetitions": 12137,
                 "completed": true
             },
             "coo": {
                 "storage": 2739424,
-                "time": 16819.5,
-                "completed": true
-            },
-            "hybrid": {
-                "storage": 2881824,
-                "time": 47315.4,
-                "completed": true
-            },
-            "sellp": {
-                "storage": 4090232,
-                "time": 67196.3,
+                "max_relative_norm2": 0.0,
+                "time": 0.000007902421703126932,
+                "repetitions": 8091,
                 "completed": true
             },
             "ell": {
                 "storage": 5540736,
-                "time": 76556.5,
+                "max_relative_norm2": 2.3216891695153785e-16,
+                "time": 0.0000067114896798912378,
+                "repetitions": 8091,
+                "completed": true
+            },
+            "sellp": {
+                "storage": 4090232,
+                "max_relative_norm2": 3.727518124136845e-16,
+                "time": 0.00004897364037558685,
+                "repetitions": 1065,
+                "completed": true
+            },
+            "hybrid": {
+                "storage": 2719776,
+                "max_relative_norm2": 1.6246960262707283e-16,
+                "time": 0.000009049026325546906,
+                "repetitions": 8091,
                 "completed": true
             }
         },
         "optimal": {
-            "spmv": "coo"
+            "spmv": "csr"
+        },
+        "conversions": {
+            "csr-coo": {
+                "time": 0.0641383111,
+                "repetitions": 10,
+                "completed": true
+            },
+            "csr-ell": {
+                "time": 0.1433176817,
+                "repetitions": 10,
+                "completed": true
+            },
+            "csr-sellp": {
+                "time": 0.052721567999999999,
+                "repetitions": 10,
+                "completed": true
+            },
+            "csr-hybrid": {
+                "time": 0.00023455142857142856,
+                "repetitions": 315,
+                "completed": true
+            },
+            "coo-csr": {
+                "time": 0.0014502941129032259,
+                "repetitions": 62,
+                "completed": true
+            },
+            "coo-ell": {
+                "completed": false
+            },
+            "coo-sellp": {
+                "completed": false
+            },
+            "coo-hybrid": {
+                "completed": false
+            },
+            "ell-csr": {
+                "time": 0.020751967258064519,
+                "repetitions": 93,
+                "completed": true
+            },
+            "ell-coo": {
+                "completed": false
+            },
+            "ell-sellp": {
+                "completed": false
+            },
+            "ell-hybrid": {
+                "completed": false
+            }
         }
     }
 ]

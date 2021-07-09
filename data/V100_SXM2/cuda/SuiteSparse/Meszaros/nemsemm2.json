@@ -1,6 +1,6 @@
 [
     {
-        "filename": "/gpfs/work/slkit/slkit003/ssget/MM/Meszaros/nemsemm2/nemsemm2.mtx",
+        "filename": "/home/kit/scc/au7114/.config/ssget/MM/Meszaros/nemsemm2/nemsemm2.mtx",
         "problem": {
             "id": 1735,
             "group": "Meszaros",
@@ -15,6 +15,7 @@
             "psym": 0,
             "nsym": 0,
             "kind": "linear programming problem",
+            "columns": 48878,
             "row_distribution": {
                 "min": 1,
                 "q1": 6.0,
@@ -44,33 +45,103 @@
         },
         "spmv": {
             "csr": {
-                "storage": 2211920,
-                "time": 201028.9,
+                "storage": 2217040,
+                "max_relative_norm2": 1.701308469650527e-16,
+                "time": 0.00001003680812013348,
+                "repetitions": 5394,
                 "completed": true
             },
             "coo": {
                 "storage": 2912192,
-                "time": 16600.5,
-                "completed": true
-            },
-            "hybrid": {
-                "storage": 3281040,
-                "time": 21630.7,
-                "completed": true
-            },
-            "sellp": {
-                "storage": 9435864,
-                "time": 2641179.7,
+                "max_relative_norm2": 1.454283983732383e-17,
+                "time": 0.000007592393523668273,
+                "repetitions": 8091,
                 "completed": true
             },
             "ell": {
-                "storage": 347927616,
-                "time": 2129639.8,
+                "completed": false
+            },
+            "sellp": {
+                "storage": 9676248,
+                "max_relative_norm2": 2.189683443811036e-16,
+                "time": 0.0021414228888888889,
+                "repetitions": 27,
+                "completed": true
+            },
+            "hybrid": {
+                "storage": 2784664,
+                "max_relative_norm2": 1.1737177566633543e-16,
+                "time": 0.0000093984872080089,
+                "repetitions": 5394,
                 "completed": true
             }
         },
         "optimal": {
             "spmv": "coo"
+        },
+        "conversions": {
+            "csr-coo": {
+                "time": 0.001018888629032258,
+                "repetitions": 62,
+                "completed": true
+            },
+            "csr-ell": {
+                "time": 0.0038268031666666665,
+                "repetitions": 18,
+                "completed": true
+            },
+            "csr-sellp": {
+                "time": 0.003946720722222223,
+                "repetitions": 18,
+                "completed": true
+            },
+            "csr-hybrid": {
+                "time": 0.0013927840975609756,
+                "repetitions": 41,
+                "completed": true
+            },
+            "coo-csr": {
+                "time": 0.000783026935483871,
+                "repetitions": 93,
+                "completed": true
+            },
+            "coo-ell": {
+                "completed": false
+            },
+            "coo-sellp": {
+                "completed": false
+            },
+            "coo-hybrid": {
+                "completed": false
+            },
+            "sellp-csr": {
+                "time": 0.0034692878333333336,
+                "repetitions": 18,
+                "completed": true
+            },
+            "sellp-coo": {
+                "completed": false
+            },
+            "sellp-ell": {
+                "completed": false
+            },
+            "sellp-hybrid": {
+                "completed": false
+            },
+            "hybrid-csr": {
+                "time": 0.002471366814814815,
+                "repetitions": 27,
+                "completed": true
+            },
+            "hybrid-coo": {
+                "completed": false
+            },
+            "hybrid-ell": {
+                "completed": false
+            },
+            "hybrid-sellp": {
+                "completed": false
+            }
         }
     }
 ]

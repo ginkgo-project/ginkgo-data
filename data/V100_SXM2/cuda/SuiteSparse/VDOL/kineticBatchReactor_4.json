@@ -1,8 +1,8 @@
 [
     {
-        "filename": "/gpfs/work/slkit/slkit003/ssget/MM/VDOL/kineticBatchReactor_4/kineticBatchReactor_4.mtx",
+        "filename": "/home/kit/scc/au7114/.config/ssget/MM/VDOL/kineticBatchReactor_4/kineticBatchReactor_4.mtx",
         "problem": {
-            "id": 247,
+            "id": 2699,
             "group": "VDOL",
             "name": "kineticBatchReactor_4",
             "rows": 7105,
@@ -15,6 +15,7 @@
             "psym": 1,
             "nsym": 1,
             "kind": "optimal control problem",
+            "columns": 7105,
             "row_distribution": {
                 "min": 1,
                 "q1": 6.0,
@@ -44,33 +45,89 @@
         },
         "spmv": {
             "csr": {
-                "storage": 926852,
-                "time": 173178.7,
+                "storage": 931972,
+                "max_relative_norm2": 4.91751642551827e-16,
+                "time": 0.000008531526263749845,
+                "repetitions": 8091,
                 "completed": true
             },
             "coo": {
                 "storage": 1197904,
-                "time": 15887.0,
-                "completed": true
-            },
-            "hybrid": {
-                "storage": 1307372,
-                "time": 17138.9,
-                "completed": true
-            },
-            "sellp": {
-                "storage": 4056072,
-                "time": 756528.2,
+                "max_relative_norm2": 1.2293791063795677e-16,
+                "time": 0.000006432798417995304,
+                "repetitions": 8091,
                 "completed": true
             },
             "ell": {
-                "storage": 206840760,
-                "time": 807250.4,
+                "completed": false
+            },
+            "sellp": {
+                "storage": 4066824,
+                "max_relative_norm2": 1.3744899896168176e-16,
+                "time": 0.0005758341935483872,
+                "repetitions": 93,
+                "completed": true
+            },
+            "hybrid": {
+                "storage": 1105588,
+                "max_relative_norm2": 4.958168222559987e-16,
+                "time": 0.000008340316771721667,
+                "repetitions": 8091,
                 "completed": true
             }
         },
         "optimal": {
             "spmv": "coo"
+        },
+        "conversions": {
+            "csr-coo": {
+                "time": 0.000057847,
+                "repetitions": 1065,
+                "completed": true
+            },
+            "csr-ell": {
+                "time": 0.003108182833333333,
+                "repetitions": 18,
+                "completed": true
+            },
+            "csr-sellp": {
+                "time": 0.001561898512195122,
+                "repetitions": 41,
+                "completed": true
+            },
+            "csr-hybrid": {
+                "time": 0.0002793182619047619,
+                "repetitions": 210,
+                "completed": true
+            },
+            "coo-csr": {
+                "time": 0.00004375317083854818,
+                "repetitions": 1598,
+                "completed": true
+            },
+            "coo-ell": {
+                "completed": false
+            },
+            "coo-sellp": {
+                "completed": false
+            },
+            "coo-hybrid": {
+                "completed": false
+            },
+            "sellp-csr": {
+                "time": 0.0009503237903225807,
+                "repetitions": 62,
+                "completed": true
+            },
+            "sellp-coo": {
+                "completed": false
+            },
+            "sellp-ell": {
+                "completed": false
+            },
+            "sellp-hybrid": {
+                "completed": false
+            }
         }
     }
 ]

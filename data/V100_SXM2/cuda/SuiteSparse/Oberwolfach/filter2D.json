@@ -1,6 +1,6 @@
 [
     {
-        "filename": "/gpfs/work/slkit/slkit003/ssget/MM/Oberwolfach/filter2D/filter2D.mtx",
+        "filename": "/home/kit/scc/au7114/.config/ssget/MM/Oberwolfach/filter2D/filter2D.mtx",
         "problem": {
             "id": 1430,
             "group": "Oberwolfach",
@@ -15,6 +15,7 @@
             "psym": 1,
             "nsym": 1,
             "kind": "model reduction problem",
+            "columns": 1668,
             "row_distribution": {
                 "min": 3,
                 "q1": 6.0,
@@ -44,33 +45,121 @@
         },
         "spmv": {
             "csr": {
-                "storage": 135676,
-                "time": 13754.1,
+                "storage": 137020,
+                "max_relative_norm2": 4.229281041292356e-17,
+                "time": 0.000004296866276674632,
+                "repetitions": 12137,
                 "completed": true
             },
             "coo": {
                 "storage": 172000,
-                "time": 13963.6,
-                "completed": true
-            },
-            "hybrid": {
-                "storage": 144272,
-                "time": 15894.1,
-                "completed": true
-            },
-            "sellp": {
-                "storage": 170168,
-                "time": 12556.5,
+                "max_relative_norm2": 0.0,
+                "time": 0.000006436061055493759,
+                "repetitions": 8091,
                 "completed": true
             },
             "ell": {
                 "storage": 180144,
-                "time": 12674.8,
+                "max_relative_norm2": 1.3402985132696128e-16,
+                "time": 0.000006206324310962798,
+                "repetitions": 8091,
+                "completed": true
+            },
+            "sellp": {
+                "storage": 170168,
+                "max_relative_norm2": 1.3402985132696128e-16,
+                "time": 0.000004715191892559941,
+                "repetitions": 12137,
+                "completed": true
+            },
+            "hybrid": {
+                "storage": 165328,
+                "max_relative_norm2": 1.134012045934219e-16,
+                "time": 0.000008290489061920653,
+                "repetitions": 8091,
                 "completed": true
             }
         },
         "optimal": {
-            "spmv": "sellp"
+            "spmv": "csr"
+        },
+        "conversions": {
+            "csr-coo": {
+                "time": 0.000040780161451814769,
+                "repetitions": 1598,
+                "completed": true
+            },
+            "csr-ell": {
+                "time": 0.00006494249765258215,
+                "repetitions": 1065,
+                "completed": true
+            },
+            "csr-sellp": {
+                "time": 0.00011487503594080338,
+                "repetitions": 473,
+                "completed": true
+            },
+            "csr-hybrid": {
+                "time": 0.00014839100845665963,
+                "repetitions": 473,
+                "completed": true
+            },
+            "coo-csr": {
+                "time": 0.00003793604255319149,
+                "repetitions": 1598,
+                "completed": true
+            },
+            "coo-ell": {
+                "completed": false
+            },
+            "coo-sellp": {
+                "completed": false
+            },
+            "coo-hybrid": {
+                "completed": false
+            },
+            "ell-csr": {
+                "time": 0.00010933808456659617,
+                "repetitions": 473,
+                "completed": true
+            },
+            "ell-coo": {
+                "completed": false
+            },
+            "ell-sellp": {
+                "completed": false
+            },
+            "ell-hybrid": {
+                "completed": false
+            },
+            "sellp-csr": {
+                "time": 0.00010983472093023256,
+                "repetitions": 473,
+                "completed": true
+            },
+            "sellp-coo": {
+                "completed": false
+            },
+            "sellp-ell": {
+                "completed": false
+            },
+            "sellp-hybrid": {
+                "completed": false
+            },
+            "hybrid-csr": {
+                "time": 0.00018301005714285715,
+                "repetitions": 315,
+                "completed": true
+            },
+            "hybrid-coo": {
+                "completed": false
+            },
+            "hybrid-ell": {
+                "completed": false
+            },
+            "hybrid-sellp": {
+                "completed": false
+            }
         }
     }
 ]

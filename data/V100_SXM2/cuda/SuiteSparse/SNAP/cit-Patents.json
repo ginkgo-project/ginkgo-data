@@ -1,6 +1,6 @@
 [
     {
-        "filename": "/gpfs/work/slkit/slkit003/ssget/MM/SNAP/cit-Patents/cit-Patents.mtx",
+        "filename": "/home/kit/scc/au7114/.config/ssget/MM/SNAP/cit-Patents/cit-Patents.mtx",
         "problem": {
             "id": 2294,
             "group": "SNAP",
@@ -15,6 +15,7 @@
             "psym": 0,
             "nsym": 0,
             "kind": "directed graph",
+            "columns": 3774768,
             "row_distribution": {
                 "min": 0,
                 "q1": 0.0,
@@ -44,31 +45,101 @@
         },
         "spmv": {
             "csr": {
-                "storage": 213326452,
-                "time": 1963996.2,
+                "storage": 213408372,
+                "max_relative_norm2": 4.543090814732309e-17,
+                "time": 0.002493912851851852,
+                "repetitions": 27,
                 "completed": true
             },
             "coo": {
                 "storage": 264303168,
-                "time": 2095957.8,
-                "completed": true
-            },
-            "hybrid": {
-                "storage": 442204896,
-                "time": 1683687.1,
-                "completed": true
-            },
-            "sellp": {
-                "storage": 1036058712,
-                "time": 2854493.5,
+                "max_relative_norm2": 0.0,
+                "time": 0.002519079925925926,
+                "repetitions": 27,
                 "completed": true
             },
             "ell": {
                 "completed": false
+            },
+            "sellp": {
+                "storage": 1036387416,
+                "max_relative_norm2": 1.6903456254122958e-16,
+                "time": 0.0030682695,
+                "repetitions": 18,
+                "completed": true
+            },
+            "hybrid": {
+                "storage": 264303168,
+                "max_relative_norm2": 0.0,
+                "time": 0.002522738592592593,
+                "repetitions": 27,
+                "completed": true
             }
         },
         "optimal": {
-            "spmv": "hybrid"
+            "spmv": "csr"
+        },
+        "conversions": {
+            "csr-coo": {
+                "time": 0.00513263325,
+                "repetitions": 12,
+                "completed": true
+            },
+            "csr-ell": {
+                "completed": false
+            },
+            "csr-sellp": {
+                "time": 0.06325522380000001,
+                "repetitions": 10,
+                "completed": true
+            },
+            "csr-hybrid": {
+                "time": 0.1181603528,
+                "repetitions": 10,
+                "completed": true
+            },
+            "coo-csr": {
+                "time": 0.004997155583333333,
+                "repetitions": 12,
+                "completed": true
+            },
+            "coo-ell": {
+                "completed": false
+            },
+            "coo-sellp": {
+                "completed": false
+            },
+            "coo-hybrid": {
+                "completed": false
+            },
+            "sellp-csr": {
+                "time": 0.0182260116,
+                "repetitions": 10,
+                "completed": true
+            },
+            "sellp-coo": {
+                "completed": false
+            },
+            "sellp-ell": {
+                "completed": false
+            },
+            "sellp-hybrid": {
+                "completed": false
+            },
+            "hybrid-csr": {
+                "time": 0.0196843483,
+                "repetitions": 10,
+                "completed": true
+            },
+            "hybrid-coo": {
+                "completed": false
+            },
+            "hybrid-ell": {
+                "completed": false
+            },
+            "hybrid-sellp": {
+                "completed": false
+            }
         }
     }
 ]

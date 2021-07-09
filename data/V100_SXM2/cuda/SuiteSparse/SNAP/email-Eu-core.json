@@ -1,8 +1,8 @@
 [
     {
-        "filename": "/gpfs/work/slkit/slkit003/ssget/MM/SNAP/email-Eu-core/email-Eu-core.mtx",
+        "filename": "/home/kit/scc/au7114/.config/ssget/MM/SNAP/email-Eu-core/email-Eu-core.mtx",
         "problem": {
-            "id": 332,
+            "id": 2784,
             "group": "SNAP",
             "name": "email-Eu-core",
             "rows": 1005,
@@ -15,6 +15,7 @@
             "psym": 0.7112198644149385,
             "nsym": 0.7112198644149385,
             "kind": "directed graph with communities",
+            "columns": 1005,
             "row_distribution": {
                 "min": 0,
                 "q1": 2.0,
@@ -44,33 +45,93 @@
         },
         "spmv": {
             "csr": {
-                "storage": 310876,
-                "time": 27375.9,
+                "storage": 314076,
+                "max_relative_norm2": 1.624639269631922e-16,
+                "time": 0.000005128913652467661,
+                "repetitions": 12137,
                 "completed": true
             },
             "coo": {
                 "storage": 409136,
-                "time": 14057.5,
-                "completed": true
-            },
-            "hybrid": {
-                "storage": 619912,
-                "time": 28266.3,
-                "completed": true
-            },
-            "sellp": {
-                "storage": 1561608,
-                "time": 111891.7,
+                "max_relative_norm2": 6.198920943423742e-17,
+                "time": 0.000005770502677762216,
+                "repetitions": 12137,
                 "completed": true
             },
             "ell": {
                 "storage": 4028040,
-                "time": 125030.2,
+                "max_relative_norm2": 2.4459025968504888e-16,
+                "time": 0.000007986809170683476,
+                "repetitions": 8091,
+                "completed": true
+            },
+            "sellp": {
+                "storage": 1561608,
+                "max_relative_norm2": 3.2597183798680876e-16,
+                "time": 0.00009216077746478871,
+                "repetitions": 710,
+                "completed": true
+            },
+            "hybrid": {
+                "storage": 407308,
+                "max_relative_norm2": 1.7532669546968918e-16,
+                "time": 0.000007451173278951922,
+                "repetitions": 8091,
                 "completed": true
             }
         },
         "optimal": {
-            "spmv": "coo"
+            "spmv": "csr"
+        },
+        "conversions": {
+            "csr-coo": {
+                "time": 0.00006792699906103288,
+                "repetitions": 1065,
+                "completed": true
+            },
+            "csr-ell": {
+                "time": 0.0006773668602150538,
+                "repetitions": 93,
+                "completed": true
+            },
+            "csr-sellp": {
+                "time": 0.0005392839462365592,
+                "repetitions": 93,
+                "completed": true
+            },
+            "csr-hybrid": {
+                "time": 0.00016719218730158728,
+                "repetitions": 315,
+                "completed": true
+            },
+            "coo-csr": {
+                "time": 0.000042800555068836048,
+                "repetitions": 1598,
+                "completed": true
+            },
+            "coo-ell": {
+                "completed": false
+            },
+            "coo-sellp": {
+                "completed": false
+            },
+            "coo-hybrid": {
+                "completed": false
+            },
+            "ell-csr": {
+                "time": 0.00040303872857142854,
+                "repetitions": 140,
+                "completed": true
+            },
+            "ell-coo": {
+                "completed": false
+            },
+            "ell-sellp": {
+                "completed": false
+            },
+            "ell-hybrid": {
+                "completed": false
+            }
         }
     }
 ]

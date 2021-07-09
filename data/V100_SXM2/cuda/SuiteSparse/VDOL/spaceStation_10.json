@@ -1,8 +1,8 @@
 [
     {
-        "filename": "/gpfs/work/slkit/slkit003/ssget/MM/VDOL/spaceStation_10/spaceStation_10.mtx",
+        "filename": "/home/kit/scc/au7114/.config/ssget/MM/VDOL/spaceStation_10/spaceStation_10.mtx",
         "problem": {
-            "id": 291,
+            "id": 2743,
             "group": "VDOL",
             "name": "spaceStation_10",
             "rows": 1272,
@@ -15,6 +15,7 @@
             "psym": 1,
             "nsym": 1,
             "kind": "optimal control problem",
+            "columns": 1272,
             "row_distribution": {
                 "min": 1,
                 "q1": 6.0,
@@ -44,33 +45,93 @@
         },
         "spmv": {
             "csr": {
-                "storage": 214828,
-                "time": 23939.6,
+                "storage": 217016,
+                "max_relative_norm2": 5.762147968160558e-17,
+                "time": 0.000004168770124412952,
+                "repetitions": 12137,
                 "completed": true
             },
             "coo": {
                 "storage": 279648,
-                "time": 13526.9,
-                "completed": true
-            },
-            "hybrid": {
-                "storage": 319136,
-                "time": 19514.4,
-                "completed": true
-            },
-            "sellp": {
-                "storage": 439624,
-                "time": 61328.7,
+                "max_relative_norm2": 3.4447013514617504e-20,
+                "time": 0.000005574903023811486,
+                "repetitions": 12137,
                 "completed": true
             },
             "ell": {
                 "storage": 2533824,
-                "time": 62852.0,
+                "max_relative_norm2": 1.069196629087622e-16,
+                "time": 0.000005588514047952542,
+                "repetitions": 12137,
+                "completed": true
+            },
+            "sellp": {
+                "storage": 438088,
+                "max_relative_norm2": 1.1523378898057146e-16,
+                "time": 0.00004495516958698373,
+                "repetitions": 1598,
+                "completed": true
+            },
+            "hybrid": {
+                "storage": 274560,
+                "max_relative_norm2": 1.0267717215381524e-16,
+                "time": 0.000007511587319243604,
+                "repetitions": 8091,
                 "completed": true
             }
         },
         "optimal": {
-            "spmv": "coo"
+            "spmv": "csr"
+        },
+        "conversions": {
+            "csr-coo": {
+                "time": 0.000052709905164319247,
+                "repetitions": 1065,
+                "completed": true
+            },
+            "csr-ell": {
+                "time": 0.0002931435238095238,
+                "repetitions": 210,
+                "completed": true
+            },
+            "csr-sellp": {
+                "time": 0.0001337445708245243,
+                "repetitions": 473,
+                "completed": true
+            },
+            "csr-hybrid": {
+                "time": 0.0001594129746031746,
+                "repetitions": 315,
+                "completed": true
+            },
+            "coo-csr": {
+                "time": 0.00004107761576971214,
+                "repetitions": 1598,
+                "completed": true
+            },
+            "coo-ell": {
+                "completed": false
+            },
+            "coo-sellp": {
+                "completed": false
+            },
+            "coo-hybrid": {
+                "completed": false
+            },
+            "ell-csr": {
+                "time": 0.00015709121353065536,
+                "repetitions": 473,
+                "completed": true
+            },
+            "ell-coo": {
+                "completed": false
+            },
+            "ell-sellp": {
+                "completed": false
+            },
+            "ell-hybrid": {
+                "completed": false
+            }
         }
     }
 ]

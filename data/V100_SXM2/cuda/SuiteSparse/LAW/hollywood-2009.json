@@ -1,6 +1,6 @@
 [
     {
-        "filename": "/gpfs/work/slkit/slkit003/ssget/MM/LAW/hollywood-2009/hollywood-2009.mtx",
+        "filename": "/home/kit/scc/au7114/.config/ssget/MM/LAW/hollywood-2009/hollywood-2009.mtx",
         "problem": {
             "id": 2447,
             "group": "LAW",
@@ -15,6 +15,7 @@
             "psym": 1,
             "nsym": 1,
             "kind": "undirected graph",
+            "columns": 1139905,
             "row_distribution": {
                 "min": 1,
                 "q1": 12.0,
@@ -44,31 +45,87 @@
         },
         "spmv": {
             "csr": {
-                "storage": 1371255548,
-                "time": 2873143.5,
+                "storage": 1371583228,
+                "max_relative_norm2": 2.220361562684325e-16,
+                "time": 0.0028657991666666668,
+                "repetitions": 18,
                 "completed": true
             },
             "coo": {
                 "storage": 1822261232,
-                "time": 3285665.7,
-                "completed": true
-            },
-            "hybrid": {
-                "storage": 2338705076,
-                "time": 3097062.5,
-                "completed": true
-            },
-            "sellp": {
-                "storage": 4435524168,
-                "time": 11808934.1,
+                "max_relative_norm2": 2.078374892143979e-17,
+                "time": 0.003767679333333334,
+                "repetitions": 18,
                 "completed": true
             },
             "ell": {
                 "completed": false
+            },
+            "sellp": {
+                "storage": 4433531208,
+                "max_relative_norm2": 1.0740818393209708e-15,
+                "time": 0.011230357,
+                "repetitions": 10,
+                "completed": true
+            },
+            "hybrid": {
+                "storage": 1798132480,
+                "max_relative_norm2": 2.4097032969217968e-16,
+                "time": 0.003180461722222222,
+                "repetitions": 18,
+                "completed": true
             }
         },
         "optimal": {
             "spmv": "csr"
+        },
+        "conversions": {
+            "csr-coo": {
+                "time": 0.0457581536,
+                "repetitions": 10,
+                "completed": true
+            },
+            "csr-ell": {
+                "completed": false
+            },
+            "csr-sellp": {
+                "time": 0.2449723809,
+                "repetitions": 10,
+                "completed": true
+            },
+            "csr-hybrid": {
+                "time": 0.0603067279,
+                "repetitions": 10,
+                "completed": true
+            },
+            "coo-csr": {
+                "time": 0.0098162392,
+                "repetitions": 10,
+                "completed": true
+            },
+            "coo-ell": {
+                "completed": false
+            },
+            "coo-sellp": {
+                "completed": false
+            },
+            "coo-hybrid": {
+                "completed": false
+            },
+            "sellp-csr": {
+                "time": 0.1236229732,
+                "repetitions": 10,
+                "completed": true
+            },
+            "sellp-coo": {
+                "completed": false
+            },
+            "sellp-ell": {
+                "completed": false
+            },
+            "sellp-hybrid": {
+                "completed": false
+            }
         }
     }
 ]

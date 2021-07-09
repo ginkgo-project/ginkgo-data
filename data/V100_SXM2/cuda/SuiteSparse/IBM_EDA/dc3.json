@@ -1,6 +1,6 @@
 [
     {
-        "filename": "/gpfs/work/slkit/slkit003/ssget/MM/IBM_EDA/dc3/dc3.mtx",
+        "filename": "/home/kit/scc/au7114/.config/ssget/MM/IBM_EDA/dc3/dc3.mtx",
         "problem": {
             "id": 1322,
             "group": "IBM_EDA",
@@ -15,6 +15,7 @@
             "psym": 0.8542477149952045,
             "nsym": 0.2426407989395915,
             "kind": "subsequent circuit simulation problem",
+            "columns": 116835,
             "row_distribution": {
                 "min": 1,
                 "q1": 2.0,
@@ -44,31 +45,87 @@
         },
         "spmv": {
             "csr": {
-                "storage": 9664096,
-                "time": 13812359.5,
+                "storage": 9684576,
+                "max_relative_norm2": 2.453249595435352e-16,
+                "time": 0.000029269815602836877,
+                "repetitions": 2397,
                 "completed": true
             },
             "coo": {
                 "storage": 12262336,
-                "time": 34769.0,
-                "completed": true
-            },
-            "hybrid": {
-                "storage": 13909276,
-                "time": 37618.2,
-                "completed": true
-            },
-            "sellp": {
-                "storage": 108691240,
-                "time": 71977244.7,
+                "max_relative_norm2": 3.469396901639799e-16,
+                "time": 0.000028023647058823538,
+                "repetitions": 2397,
                 "completed": true
             },
             "ell": {
                 "completed": false
+            },
+            "sellp": {
+                "storage": 109068328,
+                "max_relative_norm2": 1.2327349731656798e-14,
+                "time": 0.0569405348,
+                "repetitions": 10,
+                "completed": true
+            },
+            "hybrid": {
+                "storage": 11327928,
+                "max_relative_norm2": 2.088860875322392e-15,
+                "time": 0.000026154198164372137,
+                "repetitions": 2397,
+                "completed": true
             }
         },
         "optimal": {
-            "spmv": "coo"
+            "spmv": "hybrid"
+        },
+        "conversions": {
+            "csr-coo": {
+                "time": 0.0141569965,
+                "repetitions": 10,
+                "completed": true
+            },
+            "csr-ell": {
+                "completed": false
+            },
+            "csr-sellp": {
+                "time": 0.033946665499999997,
+                "repetitions": 10,
+                "completed": true
+            },
+            "csr-hybrid": {
+                "time": 0.062100075399999999,
+                "repetitions": 10,
+                "completed": true
+            },
+            "coo-csr": {
+                "time": 0.0076690023,
+                "repetitions": 10,
+                "completed": true
+            },
+            "coo-ell": {
+                "completed": false
+            },
+            "coo-sellp": {
+                "completed": false
+            },
+            "coo-hybrid": {
+                "completed": false
+            },
+            "sellp-csr": {
+                "time": 0.0790500205,
+                "repetitions": 10,
+                "completed": true
+            },
+            "sellp-coo": {
+                "completed": false
+            },
+            "sellp-ell": {
+                "completed": false
+            },
+            "sellp-hybrid": {
+                "completed": false
+            }
         }
     }
 ]

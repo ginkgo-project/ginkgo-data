@@ -1,13 +1,13 @@
 [
     {
-        "filename": "/gpfs/work/slkit/slkit003/ssget/MM/Freescale/Freescale2/Freescale2.mtx",
+        "filename": "/home/kit/scc/au7114/.config/ssget/MM/Freescale/Freescale2/Freescale2.mtx",
         "problem": {
-            "id": 210,
+            "id": 2662,
             "group": "Freescale",
             "name": "Freescale2",
             "rows": 2999349,
             "cols": 2999349,
-            "nonzeros": 14313235,
+            "nonzeros": 23042677,
             "real": true,
             "binary": false,
             "2d3d": false,
@@ -15,6 +15,7 @@
             "psym": 0.9853083953765488,
             "nsym": 0.5600838032920651,
             "kind": "circuit simulation matrix",
+            "columns": 2999349,
             "row_distribution": {
                 "min": 1,
                 "q1": 4.0,
@@ -44,31 +45,87 @@
         },
         "spmv": {
             "csr": {
-                "storage": 183756220,
-                "time": 2175558.6,
+                "storage": 183838140,
+                "max_relative_norm2": 2.4531536162451366e-17,
+                "time": 0.0007891711720430108,
+                "repetitions": 93,
                 "completed": true
             },
             "coo": {
                 "storage": 229011760,
-                "time": 706771.7,
-                "completed": true
-            },
-            "hybrid": {
-                "storage": 233255756,
-                "time": 469741.9,
-                "completed": true
-            },
-            "sellp": {
-                "storage": 1239731992,
-                "time": 10357651.4,
+                "max_relative_norm2": 1.2760108780677767e-24,
+                "time": 0.0008256779677419354,
+                "repetitions": 62,
                 "completed": true
             },
             "ell": {
                 "completed": false
+            },
+            "sellp": {
+                "storage": 1240203544,
+                "max_relative_norm2": 1.2211612201267917e-16,
+                "time": 0.0090079042,
+                "repetitions": 10,
+                "completed": true
+            },
+            "hybrid": {
+                "storage": 212660660,
+                "max_relative_norm2": 1.0245448740720446e-16,
+                "time": 0.0005987442043010752,
+                "repetitions": 93,
+                "completed": true
             }
         },
         "optimal": {
             "spmv": "hybrid"
+        },
+        "conversions": {
+            "csr-coo": {
+                "time": 0.005335304583333333,
+                "repetitions": 12,
+                "completed": true
+            },
+            "csr-ell": {
+                "completed": false
+            },
+            "csr-sellp": {
+                "time": 0.023087100399999999,
+                "repetitions": 10,
+                "completed": true
+            },
+            "csr-hybrid": {
+                "time": 0.0693572903,
+                "repetitions": 10,
+                "completed": true
+            },
+            "coo-csr": {
+                "time": 0.0042937814166666668,
+                "repetitions": 12,
+                "completed": true
+            },
+            "coo-ell": {
+                "completed": false
+            },
+            "coo-sellp": {
+                "completed": false
+            },
+            "coo-hybrid": {
+                "completed": false
+            },
+            "sellp-csr": {
+                "time": 0.0225229402,
+                "repetitions": 10,
+                "completed": true
+            },
+            "sellp-coo": {
+                "completed": false
+            },
+            "sellp-ell": {
+                "completed": false
+            },
+            "sellp-hybrid": {
+                "completed": false
+            }
         }
     }
 ]

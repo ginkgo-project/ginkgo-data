@@ -1,6 +1,6 @@
 [
     {
-        "filename": "/gpfs/work/slkit/slkit003/ssget/MM/HB/lnsp3937/lnsp3937.mtx",
+        "filename": "/home/kit/scc/au7114/.config/ssget/MM/HB/lnsp3937/lnsp3937.mtx",
         "problem": {
             "id": 191,
             "group": "HB",
@@ -15,6 +15,7 @@
             "psym": 0.849666726715907,
             "nsym": 0.001351107908484958,
             "kind": "computational fluid dynamics problem",
+            "columns": 3937,
             "row_distribution": {
                 "min": 1,
                 "q1": 4.0,
@@ -44,33 +45,93 @@
         },
         "spmv": {
             "csr": {
-                "storage": 320636,
-                "time": 14667.5,
+                "storage": 323812,
+                "max_relative_norm2": 1.0094472897099485e-17,
+                "time": 0.000004594626843536294,
+                "repetitions": 12137,
                 "completed": true
             },
             "coo": {
                 "storage": 406512,
-                "time": 15709.5,
-                "completed": true
-            },
-            "hybrid": {
-                "storage": 448236,
-                "time": 17754.2,
-                "completed": true
-            },
-            "sellp": {
-                "storage": 519400,
-                "time": 15146.1,
+                "max_relative_norm2": 0.0,
+                "time": 0.000007032978371029539,
+                "repetitions": 8091,
                 "completed": true
             },
             "ell": {
                 "storage": 519684,
-                "time": 14851.4,
+                "max_relative_norm2": 1.0296606685592386e-16,
+                "time": 0.000006233131009763936,
+                "repetitions": 8091,
+                "completed": true
+            },
+            "sellp": {
+                "storage": 519400,
+                "max_relative_norm2": 1.0296606685592386e-16,
+                "time": 0.000005164120870066739,
+                "repetitions": 12137,
+                "completed": true
+            },
+            "hybrid": {
+                "storage": 371972,
+                "max_relative_norm2": 8.587043011183565e-17,
+                "time": 0.000008722310344827586,
+                "repetitions": 8091,
                 "completed": true
             }
         },
         "optimal": {
             "spmv": "csr"
+        },
+        "conversions": {
+            "csr-coo": {
+                "time": 0.000043761864205256578,
+                "repetitions": 1598,
+                "completed": true
+            },
+            "csr-ell": {
+                "time": 0.00007316735352112676,
+                "repetitions": 710,
+                "completed": true
+            },
+            "csr-sellp": {
+                "time": 0.0001291785687103594,
+                "repetitions": 473,
+                "completed": true
+            },
+            "csr-hybrid": {
+                "time": 0.00020014326349206352,
+                "repetitions": 315,
+                "completed": true
+            },
+            "coo-csr": {
+                "time": 0.000040534484355444307,
+                "repetitions": 1598,
+                "completed": true
+            },
+            "coo-ell": {
+                "completed": false
+            },
+            "coo-sellp": {
+                "completed": false
+            },
+            "coo-hybrid": {
+                "completed": false
+            },
+            "ell-csr": {
+                "time": 0.00011444585412262157,
+                "repetitions": 473,
+                "completed": true
+            },
+            "ell-coo": {
+                "completed": false
+            },
+            "ell-sellp": {
+                "completed": false
+            },
+            "ell-hybrid": {
+                "completed": false
+            }
         }
     }
 ]

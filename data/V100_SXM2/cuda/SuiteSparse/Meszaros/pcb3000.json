@@ -1,6 +1,6 @@
 [
     {
-        "filename": "/gpfs/work/slkit/slkit003/ssget/MM/Meszaros/pcb3000/pcb3000.mtx",
+        "filename": "/home/kit/scc/au7114/.config/ssget/MM/Meszaros/pcb3000/pcb3000.mtx",
         "problem": {
             "id": 1752,
             "group": "Meszaros",
@@ -15,6 +15,7 @@
             "psym": 0,
             "nsym": 0,
             "kind": "linear programming problem",
+            "columns": 7732,
             "row_distribution": {
                 "min": 2,
                 "q1": 4.0,
@@ -24,7 +25,7 @@
                 "mean": 14.51489898989899,
                 "variance": 12507.74371741404,
                 "skewness": 42.27281126388359,
-                "kurtosis": 2208.8875169817799,
+                "kurtosis": 2208.88751698178,
                 "hyperskewness": 119141.40036259445,
                 "hyperflatness": 6459748.925950857
             },
@@ -44,33 +45,89 @@
         },
         "spmv": {
             "csr": {
-                "storage": 705592,
-                "time": 472983.6,
+                "storage": 710712,
+                "max_relative_norm2": 2.103958606240643e-16,
+                "time": 0.000007388129279446297,
+                "repetitions": 8091,
                 "completed": true
             },
             "coo": {
                 "storage": 919664,
-                "time": 16876.8,
-                "completed": true
-            },
-            "hybrid": {
-                "storage": 1002752,
-                "time": 18342.1,
-                "completed": true
-            },
-            "sellp": {
-                "storage": 10309096,
-                "time": 4040548.6,
+                "max_relative_norm2": 1.1288305324974104e-16,
+                "time": 0.000006823696947225311,
+                "repetitions": 8091,
                 "completed": true
             },
             "ell": {
-                "storage": 289159200,
-                "time": 2819544.7,
+                "completed": false
+            },
+            "sellp": {
+                "storage": 10130152,
+                "max_relative_norm2": 1.2014872599451504e-15,
+                "time": 0.0030625178333333338,
+                "repetitions": 18,
+                "completed": true
+            },
+            "hybrid": {
+                "storage": 873712,
+                "max_relative_norm2": 1.8863835315873216e-16,
+                "time": 0.0000085629831912001,
+                "repetitions": 8091,
                 "completed": true
             }
         },
         "optimal": {
             "spmv": "coo"
+        },
+        "conversions": {
+            "csr-coo": {
+                "time": 0.0005389733642857143,
+                "repetitions": 140,
+                "completed": true
+            },
+            "csr-ell": {
+                "time": 0.005174407166666666,
+                "repetitions": 12,
+                "completed": true
+            },
+            "csr-sellp": {
+                "time": 0.0033101487222222225,
+                "repetitions": 18,
+                "completed": true
+            },
+            "csr-hybrid": {
+                "time": 0.00026495302857142854,
+                "repetitions": 210,
+                "completed": true
+            },
+            "coo-csr": {
+                "time": 0.0016183269462365592,
+                "repetitions": 93,
+                "completed": true
+            },
+            "coo-ell": {
+                "completed": false
+            },
+            "coo-sellp": {
+                "completed": false
+            },
+            "coo-hybrid": {
+                "completed": false
+            },
+            "sellp-csr": {
+                "time": 0.0042526748333333338,
+                "repetitions": 12,
+                "completed": true
+            },
+            "sellp-coo": {
+                "completed": false
+            },
+            "sellp-ell": {
+                "completed": false
+            },
+            "sellp-hybrid": {
+                "completed": false
+            }
         }
     }
 ]

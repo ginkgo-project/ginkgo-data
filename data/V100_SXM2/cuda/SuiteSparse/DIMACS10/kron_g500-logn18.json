@@ -1,8 +1,8 @@
 [
     {
-        "filename": "/gpfs/work/slkit/slkit003/ssget/MM/DIMACS10/kron_g500-logn18/kron_g500-logn18.mtx",
+        "filename": "/home/kit/scc/au7114/.config/ssget/MM/DIMACS10/kron_g500-logn18/kron_g500-logn18.mtx",
         "problem": {
-            "id": 39,
+            "id": 2491,
             "group": "DIMACS10",
             "name": "kron_g500-logn18",
             "rows": 262144,
@@ -15,6 +15,7 @@
             "psym": 1,
             "nsym": 1,
             "kind": "undirected multigraph",
+            "columns": 262144,
             "row_distribution": {
                 "min": 0,
                 "q1": 1.0,
@@ -44,31 +45,101 @@
         },
         "spmv": {
             "csr": {
-                "storage": 255039476,
-                "time": 2524271.9,
+                "storage": 255367156,
+                "max_relative_norm2": 4.825888469217116e-16,
+                "time": 0.0004177961071428571,
+                "repetitions": 140,
                 "completed": true
             },
             "coo": {
                 "storage": 338654528,
-                "time": 502536.0,
-                "completed": true
-            },
-            "hybrid": {
-                "storage": 435893584,
-                "time": 605494.1,
-                "completed": true
-            },
-            "sellp": {
-                "storage": 6567599880,
-                "time": 35166137.3,
+                "max_relative_norm2": 2.829732014676947e-16,
+                "time": 0.0005018663142857143,
+                "repetitions": 140,
                 "completed": true
             },
             "ell": {
                 "completed": false
+            },
+            "sellp": {
+                "storage": 6566690568,
+                "max_relative_norm2": 2.6400139848662138e-15,
+                "time": 0.031272069099999997,
+                "repetitions": 10,
+                "completed": true
+            },
+            "hybrid": {
+                "storage": 338657968,
+                "max_relative_norm2": 4.354151684578322e-16,
+                "time": 0.0004947721214285714,
+                "repetitions": 140,
+                "completed": true
             }
         },
         "optimal": {
-            "spmv": "coo"
+            "spmv": "csr"
+        },
+        "conversions": {
+            "csr-coo": {
+                "time": 0.0064959897,
+                "repetitions": 10,
+                "completed": true
+            },
+            "csr-ell": {
+                "completed": false
+            },
+            "csr-sellp": {
+                "time": 0.3286092025,
+                "repetitions": 10,
+                "completed": true
+            },
+            "csr-hybrid": {
+                "time": 0.0197909382,
+                "repetitions": 10,
+                "completed": true
+            },
+            "coo-csr": {
+                "time": 0.0037570227777777777,
+                "repetitions": 18,
+                "completed": true
+            },
+            "coo-ell": {
+                "completed": false
+            },
+            "coo-sellp": {
+                "completed": false
+            },
+            "coo-hybrid": {
+                "completed": false
+            },
+            "sellp-csr": {
+                "time": 0.0576147186,
+                "repetitions": 10,
+                "completed": true
+            },
+            "sellp-coo": {
+                "completed": false
+            },
+            "sellp-ell": {
+                "completed": false
+            },
+            "sellp-hybrid": {
+                "completed": false
+            },
+            "hybrid-csr": {
+                "time": 0.018088078299999999,
+                "repetitions": 10,
+                "completed": true
+            },
+            "hybrid-coo": {
+                "completed": false
+            },
+            "hybrid-ell": {
+                "completed": false
+            },
+            "hybrid-sellp": {
+                "completed": false
+            }
         }
     }
 ]

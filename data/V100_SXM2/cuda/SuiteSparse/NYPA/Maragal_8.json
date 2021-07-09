@@ -1,6 +1,6 @@
 [
     {
-        "filename": "/gpfs/work/slkit/slkit003/ssget/MM/NYPA/Maragal_8/Maragal_8.mtx",
+        "filename": "/home/kit/scc/au7114/.config/ssget/MM/NYPA/Maragal_8/Maragal_8.mtx",
         "problem": {
             "id": 2217,
             "group": "NYPA",
@@ -15,6 +15,7 @@
             "psym": 0,
             "nsym": 0,
             "kind": "least squares problem",
+            "columns": 75077,
             "row_distribution": {
                 "min": 0,
                 "q1": 2.0,
@@ -44,33 +45,89 @@
         },
         "spmv": {
             "csr": {
-                "storage": 15833832,
-                "time": 541999.0,
+                "storage": 15854312,
+                "max_relative_norm2": 6.801354078045088e-17,
+                "time": 0.00004047099812265331,
+                "repetitions": 1598,
                 "completed": true
             },
             "coo": {
                 "storage": 20934640,
-                "time": 43734.8,
-                "completed": true
-            },
-            "hybrid": {
-                "storage": 20927472,
-                "time": 41844.2,
-                "completed": true
-            },
-            "sellp": {
-                "storage": 166221176,
-                "time": 4062433.6,
+                "max_relative_norm2": 1.1952377558424463e-17,
+                "time": 0.00003510092803504381,
+                "repetitions": 1598,
                 "completed": true
             },
             "ell": {
-                "storage": 2567420448,
-                "time": 4129671.4,
+                "completed": false
+            },
+            "sellp": {
+                "storage": 166354808,
+                "max_relative_norm2": 2.348967602774834e-16,
+                "time": 0.003274641055555556,
+                "repetitions": 18,
+                "completed": true
+            },
+            "hybrid": {
+                "storage": 20692752,
+                "max_relative_norm2": 7.740263425236826e-17,
+                "time": 0.00003562287797246558,
+                "repetitions": 1598,
                 "completed": true
             }
         },
         "optimal": {
-            "spmv": "hybrid"
+            "spmv": "coo"
+        },
+        "conversions": {
+            "csr-coo": {
+                "time": 0.0170491024,
+                "repetitions": 10,
+                "completed": true
+            },
+            "csr-ell": {
+                "time": 0.0164266996,
+                "repetitions": 10,
+                "completed": true
+            },
+            "csr-sellp": {
+                "time": 0.011436412100000002,
+                "repetitions": 10,
+                "completed": true
+            },
+            "csr-hybrid": {
+                "time": 0.010638289899999999,
+                "repetitions": 10,
+                "completed": true
+            },
+            "coo-csr": {
+                "time": 0.007965641583333334,
+                "repetitions": 12,
+                "completed": true
+            },
+            "coo-ell": {
+                "completed": false
+            },
+            "coo-sellp": {
+                "completed": false
+            },
+            "coo-hybrid": {
+                "completed": false
+            },
+            "sellp-csr": {
+                "time": 0.029248638100000003,
+                "repetitions": 10,
+                "completed": true
+            },
+            "sellp-coo": {
+                "completed": false
+            },
+            "sellp-ell": {
+                "completed": false
+            },
+            "sellp-hybrid": {
+                "completed": false
+            }
         }
     }
 ]

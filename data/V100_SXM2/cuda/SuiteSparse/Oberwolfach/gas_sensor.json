@@ -1,6 +1,6 @@
 [
     {
-        "filename": "/gpfs/work/slkit/slkit003/ssget/MM/Oberwolfach/gas_sensor/gas_sensor.mtx",
+        "filename": "/home/kit/scc/au7114/.config/ssget/MM/Oberwolfach/gas_sensor/gas_sensor.mtx",
         "problem": {
             "id": 1434,
             "group": "Oberwolfach",
@@ -15,6 +15,7 @@
             "psym": 1,
             "nsym": 1,
             "kind": "model reduction problem",
+            "columns": 66917,
             "row_distribution": {
                 "min": 8,
                 "q1": 27.0,
@@ -44,33 +45,93 @@
         },
         "spmv": {
             "csr": {
-                "storage": 20708052,
-                "time": 45098.2,
+                "storage": 20728532,
+                "max_relative_norm2": 6.191952294810006e-19,
+                "time": 0.00004064282102628285,
+                "repetitions": 1598,
                 "completed": true
             },
             "coo": {
                 "storage": 27253840,
-                "time": 49459.0,
-                "completed": true
-            },
-            "hybrid": {
-                "storage": 21689044,
-                "time": 45262.1,
-                "completed": true
-            },
-            "sellp": {
-                "storage": 21572200,
-                "time": 44876.2,
+                "max_relative_norm2": 0.0,
+                "time": 0.00004393194743429286,
+                "repetitions": 1598,
                 "completed": true
             },
             "ell": {
                 "storage": 26499132,
-                "time": 44534.4,
+                "max_relative_norm2": 2.1272979162799515e-16,
+                "time": 0.00004281426908635795,
+                "repetitions": 1598,
+                "completed": true
+            },
+            "sellp": {
+                "storage": 21560680,
+                "max_relative_norm2": 2.1272979162799515e-16,
+                "time": 0.00003995869274092616,
+                "repetitions": 1598,
+                "completed": true
+            },
+            "hybrid": {
+                "storage": 21689044,
+                "max_relative_norm2": 2.1272833555793496e-16,
+                "time": 0.00004363567271589486,
+                "repetitions": 1598,
                 "completed": true
             }
         },
         "optimal": {
-            "spmv": "ell"
+            "spmv": "sellp"
+        },
+        "conversions": {
+            "csr-coo": {
+                "time": 0.009499422500000002,
+                "repetitions": 10,
+                "completed": true
+            },
+            "csr-ell": {
+                "time": 0.0214271924,
+                "repetitions": 10,
+                "completed": true
+            },
+            "csr-sellp": {
+                "time": 0.006602112,
+                "repetitions": 10,
+                "completed": true
+            },
+            "csr-hybrid": {
+                "time": 0.0132650038,
+                "repetitions": 10,
+                "completed": true
+            },
+            "coo-csr": {
+                "time": 0.005898492833333334,
+                "repetitions": 12,
+                "completed": true
+            },
+            "coo-ell": {
+                "completed": false
+            },
+            "coo-sellp": {
+                "completed": false
+            },
+            "coo-hybrid": {
+                "completed": false
+            },
+            "ell-csr": {
+                "time": 0.0075517052,
+                "repetitions": 10,
+                "completed": true
+            },
+            "ell-coo": {
+                "completed": false
+            },
+            "ell-sellp": {
+                "completed": false
+            },
+            "ell-hybrid": {
+                "completed": false
+            }
         }
     }
 ]

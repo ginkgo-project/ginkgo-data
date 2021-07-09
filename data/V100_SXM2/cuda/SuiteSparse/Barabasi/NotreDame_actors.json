@@ -1,6 +1,6 @@
 [
     {
-        "filename": "/gpfs/work/slkit/slkit003/ssget/MM/Barabasi/NotreDame_actors/NotreDame_actors.mtx",
+        "filename": "/home/kit/scc/au7114/.config/ssget/MM/Barabasi/NotreDame_actors/NotreDame_actors.mtx",
         "problem": {
             "id": 1509,
             "group": "Barabasi",
@@ -15,6 +15,7 @@
             "psym": 0,
             "nsym": 0,
             "kind": "bipartite graph",
+            "columns": 127823,
             "row_distribution": {
                 "min": 0,
                 "q1": 1.0,
@@ -44,33 +45,103 @@
         },
         "spmv": {
             "csr": {
-                "storage": 19214452,
-                "time": 130945.9,
+                "storage": 19234932,
+                "max_relative_norm2": 7.830637305022422e-17,
+                "time": 0.00007790065774647887,
+                "repetitions": 710,
                 "completed": true
             },
             "coo": {
                 "storage": 23526464,
-                "time": 58660.4,
-                "completed": true
-            },
-            "hybrid": {
-                "storage": 27811968,
-                "time": 63947.8,
-                "completed": true
-            },
-            "sellp": {
-                "storage": 170411336,
-                "time": 583541.7,
+                "max_relative_norm2": 2.5302994107474963e-18,
+                "time": 0.00005724019812206573,
+                "repetitions": 1065,
                 "completed": true
             },
             "ell": {
-                "storage": 3041884800,
-                "time": 516190.5,
+                "completed": false
+            },
+            "sellp": {
+                "storage": 170273096,
+                "max_relative_norm2": 2.2213366070614428e-16,
+                "time": 0.0005255224214285715,
+                "repetitions": 140,
+                "completed": true
+            },
+            "hybrid": {
+                "storage": 22097024,
+                "max_relative_norm2": 1.253932062558773e-16,
+                "time": 0.00005401499248826292,
+                "repetitions": 1065,
                 "completed": true
             }
         },
         "optimal": {
-            "spmv": "coo"
+            "spmv": "hybrid"
+        },
+        "conversions": {
+            "csr-coo": {
+                "time": 0.1828105655,
+                "repetitions": 10,
+                "completed": true
+            },
+            "csr-ell": {
+                "time": 0.05483738869999999,
+                "repetitions": 10,
+                "completed": true
+            },
+            "csr-sellp": {
+                "time": 0.0659310449,
+                "repetitions": 10,
+                "completed": true
+            },
+            "csr-hybrid": {
+                "time": 0.1048354842,
+                "repetitions": 10,
+                "completed": true
+            },
+            "coo-csr": {
+                "time": 0.002903299,
+                "repetitions": 18,
+                "completed": true
+            },
+            "coo-ell": {
+                "completed": false
+            },
+            "coo-sellp": {
+                "completed": false
+            },
+            "coo-hybrid": {
+                "completed": false
+            },
+            "sellp-csr": {
+                "time": 0.208069639,
+                "repetitions": 10,
+                "completed": true
+            },
+            "sellp-coo": {
+                "completed": false
+            },
+            "sellp-ell": {
+                "completed": false
+            },
+            "sellp-hybrid": {
+                "completed": false
+            },
+            "hybrid-csr": {
+                "time": 0.0203362717,
+                "repetitions": 10,
+                "completed": true
+            },
+            "hybrid-coo": {
+                "completed": false
+            },
+            "hybrid-ell": {
+                "completed": false
+            },
+            "hybrid-sellp": {
+                "completed": false
+            }
         }
     }
 ]

@@ -1,6 +1,6 @@
 [
     {
-        "filename": "/gpfs/work/slkit/slkit003/ssget/MM/Pothen/barth4/barth4.mtx",
+        "filename": "/home/kit/scc/au7114/.config/ssget/MM/Pothen/barth4/barth4.mtx",
         "problem": {
             "id": 866,
             "group": "Pothen",
@@ -15,6 +15,7 @@
             "psym": 1,
             "nsym": 1,
             "kind": "structural problem",
+            "columns": 6019,
             "row_distribution": {
                 "min": 4,
                 "q1": 7.0,
@@ -44,33 +45,93 @@
         },
         "spmv": {
             "csr": {
-                "storage": 515660,
-                "time": 13790.5,
+                "storage": 520780,
+                "max_relative_norm2": 3.20266868622125e-17,
+                "time": 0.0000061888571310867609,
+                "repetitions": 12137,
                 "completed": true
             },
             "coo": {
                 "storage": 655440,
-                "time": 15597.5,
-                "completed": true
-            },
-            "hybrid": {
-                "storage": 510604,
-                "time": 16256.4,
-                "completed": true
-            },
-            "sellp": {
-                "storage": 580600,
-                "time": 13877.8,
+                "max_relative_norm2": 0.0,
+                "time": 0.000007936076381164257,
+                "repetitions": 8091,
                 "completed": true
             },
             "ell": {
                 "storage": 938964,
-                "time": 14066.4,
+                "max_relative_norm2": 9.88440344033823e-17,
+                "time": 0.000010038752688172042,
+                "repetitions": 8091,
+                "completed": true
+            },
+            "sellp": {
+                "storage": 580600,
+                "max_relative_norm2": 9.88440344033823e-17,
+                "time": 0.000007952012730194042,
+                "repetitions": 8091,
+                "completed": true
+            },
+            "hybrid": {
+                "storage": 520536,
+                "max_relative_norm2": 9.823653882600744e-17,
+                "time": 0.000009858972562106045,
+                "repetitions": 5394,
                 "completed": true
             }
         },
         "optimal": {
             "spmv": "csr"
+        },
+        "conversions": {
+            "csr-coo": {
+                "time": 0.000040761635168961197,
+                "repetitions": 1598,
+                "completed": true
+            },
+            "csr-ell": {
+                "time": 0.0016856047903225807,
+                "repetitions": 62,
+                "completed": true
+            },
+            "csr-sellp": {
+                "time": 0.00011195861522198732,
+                "repetitions": 473,
+                "completed": true
+            },
+            "csr-hybrid": {
+                "time": 0.00020453569523809528,
+                "repetitions": 315,
+                "completed": true
+            },
+            "coo-csr": {
+                "time": 0.000045659217772215267,
+                "repetitions": 1598,
+                "completed": true
+            },
+            "coo-ell": {
+                "completed": false
+            },
+            "coo-sellp": {
+                "completed": false
+            },
+            "coo-hybrid": {
+                "completed": false
+            },
+            "ell-csr": {
+                "time": 0.007853702700000002,
+                "repetitions": 10,
+                "completed": true
+            },
+            "ell-coo": {
+                "completed": false
+            },
+            "ell-sellp": {
+                "completed": false
+            },
+            "ell-hybrid": {
+                "completed": false
+            }
         }
     }
 ]

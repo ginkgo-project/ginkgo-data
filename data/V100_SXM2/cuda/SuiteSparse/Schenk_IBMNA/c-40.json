@@ -1,6 +1,6 @@
 [
     {
-        "filename": "/gpfs/work/slkit/slkit003/ssget/MM/Schenk_IBMNA/c-40/c-40.mtx",
+        "filename": "/home/kit/scc/au7114/.config/ssget/MM/Schenk_IBMNA/c-40/c-40.mtx",
         "problem": {
             "id": 1559,
             "group": "Schenk_IBMNA",
@@ -15,6 +15,7 @@
             "psym": 1,
             "nsym": 1,
             "kind": "optimization problem",
+            "columns": 9941,
             "row_distribution": {
                 "min": 2,
                 "q1": 2.0,
@@ -44,33 +45,103 @@
         },
         "spmv": {
             "csr": {
-                "storage": 1017780,
-                "time": 149106.1,
+                "storage": 1022900,
+                "max_relative_norm2": 5.925205051018211e-17,
+                "time": 0.00000853381102459523,
+                "repetitions": 8091,
                 "completed": true
             },
             "coo": {
                 "storage": 1304016,
-                "time": 15750.7,
-                "completed": true
-            },
-            "hybrid": {
-                "storage": 1504144,
-                "time": 17265.8,
-                "completed": true
-            },
-            "sellp": {
-                "storage": 3170504,
-                "time": 613727.7,
+                "max_relative_norm2": 1.135732407155367e-17,
+                "time": 0.0000057910495180028019,
+                "repetitions": 12137,
                 "completed": true
             },
             "ell": {
-                "storage": 193133748,
-                "time": 653048.2,
+                "completed": false
+            },
+            "sellp": {
+                "storage": 3170504,
+                "max_relative_norm2": 2.0126730475598719e-16,
+                "time": 0.0004036468142857143,
+                "repetitions": 140,
+                "completed": true
+            },
+            "hybrid": {
+                "storage": 1224488,
+                "max_relative_norm2": 1.2210540966458773e-16,
+                "time": 0.00000861102879742924,
+                "repetitions": 8091,
                 "completed": true
             }
         },
         "optimal": {
             "spmv": "coo"
+        },
+        "conversions": {
+            "csr-coo": {
+                "time": 0.00007407671690140845,
+                "repetitions": 710,
+                "completed": true
+            },
+            "csr-ell": {
+                "time": 0.004553381166666666,
+                "repetitions": 12,
+                "completed": true
+            },
+            "csr-sellp": {
+                "time": 0.0057040626111111119,
+                "repetitions": 18,
+                "completed": true
+            },
+            "csr-hybrid": {
+                "time": 0.00026803366666666663,
+                "repetitions": 210,
+                "completed": true
+            },
+            "coo-csr": {
+                "time": 0.00004189200312891114,
+                "repetitions": 1598,
+                "completed": true
+            },
+            "coo-ell": {
+                "completed": false
+            },
+            "coo-sellp": {
+                "completed": false
+            },
+            "coo-hybrid": {
+                "completed": false
+            },
+            "sellp-csr": {
+                "time": 0.0006691549139784946,
+                "repetitions": 93,
+                "completed": true
+            },
+            "sellp-coo": {
+                "completed": false
+            },
+            "sellp-ell": {
+                "completed": false
+            },
+            "sellp-hybrid": {
+                "completed": false
+            },
+            "hybrid-csr": {
+                "time": 0.00036417515714285716,
+                "repetitions": 140,
+                "completed": true
+            },
+            "hybrid-coo": {
+                "completed": false
+            },
+            "hybrid-ell": {
+                "completed": false
+            },
+            "hybrid-sellp": {
+                "completed": false
+            }
         }
     }
 ]

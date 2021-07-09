@@ -1,6 +1,6 @@
 [
     {
-        "filename": "/gpfs/work/slkit/slkit003/ssget/MM/GHS_indef/a5esindl/a5esindl.mtx",
+        "filename": "/home/kit/scc/au7114/.config/ssget/MM/GHS_indef/a5esindl/a5esindl.mtx",
         "problem": {
             "id": 1293,
             "group": "GHS_indef",
@@ -15,6 +15,7 @@
             "psym": 1,
             "nsym": 1,
             "kind": "optimization problem",
+            "columns": 60008,
             "row_distribution": {
                 "min": 3,
                 "q1": 3.0,
@@ -44,33 +45,103 @@
         },
         "spmv": {
             "csr": {
-                "storage": 3300084,
-                "time": 736295.9,
+                "storage": 3320564,
+                "max_relative_norm2": 2.1080681112349846e-17,
+                "time": 0.00001172763088616982,
+                "repetitions": 5394,
                 "completed": true
             },
             "coo": {
                 "storage": 4080064,
-                "time": 16815.9,
-                "completed": true
-            },
-            "hybrid": {
-                "storage": 4080192,
-                "time": 16042.8,
-                "completed": true
-            },
-            "sellp": {
-                "storage": 14287528,
-                "time": 6298155.7,
+                "max_relative_norm2": 3.476714995447264e-17,
+                "time": 0.000007830247311827957,
+                "repetitions": 8091,
                 "completed": true
             },
             "ell": {
-                "storage": 7195919328,
-                "time": 6146354.9,
+                "completed": false
+            },
+            "sellp": {
+                "storage": 14287528,
+                "max_relative_norm2": 2.0995662807013957e-16,
+                "time": 0.005062611916666667,
+                "repetitions": 12,
+                "completed": true
+            },
+            "hybrid": {
+                "storage": 3359968,
+                "max_relative_norm2": 9.259619079110556e-17,
+                "time": 0.000009771116981831664,
+                "repetitions": 5394,
                 "completed": true
             }
         },
         "optimal": {
-            "spmv": "hybrid"
+            "spmv": "coo"
+        },
+        "conversions": {
+            "csr-coo": {
+                "time": 0.002973887037037037,
+                "repetitions": 27,
+                "completed": true
+            },
+            "csr-ell": {
+                "time": 0.147728776,
+                "repetitions": 10,
+                "completed": true
+            },
+            "csr-sellp": {
+                "time": 0.0150009456,
+                "repetitions": 10,
+                "completed": true
+            },
+            "csr-hybrid": {
+                "time": 0.018939777399999998,
+                "repetitions": 10,
+                "completed": true
+            },
+            "coo-csr": {
+                "time": 0.016288009,
+                "repetitions": 10,
+                "completed": true
+            },
+            "coo-ell": {
+                "completed": false
+            },
+            "coo-sellp": {
+                "completed": false
+            },
+            "coo-hybrid": {
+                "completed": false
+            },
+            "sellp-csr": {
+                "time": 0.028750390299999995,
+                "repetitions": 10,
+                "completed": true
+            },
+            "sellp-coo": {
+                "completed": false
+            },
+            "sellp-ell": {
+                "completed": false
+            },
+            "sellp-hybrid": {
+                "completed": false
+            },
+            "hybrid-csr": {
+                "time": 0.026901530099999999,
+                "repetitions": 10,
+                "completed": true
+            },
+            "hybrid-coo": {
+                "completed": false
+            },
+            "hybrid-ell": {
+                "completed": false
+            },
+            "hybrid-sellp": {
+                "completed": false
+            }
         }
     }
 ]

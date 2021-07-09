@@ -1,13 +1,13 @@
 [
     {
-        "filename": "/gpfs/work/slkit/slkit003/ssget/MM/UTEP/Dubcova3/Dubcova3.mtx",
+        "filename": "/home/kit/scc/au7114/.config/ssget/MM/UTEP/Dubcova3/Dubcova3.mtx",
         "problem": {
             "id": 1849,
             "group": "UTEP",
             "name": "Dubcova3",
             "rows": 146689,
             "cols": 146689,
-            "nonzeros": 3636643,
+            "nonzeros": 3636649,
             "real": true,
             "binary": false,
             "2d3d": true,
@@ -15,6 +15,7 @@
             "psym": 1,
             "nsym": 1,
             "kind": "2D/3D problem",
+            "columns": 146689,
             "row_distribution": {
                 "min": 9,
                 "q1": 16.0,
@@ -44,33 +45,93 @@
         },
         "spmv": {
             "csr": {
-                "storage": 44226476,
-                "time": 89560.6,
+                "storage": 44308396,
+                "max_relative_norm2": 7.550388300379444e-17,
+                "time": 0.00008443928873239437,
+                "repetitions": 710,
                 "completed": true
             },
             "coo": {
                 "storage": 58186288,
-                "time": 96281.0,
-                "completed": true
-            },
-            "hybrid": {
-                "storage": 54650016,
-                "time": 80091.3,
-                "completed": true
-            },
-            "sellp": {
-                "storage": 43975512,
-                "time": 87103.1,
+                "max_relative_norm2": 0.0,
+                "time": 0.0000913090676056338,
+                "repetitions": 710,
                 "completed": true
             },
             "ell": {
                 "storage": 86253132,
-                "time": 84084.5,
+                "max_relative_norm2": 2.519556733679881e-16,
+                "time": 0.000082996561971831,
+                "repetitions": 710,
+                "completed": true
+            },
+            "sellp": {
+                "storage": 43970136,
+                "max_relative_norm2": 2.519556733679881e-16,
+                "time": 0.0000781814281690141,
+                "repetitions": 710,
+                "completed": true
+            },
+            "hybrid": {
+                "storage": 48929040,
+                "max_relative_norm2": 1.7183096074886635e-16,
+                "time": 0.00008088082676056338,
+                "repetitions": 710,
                 "completed": true
             }
         },
         "optimal": {
-            "spmv": "hybrid"
+            "spmv": "sellp"
+        },
+        "conversions": {
+            "csr-coo": {
+                "time": 0.015876420699999999,
+                "repetitions": 10,
+                "completed": true
+            },
+            "csr-ell": {
+                "time": 0.0086669934,
+                "repetitions": 10,
+                "completed": true
+            },
+            "csr-sellp": {
+                "time": 0.011595870500000003,
+                "repetitions": 10,
+                "completed": true
+            },
+            "csr-hybrid": {
+                "time": 0.0062147107,
+                "repetitions": 10,
+                "completed": true
+            },
+            "coo-csr": {
+                "time": 0.004056797333333333,
+                "repetitions": 18,
+                "completed": true
+            },
+            "coo-ell": {
+                "completed": false
+            },
+            "coo-sellp": {
+                "completed": false
+            },
+            "coo-hybrid": {
+                "completed": false
+            },
+            "ell-csr": {
+                "time": 0.006179604833333334,
+                "repetitions": 12,
+                "completed": true
+            },
+            "ell-coo": {
+                "completed": false
+            },
+            "ell-sellp": {
+                "completed": false
+            },
+            "ell-hybrid": {
+                "completed": false
+            }
         }
     }
 ]

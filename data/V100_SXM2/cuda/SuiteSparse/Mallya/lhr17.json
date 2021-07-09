@@ -1,13 +1,13 @@
 [
     {
-        "filename": "/gpfs/work/slkit/slkit003/ssget/MM/Mallya/lhr17/lhr17.mtx",
+        "filename": "/home/kit/scc/au7114/.config/ssget/MM/Mallya/lhr17/lhr17.mtx",
         "problem": {
             "id": 746,
             "group": "Mallya",
             "name": "lhr17",
             "rows": 17576,
             "cols": 17576,
-            "nonzeros": 379761,
+            "nonzeros": 381975,
             "real": true,
             "binary": false,
             "2d3d": false,
@@ -15,6 +15,7 @@
             "psym": 0.001513390098553639,
             "nsym": 0.0001527473453564807,
             "kind": "chemical process simulation problem",
+            "columns": 17576,
             "row_distribution": {
                 "min": 1,
                 "q1": 4.0,
@@ -44,33 +45,93 @@
         },
         "spmv": {
             "csr": {
-                "storage": 4627440,
-                "time": 19096.9,
+                "storage": 4647920,
+                "max_relative_norm2": 1.2378375330658043e-16,
+                "time": 0.000008270464095909034,
+                "repetitions": 8091,
                 "completed": true
             },
             "coo": {
                 "storage": 6076176,
-                "time": 21577.5,
-                "completed": true
-            },
-            "hybrid": {
-                "storage": 13287456,
-                "time": 62596.8,
-                "completed": true
-            },
-            "sellp": {
-                "storage": 12574264,
-                "time": 59493.6,
+                "max_relative_norm2": 2.8572094557981569e-18,
+                "time": 0.000010378657211716724,
+                "repetitions": 5394,
                 "completed": true
             },
             "ell": {
                 "storage": 13287456,
-                "time": 62546.3,
+                "max_relative_norm2": 1.897116033943111e-16,
+                "time": 0.00005776954647887324,
+                "repetitions": 1065,
+                "completed": true
+            },
+            "sellp": {
+                "storage": 12574264,
+                "max_relative_norm2": 1.897116033943111e-16,
+                "time": 0.00004565540237797246,
+                "repetitions": 1598,
+                "completed": true
+            },
+            "hybrid": {
+                "storage": 5856256,
+                "max_relative_norm2": 1.2429268946912115e-16,
+                "time": 0.000011020051167964405,
+                "repetitions": 5394,
                 "completed": true
             }
         },
         "optimal": {
             "spmv": "csr"
+        },
+        "conversions": {
+            "csr-coo": {
+                "time": 0.004898611999999999,
+                "repetitions": 12,
+                "completed": true
+            },
+            "csr-ell": {
+                "time": 0.005033716111111111,
+                "repetitions": 18,
+                "completed": true
+            },
+            "csr-sellp": {
+                "time": 0.002683437518518519,
+                "repetitions": 27,
+                "completed": true
+            },
+            "csr-hybrid": {
+                "time": 0.0166020799,
+                "repetitions": 10,
+                "completed": true
+            },
+            "coo-csr": {
+                "time": 0.0371269535,
+                "repetitions": 10,
+                "completed": true
+            },
+            "coo-ell": {
+                "completed": false
+            },
+            "coo-sellp": {
+                "completed": false
+            },
+            "coo-hybrid": {
+                "completed": false
+            },
+            "ell-csr": {
+                "time": 0.003003067111111111,
+                "repetitions": 18,
+                "completed": true
+            },
+            "ell-coo": {
+                "completed": false
+            },
+            "ell-sellp": {
+                "completed": false
+            },
+            "ell-hybrid": {
+                "completed": false
+            }
         }
     }
 ]

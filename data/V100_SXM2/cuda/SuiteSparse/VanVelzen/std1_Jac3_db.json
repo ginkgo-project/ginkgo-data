@@ -1,6 +1,6 @@
 [
     {
-        "filename": "/gpfs/work/slkit/slkit003/ssget/MM/VanVelzen/std1_Jac3_db/std1_Jac3_db.mtx",
+        "filename": "/home/kit/scc/au7114/.config/ssget/MM/VanVelzen/std1_Jac3_db/std1_Jac3_db.mtx",
         "problem": {
             "id": 1335,
             "group": "VanVelzen",
@@ -15,6 +15,7 @@
             "psym": 0.3593020610225873,
             "nsym": 0.00000784553706623987,
             "kind": "chemical process simulation problem",
+            "columns": 21982,
             "row_distribution": {
                 "min": 1,
                 "q1": 1.0,
@@ -44,33 +45,93 @@
         },
         "spmv": {
             "csr": {
-                "storage": 6469844,
-                "time": 39884.0,
+                "storage": 6490324,
+                "max_relative_norm2": 2.9646524170464169e-16,
+                "time": 0.000016665602892102336,
+                "repetitions": 3596,
                 "completed": true
             },
             "coo": {
                 "storage": 8509216,
-                "time": 26405.5,
-                "completed": true
-            },
-            "hybrid": {
-                "storage": 14502536,
-                "time": 49744.5,
-                "completed": true
-            },
-            "sellp": {
-                "storage": 19892104,
-                "time": 164156.5,
+                "max_relative_norm2": 2.344430290391551e-20,
+                "time": 0.000016566695773081204,
+                "repetitions": 3596,
                 "completed": true
             },
             "ell": {
                 "storage": 55658424,
-                "time": 174127.0,
+                "max_relative_norm2": 5.9293097227004509e-16,
+                "time": 0.00017841512063492064,
+                "repetitions": 315,
+                "completed": true
+            },
+            "sellp": {
+                "storage": 19996552,
+                "max_relative_norm2": 5.9293097227004509e-16,
+                "time": 0.00012871147780126852,
+                "repetitions": 473,
+                "completed": true
+            },
+            "hybrid": {
+                "storage": 8421288,
+                "max_relative_norm2": 1.4823338496690424e-16,
+                "time": 0.00001710308926585095,
+                "repetitions": 3596,
                 "completed": true
             }
         },
         "optimal": {
             "spmv": "coo"
+        },
+        "conversions": {
+            "csr-coo": {
+                "time": 0.008665339599999999,
+                "repetitions": 10,
+                "completed": true
+            },
+            "csr-ell": {
+                "time": 0.0029165038888888889,
+                "repetitions": 18,
+                "completed": true
+            },
+            "csr-sellp": {
+                "time": 0.0058323810833333339,
+                "repetitions": 12,
+                "completed": true
+            },
+            "csr-hybrid": {
+                "time": 0.010860014800000002,
+                "repetitions": 10,
+                "completed": true
+            },
+            "coo-csr": {
+                "time": 0.0033926406111111108,
+                "repetitions": 18,
+                "completed": true
+            },
+            "coo-ell": {
+                "completed": false
+            },
+            "coo-sellp": {
+                "completed": false
+            },
+            "coo-hybrid": {
+                "completed": false
+            },
+            "ell-csr": {
+                "time": 0.0036572634444444445,
+                "repetitions": 18,
+                "completed": true
+            },
+            "ell-coo": {
+                "completed": false
+            },
+            "ell-sellp": {
+                "completed": false
+            },
+            "ell-hybrid": {
+                "completed": false
+            }
         }
     }
 ]

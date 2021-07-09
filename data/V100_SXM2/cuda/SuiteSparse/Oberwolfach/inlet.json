@@ -1,6 +1,6 @@
 [
     {
-        "filename": "/gpfs/work/slkit/slkit003/ssget/MM/Oberwolfach/inlet/inlet.mtx",
+        "filename": "/home/kit/scc/au7114/.config/ssget/MM/Oberwolfach/inlet/inlet.mtx",
         "problem": {
             "id": 1436,
             "group": "Oberwolfach",
@@ -15,6 +15,7 @@
             "psym": 0.6083330964361183,
             "nsym": 0.000094758886014536,
             "kind": "model reduction problem",
+            "columns": 11730,
             "row_distribution": {
                 "min": 1,
                 "q1": 26.0,
@@ -44,33 +45,93 @@
         },
         "spmv": {
             "csr": {
-                "storage": 3986800,
-                "time": 16215.3,
+                "storage": 4007280,
+                "max_relative_norm2": 1.2252829332073834e-16,
+                "time": 0.000006655624273884564,
+                "repetitions": 8091,
                 "completed": true
             },
             "coo": {
                 "storage": 5253168,
-                "time": 17430.4,
-                "completed": true
-            },
-            "hybrid": {
-                "storage": 4981680,
-                "time": 25391.1,
-                "completed": true
-            },
-            "sellp": {
-                "storage": 5527176,
-                "time": 27134.1,
+                "max_relative_norm2": 0.0,
+                "time": 0.000008721576566555433,
+                "repetitions": 8091,
                 "completed": true
             },
             "ell": {
                 "storage": 5771160,
-                "time": 27784.0,
+                "max_relative_norm2": 2.143874511812511e-16,
+                "time": 0.00001761325834260289,
+                "repetitions": 3596,
+                "completed": true
+            },
+            "sellp": {
+                "storage": 5527176,
+                "max_relative_norm2": 2.143874511812511e-16,
+                "time": 0.000013031541156840937,
+                "repetitions": 5394,
+                "completed": true
+            },
+            "hybrid": {
+                "storage": 4798472,
+                "max_relative_norm2": 1.5695722529680737e-16,
+                "time": 0.000011670915090841676,
+                "repetitions": 5394,
                 "completed": true
             }
         },
         "optimal": {
             "spmv": "csr"
+        },
+        "conversions": {
+            "csr-coo": {
+                "time": 0.002199150851851852,
+                "repetitions": 27,
+                "completed": true
+            },
+            "csr-ell": {
+                "time": 0.002016614592592592,
+                "repetitions": 27,
+                "completed": true
+            },
+            "csr-sellp": {
+                "time": 0.001046254741935484,
+                "repetitions": 62,
+                "completed": true
+            },
+            "csr-hybrid": {
+                "time": 0.0043898029444444448,
+                "repetitions": 18,
+                "completed": true
+            },
+            "coo-csr": {
+                "time": 0.010776984250000002,
+                "repetitions": 12,
+                "completed": true
+            },
+            "coo-ell": {
+                "completed": false
+            },
+            "coo-sellp": {
+                "completed": false
+            },
+            "coo-hybrid": {
+                "completed": false
+            },
+            "ell-csr": {
+                "time": 0.0033980507037037037,
+                "repetitions": 27,
+                "completed": true
+            },
+            "ell-coo": {
+                "completed": false
+            },
+            "ell-sellp": {
+                "completed": false
+            },
+            "ell-hybrid": {
+                "completed": false
+            }
         }
     }
 ]
