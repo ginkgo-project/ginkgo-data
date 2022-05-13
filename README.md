@@ -47,7 +47,7 @@ in the context of a scientific paper.
 
 The data can be added by:
 1. The @ginkgo-bot account;
-2. Any user which wants to share his Ginkgo data benchmarks.
+2. Any users who want to share their Ginkgo data benchmarks.
 
 In the first case, the commit message will contain some benchmark metadata, usually in the form:
 Benchmark <benchmark type> on <executor> with <hardware> of <ginkgo commit>
@@ -69,7 +69,7 @@ this section, we focus on the format of the specific JSON files.
 
 The type can be (not necessarily up to date):
 
-+ SpMV: benchmark sparse matrix-vector product. This produces a SuiteSparse type
++ spmv: benchmark sparse matrix-vector product. This produces a SuiteSparse type
   of benchmark data.
 + solver: benchmark solvers, includes SpMV data and can include multiple
   preconditioners. This produces a SuiteSparse type of benchmark data.
@@ -125,4 +125,5 @@ The following data are benchmark dependent:
 ## Licensing
 
 The Ginkgo benchmark data is available under the [CC-BY license](LICENSE.md).
-All contributions to the project are added under this license.
+All contributions to the project are added under this license. By pushing to
+this repository, you agree to provide your data under the CC-BY license.
